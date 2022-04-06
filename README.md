@@ -8,11 +8,7 @@ Este es nuestro READ.me para el proyecto integrador de Digital House, del curso 
 
 ## Integrantes
 
-Alejo Collazo
-Aylin Paniagua
-Mercedes Cavanagh
-David Machado
-
+Alejo Collazo, Aylin Paniagua, Mercedes Cavanagh y David Machado
 
 ## Temática
 e-commerce de artículos electrónicos, orientado a personas que trabajen desde su pc y gamers.
