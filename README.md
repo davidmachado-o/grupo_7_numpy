@@ -34,3 +34,6 @@ https://www.ceven.com/#
 https://www.alibaba.com
 
 https://storecba.com/?gclid=CjwKCAjwopWSBhB6EiwAjxmqDQ6oPv4KaF8_kchcPk67BYhjhxa0ZB-pN97ahOk2WmbKdEl0Gzx1nRoC1LAQAvD_BwE
+
+
+Nuestro **prototipo** a seguir será: https://www.figma.com/file/hvOPkE4GJXYRyfi63oErfK/DH_Numpy_Prototipo?node-id=0%3A1 
