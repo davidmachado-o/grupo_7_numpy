@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #f5f5f5;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.search-input{
+    border: 1px solid white;
+    border-radius: 20px 0 0 20px;
+    padding: 10px 10px 10px 5px;
+    color: #333;
+    outline: none;
+    width: 100%;
+}
+
+.search-container{
+    width: 33%;
+}
+
+.search-container form{
+    width: 100%;
+    display: flex;
+}
+
+.search-container .fa-search{
+    color: #333;
+    padding-right: 10px;
+}
+
+.search-container button{
+    background-color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.fa-location-dot{
+    padding-right: 10px;
+}
+
+.logo-numpy{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-numpy img{
+    width: 100%;
+}
+
+.main-header a{
+    color: white;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.main-header{
+    background-color: black;
+    padding: 10px;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-top-right-top{
+    width: 33%;
+}
+
+.nav-top-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav-bottom li{
+    display: flex;
+    margin: 0 20px;
+    flex-wrap: nowrap;
+}
+
+.shortcuts-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.shortcuts-bar a .fa-location-dot{
+    color: #333;
+}
+
+.ship{
+    color: #FFFFFF;
+    opacity: 50%;
+}
+
+.list-nav .fa-angle-down{
+    padding-left: 10px;
+}
+
+.show-nav{
+    display: none;
+}
+
+.list-nav-2,
+.list-nav-4{
+    display: none;
+}
+
+@media (min-width: 768px){
+    .show-nav{
+        display: flex;
+    }
+
+    .list-nav-2,
+    .list-nav-4{
+        display: flex;
+    }
+}
