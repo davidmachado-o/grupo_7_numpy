@@ -1,0 +1,63 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c6bebe;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.hero-banner {
+    display: flex;
+}
+
+.hero-banner-imagen {
+    width: 100%;
+}
+
+.ver-promociones-general{
+    display: flex;
+    background-color: white;
+    border-radius: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 85%;
+    border: dotted rgb(23, 226, 124);
+    
+}
+
+.ver-promociones-tarjeta {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 40px;
+}
+
+.ver-promociones-texto {
+    color: #4DABCF;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.tarjeta-1 {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media (min-width: 768px){
+    .ver-promociones-general {
+        width: 65%;
+    }
+}
+
+@media (min-width: 1200px){
+    
+}
