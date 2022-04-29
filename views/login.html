@@ -4,10 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/nav-styles.css" rel="stylesheet">
     <link href="/styles/login-styles.css" rel="stylesheet">
-    <title>Login</title>
+    <script src="https://kit.fontawesome.com/21c548f2ca.js" crossorigin="anonymous"></script> 
+    <title>Login - Numpy</title>
 </head>
 <body>
-    <h1>Login</h1>
+    <header class="main-header">
+        <nav class="nav-bar">
+            <div class="logo-numpy">
+                <img src="images/logo-numpy.svg" alt="logo numpy">
+            </div>
+            <!-- <div class="search-container">
+                <form action="#" method="get" name="search">
+                <input class="search-input" type="text" placeholder="Buscá tus productos y marcas preferidas..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div> -->
+            <div class="nav-top-right-top">
+                <!-- <ul class="nav-top-right">
+                    <li class="list-nav-1"><a href="#"><i class="fa-solid fa-circle-user"></i></a></li>
+                    <li class="list-nav-2"><a href="/register">Creá tu cuenta</a></li>
+                    <li class="list-nav-3"><a href="/login">Ingresá</a></li>
+                    <li class="list-nav-4"><a href="/shoppingCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul> -->
+            </div>
+        </nav>
+        <div class="shortcuts-bar show-nav">
+            <!-- <a class="ship" href="#"><i class="fa-solid fa-location-dot"></i>Enviar a Capital Federal</a>
+            <ul class="nav-bottom">
+                <li class="list-nav"><a href="#">Categorias<i class="fa-solid fa-angle-down"></i></a></li>
+                <li class="list-nav"><a href="#">Armá tu PC</a></li>
+                <li class="list-nav"><a href="#">Gamers</a></li>
+                <li class="list-nav"><a href="#">Oficina</a></li>
+                <li class="list-nav"><a href="#">Hogar</a></li>
+                <li class="list-nav"><a href="#">Ofertas</a></li>
+            </ul> -->
+
+        </div>
+    </header>
+    
+    <div class="login-form">
+        <div>
+            <img class="register-image-girl" src="images/registro_chica.png" alt="registro chica">
+        </div>
+        <div class="welcome">
+            <h3>¡Bienvenido ### ###!</h3>
+        </div>
+        <div class="continue">
+            <h5>Inicia sesión para continuar</h5>
+        </div>
+        <form action="/login" method="post">
+        <div class="form-group">
+            <label for="email"></label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico o teléfono">
+        </div>
+        <div class="form-group">
+            <label for="password"></label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña">
+        </div>
+        <div class="form-button">
+            <button class="login-button" type="submit">Ingresar</button>
+        </div>
+        <div class="forgot">
+            <a href="/forgotPassword">¿Olvidaste tu contraseña?</a>
+        </div>
+        <p class="divide">o</p>
+        <div class="facebook-button">
+            <a href="/facebookLogin"><i class="fab fa-facebook-f"></i>Ingresar con Facebook</a>
+        </div>
+        <div class="google-button google-end">
+            <a href="/googleLogin"><i class="fab fa-google"></i>Ingresar con Google +</a>
+        </div>
+        <div class="no-account">
+            <p class="p-no-account">¿No tenés cuenta con Numpy?</p>
+            <a href="/register">Registrate acá</a>
+        </div>
+        <div>
+            <img class="register-image-boy" src="images/registro_chico.png" alt="registro chico">
+        </div>
+    </div>
 </body>
 </html>
