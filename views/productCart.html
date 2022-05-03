@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet"><!--estilo para la letra-->
+    <script src="https://kit.fontawesome.com/21c548f2ca.js" crossorigin="anonymous"></script>   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <!--boostra-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script><!--boostra-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script> <!--boostra-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> <!--boostra-->
+    <link href="/styles/nav-styles.css" rel="stylesheet">
+    <link href="/styles/produc-cart.css" rel="stylesheet" >
+    <title>Compras</title>
+</head>
+<body>
+    <header class="main-header">
+            <nav class="nav-bar">
+                <div class="logo-numpy">
+                    <img src="images/logo-numpy.svg" alt="logo numpy">
+                </div>
+                <div class="search-container">
+                    <form action="#" method="get" name="search">
+                    <input class="search-input" type="text" placeholder="Buscá tus productos y marcas preferidas..." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="nav-top-right-top">
+                    <ul class="nav-top-right">
+                        <li class="list-nav-1"><a href="#"><i class="fa-solid fa-circle-user"></i></a></li>
+                        <li class="list-nav-2"><a href="/register.html">Creá tu cuenta</a></li>
+                        <li class="list-nav-3"><a href="/login.html">Ingresá</a></li>
+                        <li class="list-nav-4"><a href="/shoppingCart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="shortcuts-bar show-nav">
+                <a class="ship" href="#"><i class="fa-solid fa-location-dot"></i>Enviar a Capital Federal</a>
+                <ul class="nav-bottom">
+                    <li class="list-nav"><a href="#">Categorias<i class="fa-solid fa-angle-down"></i></a></li>
+                    <li class="list-nav"><a href="#">Armá tu PC</a></li>
+                    <li class="list-nav"><a href="#">Gamers</a></li>
+                    <li class="list-nav"><a href="#">Oficina</a></li>
+                    <li class="list-nav"><a href="#">Hogar</a></li>
+                    <li class="list-nav"><a href="#">Ofertas</a></li>
+                </ul>
+
+            </div>
+    </header>
+<main class="first-main">
+    
+    <div class="contain-one">
+        <section class="section">
+            <ul class="buttons">
+                <li class="item">
+                    <a class="caracteristic" aria-current="page" href="#">Carrito (1)</a>
+                </li>
+                <li class="item">
+                    <a class="caracteristic" aria-current="page" href="#">Guardados (0)</a>
+                </li>
+            </ul>
+        </section>
+        <section class="option">
+            <img class="cpu" src="/images/producto_cpu.webp" alt="producto-cpu">
+            <div class="order">
+                <div class="tittles">
+                    <p class="name">Lorem ipsum dolor</p>
+                    <img class="car" src="/images/producto_camion.png" alt="camion" >
+                    <p class="send-info">Envio gratis</p>
+                </div>
+                <div class="sum">
+                    <button class="more"> + </button>
+                    <p class="change"> 1</p>
+                    <button class="rest"> - </button>
+                </div>
+                <p class="price">$30,000</p>
+            </div>
+        </section>
+        <div class="option-desc">
+            <ul class="buttons-two">
+                <li class="item">
+                    <a class="remove" aria-current="page" href="#">Eliminar</a>
+                </li>
+                <li class="item">
+                    <a class="relation" aria-current="page" href="#">Mas productos del vendedor</a>
+                </li>
+                <li class="item">
+                    <a class="send" aria-current="page" href="#">Guardar para despues</a>
+                </li>
+            </ul>
+        </div>
+        <section class="info">
+            <div class="choices">
+                <p class="live">Envio a lorem impsum, Barrio</p>
+                <a class="option-live" href=""> <img class="slice" src="/images/producto_flecha_azul.png" alt="flecha-azul"></a>
+                <p class="option">Gratis</p>
+            </div>
+            <div class="paying">
+                <p class="total">Total con envio</p>
+                <p class="price-finale">$30,000</p>
+            </div>
+        </section>
+        <section class="continue">
+            <button type="submit" class="first"> <img class="white-car" src="/images/carrito_camion.png"> Continuar Compra</button>
+        </section>
+
+    </div>
+
+    <div class="contain-two">
+        <h3 class="new-seccion">Recomendaciones para vos</h3>
+         <div class="publication">
+            <article class="product-seller">
+                <img class="volante" src="/images/producto_volante.jpeg" alt="producto-volante">
+                <!-- <img src="/images/corazon.png" alt="heart">
+                <i class="fa-light fa-heart"></i> -->
+                <div class="contain-price">
+                    <p class="previous-col8"><del>$38,000</del> </p>
+                    <p class="price-col8">$20,300</p>
+                    <p class="description-col8">Volante Logitech G29</p>
+                </div>
+            </article>
+            <article class="product-seller">
+                <img class="volante" src="/images/producto_volante.jpeg" alt="producto-volante">
+                <!-- <img src="/images/corazon.png" alt="heart">
+                <i class="fa-light fa-heart"></i> -->
+                <div class="contain-price">
+                    <p class="previous-col8"><del>$38,000</del> </p>
+                    <p class="price-col8">$20,300</p>
+                    <p class="description-col8">Volante Logitech G29</p>
+                </div>
+            </article>
+            <article class="product-seller">
+                <img class="volante" src="/images/producto_volante.jpeg" alt="producto-volante">
+                <!-- <img src="/images/corazon.png" alt="heart">
+                <i class="fa-light fa-heart"></i> -->
+                <div class="contain-price">
+                    <p class="previous-col8"><del>$38,000</del> </p>
+                    <p class="price-col8">$20,300</p>
+                    <p class="description-col8">Volante Logitech G29</p>
+                </div>
+            </article>
+            <article class="product-seller">
+                <img class="volante" src="/images/producto_volante.jpeg" alt="producto-volante">
+                <!-- <img src="/images/corazon.png" alt="heart">
+                <i class="fa-light fa-heart"></i> -->
+                <div class="contain-price">
+                    <p class="previous-col8"><del>$38,000</del> </p>
+                    <p class="price-col8">$20,300</p>
+                    <p class="description-col8">Volante Logitech G29</p>
+                </div>
+            </article>
+            <button class="more-option">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front"> <img src="/images/producto_flecha_azul.png" alt="flecha-azul">
+                </span>
+              </button>
+         </div>
+    </div>
+    <div class="contain-three">
+        <h3 class="new-seccion-two">Ofertas</h3>
+        <div class="col-8">
+            <section class="anuncio">
+                <p class="promotion">Lorem ipsun dolor sit amet</p>
+                <button class="new-product">Ver todas <img class="flechita-azul" src="/images/producto_flecha_azul.png"></button>
+                <img class="joystick" src="/images/carrito_controles.png" alt="controles">
+            </section>
+            <section class="product">
+                <article class="product-info">
+                    <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
+                    <!-- <img src="/images/corazon.png" alt="heart">
+                    <i class="fa-light fa-heart"></i> -->
+                    <div class="col-4">
+                        <p class="previous-col4"><del>$40,000</del> </p>
+                        <span class="col-min">
+                            <p class="price-col4">$36,000</p>
+                            <p class="off-col4">20% OFF</p>
+                        </span>
+                        <p class="cuotas">12 x $1,000 sin interes</p>
+                        <p class="description-col4">Silla Gamer Marvo CH 106</p>
+                    </div>
+                </article>
+                <article class="product-info">
+                    <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
+                    <!-- <img src="/images/corazon.png" alt="heart">
+                    <i class="fa-light fa-heart"></i> -->
+                    <div class="col-4">
+                        <p class="previous-col4"><del>$40,000</del> </p>
+                        <span class="col-min">
+                            <p class="price-col4">$36,000</p>
+                            <p class="off-col4">20% OFF</p>
+                        </span>
+                        <p class="cuotas">12 x $1,000 sin interes</p>
+                        <p class="description-col4">Silla Gamer Marvo CH 106</p>
+                    </div>
+                </article>
+                <article class="product-info">
+                    <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
+                    <!-- <img src="/images/corazon.png" alt="heart">
+                    <i class="fa-light fa-heart"></i> -->
+                    <div class="col-4">
+                        <p class="previous-col4"><del>$40,000</del> </p>
+                        <span class="col-min">
+                            <p class="price-col4">$36,000</p>
+                            <p class="off-col4">20% OFF</p>
+                        </span>
+                        <p class="cuotas">12 x $1,000 sin interes</p>
+                        <p class="description-col4">Silla Gamer Marvo CH 106</p>
+                    </div>
+                </article>
+            </section>
+            <section class="product-two">
+                <article class="product-info">
+                    <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
+                    <!-- <img src="/images/corazon.png" alt="heart">
+                    <i class="fa-light fa-heart"></i> -->
+                    <div class="col-4">
+                        <p class="previous-col4"><del>$40,000</del> </p>
+                        <span class="col-min">
+                            <p class="price-col4">$36,000</p>
+                            <p class="off-col4">20% OFF</p>
+                        </span>
+                        <p class="cuotas">12 x $1,000 sin interes</p>
+                        <p class="description-col4">Silla Gamer Marvo CH 106</p>
+                    </div>
+                </article>
+                <article class="product-info">
+                    <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
+                    <!-- <img src="/images/corazon.png" alt="heart">
+                    <i class="fa-light fa-heart"></i> -->
+                    <div class="col-4">
+                        <p class="previous-col4"><del>$40,000</del> </p>
+                        <span class="col-min">
+                            <p class="price-col4">$36,000</p>
+                            <p class="off-col4">20% OFF</p>
+                        </span>
+                        <p class="cuotas">12 x $1,000 sin interes</p>
+                        <p class="description-col4">Silla Gamer Marvo CH 106</p>
+                    </div>
+                </article>
+                <article class="product-info">
+                    <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
+                    <!-- <img src="/images/corazon.png" alt="heart">
+                    <i class="fa-light fa-heart"></i> -->
+                    <div class="col-4">
+                        <p class="previous-col4"><del>$40,000</del> </p>
+                        <span class="col-min">
+                            <p class="price-col4">$36,000</p>
+                            <p class="off-col4">20% OFF</p>
+                        </span>
+                        <p class="cuotas">12 x $1,000 sin interes</p>
+                        <p class="description-col4">Silla Gamer Marvo CH 106</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+
+</main>
+<footer>
+    <div class="logo-numpy">
+        <img src="images/logo-numpy.svg" alt="logo numpy">
+    </div>
+</footer>
+</body>
+</html>

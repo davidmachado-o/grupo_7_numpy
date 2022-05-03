@@ -90,6 +90,7 @@ header{
 }
 
 .nav-top-right{
+    width: 32vw;
     display: flex;
     justify-content: flex-end;
     align-items: center;
