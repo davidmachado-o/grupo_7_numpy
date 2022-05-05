@@ -9,34 +9,67 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-main {
-    padding-right: 5%;
-    padding-left: 5%;
+
+h2 {
+    font-size: 24px;
+    color: #747070;
+    letter-spacing: 3px;
+    font-weight: 250;
+    margin-left: 20px;
 }
 
-.hero-banner {
-    display: flex;
-}
+
+/* Seccion 0: Jumbotron */
 
 .hero-banner-imagen {
     width: 100%;
+    height: 240px;
 }
 
+.container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.jumbotron-texto {
+    position: absolute;
+    top: 80px;
+    left: 62px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: white;
+}
+
+.jumbotron-titulo {
+    position: absolute;
+    top: 110px;
+    left: 62px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: white;
+}
+
+
+/* Seccion 1: banner de tarjetas */
+ 
 .ver-promociones-general{
-    display: flex;
     background-color: white;
     border-radius: 60px;
     padding-top: 20px;
     padding-bottom: 20px;
     width: 85%;
     border: dotted rgb(23, 226, 124);
-    
+    display: flex;
+    align-items: center;
 }
 
 .ver-promociones-tarjeta {
     display: flex;
     align-items: flex-end;
-    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-left: 50px;
 }
 
 .ver-promociones-texto {
@@ -46,18 +79,629 @@ main {
 }
 
 .tarjeta-1 {
+    display: inline-flex;
+    justify-content: center;
+    width: 60%;
+    margin-bottom: 35px;
+}
+
+.ver-promociones-tarjeta-2 {
+    display: none;
+}
+
+.ver-promociones-simbolo-mas {
+    position: relative;
+}
+
+.ver-promociones-simbolo-mas-foto {
+    position: absolute;
+    top: -13px;
+    padding-left: 30px;
+}
+
+/* Seccion 2: carrousel de opciones */
+
+.opciones-general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opciones-article {
+    display: inline-block;
+    width: 70%;
+    background-color: white;
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 60px;
+    margin-bottom: 15px;
+}
+
+.opciones-texto {
+    font-size: 16px;
+    color: #747070;
+    letter-spacing: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 35px;
+}
+
+button {
+    padding: 1em 2.5em;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: white;
+    background-color: #4DABCF;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+   }
+   
+   button:hover {
+    background-color: #89387B;
+    box-shadow: 0px 15px 20px rgba(77, 171, 207, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+   }
+   
+   button:active  {
+    transform: translateY(-1px);
+   }
+
+   .opciones-foto-chica {
+       padding-top: 15px;
+   }
+
+   .opciones-foto-tv {
+       width: 35%;
+       height: auto;
+   }
+
+   .opciones-texto-subtitulo {
+       font-size: 12px;
+       color: #747070;
+   }
+
+   .opciones-caja-2 {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+   }
+
+   .opciones-caja-2-articles {
+       width: 50%;
+       padding-bottom: 32px;
+   }
+
+   .opciones-cta {
+    color: #4DABCF;
+    padding-left: 20px;
+    font-size: 14px;
+    text-align: center;
+   }
+
+   .opciones-cta-div {
+       align-items: center;
+       padding-bottom: 20px;
+   }
+
+/* Seccion 3: carrousel de opciones de ubicacion MOBILE */
+
+   .carousel {
+       position: relative;
+       height: 400px;
+       width: 60%;
+       margin: 0 auto;
+       background-color: white;
+       border-radius: 60px;
+       margin-top: 20px;
+        margin-bottom: 40px;
+   }
+
+   .carousel_image {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       border-radius: 0px 0px 60px 60px;
+   }
+
+   .carousel_track {
+       padding: 0px;
+       margin: 0px;
+       list-style: none;
+   }
+
+   .carousel_slide {
+       position: absolute;
+       top: 0;
+       bottom: 0;
+       width: 100%;
+   }
+
+   .carousel_track-container {
+       height: 100%;
+       position: relative;
+   }
+
+   .carousel_button {
+       position: absolute;
+       top: 50%;
+       transform: translateY(-50%);
+       cursor: pointer;
+       padding: 1em 2.5em;
+       font-size: 6px;
+       letter-spacing: 2.5px;
+       font-weight: 500;
+       color: white;
+       background-color: #4DABCF;
+       border: none;
+       border-radius: 11px;
+       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+       transition: all 0.3s ease 0s;
+       cursor: pointer;
+       outline: none;
+       height: 58px;
+   }
+
+   .carousel_button-flecha{
+    transform: rotate(90deg);
+   }
+
+   .carousel_slide_parrafo {
+       text-align: center;
+       padding-top: 50px;
+       padding-bottom: 20px;
+       background-color: white;
+       border-radius: 60px 60px 0px 0px;
+   }
+
+   .carousel_slide_titulo {
+        font-size: 16px;
+        color: #747070;
+        letter-spacing: 2px;
+   }
+
+/* Seccion 3: carrousel de opciones de ubicacion DESKTOP */
+
+.opciones {
+    display: none;
+}
+
+/* Seccion 4: banner delivery */
+    .banner-chico-section {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+
+    .banner-chico-section-foto {
+        width: 100%;
+    }
+
+    .descubri-h2 {
+        margin-bottom: 20px;
+        margin-left: 90px;
+    }
+
+/* Seccion 5: Descubi */
+
+.descubri-general{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    margin-left: 80px;
+}
+
+.descubir-article{
+    background-color: white;
+    width: 100%;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.descubir-article-izquierda {
+    border-radius: 20px 0px 0px 20px;
+    margin-bottom: 10px;
+}
+
+.descubir-article-derecha {
+    border-radius: 0px 20px 20px 0px;
+    margin-bottom: 10px;
+}
+
+.descubit-subtitulo {
+    font-size: 12px;
+    color: #747070;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+}
+
+.descubri-titulo{
+    font-size: 18px;
+    color: #747070;
+    padding-left: 40px;
+}
+
+.descubi-foto-silla {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    right: 40px;
+    top: 80px;
+}
+
+.descubri-boton {
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+/* Seccion 6: Banner recomendaciones personalizadas */
+
+.recomendaciones-banner-general {
+    width: 100%;
+    background: conic-gradient(from 41.63deg at 50% 56.25%, #4D77CF 0deg, rgba(77, 119, 207, 0.75) 360deg);
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.recomendaciones-banner-texto-1{
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    color: white;
+    padding-bottom: 30px;
+}
+.recomendaciones-banner-div-2 {
     display: flex;
     justify-content: center;
+    padding-top: 20px;
+}
+.recomendaciones-banner-texto-2{
+    font-size: 12px;
+    color: white;
+    letter-spacing: 0.1em;
+    padding-right: 10px;
+}
+
+.recomendaciones-banner-texto-3{
+    font-size: 12px;
+    color: #4DABCF;
+    letter-spacing: 0.1em;
+}
+
+/* Seccion 7: Banner seguridad */
+
+.seguridad-banner-general{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.seguridad-banner-article {
+    background-color: white;
+    text-align: center;
+    width: 50%;
+    padding: 40px 30px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.seguridad-banner-texto-1 {
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    color: #747070;
+    padding-bottom: 20px;
+}
+
+.seguridad-banner-texto-2{
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: #9F9A9A;
+    font-weight: 400;
+    padding-bottom: 20px;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.seguridad-banner-texto-3 {
+    font-size: 12px;
+    color: #4DABCF;
+    letter-spacing: 0.1em;
+}
+
+.seguridad-banner-foto {
+    padding-bottom: 30px;
 }
 
 
+/* Seccion 8: FOOTER */
+
+.footer-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 20%;
+    height: 40px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+
+.footer-lista-general{
+    list-style-type: none;
+     margin: 0;
+    padding: 0;
+    display: flex;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    padding-left: 120px;
+}
+
+.footer-imagen {
+    width: 5%;
+    transform: rotate(180deg);
+    margin-left: 14px;
+}
+
+.footer-seccion-2 {
+    background-color: black;
+}
+
+.footer-logo{
+    width: 20%;
+}
+
+.footer-lista {
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.footer-logo-div {
+    justify-content: center;
+    display: flex;
+    padding-bottom: 60px;
+}
+
+.footer-texto {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
 
 @media (min-width: 768px){
+
+    /* Seccion 0: Jumbotron */
+
+    /* Seccion 1: banner de tarjetas */
+
     .ver-promociones-general {
-        width: 65%;
+        width: 75%;
     }
+
+    /* Seccion 2: carrousel de opciones */
+
+    .opciones-article {
+        width: 60%;
+    }
+
+
+    /* Seccion 3: carrousel de opciones de ubicacion MOBILE */
+
+    /* Seccion 3: carrousel de opciones de ubicacion DESKTOP */
+
+    /* Seccion 5: Descubi */
+
+    .descubir-article{
+        padding-bottom: 100px;
+    }
+
+    /* Seccion 6: Banner recomendaciones personalizadas */
+
+    /* Seccion 7: Banner seguridad */
+
 }
 
 @media (min-width: 1200px){
+
+    /* Seccion 0: Jumbotron */
+
+    .hero-banner-imagen {
+        height: 100%;
+    }
+
+    .jumbotron-texto {
+        top: 150px;
+        left: 120px;
+        font-size: 20px;
+    }
+
+    .jumbotron-titulo {
+        top: 180px;
+        left: 120px;
+        font-size: 30px;
+    }
+
+    /* Seccion 1: banner de tarjetas */
+
+    .tarjeta-1 {
+        width: 90%;
+    }
+
+    .ver-promociones-general {
+        width: 80%;
+        padding-bottom: 35px;
+        justify-content: space-evenly;
+        margin-left: 90px;
+    }
+
+    .ver-promociones-tarjeta-2{
+        display: flex;
+    }
+
+    .ver-promociones-tarjeta {
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    .ver-promociones-simbolo-mas-foto {
+        left: -35px;
+    }
+
+    /* Seccion 2: carrousel de opciones */
     
+    .opciones-general {
+        flex-direction: row;
+        margin: 0px 30px 24px 100px;
+        justify-content: space-evenly;
+    }
+
+    .opciones-article {
+        width: 30%;
+    }
+
+    /* Seccion 3: carrousel de opciones de ubicacion MOBILE */
+
+    .carousel {
+        display: none;
+    }
+
+    /* Seccion 3: carrousel de opciones de ubicacion DESKTOP */
+
+    .opciones-carousel-general{
+        width: 30%;
+        height: 340px;
+        background-color: white;
+        border-radius: 60px;
+        justify-content: space-around;
+    }
+
+    .opciones-carousel-foto {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .opciones-carousel-parrafo {
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    
+    .opciones-carousel-texto {
+        font-size: 16px;
+        color: #747070;
+        letter-spacing: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    .opciones {
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        border: dotted red;
+        justify-content: center;
+        margin-left: 28px;
+        margin-bottom: 40px;
+    }
+
+    /* Seccion 4: banner delivery */
+
+    /* Seccion 5: Descubi */
+
+    .descubri-h2 {
+        margin-bottom: 20px;
+        margin-left: 182px;
+    }
+
+    .descubri-general{
+        display: flex;
+        flex-direction: row;
+        margin-left: 173px;
+    }
+
+    .descubri-general-izquierda {
+        margin-bottom: 10px;
+    }
+
+    .descubir-article{
+        background-color: white;
+        position: relative;
+        padding-bottom: 50px;
+    }
+    
+    .descubir-article-izquierda {
+        border-radius: 20px 0px 0px 20px;
+        margin-bottom: 0px;
+    }
+    
+    .descubir-article-derecha {
+        border-radius: 0px 20px 20px 0px;
+        margin-left: 10px;
+        margin-bottom: 0px;
+    }
+    
+    .descubit-subtitulo {
+        font-size: 12px;
+        color: #747070;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+    }
+    
+    .descubri-titulo{
+        font-size: 18px;
+        color: #747070;
+        padding-left: 40px;
+    }
+    
+    .descubi-foto-silla {
+        width: 30%;
+        height: auto;
+        position: absolute;
+        right: 40px;
+        top: 80px;
+    }
+    
+    .descubri-boton {
+        margin-left: 40px;
+        margin-top: 50px;
+    }
+
+    /* Seccion 6: Banner recomendaciones personalizadas */
+
+    /* Seccion 7: Banner seguridad */
+
+    .seguridad-banner-general{
+        flex-direction: row;
+        justify-content: center;
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+
+    .seguridad-banner-article-central{
+        border-radius: 0px;
+    }
+
+    .seguridad-banner-article-izquierda{
+        border-radius: 20px 0px 0px 20px;
+    }
+
+    .seguridad-banner-article-derecha{
+        border-radius: 0px 20px 20px 0px;
+    }
 }
