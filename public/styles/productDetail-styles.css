@@ -766,11 +766,11 @@ button:active {
     width: 70%;
 }
 
-.footer{
+.footer {
     width: 100%;
-  }
-  
-  .footer-div {
+}
+
+.footer-div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -779,12 +779,13 @@ button:active {
     height: 40px;
     border-radius: 20px 20px 0px 0px;
     margin-top: 200px;
-  }
-  
-  
-  .footer-lista-general{
+    margin-left: 750px;
+}
+
+
+.footer-lista-general {
     list-style-type: none;
-     margin: 0;
+    margin: 0;
     padding: 0;
     display: flex;
     color: white;
@@ -792,40 +793,40 @@ button:active {
     font-weight: 400;
     letter-spacing: 0.1em;
     padding-left: 120px;
-  }
-  
-  .footer-imagen {
+}
+
+.footer-imagen {
     width: 5%;
     transform: rotate(180deg);
     margin-left: 14px;
-  }
-  
-  .footer-seccion-2 {
+}
+
+.footer-seccion-2 {
     background-color: black;
-  }
-  
-  .footer-logo{
+}
+
+.footer-logo {
     width: 20%;
-  }
-  
-  .footer-lista {
+}
+
+.footer-lista {
     padding-right: 20px;
     padding-top: 40px;
     padding-bottom: 80px;
-  }
-  
-  .footer-logo-div {
+}
+
+.footer-logo-div {
     justify-content: center;
     display: flex;
     padding-bottom: 60px;
-  }
-  
-  .footer-texto {
+}
+
+.footer-texto {
     color: white;
     font-size: 14px;
     text-align: center;
     letter-spacing: 0.1em;
-  }
+}
 
 /*Celular */
 @media (max-width: 361px) {}
