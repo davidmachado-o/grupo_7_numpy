@@ -15,3 +15,7 @@ Reuniones para definir criterios, estilos y cómo avanzar con el proyecto, segui
 ## Dejar de hacer: 
 
 Reuniones sobre la hora, si bien está bueno para repasar el trabajo hasta antes de la entrega es más productivo realizar reuniones previas y no dejar todo para último momento
+
+## Tablero TRELLO
+
+https://trello.com/b/zZ523blZ/scrum

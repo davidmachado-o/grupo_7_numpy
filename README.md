@@ -13,6 +13,9 @@ Alejo Collazo, Aylin Paniagua, Mercedes Cavanagh y David Machado
 ## Temática
 e-commerce de artículos electrónicos, orientado a personas que trabajen desde su pc y gamers.
 
+## Tablero TRELLO
+
+https://trello.com/b/zZ523blZ/scrum
   
 
 Nuestros **referentes** son:
