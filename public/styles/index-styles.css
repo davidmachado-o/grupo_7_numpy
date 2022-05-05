@@ -33,8 +33,8 @@ h2 {
 
 .jumbotron-texto {
     position: absolute;
-    top: 80px;
-    left: 62px;
+    top: 140px;
+    left: 53px;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.2em;
@@ -43,8 +43,8 @@ h2 {
 
 .jumbotron-titulo {
     position: absolute;
-    top: 110px;
-    left: 62px;
+    top: 170px;
+    left: 53px;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 0.2em;
@@ -485,6 +485,14 @@ button {
 
     /* Seccion 0: Jumbotron */
 
+    .jumbotron-titulo {
+        top: 300px;
+    }
+
+    .jumbotron-texto {
+        top: 270px;
+    }
+
     /* Seccion 1: banner de tarjetas */
 
     .ver-promociones-general {
@@ -523,14 +531,14 @@ button {
     }
 
     .jumbotron-texto {
-        top: 150px;
-        left: 120px;
+        top: 290px;
+        left: 85px;
         font-size: 20px;
     }
 
     .jumbotron-titulo {
-        top: 180px;
-        left: 120px;
+        top: 335px;
+        left: 85px;
         font-size: 30px;
     }
 
