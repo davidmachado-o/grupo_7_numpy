@@ -1,0 +1,780 @@
+.List {
+    background-color: #ebebeb;
+}
+
+.Main-List {
+    padding-top: 30px;
+    margin-left: 15%;
+    background-color: #ebebeb;
+}
+
+.Line1 {
+    background-color: gray;
+    margin-left: 10px;
+    height: 25px;
+    margin-top: -5px;
+}
+
+.Listado2 {
+    margin-left: 30px;
+    margin-right: -20px;
+}
+
+.Listado2 i {
+    color: #3182de;
+    margin-right: 30px;
+    margin-left: 25px;
+}
+
+.Listado3 {
+    margin-left: 30px;
+}
+
+main {
+    background-color: #ebebeb;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 90px;
+}
+
+article {
+    background-color: white;
+    width: 70%;
+    border-radius: 3%;
+    border: 1px solid #ebebeb;
+    margin-top: 2%;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+
+.Cont-Mini-Imagen {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-right: 90%;
+    position: absolute;
+}
+
+.Mini-Imagen {
+    width: 50%;
+    border: 2px solid lightgray;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 20%;
+}
+
+.Cont-Imagen-Desc {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.Cont-Imagen {
+    width: 60%;
+    margin-top: 7%;
+    margin-left: 6%;
+    height: 60%;
+}
+
+.Cont-Imagen h2 {
+    text-align: left;
+    margin-top: 5%;
+    color: #666;
+}
+
+.Imagen {
+    width: 100%;
+}
+
+.Cont-Descripcion {
+    width: 32%;
+    text-align: left;
+    border: 2px solid lightgray;
+    margin-top: 20px;
+    border-radius: 4%;
+}
+
+.Descripcion {
+    margin-top: 40px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.Descripcion-Titulo {
+    color: #666;
+    text-align: left;
+}
+
+.Descripcion-Titulo i {
+    color: #4dc3ff;
+    margin-left: 140px;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.Mini-Descripcion {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 20px;
+    color: gray;
+}
+
+.Rank {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.Rank i {
+    margin-top: 30px;
+    width: 10%;
+    cursor: pointer;
+    font-size: 130%;
+    color: #3182de;
+}
+
+.Opinione {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.Precio-Original {
+    text-decoration: line-through;
+    font-size: 20px;
+    color: gray;
+    margin-top: 40px;
+}
+
+.Precios-Descuentos {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 20px;
+}
+
+.Precio {
+    color: #666;
+    margin-top: 1%;
+    font-size: 25px;
+}
+
+.Descuentos {
+    color: #4dc3ff;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.Cuotas {
+    color: gray;
+    font-size: 20px;
+}
+
+.Medio-Pagos {
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+.Camion-Envio {
+    margin-top: 40px;
+    color: #4dc3ff;
+    font-size: 20px;
+}
+
+.Camion-Envio i {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.Forma-Entregas {
+    font-size: 16px;
+    margin-left: 45px;
+}
+
+.Especificaciones {
+    display: flex;
+    margin-top: 30px;
+    color: gray;
+    font-size: 20px;
+}
+
+.Especificaciones h4 {
+    margin-left: 10px;
+}
+
+.Cont-Mini-Imagen2 {
+    width: 40%;
+    display: flex;
+    margin-top: 3%;
+}
+
+
+.Mini-Imagen2 {
+    width: 50%;
+    border: 2px solid lightgray;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 20%;
+}
+
+.Stock {
+    margin-top: 20px;
+    color: #4dc3ff;
+    font-size: 20px;
+}
+
+.Cantidad {
+    font-size: 18px;
+    margin-top: 30px;
+    color: gray;
+    display: flex;
+}
+
+.Cantidad i {
+    color: #3182de;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.Boton-Comprar {
+    margin-top: 30px;
+    text-align: center;
+    width: 80%;
+
+}
+
+.Boton-Carrito {
+    margin-top: 10px;
+    text-align: center;
+    width: 80%;
+}
+
+button {
+    padding: 1em 2.5em;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: white;
+    background-color: #4DABCF;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #89387B;
+    box-shadow: 0px 15px 20px rgba(77, 171, 207, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+.Cont-Imagen2 {
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 20px;
+}
+
+.Mini-Article {
+    display: flex;
+    width: 25%;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    border: 2px solid lightgray;
+}
+
+.Producto {
+    width: 100%;
+    padding: 60px 0 90px 0;
+
+}
+
+.Desc {
+    position: absolute;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    width: 30%;
+    margin-top: 50px;
+    font-size: 17px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.Heart {
+    color: #4dc3ff;
+    cursor: pointer;
+    font-size: 30px;
+    margin-left: 85%;
+    position: absolute;
+    margin-top: 40px;
+}
+
+.Sub-Mini-Article {
+    position: absolute;
+    margin-top: 110%;
+    margin-left: 25%;
+}
+
+.Precio-Original2 {
+    text-decoration: line-through;
+    font-size: 20px;
+    color: gray;
+}
+
+.Precio2 {
+    color: #666;
+    font-size: 25px;
+}
+
+.Nombre-Producto {
+    margin-top: 20px;
+    font-size: 20px;
+    color: gray;
+}
+
+.Mini-Article2 {
+    display: flex;
+    width: 25%;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    border: 2px solid lightgray;
+    margin-left: 30px;
+}
+
+.Arrow {
+    border: 2px solid lightgray;
+    width: 8%;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+.Arrow i {
+    font-size: 50px;
+    margin-top: 220%;
+    color: gray;
+}
+
+.Unknown {
+    border-radius: 10px;
+    margin-left: 30px;
+    border: 2px solid lightgray;
+    width: 30%;
+}
+
+.Detail-Content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 2px solid lightgray;
+    width: 97%;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 23px;
+}
+
+.Sub-Detail-Content {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.Feature {
+    color: white;
+    border-bottom: 1px solid lightgray;
+    background-color: #4DABCF;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 20px 80px 20px 90px;
+    cursor: pointer;
+}
+
+.Description {
+    color: #4DABCF;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 20px 80px 20px 90px;
+    cursor: pointer;
+}
+
+.FAQ {
+    color: #4DABCF;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    padding: 20px 80px 20px 90px;
+    cursor: pointer;
+}
+
+.Nothing {
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    padding: 20px 248.5px 0 90px;
+}
+
+.Tabla-Features {
+    margin-left: 5%;
+    margin-top: 50px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgray;
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.Features1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Features1 h3 {
+    width: 30%;
+    padding: 20px 80px 20px 90px;
+    background-color: lightgray;
+    border-top-left-radius: 10px;
+    text-align: left;
+}
+
+.Marca {
+    background-color: #ebebeb;
+    width: 70%;
+    text-align: left;
+    padding: 20px 80px 20px 90px;
+    border-top-right-radius: 10px;
+}
+
+.Features2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Features2 h3 {
+    width: 30%;
+    padding: 20px 80px 20px 90px;
+    background: #ebebeb;
+    text-align: left;
+}
+
+.Modelo {
+    background-color: white;
+    width: 70%;
+    text-align: left;
+    padding: 20px 80px 20px 90px;
+}
+
+.Features3 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Features3 h3 {
+    width: 30%;
+    padding: 20px 80px 20px 90px;
+    background-color: lightgray;
+    text-align: left;
+}
+
+.Procesador {
+    background-color: #ebebeb;
+    width: 70%;
+    text-align: left;
+    padding: 20px 80px 20px 90px;
+}
+
+.Features4 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Features4 h3 {
+    width: 30%;
+    padding: 20px 80px 20px 90px;
+    background: #ebebeb;
+    border-bottom-left-radius: 10px;
+    text-align: left;
+}
+
+.Disco-Duro {
+    background-color: white;
+    width: 70%;
+    text-align: left;
+    padding: 20px 80px 20px 90px;
+    border-bottom-right-radius: 10px;
+}
+
+.Title {
+    color: #666;
+    margin-top: 70px;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.Barra-Boton {
+    display: flex;
+    position: relative;
+}
+
+.Barra-Comentario {
+    width: 70%;
+    border: solid 1px lightgray;
+    display: block;
+    padding: 7px 40px 7px 7px;
+    border-radius: 15px;
+    height: 60px;
+    font-size: 1em;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.Boton-Preguntar {
+    position: absolute;
+    height: 60px;
+    border-radius: 15px;
+    width: 15%;
+    margin-top: 30px;
+    margin-left: 70%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.Comentarios-Preguntas {
+    text-align: justify;
+    margin-left: 70px;
+    width: 70%;
+}
+
+.Pregunta {
+    margin-top: 30px;
+}
+
+.Respuesta {
+    color: gray;
+    margin-top: 15px;
+}
+
+.Title2 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.Title2 a {
+    color: #4dc3ff;
+    text-decoration: none;
+}
+
+.Title2 i {
+    margin-left: 20px;
+    font-size: 30px;
+    color: #4dc3ff;
+}
+
+.Cont-Promedio-Opiniones {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 90%;
+    margin-bottom: 50px;
+}
+
+.Promedio {
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding: 90px 5px 50px 20px;
+    border: 2px solid lightgray;
+    width: 30%;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.Promedio h2 {
+    font-size: 60px;
+    color: #666;
+    margin-left: 30px;
+}
+
+.Promedio i {
+    color: #3182de;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.Promedio-Subtitulo {
+    font-size: 13px;
+    color: gray;
+    margin-top: 20px;
+}
+
+.Tabla-Opiniones1 {
+    display: flex;
+    flex-wrap: nowrap;
+    color: gray;
+    font-size: 15px;
+    margin-top: 40px;
+}
+
+.Tabla-Opiniones2 {
+    display: flex;
+    flex-wrap: nowrap;
+    color: gray;
+    font-size: 15px;
+    margin-top: 40px;
+}
+
+.Tabla-Opiniones3 {
+    display: flex;
+    flex-wrap: nowrap;
+    color: gray;
+    font-size: 15px;
+    margin-top: 40px;
+}
+
+.Tabla-Opiniones4 {
+    display: flex;
+    flex-wrap: nowrap;
+    color: gray;
+    font-size: 15px;
+    margin-top: 40px;
+}
+
+.Tabla-Opiniones5 {
+    display: flex;
+    flex-wrap: nowrap;
+    color: gray;
+    font-size: 15px;
+    margin-top: 40px;
+}
+
+.Cont-Linea {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 50%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.Linea hr {
+    width: 150px;
+    height: 10px;
+    border-radius: 10px;
+    background: #3182de;
+    position: absolute;
+}
+
+.Linea2 hr {
+    width: 80px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin-left: 140px;
+    margin-top: 2px;
+}
+
+.View {
+    margin-left: 40px;
+}
+
+.Opiniones {
+    border: 2px solid lightgray;
+    width: 100%;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.Opiniones-Subtitulo {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 120px;
+    font-size: 20px;
+    width: 100%;
+    color: #666;
+}
+
+.Sub1 {
+    border-bottom: 3px solid #209ce8;
+    width: 35%;
+    padding-bottom: 20px;
+    color: #3182de;
+}
+
+.Sub2 {
+    width: 35%;
+    padding-bottom: 20px;
+}
+
+.Sub3 {
+    width: 35%;
+    padding-bottom: 20px;
+}
+
+.Opiniones-Comentarios {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.Opiniones-Comentarios i {
+    color: #3182de;
+}
+
+.Opinion-Rank {
+    margin-top: 15px;
+}
+
+.Opinion-Text {
+    margin-top: 15px;
+    text-align: justify;
+}
+
+.Likes i {
+    color: black;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+
+.Productos-Relacionados {
+    width: 70%;
+}
+
+/*Celular */
+@media (max-width: 361px) {}
+
+/*Tablet */
+@media (min-width: 361px) {
+    main {
+        width: 100%;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 768px) {}
