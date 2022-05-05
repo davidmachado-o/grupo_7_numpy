@@ -8,8 +8,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
-  padding-bottom: 200px;
+  /* z-index: -1;
+  padding-bottom: 200px; */
 }
 
 .fa-circle-question{
@@ -19,6 +19,7 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .forgot a {
