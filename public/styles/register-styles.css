@@ -203,6 +203,10 @@ a {
   color: #747070;
 }
 
+.footer{
+  width: 100%;
+}
+
 .footer-div {
   display: flex;
   align-items: center;

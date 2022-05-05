@@ -190,6 +190,10 @@ body {
     justify-content: flex-end;
 }
 
+.footer{
+  width: 100%;
+}
+
 .footer-div {
   display: flex;
   align-items: center;
