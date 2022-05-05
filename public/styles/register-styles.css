@@ -205,6 +205,10 @@ a {
 
 .footer{
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .footer-div {
@@ -228,7 +232,7 @@ a {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.1em;
-  padding-left: 120px;
+  justify-content: center;
 }
 
 .footer-imagen {
@@ -239,6 +243,8 @@ a {
 
 .footer-seccion-2 {
   background-color: black;
+  width: 100%;
+  justify-content: center;
 }
 
 .footer-logo{
