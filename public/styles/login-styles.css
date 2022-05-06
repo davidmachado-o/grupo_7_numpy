@@ -255,3 +255,16 @@ body {
   text-align: center;
   letter-spacing: 0.1em;
 }
+
+.remember{
+  margin-bottom: 20px;
+  font-size: 0.8em;
+  color: #747070;
+}
+
+.remember-check{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
