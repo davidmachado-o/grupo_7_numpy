@@ -45,6 +45,14 @@ app.post("/login", (req, res) => {
     res.sendFile(path.resolve(__dirname, "views/login.html"))
 })
 
+app.get("/productEdit", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "views/productEdit.html"))
+})
+
+app.post("/productEdit", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "views/productEdit.html"))
+})
+
 app.get("/nav", (req, res) => {
     res.sendFile(path.resolve(__dirname, "public/test-nav/nav.html"))
 })
