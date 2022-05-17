@@ -2,76 +2,40 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail</title>
-    <link href="/styles/nav-styles.css" rel="stylesheet">
-    <link href="/styles/productDetail-styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <%- include('./partials/head.ejs'); %>
 </head>
 
 <body>
     <header class="main-header">
-        <nav class="nav-bar">
-            <div class="logo-numpy">
-                <a href="/index">
-                    <img src="images/logo-numpy.svg" alt="logo numpy">
-                </a>
-            </div>
-            <div class="search-container">
-                <form action="#" method="get" name="search">
-                    <input class="search-input" type="text" placeholder="Buscá tus productos y marcas preferidas..."
-                        name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-            <div class="nav-top-right-top">
-                <ul class="nav-top-right">
-                    <li class="list-nav-1"><a href="#"><i class="fa-solid fa-circle-user"></i></a></li>
-                    <li class="list-nav-2"><a href="/register">Creá tu cuenta</a></li>
-                    <li class="list-nav-3"><a href="/login">Ingresá</a></li>
-                    <li class="list-nav-4"><a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="shortcuts-bar show-nav">
-            <a class="ship" href="#"><i class="fa-solid fa-location-dot"></i>Enviar a Capital Federal</a>
-            <ul class="nav-bottom">
-                <li class="list-nav"><a href="#">Categorias<i class="fa-solid fa-angle-down"></i></a></li>
-                <li class="list-nav"><a href="#">Armá tu PC</a></li>
-                <li class="list-nav"><a href="#">Gamers</a></li>
-                <li class="list-nav"><a href="#">Oficina</a></li>
-                <li class="list-nav"><a href="#">Hogar</a></li>
-                <li class="list-nav"><a href="#">Ofertas</a></li>
-            </ul>
-        </div>
+        <%- include('./partials/header.ejs'); %>
     </header>
     <section class="List">
         <ul class="Main-List">
-            <li class="Listado"><a href="#" style="text-decoration: none; color: grey;">Volver al listado</a></li>
+            <li class="Listado"><a href="#">Volver al listado</a></li>
             <li class="Line1">
                 <hr>
             </li>
-            <li class="Listado2"><a href="#" style="text-decoration: none; color: #3182de;">Computación<i
-                        class="fa-solid fa-angle-right"></i></a></li>
-            <li class="Listado2"><a href="#" style="text-decoration: none; color: #3182de;">Computación<i
-                        class="fa-solid fa-angle-right"></i></a></li>
-            <li class="Listado3"><a href="#" style="text-decoration: none; color: #3182de;">Computación</a></li>
+            <li class="Listado1">
+                <a href="#">Computación</a>
+                <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+            </li>
+            <li class="Listado2">
+                <a href="#">Computación</a>
+                <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+            </li>
+            <li class="Listado3"><a href="#">Computación</a></li>
         </ul>
     </section>
     <main>
         <article>
-            <div class="Cont-Mini-Imagen">
-                <img class="Mini-Imagen" src="images\producto_cpu.webp">
-                <img class="Mini-Imagen" src="images\producto_cpu.webp">
-                <img class="Mini-Imagen" src="images\producto_cpu.webp">
-                <img class="Mini-Imagen" src="images\producto_cpu.webp">
-            </div>
+            <a href="#">
+                <div class="Cont-Mini-Imagen">
+                    <img class="Mini-Imagen" src="images\producto_cpu.webp">
+                    <img class="Mini-Imagen" src="images\producto_cpu.webp">
+                    <img class="Mini-Imagen" src="images\producto_cpu.webp">
+                    <img class="Mini-Imagen" src="images\producto_cpu.webp">
+                </div>
+            </a>
             <div class="Cont-Imagen-Desc">
                 <div class="Cont-Imagen">
                     <img class="Imagen" src="images\producto_cpu.webp">
@@ -79,7 +43,8 @@
                 <div class="Cont-Descripcion">
                     <div class="Descripcion">
                         <div class="Descripcion-Titulo">
-                            <h2>Lorem ipsum dolor<i class="fa-regular fa-heart"></i></h2>
+                            <h2 class="Titulo1">Lorem ipsum dolor</h2>
+                            <i class="fa-solid fa-heart"></i>
                         </div>
                         <div>
                             <p class="Mini-Descripcion">MARCA: Logitech</p>
@@ -148,7 +113,7 @@
             <div class="Cont-Imagen2">
                 <div class="Mini-Article">
                     <p class="Desc">60% OFF</p>
-                    <a class="Heart" href="#"><i class="fa-regular fa-heart"></i></a>
+                    <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
                     <img class="Producto" src="images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
@@ -158,7 +123,7 @@
                 </div>
                 <div class="Mini-Article2">
                     <p class="Desc">60% OFF</p>
-                    <a class="Heart" href="#"><i class="fa-regular fa-heart"></i></a>
+                    <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
                     <img class="Producto" src="images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
@@ -311,9 +276,9 @@
                 </div>
                 <div class="Opiniones">
                     <div class="Opiniones-Subtitulo">
-                        <h2 class="Sub1"><a href="#" style="text-decoration: none; color: #3182de;">Todas</a></h2>
-                        <h2 class="Sub2"><a href="#" style="text-decoration: none; color: #666;">Positivas</a></h2>
-                        <h2 class="Sub3"><a href="#" style="text-decoration: none; color: #666;">Negativas</a></h2>
+                        <h2 class="Sub1"><a href="#">Todas</a></h2>
+                        <h2 class="Sub2"><a href="#">Positivas</a></h2>
+                        <h2 class="Sub3"><a href="#">Negativas</a></h2>
                     </div>
                     <div class="Opiniones-Comentarios">
                         <i class="fa-solid fa-star"></i>
@@ -351,12 +316,12 @@
         </article>
         <div class="Productos-Relacionados">
             <div class="Title">
-                <h2>Opiniones de clientes</h2>
+                <h2>Productos relacionados</h2>
             </div>
-            <div class="Cont-Imagen2">
-                <div class="Mini-Article">
+            <div class="Cont-Imagen3">
+                <div class="Minis-Article1">
                     <p class="Desc">60% OFF</p>
-                    <a class="Heart" href="#"><i class="fa-regular fa-heart"></i></a>
+                    <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
                     <img class="Producto" src="images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
@@ -364,8 +329,8 @@
                         <p class="Nombre-Producto">Volante Logitech G29</p>
                     </div>
                 </div>
-                <div class="Mini-Article2">
-                    <a class="Heart" href="#"><i class="fa-regular fa-heart"></i></a>
+                <div class="Minis-Article2">
+                    <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
                     <img class="Producto" src="images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
@@ -373,9 +338,9 @@
                         <p class="Nombre-Producto">Volante Logitech G29</p>
                     </div>
                 </div>
-                <div class="Mini-Article2">
+                <div class="Minis-Article3">
                     <p class="Desc">60% OFF</p>
-                    <a class="Heart" href="#"><i class="fa-regular fa-heart"></i></a>
+                    <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
                     <img class="Producto" src="images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
@@ -383,8 +348,8 @@
                         <p class="Nombre-Producto">Volante Logitech G29</p>
                     </div>
                 </div>
-                <div class="Mini-Article2">
-                    <a class="Heart" href="#"><i class="fa-regular fa-heart"></i></a>
+                <div class="Minis-Article4">
+                    <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
                     <img class="Producto" src="images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
@@ -396,22 +361,8 @@
         </div>
     </main>
     <footer>
-        <div class="footer-div">
-            <p class="footer-texto">Más información</p>
-            <img class="footer-imagen" src="/images/flecha_blanca.png">
-    </div>
-    <div class="footer-seccion-2">
-        <ul class="footer-lista-general">
-            <li class="footer-lista">Trabajá con nosotros</li>
-            <li class="footer-lista">Términos y condiciones</li>
-            <li class="footer-lista">Privacidad</li>
-            <li class="footer-lista">Ayuda</li>
-        </ul>
-        <div class="footer-logo-div">
-            <img class="footer-logo" src="/images/logo-numpy.svg">
-        </div>
-    </div>
-</footer>
+        <%- include('./partials/footer.ejs'); %>
+    </footer>
 </body>
 
 </html>

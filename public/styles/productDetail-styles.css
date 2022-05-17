@@ -1,33 +1,70 @@
 .List {
     background-color: #ebebeb;
+    font-size: 0.650em;
 }
 
 .Main-List {
-    padding-top: 30px;
-    margin-left: 15%;
+    padding-top: 2%;
+    margin-left: 5%;
     background-color: #ebebeb;
+    padding-bottom: 0.5%;
+    width: 100%;
 }
 
-.Line1 {
-    background-color: gray;
-    margin-left: 10px;
-    height: 25px;
-    margin-top: -5px;
+.Listado {
+    width: 20%;
+}
+
+.Listado a {
+    text-decoration: none;
+    color: grey;
+}
+
+.Listado a:hover {
+    color: rgb(63, 63, 63);
+}
+
+.Listado1 {
+    display: flex;
+    width: 15%;
+    flex-wrap: nowrap;
+}
+
+.Listado1 a {
+    text-decoration: none;
+    color: #3182de;
+}
+
+.Listado1 i {
+    color: #3182de;
+    margin-left: 100%;
 }
 
 .Listado2 {
-    margin-left: 30px;
-    margin-right: -20px;
+    display: flex;
+    margin-left: 10%;
+    width: 15%;
+    flex-wrap: nowrap;
+}
+
+.Listado2 a {
+    text-decoration: none;
+    color: #3182de;
 }
 
 .Listado2 i {
     color: #3182de;
-    margin-right: 30px;
-    margin-left: 25px;
+    margin-left: 100%;
 }
 
 .Listado3 {
-    margin-left: 30px;
+    margin-left: 10%;
+    width: 10%;
+}
+
+.Listado3 a {
+    text-decoration: none;
+    color: #3182de;
 }
 
 main {
@@ -36,13 +73,15 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 90px;
 }
 
 article {
     background-color: white;
-    width: 70%;
-    border-radius: 3%;
+    width: 95%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
     border: 1px solid #ebebeb;
     margin-top: 2%;
     justify-content: center;
@@ -52,9 +91,9 @@ article {
 
 
 .Cont-Mini-Imagen {
-    width: 10%;
+    width: 35%;
     display: flex;
-    flex-direction: column;
+    flex-direction: inherit;
     margin-top: 3%;
     margin-right: 90%;
     position: absolute;
@@ -63,28 +102,25 @@ article {
 .Mini-Imagen {
     width: 50%;
     border: 2px solid lightgray;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 5%;
+    margin-left: 18%;
     border-radius: 20%;
+}
+
+.Mini-Imagen:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
 }
 
 .Cont-Imagen-Desc {
     width: 100%;
-    display: flex;
+    display: block;
     flex-wrap: nowrap;
 }
 
 .Cont-Imagen {
-    width: 60%;
-    margin-top: 7%;
-    margin-left: 6%;
-    height: 60%;
-}
-
-.Cont-Imagen h2 {
-    text-align: left;
-    margin-top: 5%;
-    color: #666;
+    width: 90%;
+    margin-left: 10%;
+    padding-top: 25%;
 }
 
 .Imagen {
@@ -92,35 +128,49 @@ article {
 }
 
 .Cont-Descripcion {
-    width: 32%;
+    width: 100%;
     text-align: left;
     border: 2px solid lightgray;
-    margin-top: 20px;
-    border-radius: 4%;
+    margin-top: 18%;
+    border-color: white;
+    border-top: 2px solid #ebebeb;
+    border-bottom: 2px solid #ebebeb;
 }
 
 .Descripcion {
-    margin-top: 40px;
-    padding-left: 20px;
-    padding-bottom: 20px;
+    margin-top: 20%;
+    padding-left: 3%;
+    padding-bottom: 20%;
+    padding-right: 3%;
 }
 
 .Descripcion-Titulo {
     color: #666;
-    text-align: left;
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.Descripcion-Titulo h2 {
+    width: 80%;
 }
 
 .Descripcion-Titulo i {
-    color: #4dc3ff;
-    margin-left: 140px;
+    color: lightgray;
     cursor: pointer;
-    font-size: 40px;
+    font-size: 2.1em;
+    width: 20%;
+    margin-left: 10%;
+}
+
+.Descripcion-Titulo i:hover {
+    color: #4dc3ff;
 }
 
 .Mini-Descripcion {
-    margin-top: 20px;
+    margin-top: 8%;
     text-align: left;
-    font-size: 20px;
+    font-size: 1.2em;
     color: gray;
 }
 
@@ -133,76 +183,76 @@ article {
     margin-top: 30px;
     width: 10%;
     cursor: pointer;
-    font-size: 130%;
+    font-size: 1.3em;
     color: #3182de;
 }
 
 .Opinione {
-    font-size: 18px;
-    margin-top: 30px;
-    margin-left: 25px;
+    font-size: 1.2em;
+    margin-top: 11%;
+    margin-left: 8%;
 }
 
 .Precio-Original {
     text-decoration: line-through;
-    font-size: 20px;
+    font-size: 1.2em;
     color: gray;
-    margin-top: 40px;
+    margin-top: 15%;
 }
 
 .Precios-Descuentos {
     display: flex;
     flex-wrap: nowrap;
-    font-size: 20px;
+    font-size: 1.3em;
 }
 
 .Precio {
     color: #666;
     margin-top: 1%;
-    font-size: 25px;
+    font-size: 1.3em;
 }
 
 .Descuentos {
     color: #4dc3ff;
-    margin-top: 10px;
-    margin-left: 40px;
+    margin-top: 5%;
+    margin-left: 15%;
 }
 
 .Cuotas {
     color: gray;
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 .Medio-Pagos {
-    margin-top: 25px;
-    font-size: 15px;
+    margin-top: 10%;
+    font-size: 1em;
 }
 
 .Camion-Envio {
-    margin-top: 40px;
+    margin-top: 16%;
     color: #4dc3ff;
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 .Camion-Envio i {
-    margin-right: 20px;
-    font-size: 20px;
+    margin-right: 8%;
+    font-size: 1em;
 }
 
 .Forma-Entregas {
-    font-size: 16px;
-    margin-left: 45px;
+    font-size: 1em;
+    margin-left: 17%;
 }
 
 .Especificaciones {
     display: flex;
-    margin-top: 30px;
+    margin-top: 12%;
     color: gray;
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 .Especificaciones h4 {
-    margin-left: 10px;
+    margin-left: 3%;
 }
 
 .Cont-Mini-Imagen2 {
@@ -213,22 +263,27 @@ article {
 
 
 .Mini-Imagen2 {
-    width: 50%;
+    width: 100%;
     border: 2px solid lightgray;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 5%;
+    margin-left: 16%;
     border-radius: 20%;
+    cursor: pointer;
+}
+
+.Mini-Imagen2:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
 }
 
 .Stock {
-    margin-top: 20px;
+    margin-top: 10%;
     color: #4dc3ff;
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 .Cantidad {
-    font-size: 18px;
-    margin-top: 30px;
+    font-size: 1.1em;
+    margin-top: 12%;
     color: gray;
     display: flex;
 }
@@ -240,16 +295,16 @@ article {
 }
 
 .Boton-Comprar {
-    margin-top: 30px;
+    margin-top: 10%;
     text-align: center;
-    width: 80%;
+    width: 100%;
 
 }
 
 .Boton-Carrito {
-    margin-top: 10px;
+    margin-top: 5%;
     text-align: center;
-    width: 80%;
+    width: 100%;
 }
 
 button {
@@ -278,28 +333,37 @@ button:active {
     transform: translateY(-1px);
 }
 
+.Title {
+    font-size: 1.2em;
+    margin-left: 10%;
+}
+
 .Cont-Imagen2 {
     width: 100%;
-    margin-top: 50px;
-    margin-left: 30px;
+    margin-top: 15%;
     display: flex;
     flex-wrap: nowrap;
-    margin-left: 20px;
 }
 
 .Mini-Article {
     display: flex;
-    width: 25%;
+    width: 70%;
     border-radius: 10px;
     background-color: white;
     position: relative;
     border: 2px solid lightgray;
+    margin-left: 8%;
+    cursor: pointer;
+}
+
+.Mini-Article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .Producto {
     width: 100%;
-    padding: 60px 0 90px 0;
-
+    padding-top: 60px;
+    padding-bottom: 90px;
 }
 
 .Desc {
@@ -308,41 +372,45 @@ button:active {
     color: white;
     border-radius: 10px;
     width: 30%;
-    margin-top: 50px;
-    font-size: 17px;
+    margin-top: 20%;
+    font-size: 1.1em;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 }
 
 .Heart {
-    color: #4dc3ff;
+    color: lightgray;
     cursor: pointer;
-    font-size: 30px;
-    margin-left: 85%;
+    font-size: 2em;
+    margin-left: 80%;
     position: absolute;
-    margin-top: 40px;
+    margin-top: 20%;
+}
+
+.Heart:hover {
+    color: #4dc3ff;
 }
 
 .Sub-Mini-Article {
     position: absolute;
-    margin-top: 110%;
-    margin-left: 25%;
+    margin-top: 115%;
+    margin-left: 6%;
 }
 
 .Precio-Original2 {
     text-decoration: line-through;
-    font-size: 20px;
+    font-size: 1.2em;
     color: gray;
 }
 
 .Precio2 {
     color: #666;
-    font-size: 25px;
+    font-size: 1.6em;
 }
 
 .Nombre-Producto {
-    margin-top: 20px;
-    font-size: 20px;
+    margin-top: 8%;
+    font-size: 1.250em;
     color: gray;
 }
 
@@ -354,19 +422,70 @@ button:active {
     position: relative;
     border: 2px solid lightgray;
     margin-left: 30px;
+    cursor: pointer;
+}
+
+.Mini-Article2:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.Mini-Article2 .Desc {
+    position: absolute;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    width: 30%;
+    margin-top: 50px;
+    font-size: 17px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.Mini-Article2 .Heart {
+    color: #4dc3ff;
+    cursor: pointer;
+    font-size: 30px;
+    margin-left: 85%;
+    position: absolute;
+    margin-top: 40px;
+}
+
+.Mini-Article2 .Heart:hover {
+    color: #4dc3ff;
+}
+
+.Mini-Article2 .Sub-Mini-Article .Precio-Original2 {
+    text-decoration: line-through;
+    font-size: 20px;
+    color: gray;
+}
+
+.Mini-Article2 .Sub-Mini-Article .Precio2 {
+    color: #666;
+    font-size: 25px;
+}
+
+.Mini-Article2 .Sub-Mini-Article .Nombre-Producto {
+    margin-top: 20px;
+    font-size: 20px;
+    color: gray;
 }
 
 .Arrow {
     border: 2px solid lightgray;
-    width: 8%;
+    width: 15%;
     border-radius: 10px;
-    margin-left: 30px;
+    margin-left: 5%;
 }
 
 .Arrow i {
-    font-size: 50px;
-    margin-top: 220%;
+    font-size: 2.5em;
+    margin-top: 350%;
     color: gray;
+}
+
+.Arrow i:hover {
+    color: #3182de;
 }
 
 .Unknown {
@@ -381,52 +500,80 @@ button:active {
     flex-wrap: wrap;
     flex-direction: column;
     border: 2px solid lightgray;
-    width: 97%;
+    width: 95%;
     border-radius: 10px;
     margin-top: 30px;
-    margin-left: 23px;
+    margin-left: 3%;
 }
 
 .Sub-Detail-Content {
     display: flex;
     flex-wrap: nowrap;
-    font-size: 20px;
     text-align: center;
+    width: 100%;
 }
 
 
-.Feature {
+.Sub-Detail-Content .Feature {
     color: white;
     border-bottom: 1px solid lightgray;
     background-color: #4DABCF;
     border-radius: 10px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    padding: 20px 80px 20px 90px;
+    padding-top: 10px;
     cursor: pointer;
+    font-size: 0.8em;
+    width: 35%;
 }
 
-.Description {
+.Sub-Detail-Content .Feature:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+}
+
+.Sub-Detail-Content .Description {
     color: #4DABCF;
     border-right: 1px solid lightgray;
     border-left: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
-    padding: 20px 80px 20px 90px;
+    padding-top: 10px;
     cursor: pointer;
+    font-size: 0.8em;
+    width: 35%;
 }
 
-.FAQ {
+.Sub-Detail-Content .Description:hover {
+    background-color: #4DABCF;
+    color: white;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+}
+
+.Sub-Detail-Content .FAQ {
     color: #4DABCF;
     border-bottom: 1px solid lightgray;
     border-right: 1px solid lightgray;
-    padding: 20px 80px 20px 90px;
+    padding-top: 10px;
     cursor: pointer;
+    font-size: 0.8em;
+    width: 30%;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.Sub-Detail-Content .FAQ:hover {
+    background-color: #4DABCF;
+    color: white;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
 }
 
 .Nothing {
     border-bottom: 1px solid lightgray;
     border-right: 1px solid lightgray;
     padding: 20px 248.5px 0 90px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .Tabla-Features {
@@ -445,84 +592,103 @@ button:active {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    font-size: 0.8em;
 }
 
 .Features1 h3 {
-    width: 30%;
-    padding: 20px 80px 20px 90px;
+    width: 40%;
     background-color: lightgray;
     border-top-left-radius: 10px;
-    text-align: left;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
-.Marca {
+.Features1 .Marca {
     background-color: #ebebeb;
-    width: 70%;
-    text-align: left;
-    padding: 20px 80px 20px 90px;
+    width: 60%;
+    padding: 0px;
+    text-align: center;
     border-top-right-radius: 10px;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .Features2 {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    font-size: 0.8em;
 }
 
 .Features2 h3 {
-    width: 30%;
-    padding: 20px 80px 20px 90px;
+    width: 40%;
+    padding: 0px;
     background: #ebebeb;
-    text-align: left;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
-.Modelo {
+.Features2 .Modelo {
     background-color: white;
-    width: 70%;
-    text-align: left;
-    padding: 20px 80px 20px 90px;
+    width: 60%;
+    text-align: center;
+    padding: 0px;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .Features3 {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    font-size: 0.8em;
 }
 
 .Features3 h3 {
-    width: 30%;
-    padding: 20px 80px 20px 90px;
+    width: 40%;
+    padding: 0px;
     background-color: lightgray;
-    text-align: left;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
-.Procesador {
+.Features3 .Procesador {
     background-color: #ebebeb;
-    width: 70%;
-    text-align: left;
-    padding: 20px 80px 20px 90px;
+    width: 60%;
+    text-align: center;
+    padding: 0px;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .Features4 {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    font-size: 0.8em;
 }
 
 .Features4 h3 {
-    width: 30%;
-    padding: 20px 80px 20px 90px;
+    width: 40%;
+    padding: 0px;
     background: #ebebeb;
     border-bottom-left-radius: 10px;
-    text-align: left;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
-.Disco-Duro {
+.Features4 .Disco-Duro {
     background-color: white;
-    width: 70%;
-    text-align: left;
-    padding: 20px 80px 20px 90px;
+    width: 60%;
+    text-align: center;
+    padding: 0px;
     border-bottom-right-radius: 10px;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .Title {
@@ -538,7 +704,7 @@ button:active {
 }
 
 .Barra-Comentario {
-    width: 70%;
+    width: 60%;
     border: solid 1px lightgray;
     display: block;
     padding: 7px 40px 7px 7px;
@@ -553,17 +719,18 @@ button:active {
     position: absolute;
     height: 60px;
     border-radius: 15px;
-    width: 15%;
+    width: 30%;
     margin-top: 30px;
-    margin-left: 70%;
+    margin-left: 63%;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    padding: 0px;
 }
 
 .Comentarios-Preguntas {
     text-align: justify;
-    margin-left: 70px;
-    width: 70%;
+    margin-left: 5%;
+    width: 85%;
 }
 
 .Pregunta {
@@ -592,11 +759,17 @@ button:active {
     color: #4dc3ff;
 }
 
+.Title2 a:hover,
+.Title2 i:hover {
+    color: #3182de;
+}
+
 .Cont-Promedio-Opiniones {
     display: flex;
-    flex-wrap: nowrap;
-    width: 90%;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 5%;
+    margin-left: -15px;
 }
 
 .Promedio {
@@ -604,23 +777,22 @@ button:active {
     margin-left: 30px;
     margin-top: 30px;
     padding: 90px 5px 50px 20px;
-    border: 2px solid lightgray;
-    width: 30%;
-    border-radius: 10px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top: 2px solid lightgray;
+    width: 90%;
+    border-bottom: 2px solid lightgray;
 }
 
 .Promedio h2 {
-    font-size: 60px;
+    font-size: 4em;
     color: #666;
-    margin-left: 30px;
+    text-align: center;
 }
 
 .Promedio i {
     color: #3182de;
     font-size: 20px;
     margin-top: 10px;
+    margin-left: 6%;
 }
 
 .Promedio-Subtitulo {
@@ -699,22 +871,16 @@ button:active {
 }
 
 .Opiniones {
-    border: 2px solid lightgray;
-    width: 100%;
-    border-radius: 10px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-top: 30px;
+    width: 90%;
     padding-bottom: 30px;
+    margin-left: 10%;
 }
 
 .Opiniones-Subtitulo {
     display: flex;
     flex-wrap: nowrap;
-    padding-top: 120px;
-    font-size: 20px;
+    padding-top: 30px;
+    font-size: 0.7em;
     width: 100%;
     color: #666;
 }
@@ -726,9 +892,27 @@ button:active {
     color: #3182de;
 }
 
+.Sub1 a {
+    text-decoration: none;
+    color: #3182de;
+}
+
 .Sub2 {
     width: 35%;
     padding-bottom: 20px;
+}
+
+.Sub2:hover {
+    border-bottom: 3px solid #209ce8;
+}
+
+.Sub2 a {
+    text-decoration: none;
+    color: #666;
+}
+
+.Sub2 a:hover {
+    color: #3182de;
 }
 
 .Sub3 {
@@ -736,9 +920,24 @@ button:active {
     padding-bottom: 20px;
 }
 
+.Sub3:hover {
+    border-bottom: 3px solid #209ce8;
+}
+
+.Sub3 a {
+    text-decoration: none;
+    color: #666;
+}
+
+.Sub3 a:hover {
+    color: #3182de;
+}
+
 .Opiniones-Comentarios {
     text-align: left;
     margin-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .Opiniones-Comentarios i {
@@ -762,8 +961,104 @@ button:active {
     margin-bottom: 30px;
 }
 
+.Likes i:hover {
+    color: #4DABCF;
+}
+
 .Productos-Relacionados {
-    width: 70%;
+    width: 100%;
+}
+
+.Cont-Imagen3 {
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Minis-Article1 {
+    display: flex;
+    width: 80%;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    border: 2px solid lightgray;
+    margin-left: 8%;
+    margin-bottom: 10%;
+    cursor: pointer;
+}
+
+.Minis-Article1:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.Minis-Article2 {
+    display: flex;
+    width: 80%;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    border: 2px solid lightgray;
+    margin-left: 8%;
+    margin-bottom: 10%;
+    cursor: pointer;
+}
+
+.Minis-Article2:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.Minis-Article3 {
+    display: flex;
+    width: 80%;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    border: 2px solid lightgray;
+    margin-left: 8%;
+    margin-bottom: 10%;
+    cursor: pointer;
+}
+
+.Minis-Article3:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.Minis-Article4 {
+    display: flex;
+    width: 80%;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    border: 2px solid lightgray;
+    margin-left: 8%;
+    margin-bottom: 10%;
+    cursor: pointer;
+}
+
+.Minis-Article4:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.Minis-Article4 .Heart {
+    display: block;
+}
+
+.Minis-Article4 .Producto {
+    display: block;
+}
+
+.Minis-Article4 .Sub-Mini-Article .Precio-Original2 {
+    display: block;
+}
+
+.Minis-Article4 .Sub-Mini-Article .Precio2 {
+    display: block;
+}
+
+.Minis-Article4 .Sub-Mini-Article .Nombre-Producto {
+    display: block;
 }
 
 .footer {
@@ -771,48 +1066,64 @@ button:active {
 }
 
 .footer-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    width: 20%;
-    height: 40px;
-    border-radius: 20px 20px 0px 0px;
-    margin-top: 200px;
-    margin-left: 750px;
+    background-color: #ebebeb;
+    width: 100%;
 }
 
+.footer-div a {
+    text-decoration: none;
+}
+
+.footer-div a p {
+    font-size: 0.6em;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    width: 40%;
+    border-radius: 10px;
+    margin-left: 35%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    letter-spacing: 0.1em;
+}
+
+.footer-div a i {
+    margin-left: 5%;
+    font-size: 1em;
+}
+
+.footer-seccion-2 {
+    padding-top: 0px;
+}
 
 .footer-lista-general {
     list-style-type: none;
-    margin: 0;
     padding: 0;
     display: flex;
     color: white;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    padding-left: 120px;
+    font-size: 0.6em;
+    width: 100%;
 }
 
-.footer-imagen {
-    width: 5%;
-    transform: rotate(180deg);
-    margin-left: 14px;
+.footer-lista-general .footer-lista {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 25%;
+    text-align: center;
+    letter-spacing: 0.1em;
 }
 
 .footer-seccion-2 {
     background-color: black;
+    padding-top: 2%;
 }
 
 .footer-logo {
-    width: 20%;
-}
-
-.footer-lista {
-    padding-right: 20px;
-    padding-top: 40px;
-    padding-bottom: 80px;
+    margin-top: 5%;
+    width: 45%;
 }
 
 .footer-logo-div {
@@ -821,22 +1132,1280 @@ button:active {
     padding-bottom: 60px;
 }
 
-.footer-texto {
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    letter-spacing: 0.1em;
-}
+
+
 
 /*Celular */
-@media (max-width: 361px) {}
+@media (max-width: 368px) {
 
-/*Tablet */
-@media (min-width: 361px) {
-    main {
-        width: 100%;
+    .Mini-Article2 {
+        display: none;
+    }
+
+    .Unknown {
+        display: none;
+    }
+
+    .Nothing {
+        display: none;
     }
 }
 
+/*Tablet */
+@media (min-width: 369px) {
+    main {
+        width: 100%;
+    }
+
+    .Main-List {
+        margin-left: 0%;
+    }
+
+    .Listado {
+        width: 15%;
+    }
+
+    .Listado1 {
+        width: 10%;
+    }
+
+    .Listado2 {
+        width: 10%;
+    }
+
+    .Listado3 {
+        width: 10%;
+    }
+
+    article {
+        width: 90%;
+        border: 1px solid #ebebeb;
+        margin-top: 2%;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+
+    .Cont-Mini-Imagen {
+        width: 20%;
+        flex-direction: column;
+    }
+
+    .Mini-Imagen {
+        width: 50%;
+        border: 2px solid lightgray;
+        margin-top: 10%;
+        margin-left: 15%;
+    }
+
+    .Cont-Imagen {
+        width: 80%;
+        margin-left: 15%;
+        padding-top: 5%;
+    }
+
+    .Cont-Descripcion {
+        width: 95%;
+        border-radius: 10px;
+        margin-top: 0%;
+        border: 2px solid lightgray;
+        margin-left: 2.5%;
+    }
+
+    .Descripcion {
+        padding-bottom: 10%;
+    }
+
+    .Descripcion-Titulo h2 {
+        font-size: 2em;
+        width: 100%;
+    }
+
+    .Descripcion-Titulo i {
+        text-align: right;
+        margin-left: 40%;
+        font-size: 2.1em;
+
+    }
+
+    .Mini-Descripcion {
+        margin-top: 5%;
+    }
+
+    .Rank {
+        text-align: center;
+    }
+
+    .Rank i {
+        font-size: 30px;
+        width: 8%;
+    }
+
+    .Opinione {
+        margin-top: 6%;
+    }
+
+    .Precio-Original {
+        margin-top: 10%;
+    }
+
+    .Cuotas {
+        margin-top: 1%;
+    }
+
+    .Medio-Pagos {
+        margin-top: 5%;
+    }
+
+    .Camion-Envio {
+        margin-top: 10%;
+        font-size: 1.3em;
+    }
+
+    .Forma-Entregas {
+        margin-left: 15%;
+    }
+
+
+    .Cantidad h4 {
+        margin-left: 10px;
+    }
+
+    .Boton-Comprar {
+        width: 100%;
+        margin-top: 3%;
+    }
+
+    .Boton-Carrito {
+        width: 100%;
+        margin-top: 2%;
+
+    }
+
+    .Title {
+        font-size: 20px;
+    }
+
+    .Cont-Imagen2 {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .Mini-Article {
+        margin-left: 25px;
+        width: 35%;
+    }
+
+    .Mini-Article2 {
+        margin-left: 25px;
+        width: 35%;
+    }
+
+    .Sub-Mini-Article {
+        margin-top: 115%;
+        margin-left: 6%;
+    }
+
+    .Arrow {
+        width: 10%;
+    }
+
+    .Arrow i {
+        margin-top: 250%;
+    }
+
+    .Unknown {
+        border-radius: 0px;
+        margin-left: 0px;
+        border: 0px;
+        width: 0px;
+    }
+
+    .Sub-Detail-Content .Feature {
+        font-size: 1.3em;
+    }
+
+    .Sub-Detail-Content .Description {
+        font-size: 1.3em;
+    }
+
+    .Sub-Detail-Content .FAQ {
+        border-bottom-right-radius: 10px;
+        font-size: 1.3em;
+    }
+
+    .Sub-Detail-Content .Nothing {
+        display: none;
+    }
+
+    .Barra-Comentario {
+        width: 60%;
+    }
+
+    .Boton-Preguntar {
+        width: 20%;
+        margin-left: 63%;
+    }
+
+    .Cont-Promedio-Opiniones {
+        width: 95%;
+        flex-wrap: nowrap;
+        margin-top: 5%;
+    }
+
+    .Promedio {
+        width: 40%;
+        border: 2px solid lightgray;
+        margin-top: 0px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-right: 0px;
+    }
+
+    .Linea hr {
+        width: 110px;
+
+    }
+
+    .Linea2 hr {
+        margin-left: 80px;
+    }
+
+    .Opiniones {
+        width: 60%;
+        border: 2px solid lightgray;
+        padding-top: 5%;
+        margin-left: 0px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .Opiniones-Subtitulo {
+        font-size: 0.8em;
+    }
+
+    .Opiniones-Comentarios {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .Cont-Imagen3 {
+        padding-right: 35px;
+    }
+
+    .Minis-Article1 {
+        margin-left: 10%;
+        width: 40%;
+    }
+
+    .Minis-Article1 .Sub-Mini-Article {
+        margin-left: 20%;
+    }
+
+    .Minis-Article2 {
+        margin-left: 25px;
+        width: 40%;
+    }
+
+    .Minis-Article2 .Sub-Mini-Article {
+        margin-left: 20%;
+    }
+
+    .Minis-Article3 {
+        margin-left: 10%;
+        width: 40%;
+    }
+
+    .Minis-Article3 .Sub-Mini-Article {
+        margin-left: 20%;
+    }
+
+    .Minis-Article4 {
+        margin-left: 25px;
+        width: 40%;
+    }
+
+    .Minis-Article4 .Sub-Mini-Article {
+        margin-left: 20%;
+    }
+
+    .footer-div {
+        background-color: #ebebeb;
+        width: 100%;
+    }
+
+    .footer-div a {
+        text-decoration: none;
+    }
+
+    .footer-div a p {
+        font-size: 0.8em;
+        background-color: black;
+        text-decoration: none;
+        color: white;
+        width: 30%;
+        border-radius: 10px;
+        margin-left: 35%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .footer-div a i {
+        margin-left: 20%;
+        font-size: 1.2em;
+    }
+
+    .footer-seccion-2 {
+        padding-top: 0px;
+    }
+
+    .footer-lista-general {
+        font-size: 0.8em;
+    }
+
+    .footer-logo {
+        width: 35%;
+    }
+
+
+
+}
+
 /*Desktop*/
-@media (min-width: 768px) {}
+@media (min-width: 769px) {
+
+    .List {
+        font-size: 1.2em;
+    }
+
+    .Main-List {
+        margin-left: 10px;
+    }
+
+    .Listado {
+        width: 10%;
+    }
+
+    .Line1 {
+        display: none;
+    }
+
+    .Listado1 {
+        margin-left: 2%;
+        width: 15%;
+    }
+
+    .Listado1 i {
+        color: #3182de;
+        margin-left: 20px;
+    }
+
+    .Listado2 {
+        margin-left: 0;
+        width: 15%;
+    }
+
+    .Listado2 i {
+        color: #3182de;
+        margin-left: 20px;
+    }
+
+    .Listado3 {
+        margin-left: 0%;
+    }
+
+    main {
+        background-color: #ebebeb;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    article {
+        background-color: white;
+        width: 80%;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border: 1px solid #ebebeb;
+        margin-top: 2%;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+
+    .Cont-Mini-Imagen {
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3%;
+        margin-right: 90%;
+        position: absolute;
+    }
+
+    .Mini-Imagen {
+        width: 50%;
+        border: 2px solid lightgray;
+        margin-top: 10px;
+        margin-left: 20px;
+        border-radius: 20%;
+    }
+
+    .Cont-Imagen-Desc {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .Cont-Imagen {
+        width: 60%;
+        margin-left: 7%;
+        padding-top: 10%;
+    }
+
+    .Cont-Imagen h2 {
+        text-align: left;
+        margin-top: 5%;
+        color: #666;
+    }
+
+    .Imagen {
+        width: 100%;
+    }
+
+    .Cont-Descripcion {
+        width: 32%;
+        text-align: left;
+        border: 2px solid lightgray;
+        margin-top: 20px;
+        border-radius: 3%;
+        margin-left: 1px;
+    }
+
+    .Descripcion {
+        margin-top: 40px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+    }
+
+    .Descripcion-Titulo {
+        color: #666;
+        text-align: left;
+        display: flex;
+        width: 100%;
+    }
+
+    .Descripcion-Titulo h2 {
+        width: 90%;
+    }
+
+    .Descripcion-Titulo i {
+        color: lightgray;
+        margin-left: 10%;
+        cursor: pointer;
+        font-size: 40px;
+        width: 10%;
+    }
+
+    .Mini-Descripcion {
+        margin-top: 20px;
+        text-align: left;
+        font-size: 20px;
+        color: gray;
+    }
+
+    .Rank {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .Rank i {
+        margin-top: 30px;
+        width: 10%;
+        cursor: pointer;
+        font-size: 130%;
+        color: #3182de;
+    }
+
+    .Opinione {
+        font-size: 18px;
+        margin-top: 30px;
+        margin-left: 25px;
+    }
+
+    .Precio-Original {
+        text-decoration: line-through;
+        font-size: 20px;
+        color: gray;
+        margin-top: 40px;
+    }
+
+    .Precios-Descuentos {
+        display: flex;
+        flex-wrap: nowrap;
+        font-size: 20px;
+    }
+
+    .Precio {
+        color: #666;
+        margin-top: 1%;
+        font-size: 25px;
+    }
+
+    .Descuentos {
+        color: #4dc3ff;
+        margin-top: 10px;
+        margin-left: 40px;
+    }
+
+    .Cuotas {
+        color: gray;
+        font-size: 20px;
+    }
+
+    .Medio-Pagos {
+        margin-top: 25px;
+        font-size: 15px;
+    }
+
+    .Camion-Envio {
+        margin-top: 40px;
+        color: #4dc3ff;
+        font-size: 20px;
+    }
+
+    .Camion-Envio i {
+        margin-right: 20px;
+        font-size: 20px;
+    }
+
+    .Forma-Entregas {
+        font-size: 16px;
+        margin-left: 45px;
+    }
+
+    .Especificaciones {
+        display: flex;
+        margin-top: 30px;
+        color: gray;
+        font-size: 20px;
+    }
+
+    .Especificaciones h4 {
+        margin-left: 10px;
+    }
+
+    .Cont-Mini-Imagen2 {
+        width: 40%;
+        display: flex;
+        margin-top: 3%;
+    }
+
+
+    .Mini-Imagen2 {
+        width: 50%;
+        border: 2px solid lightgray;
+        margin-top: 10px;
+        margin-left: 20px;
+        border-radius: 20%;
+    }
+
+    .Stock {
+        margin-top: 20px;
+        color: #4dc3ff;
+        font-size: 20px;
+    }
+
+    .Cantidad {
+        font-size: 18px;
+        margin-top: 30px;
+        color: gray;
+        display: flex;
+    }
+
+    .Cantidad i {
+        color: #3182de;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .Boton-Comprar {
+        margin-top: 30px;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    .Boton-Carrito {
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    button {
+        padding: 1em 2.5em;
+        font-size: 12px;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: white;
+        background-color: #4DABCF;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+    }
+
+    button:hover {
+        background-color: #89387B;
+        box-shadow: 0px 15px 20px rgba(77, 171, 207, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+    }
+
+    button:active {
+        transform: translateY(-1px);
+    }
+
+    .Cont-Imagen2 {
+        width: 100%;
+        margin-top: 50px;
+        margin-left: 30px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .Mini-Article {
+        display: flex;
+        width: 25%;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+        border: 2px solid lightgray;
+    }
+
+    .Producto {
+        width: 100%;
+        padding: 60px 0 90px 0;
+
+    }
+
+    .Desc {
+        position: absolute;
+        background-color: red;
+        color: white;
+        border-radius: 10px;
+        width: 30%;
+        margin-top: 50px;
+        font-size: 17px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .Heart {
+        color: lightgray;
+        cursor: pointer;
+        font-size: 30px;
+        margin-left: 85%;
+        position: absolute;
+        margin-top: 40px;
+    }
+
+    .Sub-Mini-Article {
+        position: absolute;
+        margin-top: 110%;
+        margin-left: 25%;
+    }
+
+    .Precio-Original2 {
+        text-decoration: line-through;
+        font-size: 20px;
+        color: gray;
+    }
+
+    .Precio2 {
+        color: #666;
+        font-size: 25px;
+    }
+
+    .Nombre-Producto {
+        margin-top: 20px;
+        font-size: 20px;
+        color: gray;
+    }
+
+    .Mini-Article2 {
+        display: flex;
+        width: 25%;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+        border: 2px solid lightgray;
+        margin-left: 30px;
+    }
+
+    .Mini-Article2 .Desc {
+        position: absolute;
+        background-color: red;
+        color: white;
+        border-radius: 10px;
+        width: 30%;
+        margin-top: 50px;
+        font-size: 17px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .Mini-Article2 .Heart {
+        color: lightgray;
+        cursor: pointer;
+        font-size: 30px;
+        margin-left: 85%;
+        position: absolute;
+        margin-top: 40px;
+    }
+
+    .Mini-Article2 .Sub-Mini-Article .Precio-Original2 {
+        text-decoration: line-through;
+        font-size: 20px;
+        color: gray;
+    }
+
+    .Mini-Article2 .Sub-Mini-Article .Precio2 {
+        color: #666;
+        font-size: 25px;
+    }
+
+    .Mini-Article2 .Sub-Mini-Article .Nombre-Producto {
+        margin-top: 20px;
+        font-size: 20px;
+        color: gray;
+    }
+
+    .Arrow {
+        border: 2px solid lightgray;
+        width: 8%;
+        border-radius: 10px;
+        margin-left: 30px;
+    }
+
+    .Arrow i {
+        font-size: 50px;
+        margin-top: 220%;
+        color: gray;
+    }
+
+    .Unknown {
+        border-radius: 10px;
+        margin-left: 30px;
+        border: 2px solid lightgray;
+        width: 15%;
+    }
+
+    .Detail-Content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border: 2px solid lightgray;
+        width: 95%;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-left: 3%;
+    }
+
+    .Sub-Detail-Content {
+        display: flex;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+
+
+    .Sub-Detail-Content .Feature {
+        color: white;
+        border-bottom: 1px solid lightgray;
+        background-color: #4DABCF;
+        border-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        padding: 20px 80px 20px 90px;
+        cursor: pointer;
+        font-size: 18px;
+        width: 34%;
+    }
+
+    .Sub-Detail-Content .Description {
+        color: #4DABCF;
+        border-right: 1px solid lightgray;
+        border-left: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        padding: 20px 80px 20px 90px;
+        cursor: pointer;
+        font-size: 18px;
+        width: 33%;
+    }
+
+    .Sub-Detail-Content .FAQ {
+        color: #4DABCF;
+        border-bottom: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        padding: 20px 80px 20px 90px;
+        cursor: pointer;
+        font-size: 18px;
+        width: 33%;
+        border-bottom-right-radius: 10px;
+    }
+
+    .Nothing {
+        border-bottom: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        padding: 20px 248.5px 0 90px;
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .Tabla-Features {
+        margin-left: 5%;
+        margin-top: 50px;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid lightgray;
+        width: 90%;
+        border-radius: 10px;
+        margin-bottom: 50px;
+    }
+
+    .Features1 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .Features1 h3 {
+        width: 30%;
+        padding: 0px;
+        background-color: lightgray;
+        border-top-left-radius: 10px;
+        text-align: center;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .Features1 .Marca {
+        background-color: #ebebeb;
+        width: 70%;
+        padding: 0px;
+        text-align: center;
+        border-top-right-radius: 10px;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .Features2 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .Features2 h3 {
+        width: 30%;
+        padding: 0px;
+        background: #ebebeb;
+        text-align: center;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .Features2 .Modelo {
+        background-color: white;
+        width: 70%;
+        text-align: center;
+        padding: 0px;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .Features3 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .Features3 h3 {
+        width: 30%;
+        padding: 0px;
+        background-color: lightgray;
+        text-align: center;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .Features3 .Procesador {
+        background-color: #ebebeb;
+        width: 70%;
+        text-align: center;
+        padding: 0px;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .Features4 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .Features4 h3 {
+        width: 30%;
+        padding: 0px;
+        background: #ebebeb;
+        border-bottom-left-radius: 10px;
+        text-align: center;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .Features4 .Disco-Duro {
+        background-color: white;
+        width: 70%;
+        text-align: center;
+        padding: 0px;
+        border-bottom-right-radius: 10px;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .Title {
+        color: #666;
+        margin-top: 70px;
+        text-align: left;
+        margin-left: 40px;
+    }
+
+    .Barra-Boton {
+        display: flex;
+        position: relative;
+    }
+
+    .Barra-Comentario {
+        width: 70%;
+        border: solid 1px lightgray;
+        display: block;
+        padding: 7px 40px 7px 7px;
+        border-radius: 15px;
+        height: 60px;
+        font-size: 1em;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+
+    .Boton-Preguntar {
+        position: absolute;
+        height: 60px;
+        border-radius: 15px;
+        width: 15%;
+        margin-top: 30px;
+        margin-left: 70%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .Comentarios-Preguntas {
+        text-align: justify;
+        margin-left: 70px;
+        width: 70%;
+    }
+
+    .Pregunta {
+        margin-top: 30px;
+    }
+
+    .Respuesta {
+        color: gray;
+        margin-top: 15px;
+    }
+
+    .Title2 {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 20px;
+    }
+
+    .Title2 a {
+        color: #4dc3ff;
+        text-decoration: none;
+    }
+
+    .Title2 i {
+        margin-left: 20px;
+        font-size: 30px;
+        color: #4dc3ff;
+    }
+
+    .Cont-Promedio-Opiniones {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .Promedio {
+        text-align: left;
+        margin-left: 30px;
+        margin-top: 30px;
+        padding: 90px 5px 50px 20px;
+        border: 2px solid lightgray;
+        width: 30%;
+        border-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .Promedio h2 {
+        margin-left: 0%;
+    }
+
+    .Promedio i {
+        color: #3182de;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .Promedio-Subtitulo {
+        font-size: 13px;
+        color: gray;
+        margin-top: 20px;
+    }
+
+    .Tabla-Opiniones1 {
+        display: flex;
+        flex-wrap: nowrap;
+        color: gray;
+        font-size: 15px;
+        margin-top: 40px;
+    }
+
+    .Tabla-Opiniones2 {
+        display: flex;
+        flex-wrap: nowrap;
+        color: gray;
+        font-size: 15px;
+        margin-top: 40px;
+    }
+
+    .Tabla-Opiniones3 {
+        display: flex;
+        flex-wrap: nowrap;
+        color: gray;
+        font-size: 15px;
+        margin-top: 40px;
+    }
+
+    .Tabla-Opiniones4 {
+        display: flex;
+        flex-wrap: nowrap;
+        color: gray;
+        font-size: 15px;
+        margin-top: 40px;
+    }
+
+    .Tabla-Opiniones5 {
+        display: flex;
+        flex-wrap: nowrap;
+        color: gray;
+        font-size: 15px;
+        margin-top: 40px;
+    }
+
+    .Cont-Linea {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 50%;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .Linea hr {
+        width: 150px;
+        height: 10px;
+        border-radius: 10px;
+        background: #3182de;
+        position: absolute;
+    }
+
+    .Linea2 hr {
+        width: 80px;
+        height: 5px;
+        border-radius: 10px;
+        background-color: lightgray;
+        margin-left: 140px;
+        margin-top: 2px;
+    }
+
+    .View {
+        margin-left: 40px;
+    }
+
+    .Opiniones {
+        border: 2px solid lightgray;
+        width: 100%;
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-top: 30px;
+        padding-bottom: 30px;
+        margin-left: 0;
+    }
+
+    .Opiniones-Subtitulo {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-top: 120px;
+        font-size: 20px;
+        width: 100%;
+        color: #666;
+    }
+
+    .Sub1 {
+        border-bottom: 3px solid #209ce8;
+        width: 35%;
+        padding-bottom: 20px;
+        color: #3182de;
+    }
+
+    .Sub2 {
+        width: 35%;
+        padding-bottom: 20px;
+    }
+
+    .Sub3 {
+        width: 35%;
+        padding-bottom: 20px;
+    }
+
+    .Opiniones-Comentarios {
+        text-align: left;
+        margin-top: 50px;
+    }
+
+    .Opinion-Rank {
+        margin-top: 15px;
+    }
+
+    .Opinion-Text {
+        margin-top: 15px;
+        text-align: justify;
+    }
+
+    .Likes i {
+        color: black;
+        margin-left: 10px;
+        margin-top: 15px;
+        margin-right: 15px;
+        margin-bottom: 30px;
+    }
+
+    .Productos-Relacionados {
+        width: 85%;
+    }
+
+    .Cont-Imagen3 {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0px;
+        margin-left: 0px;
+    }
+
+    .Minis-Article1 {
+        display: flex;
+        width: 20%;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+        border: 2px solid lightgray;
+    }
+
+    .Minis-Article2 {
+        display: flex;
+        width: 20%;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+        border: 2px solid lightgray;
+        margin-left: 30px;
+    }
+
+    .Minis-Article3 {
+        display: flex;
+        width: 20%;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+        border: 2px solid lightgray;
+        margin-left: 30px;
+    }
+
+    .Minis-Article4 {
+        display: flex;
+        width: 20%;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+        border: 2px solid lightgray;
+        margin-left: 30px;
+    }
+
+    .footer-div {
+        background-color: #ebebeb;
+        width: 100%;
+    }
+
+    .footer-div a {
+        text-decoration: none;
+    }
+
+    .footer-div a p {
+        font-size: 1.1em;
+        background-color: black;
+        text-decoration: none;
+        color: white;
+        width: 20%;
+        border-radius: 10px;
+        margin-left: 40%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .footer-div a i {
+        margin-left: 30%;
+        font-size: 1.5em;
+    }
+
+    .footer-seccion-2 {
+        padding-top: 2%;
+    }
+
+    .footer-lista-general {
+        font-size: 1.1em;
+    }
+
+    .footer-logo {
+        width: 25%;
+    }
+}
