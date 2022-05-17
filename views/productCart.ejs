@@ -8,12 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet"><!--estilo para la letra-->
     <script src="https://kit.fontawesome.com/21c548f2ca.js" crossorigin="anonymous"></script>   
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <!--boostra-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script><!--boostra-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script> <!--boostra-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> <!--boostra-->
     <link href="/styles/nav-styles.css" rel="stylesheet">
-    <link href="/styles/produc-cart.css" rel="stylesheet" >
+    <link href="/styles/produc-cart-styles.css" rel="stylesheet" >
     <title>Compras</title>
 </head>
 <body>
@@ -75,7 +71,11 @@
                 </div>
                 <div class="sum">
                     <button class="more"> + </button>
-                    <p class="change"> 1</p>
+                    <!-- <p class="change"> 1</p> -->
+                    <div class="change">
+                        <!-- <input class="campus" type="text" name="user" placeholder="1" > -->
+                        <textarea name="textarea" rows="1" cols="1">1</textarea>
+                    </div>
                     <button class="rest"> - </button>
                 </div>
                 <p class="price">$30,000</p>
@@ -106,7 +106,9 @@
             </div>
         </section>
         <section class="continue">
-            <button type="submit" class="first"> <img class="white-car" src="/images/carrito_camion.png"> Continuar Compra</button>
+            <button type="submit" class="first"> <img class="white-car" src="/images/carrito_camion.png">
+                <p class="first">Continuar Compra </p>
+                </button>
         </section>
 
     </div>
@@ -115,9 +117,11 @@
         <h3 class="new-seccion">Recomendaciones para vos</h3>
          <div class="publication">
             <article class="product-seller">
+                <div class="decoration">
+                    <p class="desc"> 60% OFF</p>
+                    <img class="heart-with" src="/images/corazon.png" alt="blue-heart">
+                </div>
                 <img class="volante" src="/images/producto_volante.jpeg" alt="producto-volante">
-                <!-- <img src="/images/corazon.png" alt="heart">
-                <i class="fa-light fa-heart"></i> -->
                 <div class="contain-price">
                     <p class="previous-col8"><del>$38,000</del> </p>
                     <p class="price-col8">$20,300</p>
@@ -125,9 +129,11 @@
                 </div>
             </article>
             <article class="product-seller">
+                <div class="decoration">
+                <img class="heart-without" src="/images/corazon.png" alt="blue-heart">
+            </div>
                 <img class="volante" src="/images/producto_volante.jpeg" alt="producto-volante">
-                <!-- <img src="/images/corazon.png" alt="heart">
-                <i class="fa-light fa-heart"></i> -->
+                
                 <div class="contain-price">
                     <p class="previous-col8"><del>$38,000</del> </p>
                     <p class="price-col8">$20,300</p>
@@ -135,9 +141,11 @@
                 </div>
             </article>
             <article class="product-seller">
+                <div class="decoration">
+                    <p class="desc"> 60% OFF</p>
+                    <img class="heart-with" src="/images/corazon.png" alt="blue-heart">
+                </div>
                 <img class="volante" src="/images/producto_volante.jpeg" alt="producto-volante">
-                <!-- <img src="/images/corazon.png" alt="heart">
-                <i class="fa-light fa-heart"></i> -->
                 <div class="contain-price">
                     <p class="previous-col8"><del>$38,000</del> </p>
                     <p class="price-col8">$20,300</p>
@@ -145,9 +153,10 @@
                 </div>
             </article>
             <article class="product-seller">
+                <div class="decoration">
+                    <img class="heart-without" src="/images/corazon.png" alt="blue-heart">
+                </div>
                 <img class="volante" src="/images/producto_volante.jpeg" alt="producto-volante">
-                <!-- <img src="/images/corazon.png" alt="heart">
-                <i class="fa-light fa-heart"></i> -->
                 <div class="contain-price">
                     <p class="previous-col8"><del>$38,000</del> </p>
                     <p class="price-col8">$20,300</p>
@@ -173,8 +182,7 @@
             <section class="product">
                 <article class="product-info">
                     <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
-                    <!-- <img src="/images/corazon.png" alt="heart">
-                    <i class="fa-light fa-heart"></i> -->
+                    <!-- <img src="/images/corazon.png" alt="heart">-->
                     <div class="col-4">
                         <p class="previous-col4"><del>$40,000</del> </p>
                         <span class="col-min">
@@ -187,8 +195,7 @@
                 </article>
                 <article class="product-info">
                     <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
-                    <!-- <img src="/images/corazon.png" alt="heart">
-                    <i class="fa-light fa-heart"></i> -->
+                    <!-- <img src="/images/corazon.png" alt="heart">-->
                     <div class="col-4">
                         <p class="previous-col4"><del>$40,000</del> </p>
                         <span class="col-min">
@@ -201,8 +208,7 @@
                 </article>
                 <article class="product-info">
                     <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
-                    <!-- <img src="/images/corazon.png" alt="heart">
-                    <i class="fa-light fa-heart"></i> -->
+                    <!-- <img src="/images/corazon.png" alt="heart">-->
                     <div class="col-4">
                         <p class="previous-col4"><del>$40,000</del> </p>
                         <span class="col-min">
@@ -217,8 +223,7 @@
             <section class="product-two">
                 <article class="product-info">
                     <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
-                    <!-- <img src="/images/corazon.png" alt="heart">
-                    <i class="fa-light fa-heart"></i> -->
+                    <!-- <img src="/images/corazon.png" alt="heart">-->
                     <div class="col-4">
                         <p class="previous-col4"><del>$40,000</del> </p>
                         <span class="col-min">
@@ -231,8 +236,7 @@
                 </article>
                 <article class="product-info">
                     <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
-                    <!-- <img src="/images/corazon.png" alt="heart">
-                    <i class="fa-light fa-heart"></i> -->
+                    <!-- <img src="/images/corazon.png" alt="heart">-->
                     <div class="col-4">
                         <p class="previous-col4"><del>$40,000</del> </p>
                         <span class="col-min">
@@ -245,8 +249,7 @@
                 </article>
                 <article class="product-info">
                     <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
-                    <!-- <img src="/images/corazon.png" alt="heart">
-                    <i class="fa-light fa-heart"></i> -->
+                    <!-- <img src="/images/corazon.png" alt="heart">-->
                     <div class="col-4">
                         <p class="previous-col4"><del>$40,000</del> </p>
                         <span class="col-min">

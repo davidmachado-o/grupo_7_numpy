@@ -31,6 +31,7 @@ section.option {
   display: flex;
   background-color: #fff;
   border: 1px solid #6666;
+  padding: 30px 40px;
 }
 img.cpu {
   width: 15%;
@@ -216,18 +217,26 @@ button.first {
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
-  color: #000;
-  background-color: #1259c3;
+  color: #fff;
+  background-color: #4DABCF;
   border: none;
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+  position: relative;
+  left: 20vw;
+  display: flex;
 }
+p.first{
+  position: relative;
+  top: 25px;
+}
+
 button.first:hover {
-  background-color: #5df166;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  background-color: #89387B;
+  box-shadow: 0px 15px 20px rgb(77 171 207 / 40%);
   color: #fff;
   transform: translateY(-7px);
 }
@@ -239,7 +248,7 @@ img.white-car {
   width: 5vw;
   margin: 0.5em;
 }
-/**contain two**/
+/**                   contain two               **/
 .contain-two {
   display: grid;
   justify-content: center;
@@ -282,6 +291,33 @@ article.product-seller {
 img.volante {
   width: 135px;
   height: 115px;
+}
+.decoration{
+  display: flex;
+}
+p.desc {
+  position: relative;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  width: 10vw;
+  height: 1.5em;
+  right: 20px;
+  font-size: 12px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+img.heart-with{
+  cursor: pointer;
+  position: relative;
+  height: 1.5em;
+  left: 20px;
+}
+img.heart-without{
+  cursor: pointer;
+  position: relative;
+  height: 1.5em;
+  left: 10vw;
 }
 .contain-price {
   position: relative;
@@ -497,14 +533,13 @@ p.previous-col4 {
   font-size: 12px;
   display: flex;
   position: relative;
-  top: 20px;
   margin: 2px;
   color: #6666;
 }
 span.col-min {
   display: flex;
   position: relative;
-  top: 30px;
+  top: 15px;
 }
 p.price-col4 {
   font-size: 25px;
@@ -526,7 +561,6 @@ p.cuotas {
   display: flex;
   position: relative;
   color: #6666;
-  top: 10px;
 }
 p.description-col4 {
   font-size: 15px;
@@ -597,9 +631,15 @@ footer {
   text-align: center;
   letter-spacing: 0.1em;
 }
-
+/* computadora */
 @media (min-width: 360px) {
   .contain-one {
     display: block;
   }
+}
+/* tablet */
+@media (min-width: 790px) { 
+  .contain-one {
+    display: block;
+    }
 }
