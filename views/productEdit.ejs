@@ -22,14 +22,19 @@
             <img class="bola-verde" src="/images/bolita_verde.png" alt="bolita verde">
         </div>
         <!--Seccion 2: Carga de productos-->
-        <form class="seccion-detalles-producto seccion-detalles-producto-1">
+        <form class="seccion-detalles-producto seccion-detalles-producto-1" action="/productEdit" method="POST">
                 <img class="imagen-producto" src="/images/producto_cpu.webp" alt="cpu intel">
                 <div class="titulo-linea">
                         <h2 class="titulo-producto">Categoría producto</h2>
                         <hr class="linea-producto">
                     <div class="caja-producto">
                         <p class="caja-tick">✅</p>
-                        <p class="caja-texto">CPU</p>
+                        <label  for="categoriaProducto"></label>
+                        <select class="caja-texto" name="categoriaProducto">
+                            <option>CBU</option>
+                            <option>PC</option>
+                            <option>Silla Gamer</option>
+                        </select>
                         <div class="imagen-lapiz">
                             <img src="/images/lapiz_edicion.png" alt="Editar imagen">
                         </div>
@@ -40,7 +45,12 @@
                         <hr class="linea-producto">
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
-                            <p class="caja-texto">Intel</p>
+                            <label  for="marcaProducto"></label>
+                            <select class="caja-texto" name="marcaProducto">
+                                <option>Intel</option>
+                                <option>Intel</option>
+                                <option>Intel</option>
+                            </select>
                         </div>
                     </div>
                     <div class="titulo-linea-2">
@@ -48,7 +58,12 @@
                         <hr class="linea-producto">
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
-                            <p class="caja-texto">Intel</p>
+                            <label  for="modeloProducto"></label>
+                            <select class="caja-texto" name="modeloProducto">
+                                <option>XXXXXXXX</option>
+                                <option>XXXXXX</option>
+                                <option>XXXXXXX</option>
+                            </select>
                         </div>
                     </div>
                     <div class="titulo-linea-2">
@@ -56,7 +71,12 @@
                         <hr class="linea-producto">
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
-                            <p class="caja-texto">Intel</p>
+                            <label  for="procesadorProducto"></label>
+                            <select class="caja-texto" name="procesadorProducto">
+                                <option>XXXXXXX</option>
+                                <option>XXXXXXX</option>
+                                <option>XXXXXXXX</option>
+                            </select>
                         </div>
                     </div>
                     <div class="titulo-linea-2">
@@ -64,7 +84,12 @@
                         <hr class="linea-producto">
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
-                            <p class="caja-texto">Intel</p>
+                            <label  for="discoDuroProducto"></label>
+                            <select class="caja-texto" name="discoDuroProducto">
+                                <option>XXXXXXXX</option>
+                                <option>XXXXXXXX</option>
+                                <option>XXXXXXXX</option>
+                            </select>
                         </div>
                     </div>
                     <div class="titulo-linea-2">
@@ -72,7 +97,8 @@
                         <hr class="linea-producto">
                         <div class="caja-producto caja-producto-descripcion">
                             <p class="caja-tick">✅</p>
-                            <p class="caja-texto">Intel</p>
+                            <label  for="descripcionProducto"></label>
+                            <input class="caja-texto" name="categoriaProducto" type="text" name="descripcionProducto">
                             <img src="/images/lapiz_edicion.png" alt="Editar imagen">
                         </div>
                     </div>
@@ -103,7 +129,8 @@
                 <hr class="linea-producto linea-producto-2">
                 <div class="caja-producto-2">
                     <p class="caja-tick">✅</p>
-                    <p class="caja-texto">$    500.00</p>
+                    <label  for="precioProducto"></label>
+                    <input class="caja-texto" name="categoriaProducto" type="text" name="precioProducto">
                 </div>
             </div> 
             <div class="titulo-linea-2">
@@ -111,7 +138,8 @@
                 <hr class="linea-producto linea-producto-2">
                 <div class="caja-producto-2">
                     <p class="caja-tick">✅</p>
-                    <p class="caja-texto">3   unidades</p>
+                    <label  for="unidadesProducto"></label>
+                    <input class="caja-texto" name="categoriaProducto" type="text" name="unidadesProducto">
                 </div>
             </div>   
         </div>
