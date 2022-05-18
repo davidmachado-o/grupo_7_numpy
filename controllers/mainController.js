@@ -40,6 +40,9 @@ const mainController = {
     },
     register: (req,res) =>{
         res.render('register', {productos:productos})
+    },
+    productEdit: (req,res) =>{
+        res.render('productEdit', {productos:productos})
     }
 }
 

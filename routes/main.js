@@ -21,6 +21,9 @@ router.post('/register', mainController.register);
 router.get('/login', mainController.login);
 router.post('/login', mainController.login);
 
+router.get('/productEdit', mainController.productEdit);
+router.post('/productEdit', mainController.productEdit);
+
 // router.get('/nav', mainController.nav);
 // router.get('*', mainController.index);
 
