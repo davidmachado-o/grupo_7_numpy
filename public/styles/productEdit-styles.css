@@ -125,6 +125,11 @@ main {
     font-weight: 300;
     font-size: 16px;
     font-style: italic;
+    width: 70%;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    word-wrap: break-word;
 }
 
 .imagen-lapiz {
@@ -133,16 +138,18 @@ main {
 
 /* Seccion 3: Carga de productos sub-seccion */
 
-.titulo-linea-2 {
-    margin-top: 40px;
-    text-align: center;
-}
 
 .caja-producto-descripcion {
     height: 250px;
     align-items: start;
     border-radius: 30px;
     padding-top: 37px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+    overflow: auto;
 }
 
 /* Seccion 4: Carga de fotos */
@@ -184,15 +191,12 @@ main {
     padding-top: 30px;
 }
 
-.titulo-producto-2{
-    text-align: center;
-}
 
 /* Seccion 5: Carga de precio */
 
 .seccion-detalles-producto-3 {
     border-radius: 0px 0px 120px 120px;
-    padding-bottom: 100px;
+    padding-bottom: 22px;
 }
 
 .caja-producto-2 {
@@ -310,36 +314,8 @@ button {
     
 /* Seccion 2: Carga de Productos */
 
-.seccion-detalles-producto {
-    display: flex;
-}
-
-.caja-producto {
-    width: 150%;
-}
-
-.caja-tick {
-    margin-left: 35px;
-    margin-right: 20px;
-}
-
-.caja-texto {
-    color: #747070;
-    font-weight: 300;
-    font-size: 16px;
-    font-style: italic;
-}
-
-.linea-producto {
-    width: 150%;
-    margin: 0px 0px 20px 0px;
-}
-
 /* Seccion 3: Carga de productos sub-seccion */
 
-.titulo-linea-2 {
-    text-align: left;
-}
 
 /* Seccion 4: Carga de fotos */
 
@@ -354,27 +330,15 @@ button {
     margin-left: 0px;
 }
 
-.titulo-producto-2{
-    text-align: left;
-    padding-left: 80px;
-}
-
-.linea-producto-2 {
-    width: 60%;
-    margin-left: 134px;
-}
 
 /* Seccion 5: Carga de precio */
 
-.seccion-detalles-producto-3 {
-    padding-left: 200px;
-}
 
 /* Seccion 6: Final */
 
 .bola-rosa-2 {
     top: 85px;
-    right: 465px;
+    right: 370px;
 }
 
 .bola-verde-2 {
@@ -415,7 +379,7 @@ button {
     }
 
     .caja-producto {
-        width: 250%;
+        width: 70%;
     }
 
     /* Seccion 3: Carga de productos sub-seccion */
@@ -447,9 +411,6 @@ button {
         padding-top: 20px;
     }
 
-    .linea-producto-2 {
-        width: 70%;
-    }
 
     /* Seccion 5: Carga de precio */
 

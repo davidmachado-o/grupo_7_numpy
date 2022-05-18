@@ -30,7 +30,7 @@
                     <div class="caja-producto">
                         <p class="caja-tick">✅</p>
                         <label  for="categoriaProducto"></label>
-                        <select class="caja-texto" name="categoriaProducto">
+                        <select class="caja-texto" name="categoriaProducto" required>
                             <option>CBU</option>
                             <option>PC</option>
                             <option>Silla Gamer</option>
@@ -40,70 +40,71 @@
                         </div>
                     </div>
                      <!--Seccion 3: Carga de productos sub-seccion -->
-                    <div class="titulo-linea-2">
+                    <div class="titulo-linea">
                         <h2 class="titulo-producto">Marca</h2>
                         <hr class="linea-producto">
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
                             <label  for="marcaProducto"></label>
-                            <select class="caja-texto" name="marcaProducto">
+                            <select class="caja-texto" name="marcaProducto" required>
                                 <option>Intel</option>
                                 <option>Intel</option>
                                 <option>Intel</option>
                             </select>
                         </div>
                     </div>
-                    <div class="titulo-linea-2">
+                    <div class="titulo-linea">
                         <h2 class="titulo-producto">Modelo</h2>
                         <hr class="linea-producto">
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
                             <label  for="modeloProducto"></label>
-                            <select class="caja-texto" name="modeloProducto">
+                            <select class="caja-texto" name="modeloProducto" required>
                                 <option>XXXXXXXX</option>
                                 <option>XXXXXX</option>
                                 <option>XXXXXXX</option>
                             </select>
                         </div>
                     </div>
-                    <div class="titulo-linea-2">
+                    <div class="titulo-linea">
                         <h2 class="titulo-producto">Procesador</h2>
                         <hr class="linea-producto">
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
                             <label  for="procesadorProducto"></label>
-                            <select class="caja-texto" name="procesadorProducto">
+                            <select class="caja-texto" name="procesadorProducto" required>
                                 <option>XXXXXXX</option>
                                 <option>XXXXXXX</option>
                                 <option>XXXXXXXX</option>
                             </select>
                         </div>
                     </div>
-                    <div class="titulo-linea-2">
+                    <div class="titulo-linea">
                         <h2 class="titulo-producto">Disco duro</h2>
                         <hr class="linea-producto">
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
                             <label  for="discoDuroProducto"></label>
-                            <select class="caja-texto" name="discoDuroProducto">
+                            <select class="caja-texto" name="discoDuroProducto" required>
                                 <option>XXXXXXXX</option>
                                 <option>XXXXXXXX</option>
                                 <option>XXXXXXXX</option>
                             </select>
                         </div>
                     </div>
-                    <div class="titulo-linea-2">
+                    <div class="titulo-linea">
                         <h2 class="titulo-producto">Descripción</h2>
                         <hr class="linea-producto">
                         <div class="caja-producto caja-producto-descripcion">
                             <p class="caja-tick">✅</p>
                             <label  for="descripcionProducto"></label>
-                            <input class="caja-texto" name="categoriaProducto" type="text" name="descripcionProducto">
+                            <textarea class="caja-texto" name="categoriaProducto" type="text" maxlength="1000" required>
+                            </textarea>
                             <img src="/images/lapiz_edicion.png" alt="Editar imagen">
                         </div>
                     </div>
-                </div>
-            </form>     
+                </div> 
+            </form>    
             <!--Seccion 4: Carga de fotos --> 
             <div class="seccion-detalles-producto-2">
                 <h2 class="titulo-producto titulo-producto-2">Fotos</h2>
@@ -124,25 +125,25 @@
         </div>
          <!--Seccion 5: Carga de precio --> 
          <div class="seccion-detalles-producto-2 seccion-detalles-producto-3">
-            <div class="titulo-linea-2">
-                <h2 class="titulo-producto titulo-producto-2">Precio por unidad</h2>
-                <hr class="linea-producto linea-producto-2">
+            <div class="titulo-linea">
+                <h2 class="titulo-producto">Precio por unidad</h2>
+                <hr class="linea-producto">
                 <div class="caja-producto-2">
                     <p class="caja-tick">✅</p>
                     <label  for="precioProducto"></label>
-                    <input class="caja-texto" name="categoriaProducto" type="text" name="precioProducto">
+                    <input class="caja-texto" name="categoriaProducto" type="number" name="precioProducto" required>
                 </div>
             </div> 
-            <div class="titulo-linea-2">
-                <h2 class="titulo-producto titulo-producto-2">Inventario a la venta</h2>
-                <hr class="linea-producto linea-producto-2">
+            <div class="titulo-linea">
+                <h2 class="titulo-producto">Inventario a la venta</h2>
+                <hr class="linea-producto">
                 <div class="caja-producto-2">
                     <p class="caja-tick">✅</p>
                     <label  for="unidadesProducto"></label>
-                    <input class="caja-texto" name="categoriaProducto" type="text" name="unidadesProducto">
+                    <input class="caja-texto" name="categoriaProducto" type="number" name="unidadesProducto" required>
                 </div>
             </div>   
-        </div>
+        
         <!--Seccion 6: Final --> 
         <div class="final-general">
             <p class="final-titulo">¿Ya todo revisado?</p>
