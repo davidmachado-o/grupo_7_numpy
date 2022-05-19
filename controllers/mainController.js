@@ -43,6 +43,9 @@ const mainController = {
     },
     productEdit: (req,res) =>{
         res.render('productEdit', {productos:productos})
+    },
+    productADd: (req,res) =>{
+        res.render('productAdd', {productos:productos})
     }
 }
 
