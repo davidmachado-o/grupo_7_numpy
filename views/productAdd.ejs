@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link href="/styles/login-styles.css" rel="stylesheet">
+    <link href="/styles/productAdd-styles.css" rel="stylesheet">
     <%- include('./partials/head.ejs'); %>
 </head>
 
@@ -11,7 +11,194 @@
         <%- include('./partials/header.ejs'); %>
     </header>
     <main>
-        <form action=""></form>
+        <div class="main-container">
+            <img src="" alt="">
+            <img src="" alt="">
+            <p class="subtitulo-principal">¡Hola Grupo 7!</p>
+            <h1 class="titulo-principal">Contános sobre tu producto</h1>
+            <hr class="titulos-linea">
+            <div class="container-uno">
+                <h2>Seleccioná la categoría de tu producto</h2>
+                <div class="categorias">
+                    
+                    <div class="img-contenedor">
+                    <label for="monitores"><input type="radio" id="monitores" name="categorias" value="monitores">
+                    <img src="/images/3269_800 1.png" alt="monitor"><br>Monitores</label>
+                    </div>
+                    
+                    <div class="img-contenedor">
+                    <label for="combos"><input type="radio" id="combos" name="categorias" value="combos">
+                    <img src="/images/compu 1.png" alt="combos"><br>Combos</label>
+                    </div>
+                    
+                    <div class="img-contenedor">
+                    <label for="monitores"><input type="radio" id="monitores" name="categorias" value="monitores">
+                    <img src="/images/GK30US_800 1.png" alt="teclados"><br>Teclados</label>
+                    </div>
+
+                    <div class="img-contenedor">
+                    <label for="mouse"><input type="radio" id="mouse" name="categorias" value="mouse">
+                    <img src="/images/mouse1.jpg" alt="mouse"><br>Mouse</label>
+                    </div>
+                    
+                    <div class="img-contenedor">
+                    <label for="procesadores"><input type="radio" id="procesadores" name="categorias" value="procesadores">
+                    <img src="/images/procesadores.jpeg" alt="procesadores"><br>Procesadores</label>
+                    </div>
+
+                    <div class="img-contenedor">
+                    <label for="sillas"><input type="radio" id="sillas" name="categorias" value="sillas">
+                    <img src="/images/silla 1.png" alt="sillas"><br>Sillas</label>
+                    </div>
+
+                </div>
+
+                <img src="/images/Polygon 2.png" alt="flecha abajo">
+
+            </div>
+
+            <div class="container-dos">
+            <h2>Indica la marca del producto</h2>
+            <div class="caja-producto">
+                <img class="pointer" src="/images/mano-1.png" alt="selector">
+                <label  for="categoriaProducto"></label>
+                <select class="caja-texto" name="categoriaProducto" required>
+                    <option disabled selected>Haz click para seleccionar</option>
+                    <option value="intel">Intel</option>
+                    <option value="amd">AMD</option>
+                    <option value="msi">MSI</option>
+                    <option value="asus">Asus</option>
+                    <option value="acer">Acer</option>
+                    <option value="dell">Dell</option>
+                    <option value="hp">HP</option>
+                    <option value="lenovo">Lenovo</option>
+                    <option value="toshiba">Toshiba</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="lg">LG</option>
+                    <option value="apple">Apple</option>
+                    <option value="sony">Sony</option>
+                    <option value="nvidia">Nvidia</option>
+                    <option value="razer">Razer</option>
+                    <option value="logitech">Logitech</option>
+                </select>
+                <div>
+                    <img class="selector" src="/images/Rectangle.png" alt="Selector">
+                </div>
+            </div>
+
+            <img src="/images/Polygon 2.png" alt="flecha abajo">
+
+            </div>
+
+            <div class="container-tres">
+            <h2>Indica las caracteristicas del producto</h2>
+            <p class="modelo">PROCESADOR</p>
+            <div class="caja-producto">
+                <img class="pointer" src="/images/mano-1.png" alt="selector">
+                <label  for="caracteristicasProducto"></label>
+                <select class="caja-texto" name="caracteristicasProducto" required>
+                    <option disabled selected>Haz click para seleccionar</option>
+                    <option value="i9">i9</option>
+                    <option value="i7">i7</option>
+                    <option value="i5">i5</option>
+                    <option value="i3">i3</option>
+                    <option value="ryzen7">Ryzen7</option>
+                    <option value="ryzen5">Ryzen5</option>
+                    <option value="ryzen3">Ryzen3</option>
+                </select>
+                <div>
+                    <img class="selector" src="/images/Rectangle.png" alt="Selector">
+                </div>
+            </div>
+            <p class="modelo">MEMORIA</p>
+            <div class="caja-producto">
+                <img class="pointer" src="/images/mano-1.png" alt="selector">
+                <label  for="caracteristicasProducto"></label>
+                <select class="caja-texto" name="caracteristicasProducto" required>
+                    <option disabled selected>Haz click para seleccionar</option>
+                    <option value="4gb">4GB</option>
+                    <option value="8gb">8GB</option>
+                    <option value="16gb">16GB</option>
+                    <option value="32gb">32GB</option>
+                    <option value="64gb">64GB</option>
+                    <option value="128gb">128GB</option>
+                </select>
+                <div>
+                    <img class="selector" src="/images/Rectangle.png" alt="Selector">
+                </div>
+            </div>
+            <p class="modelo">DISCO DURO</p>
+            <div class="caja-producto">
+                <img class="pointer" src="/images/mano-1.png" alt="selector">
+                <label  for="caracteristicasProducto"></label>
+                <select class="caja-texto" name="caracteristicasProducto" required>
+                    <option disabled selected>Haz click para seleccionar</option>
+                    <option value="128gb">128GB</option>
+                    <option value="256gb">256GB</option>
+                    <option value="512gb">512GB</option>
+                    <option value="1tb">1TB</option>
+                    <option value="2tb">2TB</option>
+                </select>
+                <div>
+                    <img class="selector" src="/images/Rectangle.png" alt="Selector">
+                </div>
+            </div>
+            <img src="/images/Polygon 2.png" alt="flecha abajo">
+            </div>
+            <div class="container-cuatro">
+            <h2>Colocá una breve descripción del producto</h2>
+            <div class="caja-producto-descripcion">
+                <img class="pencil" src="/images/pencil.png" alt="lapiz">
+                <textarea rows="10" required placeholder="Escribe aqui" name="descripcionProducto"></textarea>
+            </div>
+            <img src="/images/Polygon 2.png" alt="flecha abajo">
+            </div>
+
+            <div class="container-cinco">
+                <h2>Carga las imagenes del producto</h2>
+                <div class="caja-producto-imagenes">
+                    <img class="pointer" src="/images/plus-sign.png" alt="selector">
+                    <label  for="imagenesProducto"></label>
+                    <input type="file" name="imagenesProducto" required>
+                </div>
+                <img src="/images/Polygon 2.png" alt="flecha abajo">
+            </div>
+
+            <div class="container-seis">
+                <h2>Indica el precio de venta e inventario disponible</h2>
+                <div>
+                <p class="modelo">PRECIO</p>
+                <div class="caja-producto-precio-stock">
+                    <label for="precioProducto"></label>
+                    <input type="text" placeholder="Ej. 500.00" required minlength="1">
+                    </select>
+                    <div>
+                    <img class="selector" src="/images/Rectangle.png" alt="Selector">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="modelo">STOCK</p>
+                <div class="caja-producto-precio-stock">
+                    <label for="stockProducto"></label>
+                    <input type="text" placeholder="Ej. 3" required minlength="1">
+                    </select>
+                    <div>
+                    <img class="selector" src="/images/Rectangle.png" alt="Selector">
+                    </div>
+                </div>
+
+            </div>
+            <img src="/images/Polygon 2.png" alt="flecha abajo">
+
+            </div>
+            
+            <div class="container-siete">
+                <h1>¡Ya casi estas list@!</h1>
+                <div class="form-button">
+                    <button class="login-button" type="submit">SIGUIENTE</button>
+                </div>
+            </div>
     </main>
     <footer>
         <%- include('./partials/footer.ejs'); %>
