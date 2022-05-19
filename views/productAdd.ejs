@@ -11,7 +11,7 @@
         <%- include('./partials/header.ejs'); %>
     </header>
     <main>
-        <div class="main-container">
+        <form class="main-container">
             <img class="bola-rosa" src="/images/bolita_rosa.png" alt="bola rosa">
             <img class="bola-verde" src="/images/bolita_verde.png" alt="bola verde">
             <p class="subtitulo-principal">¡Hola Grupo 7!</p>
@@ -23,32 +23,32 @@
                 <div class="categorias">
                     
                     <div class="img-contenedor">
-                    <label for="monitores"><input type="radio" id="monitores" name="categorias" value="monitores">
+                    <label for="monitores"><input method="POST" type="radio" id="monitores" name="categorias" value="monitores" required>
                     <img src="/images/3269_800 1.png" alt="monitor"><br>Monitores</label>
                     </div>
                     
                     <div class="img-contenedor">
-                    <label for="combos"><input type="radio" id="combos" name="categorias" value="combos">
+                    <label for="combos"><input method="POST"  type="radio" id="combos" name="categorias" value="combos">
                     <img src="/images/compu 1.png" alt="combos"><br>Combos</label>
                     </div>
                     
                     <div class="img-contenedor">
-                    <label for="monitores"><input type="radio" id="monitores" name="categorias" value="monitores">
+                    <label for="teclados"><input method="POST" type="radio" id="teclados" name="categorias" value="teclados" required>
                     <img src="/images/GK30US_800 1.png" alt="teclados"><br>Teclados</label>
                     </div>
 
                     <div class="img-contenedor">
-                    <label for="mouse"><input type="radio" id="mouse" name="categorias" value="mouse">
+                    <label for="mouse"><input method="POST" type="radio" id="mouse" name="categorias" value="mouse" required>
                     <img src="/images/mouse1.jpg" alt="mouse"><br>Mouse</label>
                     </div>
                     
                     <div class="img-contenedor">
-                    <label for="procesadores"><input type="radio" id="procesadores" name="categorias" value="procesadores">
+                    <label for="procesadores"><input method="POST" type="radio" id="procesadores" name="categorias" value="procesadores" required>
                     <img src="/images/procesadores.jpeg" alt="procesadores"><br>Procesadores</label>
                     </div>
 
                     <div class="img-contenedor">
-                    <label for="sillas"><input type="radio" id="sillas" name="categorias" value="sillas">
+                    <label for="sillas"><input method="POST" type="radio" id="sillas" name="categorias" value="sillas" required>
                     <img src="/images/silla 1.png" alt="sillas"><br>Sillas</label>
                     </div>
 
@@ -64,7 +64,7 @@
             <div class="caja-producto">
                 <img class="pointer" src="/images/mano-1.png" alt="selector">
                 <label  for="categoriaProducto"></label>
-                <select class="caja-texto" name="categoriaProducto" required>
+                <select method="POST" class="caja-texto" name="categoriaProducto" required>
                     <option disabled selected>Haz click para seleccionar</option>
                     <option value="intel">Intel</option>
                     <option value="amd">AMD</option>
@@ -99,7 +99,7 @@
             <div class="caja-producto">
                 <img class="pointer" src="/images/mano-1.png" alt="selector">
                 <label  for="caracteristicasProducto"></label>
-                <select class="caja-texto" name="caracteristicasProducto" required>
+                <select method="POST" class="caja-texto" name="caracteristicasProducto" required>
                     <option disabled selected>Haz click para seleccionar</option>
                     <option value="i9">i9</option>
                     <option value="i7">i7</option>
@@ -117,7 +117,7 @@
             <div class="caja-producto">
                 <img class="pointer" src="/images/mano-1.png" alt="selector">
                 <label  for="caracteristicasProducto"></label>
-                <select class="caja-texto" name="caracteristicasProducto" required>
+                <select method="POST" class="caja-texto" name="caracteristicasProducto" required>
                     <option disabled selected>Haz click para seleccionar</option>
                     <option value="4gb">4GB</option>
                     <option value="8gb">8GB</option>
@@ -134,7 +134,7 @@
             <div class="caja-producto">
                 <img class="pointer" src="/images/mano-1.png" alt="selector">
                 <label  for="caracteristicasProducto"></label>
-                <select class="caja-texto" name="caracteristicasProducto" required>
+                <select method="POST" class="caja-texto" name="caracteristicasProducto" required>
                     <option disabled selected>Haz click para seleccionar</option>
                     <option value="128gb">128GB</option>
                     <option value="256gb">256GB</option>
@@ -153,7 +153,7 @@
             <h2>Colocá una breve descripción del producto</h2>
             <div class="caja-producto-descripcion">
                 <img class="pencil" src="/images/pencil.png" alt="lapiz">
-                <textarea rows="10" required placeholder="Escribe aqui" name="descripcionProducto"></textarea>
+                <textarea method="POST" rows="10" required placeholder="Escribe aqui" name="descripcionProducto"></textarea>
             </div>
             <img src="/images/Polygon 2.png" alt="flecha abajo">
             </div>
@@ -164,7 +164,7 @@
                 <div class="caja-producto-imagenes">
                     <img class="pointer" src="/images/plus-sign.png" alt="selector">
                     <label  for="imagenesProducto"></label>
-                    <input type="file" name="imagenesProducto" required>
+                    <input method="POST" type="file" name="imagenesProducto" required>
                 </div>
                 <img src="/images/Polygon 2.png" alt="flecha abajo">
             </div>
@@ -209,7 +209,7 @@
                 <div class="form-button">
                     <button class="login-button" type="submit">SIGUIENTE</button>
                 </div>
-            </div>
+            </form>
     </main>
     <footer>
         <%- include('./partials/footer.ejs'); %>
