@@ -19,6 +19,7 @@ header{
     top: 0;
     width: 100%;
     z-index: 1;
+    background-color: black;
 }
 
 .search-input{
@@ -55,6 +56,7 @@ header{
 .fa-location-dot{
     padding-right: 10px;
 }
+
 
 .logo-numpy{
     width: 33%;

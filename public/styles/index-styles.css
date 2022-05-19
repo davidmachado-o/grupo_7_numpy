@@ -425,61 +425,7 @@ button {
 
 /* Seccion 8: FOOTER */
 
-.footer-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    width: 20%;
-    height: 40px;
-    border-radius: 20px 20px 0px 0px;
-}
 
-
-.footer-lista-general{
-    list-style-type: none;
-     margin: 0;
-    padding: 0;
-    display: flex;
-    color: white;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    padding-left: 120px;
-}
-
-.footer-imagen {
-    width: 5%;
-    transform: rotate(180deg);
-    margin-left: 14px;
-}
-
-.footer-seccion-2 {
-    background-color: black;
-}
-
-.footer-logo{
-    width: 20%;
-}
-
-.footer-lista {
-    padding-right: 20px;
-    padding-top: 40px;
-    padding-bottom: 80px;
-}
-
-.footer-logo-div {
-    justify-content: center;
-    display: flex;
-    padding-bottom: 60px;
-}
-
-.footer-texto {
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    letter-spacing: 0.1em;
-}
 
 @media (min-width: 768px){
 

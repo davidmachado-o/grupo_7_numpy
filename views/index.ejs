@@ -1,53 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/styles/index-styles.css" rel="stylesheet">
-    <link href="/styles/nav-styles.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/21c548f2ca.js" crossorigin="anonymous"></script>     
+    <%- include('./partials/head.ejs'); %>    
     <title>Numpy - Home</title>
 </head>
 <body>
-    <header class="main-header">
-        <nav class="nav-bar">
-            <div class="logo-numpy">
-                <a href="/index">
-                <img src="images/logo-numpy.svg" alt="logo numpy">
-                </a>
-            </div>
-            <div class="search-container">
-                <form action="#" method="get" name="search">
-                <input class="search-input" type="text" placeholder="Buscá tus productos y marcas preferidas..." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-            <div class="nav-top-right-top">
-                <ul class="nav-top-right">
-                    <li class="list-nav-1"><a href="#"><i class="fa-solid fa-circle-user"></i></a></li>
-                    <li class="list-nav-2"><a href="/register">Creá tu cuenta</a></li>
-                    <li class="list-nav-3"><a href="/login">Ingresá</a></li>
-                    <li class="list-nav-4"><a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="shortcuts-bar show-nav">
-            <a class="ship" href="#"><i class="fa-solid fa-location-dot"></i>Enviar a Capital Federal</a>
-            <ul class="nav-bottom">
-                <li class="list-nav"><a href="#">Categorias<i class="fa-solid fa-angle-down"></i></a></li>
-                <li class="list-nav"><a href="#">Armá tu PC</a></li>
-                <li class="list-nav"><a href="#">Gamers</a></li>
-                <li class="list-nav"><a href="#">Oficina</a></li>
-                <li class="list-nav"><a href="#">Hogar</a></li>
-                <li class="list-nav"><a href="#">Ofertas</a></li>
-            </ul>
-
-        </div>
-</header>
+    <header>
+        <%- include('./partials/header.ejs'); %>
+    </header>
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -298,21 +259,7 @@
         </div>
     </main>  
     <footer>
-            <div class="footer-div">
-                <p class="footer-texto">Más información</p>
-                <img class="footer-imagen" src="/images/flecha_blanca.png">
-        </div>
-        <div class="footer-seccion-2">
-            <ul class="footer-lista-general">
-                <li class="footer-lista">Trabajá con nosotros</li>
-                <li class="footer-lista">Términos y condiciones</li>
-                <li class="footer-lista">Privacidad</li>
-                <li class="footer-lista">Ayuda</li>
-            </ul>
-            <div class="footer-logo-div">
-                <img class="footer-logo" src="/images/logo-numpy.svg">
-            </div>
-        </div>
+        <%- include('./partials/footer.ejs'); %>
     </footer>
 </body>
 </html>
