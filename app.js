@@ -16,6 +16,7 @@ app.listen(3000, () => {
 app.use('/', mainRouter);
 app.use('/home', mainRouter);
 
+app.use('/productAdd', mainRouter);
 app.use('/productDetail', mainRouter);
 app.use('/productCart', mainRouter);
 app.use('/register', mainRouter);
