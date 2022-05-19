@@ -13,7 +13,7 @@ main {
   background-color: #5483ed;
   width: 70%;
   align-items: center;
-  padding: 3em 0;
+  padding: 10em 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -25,8 +25,72 @@ main {
 }
 
 .titulos-linea {
-  margin-top: 66px;
+  margin-top: 2em;
+  margin-bottom: 7em;
   color: white;
+}
+
+.bola-rosa {
+  position: absolute;
+  width: 100px;
+  top: -80px;
+  left: 230px;
+  z-index: 1;
+}
+
+.bola-verde {
+  position: absolute;
+  width: 300px;
+  top: -220px;
+  left: 110px;
+}
+
+.numero-uno {
+  position: absolute;
+  top: 180px;
+  left: 110px;
+  z-index: 1;
+  width: 1.5em;
+}
+
+.numero-dos {
+  position: absolute;
+  top: 840px;
+  left: 110px;
+  z-index: 1;
+  width: 2.5em;
+}
+
+.numero-tres {
+    position: absolute;
+    top: 1100px;
+    left: 110px;
+    z-index: 1;
+    width: 2.5em;
+}
+
+.numero-cuatro {
+    position: absolute;
+    top: 1610px;
+    left: 110px;
+    z-index: 1;
+    width: 3em;
+}
+
+.numero-cinco {
+    position: absolute;
+    top: 2070px;
+    left: 110px;
+    z-index: 1;
+    width: 2.7em;
+}
+
+.numero-seis {
+    position: absolute;
+    top: 2353px;
+    left: 110px;
+    z-index: 1;
+    width: 2.7em;
 }
 
 .container-uno,
@@ -227,4 +291,16 @@ main {
 
 .pencil {
   width: 6em;
+}
+
+.bola-rosa-2{
+    position: absolute;
+    top: 2900px;
+    left: 100px;
+}
+
+.bola-verde-2{
+    position: absolute;
+    top: 2875px;
+    left: 300px;
 }
