@@ -9,8 +9,9 @@
     "model": "Basilisk V3",
     "processor": false,
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 5,
+    "stock": 100
   },
   {
     "id": 2,
@@ -22,8 +23,9 @@
     "model": "G502 Lightspeed",
     "processor": false,
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 10,
+    "stock": 100
   },
   {
     "id": 3,
@@ -35,8 +37,9 @@
     "model": "DeathAdder V2 Pro",
     "processor": false,
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 15,
+    "stock": 100
   },
   {
     "id": 4,
@@ -48,8 +51,9 @@
     "model": "K100 RGB Optical",
     "processor": false,
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 5,
+    "stock": 100
   },
   {
     "id": 5,
@@ -61,8 +65,9 @@
     "model": "Everest Max",
     "processor": false,
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 10,
+    "stock": 100
   },
   {
     "id": 6,
@@ -74,8 +79,9 @@
     "model": "G915 Lightspeed",
     "processor": false,
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 15,
+    "stock": 100
   },
   {
     "id": 7,
@@ -87,8 +93,9 @@
     "model": "Rog Swift PG35VQ",
     "processor": false,
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 5,
+    "stock": 100
   },
   {
     "id": 8,
@@ -100,8 +107,9 @@
     "model": "Predator X27",
     "processor": false,
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 10,
+    "stock": 100
   },
   {
     "id": 9,
@@ -113,8 +121,9 @@
     "model": "CRG5",
     "processor": false,
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 15,
+    "stock": 100
   },
   {
     "id": 10,
@@ -126,8 +135,9 @@
     "model": "GLADIATOR Series",
     "processor": false,
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 5,
+    "stock": 100
   },
   {
     "id": 11,
@@ -139,8 +149,9 @@
     "model": "Armor Titan",
     "processor": false,
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 10,
+    "stock": 100
   },
   {
     "id": 12,
@@ -152,8 +163,9 @@
     "model": "Takamikura",
     "processor": false,
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 15,
+    "stock": 100
   },
   {
     "id": 13,
@@ -165,8 +177,9 @@
     "model": "Ryzen 7 5700G",
     "processor": "Ryzen 7",
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 5,
+    "stock": 100
   },
   {
     "id": 14,
@@ -178,8 +191,9 @@
     "model": "Core i7 12700K",
     "processor": "Core i7",
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 10,
+    "stock": 100
   },
   {
     "id": 15,
@@ -191,8 +205,9 @@
     "model": "Core i5 10400",
     "processor": "Core i5",
     "memory": false,
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 15,
+    "stock": 100
   },
   {
     "id": 16,
@@ -204,8 +219,9 @@
     "model": "Ryzen 7 5800X3D",
     "processor": "Ryzen 7",
     "memory": "64gb",
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 5,
+    "stock": 100
   },
   {
     "id": 17,
@@ -217,8 +233,9 @@
     "model": "Core i7-12700K",
     "processor": "Core i7",
     "memory": "64gb",
-    "price": "$100",
-    "stock": "100"
+    "price": 100,
+    "discount": 10,
+    "stock": 100
   },
   {
     "id": 18,
@@ -230,7 +247,8 @@
     "model": "Ryzen 9 5950X",
     "processor": "Ryzen 9",
     "memory": "32gb",
-    "price": "$100",
-    "stock": "100" 
+    "price": 100,
+    "discount": 15,
+    "stock": 100 
   }
 ]
