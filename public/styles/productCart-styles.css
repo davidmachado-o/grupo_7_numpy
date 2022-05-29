@@ -1,3 +1,7 @@
+body{
+  background-color: lightgray;
+}
+
 /** main **/
 .contain-one {
   display: grid;
@@ -6,16 +10,18 @@
   border-radius: 25px;
   text-align: center;
   position: relative;
-  left: 105px;
+  /* left: 105px; */
+  border: 1px soli #6666;
   background-color: #fff;
-  padding: 50px 60px;
+  padding: 22px 60px;
+  height: 145vw;
   margin: 20px;
-  width: 75vw;
+  /* width: 75vw; */
 }
 section.section {
   display: flex;
   align-items: center;
-  width: 65vw;
+  /* width: 65vw; */
   background-color: #fff;
 }
 ul {
@@ -30,67 +36,70 @@ a {
 section.option {
   display: flex;
   background-color: #fff;
-  border: 1px solid #6666;
-  padding: 30px 40px;
+  border-top: 1px solid #6666;
+  border-bottom: 1px solid #6666;
+  padding: 25px 5px;
 }
 img.cpu {
-  width: 15%;
+  width: 40px;
+  height: 40px;
   position: relative;
-  left: 21px;
+
 }
 .order {
   padding: 5px;
-  width: 60vw;
+  width: 45vw;
   height: 20vh;
-  left: 40px;
+
   position: relative;
   display: flex;
 }
 .tittles {
-  font-size: 30px;
+  font-size: 12px;
   display: flex;
 }
-p.name {
+/* p.name {
   position: relative;
-  top: 15px;
-}
+} */
 img.car {
   width: 50px;
-  bottom: 15px;
-  left: 20px;
+  top: 65px;
   position: absolute;
   height: 50px;
 }
 p.send-info {
   position: absolute;
-  font-size: 15px;
-  top: 85px;
+  font-size: 17px;
+  top: 65px;
   color: #0d6efd;
-  left: 85px;
+  left: 100px;
 }
 .sum {
   display: flex;
   position: relative;
-  top: 20px;
-  height: 44px;
-  left: 100px;
+  /* top: 20px; */
+  height: 30px;
+  left: 20px;
   align-items: center;
   border: 1px solid blue;
   border-radius: 15px;
   background-color: gray;
-  font-size: 30px;
+}
+input.quantity {
+  width: 4vw;
 }
 button.more {
-  padding: 5px 10px;
-  border-radius: 12px;
+  padding: 3px 8px;
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
   /* align-content: center; */
   border: 0;
-  background-color: white;
+  background-color: #6666;
   box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   /* height: 27px; */
-  font-size: 20px;
+  font-size: 16px;
   transition: all 0.5s ease;
 }
 button.more:hover {
@@ -105,24 +114,25 @@ button.more:active {
   background-color: hsl(261deg 80% 48%);
   color: hsl(0, 0%, 100%);
   box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
-  transform: translateY(10px);
+  transform: translateY(5px);
   transition: 100ms;
 }
-p.change {
+/* p.change {
   position: relative;
   margin: 5px;
-}
+} */
 button.rest {
-  padding: 5px 10px;
-  border-radius: 12px;
+  padding: 3px 8px;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
   /* align-content: center; */
   border: 0;
-  background-color: white;
+  background-color: #6666;
   box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   /* height: 27px; */
-  font-size: 20px;
+  font-size: 16px;
   transition: all 0.5s ease;
 }
 button.rest:hover {
@@ -137,28 +147,27 @@ button.rest:active {
   background-color: hsl(261deg 80% 48%);
   color: hsl(0, 0%, 100%);
   box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
-  transform: translateY(10px);
+  transform: translateY(5px);
   transition: 100ms;
 }
 p.price {
   position: relative;
-  font-size: 30px;
-  left: 250px;
-  top: 20px;
+  font-size: 17px;
+  left: 28px;
 }
 .option-desc {
   height: 50px;
   background-color: #ffff;
+  border-bottom: 1px solid #6666;
 }
-ul.buttons-two {
+/* ul.buttons-two {
   position: relative;
   left: 150px;
-  /* font-size: 25px; */
-}
+} */
 li.item {
-  padding: 15px;
+  padding: 7px 5px;
   position: relative;
-  font-size: 16px;
+  font-size: 12px;
 }
 section.info {
   padding: 10px;
@@ -168,48 +177,44 @@ section.info {
 .choices {
   display: flex;
   position: relative;
-  left: 25px;
-  width: 70vw;
+  width: 61vw;
 }
 a.option-live {
   /* border: 1px solid; */
-  width: 40px;
-  height: 35px;
   position: relative;
-  left: 18vw;
+  width: 35px;
+  height: 35px;
 }
 p.live {
-  font-size: 20px;
-  position: relative;
-  left: 190px;
+  font-size: 13px;
 }
 p.option {
-  font-size: 20px;
+  font-size: 15px;
   position: relative;
   color: #1259c3;
-  left: 34vw;
+  left: 12vw;
 }
 .paying {
   display: flex;
   align-items: center;
   position: relative;
   width: 70vw;
-  left: 25px;
+  /* left: 25px; */
+  padding: 2px 10px;
 }
 p.total {
   font-size: 25px;
-  position: relative;
-  left: 25vw;
+  padding: 3px 17px;
 }
 p.price-finale {
-  font-size: 20px;
+  font-size: 15px;
   position: relative;
-  left: 40vw;
 }
 section.continue {
   background-color: white;
   padding: 15px;
-  border: 1px solid #6666;
+  border-top: 1px solid #6666;
+  border-bottom: 1px solid #6666;
 }
 button.first {
   padding: 10px 5px;
@@ -226,12 +231,11 @@ button.first {
   cursor: pointer;
   outline: none;
   position: relative;
-  left: 20vw;
   display: flex;
 }
 p.first{
   position: relative;
-  top: 25px;
+  top: 8px;
 }
 
 button.first:hover {
@@ -251,24 +255,21 @@ img.white-car {
 /**                   contain two               **/
 .contain-two {
   display: grid;
-  justify-content: center;
   align-items: center;
   border-radius: 25px;
   text-align: center;
   position: relative;
-  left: 80px;
-  right: 15px;
+  right: 75px;
   padding: 50px 60px;
   margin: 20px;
-  width: 80vw;
 }
 h3.new-seccion {
   color: #666666;
-  font-size: 22px;
+  font-size: 15px;
   align-items: center;
   letter-spacing: 2.5px;
   align-content: center;
-  right: 5px;
+  left: 20px;
   position: relative;
   display: flex;
 }
@@ -276,7 +277,6 @@ h3.new-seccion {
   align-items: center;
   margin: 15px;
   position: relative;
-  right: 25px;
   /* align-content: center; */
   display: flex;
 }
@@ -289,8 +289,8 @@ article.product-seller {
   padding: 25px;
 }
 img.volante {
-  width: 135px;
-  height: 115px;
+  width: 87px;
+  height: 65px;
 }
 .decoration{
   display: flex;
@@ -300,7 +300,7 @@ p.desc {
   background-color: red;
   color: white;
   border-radius: 10px;
-  width: 10vw;
+  width: 19vw;
   height: 1.5em;
   right: 20px;
   font-size: 12px;
@@ -317,7 +317,7 @@ img.heart-without{
   cursor: pointer;
   position: relative;
   height: 1.5em;
-  left: 10vw;
+  left: 25vw;
 }
 .contain-price {
   position: relative;
@@ -426,15 +426,14 @@ button.more-option:focus:not(:focus-visible) {
   border-radius: 25px;
   text-align: center;
   position: relative;
-  left: 80px;
-  right: 15px;
+  left: 10px;
   padding: 50px 60px;
   margin: 20px;
   width: 80vw;
 }
 h3.new-seccion-two {
   color: #666666;
-  font-size: 22px;
+  font-size: 16px;
   align-items: center;
   letter-spacing: 2.5px;
   align-content: center;
@@ -446,7 +445,6 @@ h3.new-seccion-two {
 }
 .col-8 {
   display: flex;
-  width: 76vw;
   padding: 5px;
   background-color: whitesmoke;
   border-radius: 15px;
@@ -454,12 +452,11 @@ h3.new-seccion-two {
 section.anuncio {
   position: relative;
   margin: 0px -4px;
-  width: 18vw;
   border-radius: 12px;
   background-color: #dadfff;
 }
 p.promotion {
-  font-size: 25px;
+  font-size: 13px;
   /* border-inline: inherit; */
   position: relative;
   top: 50px;
@@ -469,7 +466,7 @@ button.new-product {
   position: relative;
   top: 75px;
   padding: 10px 2em;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
@@ -505,32 +502,31 @@ img.joystick {
 /** section product**/
 section.product {
   position: relative;
-  left: 5px;
-  width: 28vw;
+  width: 30vw;
   background-color: #fff;
 }
 section.product-two {
   background-color: #fff;
-  border-radius: 15px;
+  boder-radius: 15px;
 }
 
 article.product-info {
   display: flex;
-  width: 30vw;
+  width: 34vw;
+  height: 35vw;
   margin: 15px 0px;
   align-items: center;
   background-color: #ffffff;
   position: relative;
 }
 img.game-chair {
-  width: 12vw;
-  height: 21vh;
+  width: 10vw;
+  height: 20vh;
 }
-.col-4 {
-  width: 15vw;
-}
+
 p.previous-col4 {
-  font-size: 12px;
+  font-size: 10px;
+  bottom: 12px;
   display: flex;
   position: relative;
   margin: 2px;
@@ -539,10 +535,9 @@ p.previous-col4 {
 span.col-min {
   display: flex;
   position: relative;
-  top: 15px;
 }
 p.price-col4 {
-  font-size: 25px;
+  font-size: 12px;
   margin: 3px 3px;
   position: relative;
   bottom: 15px;
@@ -550,21 +545,23 @@ p.price-col4 {
 }
 p.off-col4 {
   position: absolute;
-  right: 10px;
-  font-size: 12px;
+  right: 40px;
+  font-size: 9px;
   /* top: 10px; */
   color: #39b54a;
 }
 p.cuotas {
-  font-size: 12px;
+  font-size: 10px;
   align-items: center;
   display: flex;
   position: relative;
+  right: 7px;
   color: #6666;
 }
 p.description-col4 {
-  font-size: 15px;
-  position: absolute;
+  font-size: 10px;
+  top:10px;
+  position: relative;
   padding: 1px 0px;
   color: #666;
 }
@@ -634,11 +631,188 @@ footer {
 /* computadora */
 @media (min-width: 360px) {
   .contain-one {
-    display: block;
+    left: 105px;
+    width: 75vw;
+    top: 5vh;
+    height: 91vh;
+    padding: 50px 60px;
+  }
+  section.section {
+    width: 65vw;
+  }
+  section.option {
+    padding: 30px 40px;
+  }
+  img.cpu {
+    width: 15%;
+    position: relative;
+    right: 20px;
+    height: 20vh;
+  }
+  /* .order{
+    left: 40px;
+    width: 60vw;
+  } */
+  .tittles {
+    font-size: 30px;
+  }
+  p.name {
+    position: relative;
+    top: 15px;
+  }
+  img.car {
+    bottom: 15px;
+    left: 20px;
+  }
+  p.send-info {
+    top: 85px;
+    left: 85px;
+  }
+  .sum{
+    top: 20px;
+    height: 35px;
+    left: 50px;
+  }
+  input.quantity {
+    width: 2vw;
+    text-align: center;
+    height: 5vh;
+    border: 1px;
+  }
+  p.price {
+    font-size: 30px;
+    left: 90px;
+    top: 20px;
+  }
+  ul.buttons-two {
+    position: relative;
+    left: 85px;
+  }
+  button.more{
+    font-size: 23px;
+  }
+  button.rest{
+    font-size: 24px;
+  }
+
+  li.item {
+    padding: 15px;
+    font-size: 16px;
+  }
+  .choices {
+    right: 10vw;
+  }
+  p.live {
+    font-size: 20px;
+    position: relative;
+    left: 190px;
+  }
+  a.option-live {
+    width: 40px;
+    left: 18vw;
+  }
+  p.option {
+    font-size: 20px;
+    left: 34vw;
+  }
+  .paying{
+    right: 11vw;
+  }
+  p.total {
+    position: relative;
+    left: 25vw;
+  }
+  p.price-finale {
+    left: 40vw;
+  }
+  button.first{
+    left: 20vw;
+  }
+  p.first{
+    top: 25px;
+  }
+  /* contain two*/
+  .contain-two {
+    justify-content: center;
+    left: 80px;
+    right: 15px;
+    width: 80vw;
+  }
+  h3.new-seccion{
+    font-size: 22px;
+    right: 5px;
+  }
+  .publication{
+    right: 25px;
+  }
+  p.desc{
+    width: 10vw;
+  }
+  img.volante {
+    width: 135px;
+    height: 115px;
+  }
+  img.heart-without{
+    left: 10vw;
+  }
+  .contain-three{
+    left: 80px;
+  }
+  h3.new-seccion-two{
+    font-size: 22px;
+  }
+  p.promotion{
+    font-size: 25px;
+  }
+  button.new-product{
+    font-size: 12px;
+    height: 7vw;
+  }
+  img.joystick{
+    height: 45vh;
+    top: 100px;
+  }
+  /** sections**/
+  section.product{
+    left: 5px;
+  }
+  article.product-info{
+    width: 30vw;
+    height: 15vw;
+  }
+  img.game-chair {
+    width: 12vw;
+    height: 21vh;
+  }
+  .col-4 {
+    width: 15vw;
+  }
+  p.previous-col4{
+    font-size: 12px;
+    bottom: 0px
+  }
+  span.col-min{
+    top: 15px;
+  }
+  p.price-col4{
+    font-size: 25px;
+  }
+  p.off-col4{
+    right: 10px;
+    font-size: 12px;
+  }
+  p.cuotas{
+    font-size: 12px;
+    left:7px;
+    top:10px;
+  }
+  p.description-col4{
+    font-size: 15px;
+    bottom: 80px;
   }
 }
 /* tablet */
-@media (min-width: 790px) { 
+@media (min-width: 790px) {
   .contain-one {
     display: block;
     }

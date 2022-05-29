@@ -7,49 +7,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet"><!--estilo para la letra-->
-    <script src="https://kit.fontawesome.com/21c548f2ca.js" crossorigin="anonymous"></script>   
+    <script src="https://kit.fontawesome.com/21c548f2ca.js" crossorigin="anonymous"></script>
     <link href="/styles/nav-styles.css" rel="stylesheet">
-    <link href="/styles/produc-cart-styles.css" rel="stylesheet" >
+    <link href="/styles/productCart-styles.css" rel="stylesheet" >
     <title>Compras</title>
 </head>
 <body>
     <header class="main-header">
-            <nav class="nav-bar">
-                <div class="logo-numpy">
-                    <a href="/index">
-                        <img src="images/logo-numpy.svg" alt="logo numpy">
-                    </a>
-                </div>
-                <div class="search-container">
-                    <form action="#" method="get" name="search">
-                    <input class="search-input" type="text" placeholder="Buscá tus productos y marcas preferidas..." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
-                <div class="nav-top-right-top">
-                    <ul class="nav-top-right">
-                        <li class="list-nav-1"><a href="#"><i class="fa-solid fa-circle-user"></i></a></li>
-                        <li class="list-nav-2"><a href="/register">Creá tu cuenta</a></li>
-                        <li class="list-nav-3"><a href="/login">Ingresá</a></li>
-                        <li class="list-nav-4"><a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="shortcuts-bar show-nav">
-                <a class="ship" href="#"><i class="fa-solid fa-location-dot"></i>Enviar a Capital Federal</a>
-                <ul class="nav-bottom">
-                    <li class="list-nav"><a href="#">Categorias<i class="fa-solid fa-angle-down"></i></a></li>
-                    <li class="list-nav"><a href="#">Armá tu PC</a></li>
-                    <li class="list-nav"><a href="#">Gamers</a></li>
-                    <li class="list-nav"><a href="#">Oficina</a></li>
-                    <li class="list-nav"><a href="#">Hogar</a></li>
-                    <li class="list-nav"><a href="#">Ofertas</a></li>
-                </ul>
-
-            </div>
+           <%- include('./partials/header.ejs'); %> 
     </header>
 <main class="first-main">
-    
+
     <div class="contain-one">
         <section class="section">
             <ul class="buttons">
@@ -73,8 +41,8 @@
                     <button class="more"> + </button>
                     <!-- <p class="change"> 1</p> -->
                     <div class="change">
-                        <!-- <input class="campus" type="text" name="user" placeholder="1" > -->
-                        <textarea name="textarea" rows="1" cols="1">1</textarea>
+                        <input class="quantity" value="1" type="text" name="user" placeholder="1" >
+                        <!-- <textarea name="textarea" rows="1" cols="1">1</textarea> -->
                     </div>
                     <button class="rest"> - </button>
                 </div>
@@ -133,7 +101,7 @@
                 <img class="heart-without" src="/images/corazon.png" alt="blue-heart">
             </div>
                 <img class="volante" src="/images/producto_volante.jpeg" alt="producto-volante">
-                
+
                 <div class="contain-price">
                     <p class="previous-col8"><del>$38,000</del> </p>
                     <p class="price-col8">$20,300</p>
