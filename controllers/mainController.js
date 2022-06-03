@@ -20,6 +20,7 @@ let productos =[
         imagen: "producto_volante.jpeg"}
 ]
 
+
 const mainController = {
 
     index : (req, res) => {

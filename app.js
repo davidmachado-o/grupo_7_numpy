@@ -2,9 +2,11 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const mainRouter = require('./routes/main')
-
+const methodOverride = require ('method-override');
 const publicPath = path.resolve(__dirname, "public");
+
 app.use(express.static(publicPath));
+app.use(express.json());
 
 app.set('view engine', 'ejs')
 app.set('views', (path.resolve('views')))
@@ -15,6 +17,7 @@ app.listen(3000, () => {
 
 app.use('/', mainRouter);
 app.use('/home', mainRouter);
+
 
 app.use('/productAdd', mainRouter);
 app.use('/productDetail', mainRouter);
