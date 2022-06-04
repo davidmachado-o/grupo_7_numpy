@@ -46,51 +46,57 @@ main {
 }
 
 .numero-uno {
-  position: absolute;
+  /* position: absolute; */
   top: 180px;
   left: 110px;
   z-index: 1;
   width: 1.5em;
+  margin-right: auto;
 }
 
 .numero-dos {
-  position: absolute;
+  /* position: absolute; */
   top: 840px;
   left: 110px;
   z-index: 1;
   width: 2.5em;
+  margin-right: auto;
 }
 
 .numero-tres {
-    position: absolute;
+    /* position: absolute; */
     top: 1100px;
     left: 110px;
     z-index: 1;
     width: 2.5em;
+    margin-right: auto;
 }
 
 .numero-cuatro {
-    position: absolute;
+    /* position: absolute; */
     top: 1610px;
     left: 110px;
     z-index: 1;
     width: 3em;
+    margin-right: auto;
 }
 
 .numero-cinco {
-    position: absolute;
+    /* position: absolute; */
     top: 2070px;
     left: 110px;
     z-index: 1;
     width: 2.7em;
+    margin-right: auto;
 }
 
 .numero-seis {
-    position: absolute;
+    /* position: absolute; */
     top: 2353px;
     left: 110px;
     z-index: 1;
     width: 2.7em;
+    margin-right: auto;
 }
 
 .container-uno,
@@ -99,6 +105,8 @@ main {
 .container-cuatro,
 .container-cinco,
 .container-seis {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 40px;
   background-color: rgba(175, 208, 220, 0.44);
@@ -242,7 +250,7 @@ main {
   box-shadow: 0px 4px 8px #affee1;
   border-radius: 140px;
   height: 50px;
-  width: 70%;
+  /* width: 70%; */
   margin-left: auto;
   margin-right: auto;
   align-items: center;
