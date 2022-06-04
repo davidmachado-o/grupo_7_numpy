@@ -13,9 +13,10 @@ main {
   background-color: #5483ed;
   width: 70%;
   align-items: center;
-  padding: 10em 0;
+  /* padding: 10em 0; */
   margin-left: auto;
   margin-right: auto;
+  border-radius: 50px;
 }
 
 .main-container {
@@ -30,8 +31,12 @@ main {
   color: white;
 }
 
+.ball-container{
+  margin-right: 0;
+}
+
 .bola-rosa {
-  position: absolute;
+  /* position: absolute; */
   width: 100px;
   top: -80px;
   left: 230px;
@@ -39,7 +44,7 @@ main {
 }
 
 .bola-verde {
-  position: absolute;
+  /* position: absolute; */
   width: 300px;
   top: -220px;
   left: 110px;
@@ -118,7 +123,6 @@ main {
 
 .container-siete {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-top: 15em;
 }
 
 .form-button {
@@ -176,6 +180,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
 }
 
 .categorias label {
@@ -183,10 +188,26 @@ main {
   cursor: pointer;
 }
 
-.img-contenedor input {
-  display: none;
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type=radio] + img {
   cursor: pointer;
 }
+[type=radio]:checked + img {
+  /* outline: 2px solid black; */
+  border: 3px solid #4dabcf;
+  border-radius: 10px;
+}
+
+/* .img-contenedor input {
+  display: none;
+  cursor: pointer;
+} */
 
 .caja-producto {
   display: flex;
@@ -302,13 +323,13 @@ main {
 }
 
 .bola-rosa-2{
-    position: absolute;
+    /* position: absolute; */
     top: 2900px;
     left: 100px;
 }
 
 .bola-verde-2{
-    position: absolute;
+    /* position: absolute; */
     top: 2875px;
     left: 300px;
 }
