@@ -8,7 +8,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  /* z-index: -1; */
+
 }
 
 a {
@@ -16,7 +16,7 @@ a {
 }
 
 body {
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: center;
   background-color: #c6bebe;
@@ -28,8 +28,10 @@ body {
 }
 
 .register-form {
+  margin: auto;
   background-color: #fff;
-  /* width: 50vw; */
+  width: 90vw;
+  max-width: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +41,8 @@ body {
   position: relative;
   top: 180px;
   padding: 10px;
+  padding-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 .nav-top-right-top {
@@ -203,7 +207,7 @@ a {
   color: #747070;
 }
 
-.footer{
+/* .footer{
   width: 100%;
   display: flex;
   align-items: center;
@@ -268,4 +272,4 @@ a {
   font-size: 14px;
   text-align: center;
   letter-spacing: 0.1em;
-}
+} */
