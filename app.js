@@ -2,11 +2,12 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const mainRouter = require('./routes/main')
-const methodOverride = require ('method-override');
-const publicPath = path.resolve(__dirname, "public");
+const productRouter = require('./routes/products')
 
+const methodOverride = require('method-override')
+const publicPath = path.resolve(__dirname, "public");
 app.use(express.static(publicPath));
-app.use(express.json());
+app.use(express.json)
 
 app.set('view engine', 'ejs')
 app.set('views', (path.resolve('views')))
@@ -16,16 +17,10 @@ app.listen(3000, () => {
 });
 
 app.use('/', mainRouter);
-app.use('/home', mainRouter);
+app.use('/product/', productRouter)
 
-
-app.use('/productAdd', mainRouter);
-app.use('/productDetail', mainRouter);
-app.use('/productCart', mainRouter);
-app.use('/register', mainRouter);
-app.use('/login', mainRouter);
-app.use('/nav', mainRouter);
 app.use('*', mainRouter);
+
 // app.get("/", (req, res) => {
 //     res.sendFile(path.resolve(__dirname, "views/index.html"))
 // })

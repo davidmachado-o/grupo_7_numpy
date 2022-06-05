@@ -1,53 +1,35 @@
-let productos =[
-    {
-        id:1,
-        nombre:"Volante Logitech G29",
-        precio: "$20,300",
-        anterior: "$38,000",
-        imagen: "producto_volante.jpeg"
-    },
-    {
-        id:2,
-        nombre:"Volante Logitech G29",
-        precio: "$20,300",
-        anterior: "$38,000",
-        imagen: "producto_volante.jpeg"},
-    {
-        id:3,
-        nombre:"Volante Logitech G29",
-        precio: "$20,300",
-        anterior: "$38,000",
-        imagen: "producto_volante.jpeg"}
-]
+const fs = require('fs');
+const path =require('path');
 
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
+
+const mouses = products.filter(product => product.category == 'mouse')
+
+const keyboard = products.filter(product => product.category == 'teclado')
+
+const display = products.filter(product => product.category == 'monitor')
+
+const gamerChair = products.filter(product => product.category == 'silla')
+
+const processor = products.filter(product => product.category == 'procesador')
+
+const blend = products.filter(product => product.category == 'combo')
 
 const mainController = {
+    index: (req, res) => {
+		res.render("index", {mouses, keyboard, display, gamerChair, processor, blend})
+	},
+	search: (req, res) => {
+		// Do the magic
+	},
+	login: (req, res) =>{
+        res.render('login') //ir hacia el form
+    },
+	register: (req,res) =>{
+        res.render('register' ) //ir hacia el form
+    },
+	//agregar el login y register
+};
 
-    index : (req, res) => {
-
-        res.render('index', {productos:productos}) //productos es un ejemplo
-    },
-    productDetail: (req, res) => {
-
-        // let detalleProducto = productos.find(producto => producto.id == req.params.id); detalleProducto
-
-            res.render('productDetail', {producto: productos} )
-    },
-    login: (req, res) =>{
-        res.render('login', {productos:productos})
-    },
-    productCart: (req, res) =>{
-        res.render('productCart', {productos:productos})
-    },
-    register: (req,res) =>{
-        res.render('register', {productos:productos})
-    },
-    productEdit: (req,res) =>{
-        res.render('productEdit', {productos:productos})
-    },
-    productAdd: (req,res) =>{
-        res.render('productAdd', {productos:productos})
-    }
-}
-
-module.exports = mainController;
+module.exports = mainController

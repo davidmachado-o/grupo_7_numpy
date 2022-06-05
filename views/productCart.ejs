@@ -1,16 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet"><!--estilo para la letra-->
-    <script src="https://kit.fontawesome.com/21c548f2ca.js" crossorigin="anonymous"></script>
-    <link href="/styles/nav-styles.css" rel="stylesheet">
+    
     <link href="/styles/productCart-styles.css" rel="stylesheet" >
-    <title>Compras</title>
+    <%- include('./partials/head.ejs'); %>
 </head>
 <body>
     <header class="main-header">
@@ -234,21 +227,7 @@
 
 </main>
 <footer>
-    <div class="footer-div">
-        <p class="footer-texto">Más información</p>
-        <img class="footer-imagen" src="/images/flecha_blanca.png">
-</div>
-<div class="footer-seccion-2">
-    <ul class="footer-lista-general">
-        <li class="footer-lista">Trabajá con nosotros</li>
-        <li class="footer-lista">Términos y condiciones</li>
-        <li class="footer-lista">Privacidad</li>
-        <li class="footer-lista">Ayuda</li>
-    </ul>
-    <div class="footer-logo-div">
-        <img class="footer-logo" src="/images/logo-numpy.svg">
-    </div>
-</div>
+    <%- include('./partials/footer.ejs'); %>
 </footer>
 </body>
 </html>
