@@ -21,7 +21,7 @@
         </div>
         <!--Seccion 2: Carga de productos-->
         <form class="seccion-detalles-producto seccion-detalles-producto-1" action="/product/productEdit/<%= product.id%>?_method=PUT " method="POST" enctype="multipart/form-data" id="productEditForm" name="productEditForm">
-                <img class="imagen-producto" src="/images/compu 1.png" alt="cpu intel">
+                <img class="imagen-producto" src="/images/products/<%= product.image_1 %> " alt="<%= product.name %>">
                 <div class="titulo-linea">
                         <h2 class="titulo-producto">Categoría producto</h2>
                         <hr class="linea-producto">
@@ -148,15 +148,12 @@
                 <h2 class="titulo-producto titulo-producto-2">Fotos</h2>
                 <hr class="linea-producto linea-producto-2">
                 <div class="seccion-carga-fotos">
-                    <img class="imagen-producto-2" src="/images/producto_cpu.webp" alt="cpu intel">
-                    <img class="imagen-producto-2" src="/images/producto_cpu.webp" alt="cpu intel">
-                    <img class="imagen-producto-2" src="/images/producto_cpu.webp" alt="cpu intel">
-                    <img class="imagen-producto-2" src="/images/producto_cpu.webp" alt="cpu intel">
-                    <img class="imagen-producto-2" src="/images/producto_cpu.webp" alt="cpu intel">
-                    <img class="imagen-producto-2" src="/images/producto_cpu.webp" alt="cpu intel">
-                    <img class="imagen-producto-2" src="/images/producto_cpu.webp" alt="cpu intel">
+                    <img class="imagen-producto-2" src="/images/products/<%= product.image_1 %> " alt="<%= product.name %>">
+                    <img class="imagen-producto-2" src="/images/products/<%= product.image_2 %> " alt="<%= product.name %>">
+                    <img class="imagen-producto-2" src="/images/products/<%= product.image_3 %> " alt="<%= product.name %>">
                     <div class="div-agregar-fotos">
-                        <img class="imagen-agregar-fotos" src="/images/simbolo_mas.png" alt="Agregar fotos">
+                        <label for="image"></label>
+                        <input type="file" name="image"> 
                     </div>
                 </div>
              </div>
@@ -211,7 +208,7 @@
                 <span>Enviar</span>
             </button>
         </form> 
-            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+            <form action="/product/delete/<%= product.id %>?_method=DELETE" method="POST">
                 <button type="submit">
                     <img class="basurero" src="/images/basura.png" alt="basuero">
                     <span>Eliminar producto</span>

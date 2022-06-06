@@ -32,14 +32,51 @@ const productsController = {
         res.render('productEdit', {product})
     },
 
+
+    productAdd: (req,res) =>{
+
+        res.render('productAdd', {products})
+
+        let newProduct = {
+            id: products[product.length - 1].id + 1,
+            ...req.body,
+            image:image
+        }
+
+        products.push(newProduct)
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
+
+        res.redirect('/products')
+    },
+
+    destroy : (req, res) => {
+		let id = req.params.id 
+		let productDeleted = products.filter(product => product.id !== id);
+		
+		fs.writeFileSync(productsFilePath, JSON.stringify(productDeleted));
+
+		res.redirect('/')
+	},
     productUpdate: (req,res) =>{
+        
+
         let id = req.params.id;
         let productToEdit = products.find(product => product.id == id);
 
         productToEdit = {
             id: productToEdit.id,
             ...req.body,
-            image_1: productToEdit.image_1
+            image_1: image_1,
+            image_2: image_2,
+            image_3: image_3,
+        };
+
+        let image
+        if (req.files[0] != undefined){
+            image= req.files[0].filename;
+        } else {
+            image = productToEdit.image_1
         };
 
         let productEdited = products.map (product => {
@@ -52,19 +89,7 @@ const productsController = {
         fs.writeFileSync(productsFilePath, JSON.stringify(productEdited));
         res.redirect ('/') //despues vemos hacia donde redirige
 
-    },
-
-    productAdd: (req,res) =>{
-        res.render('productAdd', {products})
-    },
-    destroy : (req, res) => {
-		let id = req.params.id 
-		let productDeleted = products.filter(product => product.id !== id);
-		
-		fs.writeFileSync(productsFilePath, JSON.stringify(productDeleted));
-
-		res.redirect('/')
-	}
+    }
 }
 
 module.exports = productsController;

@@ -173,17 +173,7 @@ textarea {
     padding-bottom: 15px;
 }
 
-.div-agregar-fotos {
-    width: 30%;
-    height: 112px;
-    background: linear-gradient(93.09deg, #FFFFFF 80.04%, rgba(175, 254, 225, 0.4) 91.82%);
-    border: 1px solid #E5E5E5;
-    box-shadow: 0px 4px 8px #AFFEE1;
-    border-radius: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-}
+
 
 .imagen-agregar-fotos {
     padding-top: 30px;

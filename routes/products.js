@@ -9,7 +9,7 @@ const productsController = require('../controllers/productsController');
 
 const storage =multer.diskStorage({
     destination: function(req, file, cb){
-        cb(null, 'public/images')
+        cb(null, 'public/images/products')
     },
     filename: function(req, file, cb){
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9) + path.extname(file.originalname)
@@ -27,10 +27,11 @@ router.get('/productDetail/:id/', productsController.productDetail);
 router.get('/productCart/', productsController.productCart)
 
  /* EDIT + DONDE SE ENVIA FORM */ 
-router.get('/productEdit/:id/', productsController.productEdit); 
-router.put('/productEdit/:id/', productsController.productUpdate);
 router.get('/productAdd', productsController.productAdd);
-router.post('/productAdd', productsController.productAdd); // para subir cualquier cant de fotos el 'upload.any()' 
+router.post('/productAdd', upload.any(), productsController.productAdd); // para subir cualquier cant de fotos el 'upload.any()' 
+
+router.get('/productEdit/:id/', productsController.productEdit); 
+router.put('/priductEdit/:id/', upload.any(), productsController.productUpdate);
 
 
 /* DELETE */ 
