@@ -20,22 +20,23 @@
             <img class="bola-verde" src="/images/bolita_verde.png" alt="bolita verde">
         </div>
         <!--Seccion 2: Carga de productos-->
-        <form class="seccion-detalles-producto seccion-detalles-producto-1" action="/productEdit" method="POST">
-                <img class="imagen-producto" src="/images/compu 1.png " alt="cpu intel">
+        <form class="seccion-detalles-producto seccion-detalles-producto-1" action="/product/productEdit/<%= product.id%>?_method=PUT " method="POST" enctype="multipart/form-data" id="productEditForm" name="productEditForm">
+                <img class="imagen-producto" src="/images/<%= product.image_1%>  " alt="cpu intel">
                 <div class="titulo-linea">
                         <h2 class="titulo-producto">Categoría producto</h2>
                         <hr class="linea-producto">
                     <div class="caja-producto">
                         <p class="caja-tick">✅</p>
                         <label  for="categoriaProducto"></label>
-                        <select class="caja-texto" name="categoriaProducto" required>
-                            <option>CBU</option>
-                            <option>PC</option>
-                            <option>Silla Gamer</option>
+                        <select class="caja-texto" name="category" id="category" required>
+                            <option value="<%= product.category %> " disabled> Seleccionar una opcion</option>
+                            <option value="mouse" <%= product.category  === 'mouse' ? 'selected' : ''%> >Mouse</option>
+                            <option value="teclado" <%= product.category  === 'teclado' ? 'selected' : ''%> >Teclado</option>
+                            <option value="monitor" <%= product.category  === 'monitor' ? 'selected' : ''%> >Monitor</option>
+                            <option value="silla" <%= product.category  === 'silla' ? 'selected' : ''%> >Silla</option>
+                            <option value="procesador" <%= product.category  === 'procesador' ? 'selected' : ''%> >Procesador</option>
+                            <option value="combo" <%= product.category  === 'combo' ? 'selected' : ''%> >Combo</option>
                         </select>
-                        <div class="imagen-lapiz">
-                            <img src="/images/lapiz_edicion.png" alt="Editar imagen">
-                        </div>
                     </div>
                      <!--Seccion 3: Carga de productos sub-seccion -->
                     <div class="titulo-linea">
@@ -44,10 +45,29 @@
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
                             <label  for="marcaProducto"></label>
-                            <select class="caja-texto" name="marcaProducto" required>
-                                <option>Intel</option>
-                                <option>Intel</option>
-                                <option>Intel</option>
+                            <select class="caja-texto" name="brand" id="brand" required>
+                                <option value="<%= product.brand %> " disabled> Seleccionar una opcion</option>
+
+                                <option value="Acer" <%= product.brand  === 'Acer' ? 'selected' : ''%> >Acer</option>
+                                <option value="AMD" <%= product.brand  === 'AMD' ? 'selected' : ''%> >AMD</option>
+                                <option value="Asus" <%= product.brand  === 'Asus' ? 'selected' : ''%> >Asus</option>
+                                <option value="Apple" <%= product.brand  === 'Apple' ? 'selected' : ''%> >Apple</option>
+                                <option value="Cougar" <%= product.brand  === 'Cougar' ? 'selected' : ''%> >Cougar</option>
+                                <option value="Corsair" <%= product.brand  === 'Corsair' ? 'selected' : ''%> >Corsair</option>
+                                <option value="Dell" <%= product.brand  === 'Dell' ? 'selected' : ''%> >Dell</option>
+                                <option value="Dx Racer" <%= product.brand  === 'Dx Racer' ? 'selected' : ''%> >Dx Racer</option>
+                                <option value="HP" <%= product.brand  === 'HP' ? 'selected' : ''%> >HP</option>
+                                <option value="Intel" <%= product.brand  === 'Intel' ? 'selected' : ''%> >Intel</option>
+                                <option value="Logitech" <%= product.brand  === 'Logitech' ? 'selected' : ''%> >Logitech</option>
+                                <option value="LG" <%= product.brand  === 'LG' ? 'selected' : ''%> >LG</option>
+                                <option value="Lenovo" <%= product.brand  === 'Lenovo' ? 'selected' : ''%> >Lenovo</option>
+                                <option value="MSI" <%= product.brand  === 'MSI' ? 'selected' : ''%> >MSI</option>
+                                <option value="Mountain" <%= product.brand  === 'Mountain' ? 'selected' : ''%> >Mountain</option>
+                                <option value="Newskill" <%= product.brand  === 'Newskill' ? 'selected' : ''%> >Newskill</option>
+                                <option value="Razer" <%= product.brand  === 'Razer' ? 'selected' : ''%> >Razer</option>
+                                <option value="Samsung" <%= product.brand  === 'Samsung' ? 'selected' : ''%> >Samsung</option>
+                                <option value="Sony" <%= product.brand  === 'Sony' ? 'selected' : ''%> >Sony</option>
+                                <option value="Toshiba" <%= product.brand  === 'Toshiba' ? 'selected' : ''%> >Toshiba</option>
                             </select>
                         </div>
                     </div>
@@ -57,11 +77,7 @@
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
                             <label  for="modeloProducto"></label>
-                            <select class="caja-texto" name="modeloProducto" required>
-                                <option>XXXXXXXX</option>
-                                <option>XXXXXX</option>
-                                <option>XXXXXXX</option>
-                            </select>
+                            <input type="text" id="model" name="model" value="<%= product.model%>" class="caja-texto" required>
                         </div>
                     </div>
                     <div class="titulo-linea">
@@ -70,10 +86,29 @@
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
                             <label  for="procesadorProducto"></label>
-                            <select class="caja-texto" name="procesadorProducto" required>
-                                <option>XXXXXXX</option>
-                                <option>XXXXXXX</option>
-                                <option>XXXXXXXX</option>
+                            <select class="caja-texto" name="processor" id="processor" required>
+                                <option value="<%= product.processor %> " disabled> Seleccionar una opcion</option>
+                                <option value="Core i3" <%= product.processor  === 'Core i3' ? 'selected' : ''%> >Core i3</option>
+                                <option value="Core i5" <%= product.processor  === 'Core i5' ? 'selected' : ''%> >Core i5</option>
+                                <option value="Core i7" <%= product.processor  === 'Core i7' ? 'selected' : ''%> >Core i7</option>
+                                <option value="Core i9" <%= product.processor  === 'Core i9' ? 'selected' : ''%> >Core i9</option>
+                                <option value="Ryzen 7" <%= product.processor  === 'Ryzen 7' ? 'selected' : ''%> >Ryzen 7</option>
+                                <option value="Ryzen 9" <%= product.processor  === 'Ryzen 9' ? 'selected' : ''%> >Ryzen 9</option>
+                                <option value="false" <%= product.processor  === 'false' ? 'selected' : ''%> >No aplica</option>   
+                            </select>
+                        </div>
+                    </div>
+                    <div class="titulo-linea">
+                        <h2 class="titulo-producto">Memoria</h2>
+                        <hr class="linea-producto">
+                        <div class="caja-producto">
+                            <p class="caja-tick">✅</p>
+                            <label  for="memoriaProducto"></label>
+                            <select class="caja-texto" name="memory" id="memory" required>
+                                <option value="<%= product.memory %>" disabled> Seleccionar una opcion</option>
+                                <option value="34gb" <%= product.memory  === '34gb' ? 'selected' : ''%> >34 GB</option>
+                                <option value="64gb" <%= product.memory  === '64gb' ? 'selected' : ''%> >64 GB</option>
+                                <option value="false" <%= product.memory  === 'false' ? 'selected' : ''%> >No aplica</option> 
                             </select>
                         </div>
                     </div>
@@ -83,10 +118,14 @@
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
                             <label  for="discoDuroProducto"></label>
-                            <select class="caja-texto" name="discoDuroProducto" required>
-                                <option>XXXXXXXX</option>
-                                <option>XXXXXXXX</option>
-                                <option>XXXXXXXX</option>
+                            <select class="caja-texto" name="storage" id="storage" required>
+                                <option value="<%= product.storage %>" disabled> Seleccionar una opcion</option>
+                                <option value="128gb" <%= product.storage  === '128gb' ? 'selected' : ''%> >128 GB</option>
+                                <option value="256gb" <%= product.storage  === '256gb' ? 'selected' : ''%> >256 GB</option>
+                                <option value="512gb" <%= product.storage  === '512gb' ? 'selected' : ''%> >512 GB</option>
+                                <option value="1tb" <%= product.storage  === '1tb' ? 'selected' : ''%> >1 TB</option>
+                                <option value="2tb" <%= product.storage  === '2tb' ? 'selected' : ''%> >2 TB</option>
+                                <option value="false" <%= product.storage  === 'false' ? 'selected' : ''%> >No aplica</option> 
                             </select>
                         </div>
                     </div>
@@ -97,6 +136,7 @@
                             <p class="caja-tick">✅</p>
                             <label  for="descripcionProducto"></label>
                             <textarea class="caja-texto" name="categoriaProducto" type="text" maxlength="1000" required>
+                                <%= product.description %>
                             </textarea>
                             <img src="/images/lapiz_edicion.png" alt="Editar imagen">
                         </div>
@@ -128,17 +168,32 @@
                 <hr class="linea-producto">
                 <div class="caja-producto-2">
                     <p class="caja-tick">✅</p>
-                    <label  for="precioProducto"></label>
-                    <input class="caja-texto" name="categoriaProducto" type="number" name="precioProducto" required>
+                    <label  for="precioProducto">
+                        $ <%= product.price %>
+                    </label>
+                    <input class="caja-texto" name="categoriaProducto" type="number" name="price" required>
                 </div>
             </div> 
+            <div class="titulo-linea">
+                <h2 class="titulo-producto">Descuento por unidad</h2>
+                <hr class="linea-producto">
+                <div class="caja-producto-2">
+                    <p class="caja-tick">✅</p>
+                    <label  for="unidadesProducto">
+                        <%= product.discount %> %
+                    </label>
+                    <input class="caja-texto" name="categoriaProducto" type="number" name="discount" required>
+                </div>
+            </div>
             <div class="titulo-linea">
                 <h2 class="titulo-producto">Inventario a la venta</h2>
                 <hr class="linea-producto">
                 <div class="caja-producto-2">
                     <p class="caja-tick">✅</p>
-                    <label  for="unidadesProducto"></label>
-                    <input class="caja-texto" name="categoriaProducto" type="number" name="unidadesProducto" required>
+                    <label  for="unidadesProducto">
+                        <%= product.stock %>
+                    </label>
+                    <input class="caja-texto" name="categoriaProducto" type="number" name="stock" required>
                 </div>
             </div>   
         

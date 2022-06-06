@@ -28,6 +28,7 @@ router.get('/productCart/', productsController.productCart)
 
  /* EDIT + DONDE SE ENVIA FORM */ 
 router.get('/productEdit/:id/', productsController.productEdit); 
+router.put('/productEdit/:id/', productsController.productUpdate);
 router.get('/productAdd', productsController.productAdd);
 router.post('/productAdd', productsController.productAdd); // para subir cualquier cant de fotos el 'upload.any()' 
 

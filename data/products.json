@@ -11,6 +11,7 @@
     "model": "Basilisk V3",
     "processor": false,
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 5,
     "stock": 100
@@ -27,6 +28,7 @@
     "model": "G502 Lightspeed",
     "processor": false,
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 10,
     "stock": 100
@@ -43,6 +45,7 @@
     "model": "DeathAdder V2 Pro",
     "processor": false,
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 15,
     "stock": 100
@@ -59,6 +62,7 @@
     "model": "K100 RGB Optical",
     "processor": false,
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 5,
     "stock": 100
@@ -75,6 +79,7 @@
     "model": "Everest Max",
     "processor": false,
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 10,
     "stock": 100
@@ -91,6 +96,7 @@
     "model": "G915 Lightspeed",
     "processor": false,
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 15,
     "stock": 100
@@ -107,6 +113,7 @@
     "model": "Rog Swift PG35VQ",
     "processor": false,
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 5,
     "stock": 100
@@ -123,6 +130,7 @@
     "model": "Predator X27",
     "processor": false,
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 10,
     "stock": 100
@@ -139,6 +147,7 @@
     "model": "CRG5",
     "processor": false,
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 15,
     "stock": 100
@@ -155,6 +164,7 @@
     "model": "GLADIATOR Series",
     "processor": false,
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 5,
     "stock": 100
@@ -171,6 +181,7 @@
     "model": "Armor Titan",
     "processor": false,
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 10,
     "stock": 100
@@ -187,6 +198,7 @@
     "model": "Takamikura",
     "processor": false,
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 15,
     "stock": 100
@@ -203,6 +215,7 @@
     "model": "Ryzen 7 5700G",
     "processor": "Ryzen 7",
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 5,
     "stock": 100
@@ -219,6 +232,7 @@
     "model": "Core i7 12700K",
     "processor": "Core i7",
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 10,
     "stock": 100
@@ -235,6 +249,7 @@
     "model": "Core i5 10400",
     "processor": "Core i5",
     "memory": false,
+    "storage": false,
     "price": 100,
     "discount": 15,
     "stock": 100
@@ -251,6 +266,7 @@
     "model": "Ryzen 7 5800X3D",
     "processor": "Ryzen 7",
     "memory": "64gb",
+    "storage": "128gb",
     "price": 100,
     "discount": 5,
     "stock": 100
@@ -267,6 +283,7 @@
     "model": "Core i7-12700K",
     "processor": "Core i7",
     "memory": "64gb",
+    "storage": "128gb",
     "price": 100,
     "discount": 10,
     "stock": 100
@@ -283,6 +300,7 @@
     "model": "Ryzen 9 5950X",
     "processor": "Ryzen 9",
     "memory": "32gb",
+    "storage": "128gb",
     "price": 100,
     "discount": 15,
     "stock": 100 

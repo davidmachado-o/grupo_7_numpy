@@ -7,7 +7,7 @@ const productRouter = require('./routes/products')
 const methodOverride = require('method-override')
 const publicPath = path.resolve(__dirname, "public");
 app.use(express.static(publicPath));
-// app.use(express.json)
+//app.use(express.json);
 
 app.set('view engine', 'ejs')
 app.set('views', (path.resolve('views')))
