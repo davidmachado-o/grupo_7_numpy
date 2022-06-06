@@ -59,9 +59,9 @@ const productsController = {
     },
     destroy : (req, res) => {
 		let id = req.params.id 
-		let productDeleted = products.filter(product => product.id != id) //diferentes
+		let productDeleted = products.filter(product => product.id !== id);
 		
-		fs.writeFileSync(productsFilePath, JSON.stringify(productDeleted))
+		fs.writeFileSync(productsFilePath, JSON.stringify(productDeleted));
 
 		res.redirect('/')
 	}

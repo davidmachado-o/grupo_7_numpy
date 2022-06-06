@@ -21,13 +21,13 @@
         </div>
         <!--Seccion 2: Carga de productos-->
         <form class="seccion-detalles-producto seccion-detalles-producto-1" action="/product/productEdit/<%= product.id%>?_method=PUT " method="POST" enctype="multipart/form-data" id="productEditForm" name="productEditForm">
-                <img class="imagen-producto" src="/images/<%= product.image_1%>  " alt="cpu intel">
+                <img class="imagen-producto" src="/images/compu 1.png" alt="cpu intel">
                 <div class="titulo-linea">
                         <h2 class="titulo-producto">Categoría producto</h2>
                         <hr class="linea-producto">
                     <div class="caja-producto">
                         <p class="caja-tick">✅</p>
-                        <label  for="categoriaProducto"></label>
+                        <label  for="category" method="POST"></label>
                         <select class="caja-texto" name="category" id="category" required>
                             <option value="<%= product.category %> " disabled> Seleccionar una opcion</option>
                             <option value="mouse" <%= product.category  === 'mouse' ? 'selected' : ''%> >Mouse</option>
@@ -44,7 +44,7 @@
                         <hr class="linea-producto">
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
-                            <label  for="marcaProducto"></label>
+                            <label  for="brand" method="POST"></label>
                             <select class="caja-texto" name="brand" id="brand" required>
                                 <option value="<%= product.brand %> " disabled> Seleccionar una opcion</option>
 
@@ -76,7 +76,7 @@
                         <hr class="linea-producto">
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
-                            <label  for="modeloProducto"></label>
+                            <label  for="model" method="POST"></label>
                             <input type="text" id="model" name="model" value="<%= product.model%>" class="caja-texto" required>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                         <hr class="linea-producto">
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
-                            <label  for="procesadorProducto"></label>
+                            <label  for="proccesor" method="POST"></label>
                             <select class="caja-texto" name="processor" id="processor" required>
                                 <option value="<%= product.processor %> " disabled> Seleccionar una opcion</option>
                                 <option value="Core i3" <%= product.processor  === 'Core i3' ? 'selected' : ''%> >Core i3</option>
@@ -103,7 +103,7 @@
                         <hr class="linea-producto">
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
-                            <label  for="memoriaProducto"></label>
+                            <label  for="memory" method="POST"></label>
                             <select class="caja-texto" name="memory" id="memory" required>
                                 <option value="<%= product.memory %>" disabled> Seleccionar una opcion</option>
                                 <option value="34gb" <%= product.memory  === '34gb' ? 'selected' : ''%> >34 GB</option>
@@ -117,7 +117,7 @@
                         <hr class="linea-producto">
                         <div class="caja-producto">
                             <p class="caja-tick">✅</p>
-                            <label  for="discoDuroProducto"></label>
+                            <label  for="storage" method="POST"></label>
                             <select class="caja-texto" name="storage" id="storage" required>
                                 <option value="<%= product.storage %>" disabled> Seleccionar una opcion</option>
                                 <option value="128gb" <%= product.storage  === '128gb' ? 'selected' : ''%> >128 GB</option>
@@ -134,15 +134,15 @@
                         <hr class="linea-producto">
                         <div class="caja-producto caja-producto-descripcion">
                             <p class="caja-tick">✅</p>
-                            <label  for="descripcionProducto"></label>
-                            <textarea class="caja-texto" name="categoriaProducto" type="text" maxlength="1000" required>
+                            <label  for="description" method="POST"></label>
+                            <textarea class="caja-texto" name="description" id="description" type="text" maxlength="1000" required>
                                 <%= product.description %>
                             </textarea>
                             <img src="/images/lapiz_edicion.png" alt="Editar imagen">
                         </div>
                     </div>
                 </div> 
-            </form>    
+               
             <!--Seccion 4: Carga de fotos --> 
             <div class="seccion-detalles-producto-2">
                 <h2 class="titulo-producto titulo-producto-2">Fotos</h2>
@@ -168,10 +168,10 @@
                 <hr class="linea-producto">
                 <div class="caja-producto-2">
                     <p class="caja-tick">✅</p>
-                    <label  for="precioProducto">
-                        $ <%= product.price %>
+                    <label  for="price" method="POST">
+                        $
                     </label>
-                    <input class="caja-texto" name="categoriaProducto" type="number" name="price" required>
+                    <input class="caja-texto" type="number" name="price" id="price" value="<%= product.price %>" required>
                 </div>
             </div> 
             <div class="titulo-linea">
@@ -179,10 +179,10 @@
                 <hr class="linea-producto">
                 <div class="caja-producto-2">
                     <p class="caja-tick">✅</p>
-                    <label  for="unidadesProducto">
-                        <%= product.discount %> %
+                    <label  for="discount" method="POST">
+                        %
                     </label>
-                    <input class="caja-texto" name="categoriaProducto" type="number" name="discount" required>
+                    <input class="caja-texto" type="number" name="discount"  id="discount" value="<%= product.discount %>" required>
                 </div>
             </div>
             <div class="titulo-linea">
@@ -190,17 +190,16 @@
                 <hr class="linea-producto">
                 <div class="caja-producto-2">
                     <p class="caja-tick">✅</p>
-                    <label  for="unidadesProducto">
-                        <%= product.stock %>
+                    <label  for="stock" method="POST">
                     </label>
-                    <input class="caja-texto" name="categoriaProducto" type="number" name="stock" required>
+                    <input class="caja-texto" type="number" name="stock" id="stock" value="<%= product.stock %>" required>
                 </div>
             </div>   
         
         <!--Seccion 6: Final --> 
         <div class="final-general">
             <p class="final-titulo">¿Ya todo revisado?</p>
-            <button>
+            <button type="submit">
                 <div class="svg-wrapper-1">
                   <div class="svg-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -210,10 +209,19 @@
                   </div>
                 </div>
                 <span>Enviar</span>
-              </button>
+            </button>
+        </form> 
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                <button type="submit">
+                    <img class="basurero" src="/images/basura.png" alt="basuero">
+                    <span>Eliminar producto</span>
+                </button>
+            </form>
+            
               <img class="bola-rosa-2" src="/images/bolita_rosa.png" alt="Bola rosa">
               <img class="bola-verde-2" src="/images/bolita_verde.png" alt="Bola verde">
         </div>
+    
     </main>  
     <footer>
         <%- include('./partials/footer.ejs'); %>
