@@ -37,17 +37,32 @@ const productsController = {
 
         res.render('productAdd', {products})
 
+        // let newProduct = {
+        //     id: products.length + 1,
+        // }
+
+        // products.push(newProduct)
+
+        // fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+
+        // res.redirect('/products')
+    },
+
+    store: (req,res) =>{
         let newProduct = {
-            id: products[product.length - 1].id + 1,
+            id: products.length + 1,
             ...req.body,
-            image:image
+            image_1: req.files[0].filename,
+            image_2: req.files[1].filename,
+            image_3: req.files[2].filename
         }
 
         products.push(newProduct)
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 
-        res.redirect('/products')
+        res.redirect('/product/productEdit/' + newProduct.id);
+        
     },
 
     destroy : (req, res) => {
