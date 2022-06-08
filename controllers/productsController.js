@@ -67,12 +67,13 @@ const productsController = {
 
     destroy : (req, res) => {
 		let id = req.params.id 
-		let productDeleted = products.filter(product => product.id !== id);
+		let productDeleted = products.filter(product => product.id != id);
 		
 		fs.writeFileSync(productsFilePath, JSON.stringify(productDeleted));
 
 		res.redirect('/')
 	},
+
     productUpdate: (req,res) =>{
         
 
@@ -82,17 +83,17 @@ const productsController = {
         productToEdit = {
             id: productToEdit.id,
             ...req.body,
-            image_1: image_1,
-            image_2: image_2,
-            image_3: image_3,
+            image_1: productToEdit.image_1,
+            image_2: productToEdit.image_2,
+            image_3: productToEdit.image_3
         };
 
-        let image
-        if (req.files[0] != undefined){
-            image= req.files[0].filename;
-        } else {
-            image = productToEdit.image_1
-        };
+        // let image
+        // if (req.files[0] != undefined){
+        //     image= req.files[0].filename;
+        // } else {
+        //     image = productToEdit.image_1
+        // };
 
         let productEdited = products.map (product => {
             if (product.id == productToEdit.id) {

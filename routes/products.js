@@ -31,7 +31,7 @@ router.get('/productAdd', productsController.productAdd);
 router.post('/productAdd', upload.any(), productsController.store); // para subir cualquier cant de fotos el 'upload.any()' 
 
 router.get('/productEdit/:id/', productsController.productEdit); 
-router.put('/priductEdit/:id/', upload.any(), productsController.productUpdate);
+router.put('/productEdit/:id/', upload.any(), productsController.productUpdate);
 
 
 /* DELETE */ 

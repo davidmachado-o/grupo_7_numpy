@@ -20,7 +20,7 @@
             <img class="bola-verde" src="/images/bolita_verde.png" alt="bolita verde">
         </div>
         <!--Seccion 2: Carga de productos-->
-        <form class="seccion-detalles-producto seccion-detalles-producto-1" action="/product/productEdit/<%= product.id%>?_method=PUT " method="POST" enctype="multipart/form-data" id="productEditForm" name="productEditForm">
+        <form class="seccion-detalles-producto seccion-detalles-producto-1" action="/product/productEdit/<%= product.id%>?_method=PUT" method="POST" enctype="multipart/form-data" id="productEditForm" name="productEditForm">
                 <img class="imagen-producto" src="/images/products/<%= product.image_1 %> " alt="<%= product.name %>">
                 <div class="titulo-linea">
                         <h2 class="titulo-producto">Categoría producto</h2>
@@ -94,7 +94,7 @@
                                 <option value="Core i9" <%= product.processor  === 'Core i9' ? 'selected' : ''%> >Core i9</option>
                                 <option value="Ryzen 7" <%= product.processor  === 'Ryzen 7' ? 'selected' : ''%> >Ryzen 7</option>
                                 <option value="Ryzen 9" <%= product.processor  === 'Ryzen 9' ? 'selected' : ''%> >Ryzen 9</option>
-                                <option value="false" <%= product.processor  === 'false' ? 'selected' : ''%> >No aplica</option>   
+                                <option value="false" <%= product.processor  == false ? 'selected' : ''%> >No aplica</option>   
                             </select>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                                 <option value="<%= product.memory %>" disabled> Seleccionar una opcion</option>
                                 <option value="34gb" <%= product.memory  === '34gb' ? 'selected' : ''%> >34 GB</option>
                                 <option value="64gb" <%= product.memory  === '64gb' ? 'selected' : ''%> >64 GB</option>
-                                <option value="false" <%= product.memory  === 'false' ? 'selected' : ''%> >No aplica</option> 
+                                <option value="false" <%= product.memory  == false ? 'selected' : ''%> >No aplica</option> 
                             </select>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                                 <option value="512gb" <%= product.storage  === '512gb' ? 'selected' : ''%> >512 GB</option>
                                 <option value="1tb" <%= product.storage  === '1tb' ? 'selected' : ''%> >1 TB</option>
                                 <option value="2tb" <%= product.storage  === '2tb' ? 'selected' : ''%> >2 TB</option>
-                                <option value="false" <%= product.storage  === 'false' ? 'selected' : ''%> >No aplica</option> 
+                                <option value="false" <%= product.storage  === false ? 'selected' : ''%> >No aplica</option> 
                             </select>
                         </div>
                     </div>

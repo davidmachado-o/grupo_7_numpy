@@ -1,22 +1,4 @@
-[
- {
-  "id": 1,
-  "name": "Razer Basilisk V3",
-  "image_1": "Razer_Basilisk _V3_1.png",
-  "image_2": "Razer_Basilisk _V3_2.png",
-  "image_3": "Razer_Basilisk _V3_3.png",
-  "description": "Crea, controla e impulsa tu estilo de juego con el nuevo Razer Basilisk V3, el ratón ergonómico para juegos por excelencia para un rendimiento personalizado. Con 10+1 botones programables, una rueda de desplazamiento inteligente y una buena dosis de Razer Chroma™ RGB, es hora de iluminar la competición con tu juego.",
-  "category": "mouse",
-  "brand": "Razer",
-  "model": "Basilisk V3",
-  "processor": false,
-  "memory": false,
-  "storage": false,
-  "price": 100,
-  "discount": 5,
-  "stock": 100
- },
- {
+[{
   "id": 2,
   "name": "Logitech G502 Lightspeed",
   "image_1": "Logitech_G502_Lightspeed_1.png",
@@ -32,8 +14,7 @@
   "price": 100,
   "discount": 10,
   "stock": 100
- },
- {
+}, {
   "id": 3,
   "name": "Razer DeathAdder V2 Pro",
   "image_1": "Razer_DeathAdder_1.png",
@@ -49,8 +30,7 @@
   "price": 100,
   "discount": 15,
   "stock": 100
- },
- {
+}, {
   "id": 4,
   "name": "Corsair K100 RGB Optical",
   "image_1": "Corsair_K100_1.png",
@@ -66,8 +46,7 @@
   "price": 100,
   "discount": 5,
   "stock": 100
- },
- {
+}, {
   "id": 5,
   "name": "Mountain Everest Max",
   "image_1": "Mountain_Everest_Max_1.png",
@@ -83,8 +62,7 @@
   "price": 100,
   "discount": 10,
   "stock": 100
- },
- {
+}, {
   "id": 6,
   "name": "Logitech G915 Lightspeed",
   "image_1": "Logitech_G915_1.png",
@@ -100,8 +78,7 @@
   "price": 100,
   "discount": 15,
   "stock": 100
- },
- {
+}, {
   "id": 7,
   "name": "Asus Rog Swift PG35VQ",
   "image_1": "Asus_Rog_Swift_1.png",
@@ -117,8 +94,7 @@
   "price": 100,
   "discount": 5,
   "stock": 100
- },
- {
+}, {
   "id": 8,
   "name": "Acer Predator X27",
   "image_1": "Acer_Predator_1.png",
@@ -134,8 +110,7 @@
   "price": 100,
   "discount": 10,
   "stock": 100
- },
- {
+}, {
   "id": 9,
   "name": "Samsung CRG5",
   "image_1": "Samsung_CRG5_1.png",
@@ -151,8 +126,7 @@
   "price": 100,
   "discount": 15,
   "stock": 100
- },
- {
+}, {
   "id": 10,
   "name": "Dx Racer GLADIATOR Series",
   "image_1": "Dx_Racer_1.png",
@@ -168,8 +142,7 @@
   "price": 100,
   "discount": 5,
   "stock": 100
- },
- {
+}, {
   "id": 11,
   "name": "Cougar Armor Titan",
   "image_1": "Cougar_Armor_1.png",
@@ -185,8 +158,7 @@
   "price": 100,
   "discount": 10,
   "stock": 100
- },
- {
+}, {
   "id": 12,
   "name": "Newskill Takamikura",
   "image_1": "http://dummyimage.com/193x100.png/dddddd/000000",
@@ -202,8 +174,7 @@
   "price": 100,
   "discount": 15,
   "stock": 100
- },
- {
+}, {
   "id": 13,
   "name": "AMD Ryzen 7 5700G",
   "image_1": "http://dummyimage.com/194x100.png/ff4444/ffffff",
@@ -219,8 +190,7 @@
   "price": 100,
   "discount": 5,
   "stock": 100
- },
- {
+}, {
   "id": 14,
   "name": "Intel Core i7 12700K",
   "image_1": "http://dummyimage.com/195x100.png/5fa2dd/ffffff",
@@ -236,8 +206,7 @@
   "price": 100,
   "discount": 10,
   "stock": 100
- },
- {
+}, {
   "id": 15,
   "name": "Intel Core i5 10400",
   "image_1": "http://dummyimage.com/196x100.png/ff4444/ffffff",
@@ -253,8 +222,7 @@
   "price": 100,
   "discount": 15,
   "stock": 100
- },
- {
+}, {
   "id": 16,
   "name": "Combo Amd Ryzen 7 5800x3d + 64gb + X570 Plus",
   "image_1": "http://dummyimage.com/197x100.png/dddddd/000000",
@@ -270,8 +238,7 @@
   "price": 100,
   "discount": 5,
   "stock": 100
- },
- {
+}, {
   "id": 17,
   "name": "Combo Intel Core i7-12700K + 64gb + GTX 1660 6gb",
   "image_1": "http://dummyimage.com/198x100.png/ff4444/ffffff",
@@ -287,8 +254,7 @@
   "price": 100,
   "discount": 10,
   "stock": 100
- },
- {
+}, {
   "id": 18,
   "name": "Combo Amd Ryzen 9 5950x + 32gb 3600mhz + B550",
   "image_1": "http://dummyimage.com/199x100.png/5fa2dd/ffffff",
@@ -304,5 +270,4 @@
   "price": 100,
   "discount": 15,
   "stock": 100
- }
-]
+}]
