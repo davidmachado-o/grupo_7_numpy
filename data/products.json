@@ -1,4 +1,20 @@
 [{
+  "id": 1,
+  "name": "Razer Basilisk",
+  "image_1": "Razer_Basilisk _V3_1.png",
+  "image_2": "Razer_Basilisk _V3_2.png",
+  "image_3": "Razer_Basilisk _V3_3.png",
+  "description": "El mouse G502 es todo un icono que ha ocupado las primeras posiciones de las listas generación tras generación. Y es el mouse que eligen quienes juegan en serio. Ahora, el mouse G502 se une a las filas de los mouse inalámbricos para juegos más avanzados del mundo con el lanzamiento de G502 LIGHTSPEED.",
+  "category": "mouse",
+  "brand": "Razer",
+  "model": "Razer 40",
+  "processor": false,
+  "memory": false,
+  "storage": false,
+  "price": 100,
+  "discount": 10,
+  "stock": 100
+},{
   "id": 2,
   "name": "Logitech G502 Lightspeed",
   "image_1": "Logitech_G502_Lightspeed_1.png",
