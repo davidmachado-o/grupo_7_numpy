@@ -21,12 +21,13 @@ header{
     width: 100%;
     z-index: 1;
     background-color: black;
+    padding-bottom: 12px;
 }
 
 .search-input{
     border: 1px solid white;
     border-radius: 20px 0 0 20px;
-    padding: 10px 10px 10px 5px;
+    padding: 10px 10px 10px 18px;
     color: #333;
     outline: none;
     width: 100%;
@@ -67,7 +68,7 @@ header{
 }
 
 .logo-numpy img{
-    width: 100%;
+    width: 50%;
 }
 
 .main-header a{
@@ -86,6 +87,7 @@ header{
     justify-content: space-between;
     align-items: center;
     margin: 0 20px 0 20px;
+    padding-top: 15px;
 }
 
 .nav-top-right-top{
@@ -118,8 +120,17 @@ header{
 }
 
 .ship{
+    display: none;
     color: #FFFFFF;
     opacity: 50%;
+}
+
+.fa-circle-user{
+    padding-right: 5px;
+}
+
+.fa-angle-down{
+    padding-left: 5px;
 }
 
 .list-nav .fa-angle-down{
@@ -130,9 +141,35 @@ header{
     display: none;
 }
 
-.list-nav-2,
-.list-nav-4{
+.list-nav-2 {
+    padding-right: 20px;
+    font-size: 12px;
+    
+}
+
+.list-nav-3 {
     display: none;
+}
+
+.list-nav-4 {
+    padding-right: 10px;
+    font-size: 12px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #4DABCF;
+}
+
+@media (min-width: 680px){
+        .show-nav{
+            display: block;
+            justify-content: space-evenly;
+}
 }
 
 @media (min-width: 768px){
@@ -143,5 +180,33 @@ header{
     .list-nav-2,
     .list-nav-4{
         display: flex;
+    }
+}
+
+@media (min-width: 900px){
+
+    .ship{
+        display: block;
+        padding-left: 25px;
+        opacity: 70%;
+        font-size: 12px;
+    }
+
+}
+
+@media (min-width: 1200px){
+
+    .ship{
+        padding-left: 64px;
+    }
+
+    .list-nav-3 {
+        display: block;
+        padding-right: 20px;
+        font-size: 12px;
+    }
+
+    .show-nav{
+        justify-content: space-between;
     }
 }
