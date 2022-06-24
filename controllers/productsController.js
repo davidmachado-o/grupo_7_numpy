@@ -15,10 +15,10 @@ const productsController = {
 
         // let detalleProducto = productos.find(producto => producto.id == req.params.id); detalleProducto
 
-        // let id = req.params.id
-        // let product = products.find(product => product.id == id)
+        let id = req.params.id
+        let product = products.find(product => product.id == id)
 
-        res.render('productDetail', {products} )
+        res.render('productDetail', {product} )
     },
     
     productCart: (req, res) =>{

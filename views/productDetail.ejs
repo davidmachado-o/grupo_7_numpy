@@ -31,24 +31,23 @@
         <article>
             <a href="#">
                 <div class="Cont-Mini-Imagen">
-                    <img class="Mini-Imagen" src="images\producto_cpu.webp">
-                    <img class="Mini-Imagen" src="images\producto_cpu.webp">
-                    <img class="Mini-Imagen" src="images\producto_cpu.webp">
-                    <img class="Mini-Imagen" src="images\producto_cpu.webp">
+                    <img class="Mini-Imagen" src="/images/products/<%= product.image_1 %>"  alt="<%= product.name %>">
+                    <img class="Mini-Imagen" src="/images/products/<%= product.image_2 %>"  alt="<%= product.name %>">
+                    <img class="Mini-Imagen" src="/images/products/<%= product.image_3 %>"  alt="<%= product.name %>">
                 </div>
             </a>
             <div class="Cont-Imagen-Desc">
                 <div class="Cont-Imagen">
-                    <img class="Imagen" src="images\producto_cpu.webp">
+                    <img class="Imagen" src="/images/products/<%= product.image_1 %>"  alt="<%= product.name %>">
                 </div>
                 <div class="Cont-Descripcion">
                     <div class="Descripcion">
                         <div class="Descripcion-Titulo">
-                            <h2 class="Titulo1">Lorem ipsum dolor</h2>
+                            <h2 class="Titulo1"><%= product.name%></h2>
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div>
-                            <p class="Mini-Descripcion">MARCA: Logitech</p>
+                            <p class="Mini-Descripcion">MARCA: <%= product.brand%></p>
                         </div>
                         <div class="Rank">
                             <i class="fa-regular fa-star"></i>
@@ -64,10 +63,10 @@
                         </div>
                         <div class="Precios-Descuentos">
                             <div class="Precio">
-                                <h2>$30.000</h2>
+                                <h2>$<%= product.price%></h2>
                             </div>
                             <div class="Descuentos">
-                                30% OFF
+                                <%= product.discount%> % OFF
                             </div>
                         </div>
                         <div class="Cuotas">
@@ -84,12 +83,11 @@
                         </div>
                         <div class="Especificaciones">
                             <p>Almacenamiento:</p>
-                            <h4 style="color: #666;">SSD 240 Gb</h4>
+                            <h4 style="color: #666;"> 
+                                <%= product.storage%>
+                                
                         </div>
-                        <div class="Cont-Mini-Imagen2">
-                            <img class="Mini-Imagen2" src="images\producto_cpu.webp">
-                            <img class="Mini-Imagen2" src="images\producto_cpu.webp">
-                        </div>
+
                         <div class="Stock">
                             <h4>Stock Disponible</h4>
                         </div>
@@ -97,7 +95,7 @@
                             <p>Cantidad:</p>
                             <h4 style="color: #666;"> 1 unidad</h4>
                             <a href="#"><i class="fa-solid fa-angle-down"></i></a>
-                            <p style="font-size: 14px;">(4 disponibles)</p>
+                            <p style="font-size: 14px;">(<%= product.stock%> disponibles)</p>
                         </div>
                         <div class="Boton-Comprar">
                             <button type="submit" class="Boton-Comprar">Comprar Ahora</button>
@@ -113,23 +111,23 @@
             </div>
             <div class="Cont-Imagen2">
                 <div class="Mini-Article">
-                    <p class="Desc">60% OFF</p>
+                    <p class="Desc"><%= product.discount%>% OFF</p>
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="images\producto_volante.jpeg">
+                    <img class="Producto" src="/images/products/<%= product.image_1 %>"  alt="<%= product.name %>">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
-                        <h2 class="Precio2">$20.300</h2>
-                        <p class="Nombre-Producto">Volante Logitech G29</p>
+                        <h2 class="Precio2">$<%= product.price%></h2>
+                        <p class="Nombre-Producto"><%= product.model%></p>
                     </div>
                 </div>
                 <div class="Mini-Article2">
-                    <p class="Desc">60% OFF</p>
+                    <p class="Desc"><%= product.discount%>% OFF</p>
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="images\producto_volante.jpeg">
+                    <img class="Producto" src="/images/products/<%= product.image_1 %>"  alt="<%= product.name %>">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
-                        <h2 class="Precio2">$20.300</h2>
-                        <p class="Nombre-Producto">Volante Logitech G29</p>
+                        <h2 class="Precio2">$<%= product.price%></h2>
+                        <p class="Nombre-Producto"><%= product.model%></p>
                     </div>
                 </div>
                 <div class="Arrow">
@@ -148,19 +146,19 @@
                 <div class="Tabla-Features">
                     <div class="Features1">
                         <h3>Marca</h3>
-                        <p class="Marca">Intel</p>
+                        <p class="Marca"><%= product.brand%></p>
                     </div>
                     <div class="Features2">
                         <h3>Modelo</h3>
-                        <p class="Modelo">Intel</p>
+                        <p class="Modelo"><%= product.model%></p>
                     </div>
                     <div class="Features3">
                         <h3>Procesador</h3>
-                        <p class="Procesador">Intel Core i5</p>
+                        <p class="Procesador"><%= product.processor%></p>
                     </div>
                     <div class="Features4">
                         <h3>Disco Duro</h3>
-                        <p class="Disco-Duro">1 TB</p>
+                        <p class="Disco-Duro"><%= product.storage%></p>
                     </div>
                 </div>
             </div>
