@@ -1,13 +1,16 @@
 const fs = require('fs');
-const path =require('path');
+const path = require('path');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'))
 
 
 const usersController = {
-    users: (req,res) =>{
-        res.render('users', {users})
+    details: (req,res) =>{
+        let id = req.params.id;
+        let user = users.find(user => user.id == id);
+
+        res.render('userDetail', {user})
     },
 
     // destroy : (req, res) => {

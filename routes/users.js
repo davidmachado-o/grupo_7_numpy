@@ -7,7 +7,7 @@ const usersController = require('../controllers/usersController');
 
 //******** MULTER  **********
 
-const storage =multer.diskStorage({
+const storage = multer.diskStorage({
     destination: function(req, file, cb){
         cb(null, 'public/images/products')
     },
@@ -21,15 +21,16 @@ const upload = multer({storage:storage})
 
 // implementea
 
-router.get('/productAdd', productsController.productAdd);
-router.post('/productAdd', upload.any(), productsController.store); // para subir cualquier cant de fotos el 'upload.any()' 
+router.get('/details/:id/', usersController.details);
+// router.post('/productAdd', upload.any(), productsController.store); 
+// para subir cualquier cant de fotos el 'upload.any()' 
 
-router.get('/productEdit/:id/', productsController.productEdit); 
-router.put('/productEdit/:id/', upload.any(), productsController.productUpdate);
+// router.get('/productEdit/:id/', productsController.productEdit); 
+// router.put('/productEdit/:id/', upload.any(), productsController.productUpdate);
 
 
 /* DELETE */ 
-router.delete('/delete/:id/', productsController.destroy); 
+// router.delete('/delete/:id/', productsController.destroy); 
 
 
 

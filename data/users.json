@@ -6,7 +6,7 @@
         "email": "esellan0@slate.com",
         "password": "CQqlVgAK70",
         "category": "user",
-        "image": "user_1.jpg"
+        "image": "user_1.jpeg"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "email": "lelliot1@flavors.me",
         "password": "LtG3VPpV",
         "category": "user",
-        "image": "user_2.jpg"
+        "image": "user_2.jpeg"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "email": "rodcroft2@skype.com",
         "password": "XS1VhpqzP",
         "category": "user",
-        "image": "user_3.jpg"
+        "image": "user_3.jpeg"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "email": "aloan3@ow.ly",
         "password": "bDgb8hdwn",
         "category": "user",
-        "image": "user_4.jpg"
+        "image": "user_4.jpeg"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "email": "jdosdale4@example.com",
         "password": "HMogBXt",
         "category": "user",
-        "image": "user_5.jpg"
+        "image": "user_5.jpeg"
     },
     {
         "id": 6,
@@ -51,7 +51,7 @@
         "email": "dkobierra5@tiny.cc",
         "password": "KgDPBo",
         "category": "user",
-        "image": "user_6.jpg"
+        "image": "user_6.jpeg"
     },
     {
         "id": 7,
@@ -60,7 +60,7 @@
         "email": "gmilier6@ocn.ne.jp",
         "password": "hZexcw6",
         "category": "user",
-        "image": "user_7.jpg"
+        "image": "user_7.jpeg"
     },
     {
         "id": 8,
@@ -69,7 +69,7 @@
         "email": "asqueers7@nhs.uk",
         "password": "OmfojrpB",
         "category": "user",
-        "image": "user_8.jpg"
+        "image": "user_8.jpeg"
     },
     {
         "id": 9,
@@ -78,7 +78,7 @@
         "email": "jlys8@theguardian.com",
         "password": "onjVOOuCpzt",
         "category": "user",
-        "image": "user_9.jpg"
+        "image": "user_9.jpeg"
     },
     {
         "id": 10,
@@ -87,6 +87,6 @@
         "email": "vguidetti9@networksolutions.com",
         "password": "1Y8oTtY",
         "category": "user",
-        "image": "user_10.jpg"
+        "image": "user_10.jpeg"
     }
 ]

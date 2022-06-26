@@ -3,8 +3,11 @@ const app = express();
 const path = require("path");
 const mainRouter = require('./routes/main')
 const productRouter = require('./routes/products')
+const usersRouter = require('./routes/users')
 
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
+// const { users } = require("./controllers/usersController");
+// const usersController = require("./controllers/usersController");
 const publicPath = path.resolve(__dirname, "public");
 app.use(express.static(publicPath));
 //app.use(express.json);
@@ -19,7 +22,8 @@ app.listen(3000, () => {
 });
 
 app.use('/', mainRouter);
-app.use('/product/', productRouter)
+app.use('/product/', productRouter);
+app.use('/users/', usersRouter);
 
 app.use('*', mainRouter);
 
