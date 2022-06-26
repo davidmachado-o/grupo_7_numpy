@@ -17,6 +17,8 @@ app.set('views', (path.resolve('views')))
 
 app.use(methodOverride('_method'))
 
+app.use(express.urlencoded({ extended: false }));
+
 app.listen(3000, () => {
   console.log("Running on port 3000");
 });
