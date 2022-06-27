@@ -18,15 +18,26 @@ const usersController = {
     },
     processLogin: (req, res) =>{
         const resultValidation = validationResult(req);
-        if(!resultValidation.isEmpty()){
-            return res.render('login', {errors: resultValidation.array()})
-        }
-        let email = req.body.email;
-        let password = req.body.password;
-        let user = users.find(user => user.email == email && user.password == password);
-        if(user){
-            res.redirect('/users/details/' + user.id)
-        }
+        if(resultValidation.errors.length > 0){
+           return res.render('login', {
+            errors: resultValidation.mapped()
+            })
+            }else{
+                let user = users.find(user => user.email == req.body.email);
+                if(user){
+                    if(user.password == req.body.password){
+                        res.redirect('/users/details/' + user.id)
+                    }else{
+                        res.render('login', {
+                            errors: [{msg: 'Password incorrecto'}]
+                        })
+                    }
+                }else{
+                    res.render('login', {
+                        errors: [{msg: 'Email incorrecto'}]
+                    })
+                }
+            }
     },
 	register: (req,res) =>{
         res.render('register' ) //ir hacia el form

@@ -24,11 +24,18 @@
         <form action="/users/processLogin" method="POST">
         <div class="form-group">
             <label for="email"></label>
-            <input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico">
+            <input type="text" name="email" id="email" class="form-control" placeholder="Correo electrónico">
+            
+            <% if (locals.errors && errors.email) { %>
+                <p class="error"><%= errors.email.msg %></p>
+            <% } %> 
         </div>
         <div class="form-group">
             <label for="password"></label>
             <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña">
+            <% if (locals.errors && errors.password) { %>
+                <p class="error"><%= errors.password.msg %></p>
+            <% } %> 
         </div>
         <div class="remember-check">
         <input class="remember" type="checkbox" value="lsRememberMe" id="rememberMe"> <label class="remember" for="rememberMe">Recordarme</label>
@@ -48,10 +55,10 @@
         </div>
         <div class="no-account">
             <p class="p-no-account">¿No tenés cuenta con Numpy?</p>
-            <a href="/register">Registrate acá</a>
+            <a href="/users/register">Registrate acá</a>
         </div>
         <div>
-            <img class="register-image-boy" src="images/registro_chico.png" alt="registro chico">
+            <img class="register-image-boy" src="/images/registro_chico.png" alt="registro chico">
         </div>
     </div>
 </main>
