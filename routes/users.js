@@ -3,6 +3,7 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const { body } = require('express-validator');
+const loginValidations = require('../middlewares/validateLoginMiddleware');
 
 const usersController = require('../controllers/usersController');
 
@@ -18,13 +19,6 @@ const storage = multer.diskStorage({
     }
 })
 
-const validations = [
-    body('email').notEmpty().withMessage('Es necesario que ingreses un mail').bail().isEmail().withMessage('El mail debe tener un formato correcto'),
-    body('password').notEmpty().withMessage('Es necesario que ingreses una contraseña').bail()
-
-    // email y password
-]
-
 const upload = multer({storage:storage})
 
 // implementea
@@ -34,7 +28,7 @@ const upload = multer({storage:storage})
 router.get('/register', usersController.register); 
 
 router.get('/login', usersController.login); 
-router.post('/processLogin', validations, usersController.processLogin);
+router.post('/login', loginValidations, usersController.processLogin);
 
 router.get('/details/:id/', usersController.details);
 

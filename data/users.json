@@ -1,92 +1,92 @@
 [
-    {
-        "id": 1,
-        "first_name": "Estell",
-        "last_name": "Sellan",
-        "email": "esellan0@slate.com",
-        "password": "CQqlVgAK70",
-        "category": "user",
-        "image": "user_1.jpeg"
-    },
-    {
-        "id": 2,
-        "first_name": "Lotty",
-        "last_name": "Elliot",
-        "email": "lelliot1@flavors.me",
-        "password": "LtG3VPpV",
-        "category": "user",
-        "image": "user_2.jpeg"
-    },
-    {
-        "id": 3,
-        "first_name": "Rosina",
-        "last_name": "Odcroft",
-        "email": "rodcroft2@skype.com",
-        "password": "XS1VhpqzP",
-        "category": "user",
-        "image": "user_3.jpeg"
-    },
-    {
-        "id": 4,
-        "first_name": "Albrecht",
-        "last_name": "Loan",
-        "email": "aloan3@ow.ly",
-        "password": "bDgb8hdwn",
-        "category": "user",
-        "image": "user_4.jpeg"
-    },
-    {
-        "id": 5,
-        "first_name": "Jeannine",
-        "last_name": "Dosdale",
-        "email": "jdosdale4@example.com",
-        "password": "HMogBXt",
-        "category": "user",
-        "image": "user_5.jpeg"
-    },
-    {
-        "id": 6,
-        "first_name": "Denise",
-        "last_name": "Kobierra",
-        "email": "dkobierra5@tiny.cc",
-        "password": "KgDPBo",
-        "category": "user",
-        "image": "user_6.jpeg"
-    },
-    {
-        "id": 7,
-        "first_name": "Gamaliel",
-        "last_name": "Milier",
-        "email": "gmilier6@ocn.ne.jp",
-        "password": "hZexcw6",
-        "category": "user",
-        "image": "user_7.jpeg"
-    },
-    {
-        "id": 8,
-        "first_name": "Antonietta",
-        "last_name": "Squeers",
-        "email": "asqueers7@nhs.uk",
-        "password": "OmfojrpB",
-        "category": "user",
-        "image": "user_8.jpeg"
-    },
-    {
-        "id": 9,
-        "first_name": "Joyan",
-        "last_name": "Lys",
-        "email": "jlys8@theguardian.com",
-        "password": "onjVOOuCpzt",
-        "category": "user",
-        "image": "user_9.jpeg"
-    },
-    {
-        "id": 10,
-        "first_name": "Virgil",
-        "last_name": "Guidetti",
-        "email": "vguidetti9@networksolutions.com",
-        "password": "1Y8oTtY",
-        "category": "user",
-        "image": "user_10.jpeg"
-    }
+ {
+  "id": 1,
+  "first_name": "Estell",
+  "last_name": "Sellan",
+  "email": "esellan0@slate.com",
+  "password": "CQqlVgAK70",
+  "category": "user",
+  "image": "user_1.jpeg"
+ },
+ {
+  "id": 2,
+  "first_name": "Lotty",
+  "last_name": "Elliot",
+  "email": "lelliot1@flavors.me",
+  "password": "LtG3VPpV",
+  "category": "user",
+  "image": "user_2.jpeg"
+ },
+ {
+  "id": 3,
+  "first_name": "Rosina",
+  "last_name": "Odcroft",
+  "email": "rodcroft2@skype.com",
+  "password": "XS1VhpqzP",
+  "category": "user",
+  "image": "user_3.jpeg"
+ },
+ {
+  "id": 4,
+  "first_name": "Albrecht",
+  "last_name": "Loan",
+  "email": "aloan3@ow.ly",
+  "password": "bDgb8hdwn",
+  "category": "user",
+  "image": "user_4.jpeg"
+ },
+ {
+  "id": 5,
+  "first_name": "Jeannine",
+  "last_name": "Dosdale",
+  "email": "jdosdale4@example.com",
+  "password": "HMogBXt",
+  "category": "user",
+  "image": "user_5.jpeg"
+ },
+ {
+  "id": 6,
+  "first_name": "Denise",
+  "last_name": "Kobierra",
+  "email": "dkobierra5@tiny.cc",
+  "password": "KgDPBo",
+  "category": "user",
+  "image": "user_6.jpeg"
+ },
+ {
+  "id": 7,
+  "first_name": "Gamaliel",
+  "last_name": "Milier",
+  "email": "gmilier6@ocn.ne.jp",
+  "password": "hZexcw6",
+  "category": "user",
+  "image": "user_7.jpeg"
+ },
+ {
+  "id": 8,
+  "first_name": "Antonietta",
+  "last_name": "Squeers",
+  "email": "asqueers7@nhs.uk",
+  "password": "OmfojrpB",
+  "category": "user",
+  "image": "user_8.jpeg"
+ },
+ {
+  "id": 9,
+  "first_name": "Joyan",
+  "last_name": "Lys",
+  "email": "jlys8@theguardian.com",
+  "password": "onjVOOuCpzt",
+  "category": "user",
+  "image": "user_9.jpeg"
+ },
+ {
+  "id": 10,
+  "first_name": "Virgil",
+  "last_name": "Guidetti",
+  "email": "vguidetti9@networksolutions.com",
+  "password": "1Y8oTtY",
+  "category": "user",
+  "image": "user_10.jpeg"
+ }
 ]
