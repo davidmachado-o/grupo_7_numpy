@@ -3,7 +3,9 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const { body } = require('express-validator');
-const loginValidations = require('../middlewares/validateLoginMiddleware');
+const loginValidations = require('../middlewares/validateLoginMiddleware.js');
+const guestMiddleware = require('../middlewares/guestMiddleware.js');
+const authMiddleware = require('../middlewares/authMiddleware.js');
 
 const usersController = require('../controllers/usersController');
 
@@ -25,12 +27,12 @@ const upload = multer({storage:storage})
 
 
 /* FORMULARIO DE CREACIÓN + DONDE SE ENVIA FORM */ 
-router.get('/register', usersController.register); 
+router.get('/register', guestMiddleware, usersController.register); 
 
-router.get('/login', usersController.login); 
+router.get('/login', guestMiddleware, usersController.login); 
 router.post('/login', loginValidations, usersController.processLogin);
 
-router.get('/details/:id/', usersController.details);
+router.get('/details/:id/', authMiddleware, usersController.details);
 
 // router.post('/productAdd', upload.any(), productsController.store); 
 // para subir cualquier cant de fotos el 'upload.any()' 

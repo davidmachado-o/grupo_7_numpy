@@ -21,13 +21,14 @@ const usersController = {
     processLogin: (req, res) =>{
         let userToLogin = User.findByField('email', req.body.email);
         if(userToLogin){
+            req.session.userLogged = userToLogin;
             res.redirect('/users/details/' + userToLogin.id);
         } else {
 
         return res.render('login', {
             errors: {
                 email: {
-                    msg: 'No se encuentra este mail en nuestra base de datos'
+                    msg: 'Las credenciales no son válidas'
                 }
             }
             
