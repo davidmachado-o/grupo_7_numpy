@@ -6,6 +6,7 @@ const { body } = require('express-validator');
 const loginValidations = require('../middlewares/validateLoginMiddleware.js');
 const guestMiddleware = require('../middlewares/guestMiddleware.js');
 const authMiddleware = require('../middlewares/authMiddleware.js');
+const registerValidations = require('../middlewares/validateRegisterMiddleware.js');
 
 const usersController = require('../controllers/usersController');
 
