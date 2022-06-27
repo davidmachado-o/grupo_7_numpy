@@ -13,18 +13,18 @@
     <main>
     <div class="login-form">
         <div>
-            <img class="register-image-girl" src="images/registro_chica.png" alt="registro chica">
+            <img class="register-image-girl" src="/images/registro_chica.png" alt="registro chica">
         </div>
         <div class="welcome">
-            <h3>¡Bienvenido ### ###!</h3>
+            <h3>¡Bienvenido!</h3>
         </div>
         <div class="continue">
             <h5>Inicia sesión para continuar</h5>
         </div>
-        <form action="/" method="post">
+        <form action="/users/processLogin" method="POST">
         <div class="form-group">
             <label for="email"></label>
-            <input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico o teléfono">
+            <input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico">
         </div>
         <div class="form-group">
             <label for="password"></label>

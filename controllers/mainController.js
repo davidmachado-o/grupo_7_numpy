@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path =require('path');
+const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
@@ -22,14 +22,7 @@ const mainController = {
 	},
 	search: (req, res) => {
 		// Do the magic
-	},
-	login: (req, res) =>{
-        res.render('login') //ir hacia el form
-    },
-	register: (req,res) =>{
-        res.render('register' ) //ir hacia el form
-    },
-	//agregar el login y register
+	}
 };
 
 module.exports = mainController

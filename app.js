@@ -27,7 +27,7 @@ app.use('/', mainRouter);
 app.use('/product/', productRouter);
 app.use('/users/', usersRouter);
 
-app.use('*', mainRouter);
+// app.use('*', mainRouter);
 
 
 // app.get("/", (req, res) => {
@@ -66,10 +66,10 @@ app.use('*', mainRouter);
 //     res.sendFile(path.resolve(__dirname, "views/login.html"))
 // })
 
-app.get("/nav", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "public/test-nav/nav.html"))
-})
+// app.get("/nav", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "public/test-nav/nav.html"))
+// })
 
-app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "views/index.html"))
-})
+// app.get("*", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "views/index.html"))
+// })

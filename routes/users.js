@@ -18,11 +18,23 @@ const storage = multer.diskStorage({
     }
 })
 
-const validations = []
+const validations = [
+    body('email').notEmpty().withMessage('Es necesario que ingreses un mail').bail().isEmail().withMessage('El mail debe tener un formato correcto'),
+    body('password').notEmpty().withMessage('Es necesario que ingreses una contraseña').bail()
+
+    // email y password
+]
 
 const upload = multer({storage:storage})
 
 // implementea
+
+
+/* FORMULARIO DE CREACIÓN + DONDE SE ENVIA FORM */ 
+router.get('/register', usersController.register); 
+
+router.get('/login', usersController.login); 
+router.post('/processLogin', validations, usersController.processLogin);
 
 router.get('/details/:id/', usersController.details);
 
