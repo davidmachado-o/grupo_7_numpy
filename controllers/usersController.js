@@ -37,8 +37,11 @@ const usersController = {
     },
 	register: (req,res) => {
         res.render('register' ) //ir hacia el form
-    }
-    ,
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        res.redirect('/');
+    },
     // create: (req,res) => {
     //     let user = {
     //         first_name: req.body.first_name,

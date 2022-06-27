@@ -23,28 +23,18 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage:storage})
 
-// implementea
 
-
-/* FORMULARIO DE CREACIÓN + DONDE SE ENVIA FORM */ 
+// REGISTER FORM
 router.get('/register', guestMiddleware, usersController.register); 
 
+// LOGIN FORM
 router.get('/login', guestMiddleware, usersController.login); 
 router.post('/login', loginValidations, usersController.processLogin);
 
+// USER DETAILS
 router.get('/details/:id/', authMiddleware, usersController.details);
 
-// router.post('/productAdd', upload.any(), productsController.store); 
-// para subir cualquier cant de fotos el 'upload.any()' 
-
-// router.get('/productEdit/:id/', productsController.productEdit); 
-// router.put('/productEdit/:id/', upload.any(), productsController.productUpdate);
-
-
-/* DELETE */ 
-// router.delete('/delete/:id/', productsController.destroy); 
-
-
-
+// LOGOUT
+router.get('/logout', usersController.logout);
 
 module.exports = router;
