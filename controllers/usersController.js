@@ -10,9 +10,9 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'))
 
 const usersController = {
     details: (req,res) =>{
-        res.render('userDetail', {
-            user: req.session.user // falta arreglar!!!
-        });
+        const id = req.session.userLogged.id;
+        const user = users.find(user => user.id === id);
+        res.render('userDetail', {user});
     },
     login: (req, res) =>{
         res.render('login') //ir hacia el form
