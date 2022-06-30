@@ -35,21 +35,48 @@ const usersController = {
         })
         }
     },
-	register: (req,res) => {
-        res.render('register' ) //ir hacia el form
-    },
     logout: (req, res) => {
         req.session.destroy();
         res.redirect('/');
     },
-    // create: (req,res) => {
-    //     let user = {
-    //         first_name: req.body.first_name,
-    //         last_name: req.body.last_name,
-    //         email: req.body.email,
-    //         password: bcypt.hashSync(req.body.password, 10)
-    //     }
-    // }
+    register: (req, res) => {
+        res.render('register') //ir hacia el form
+    },
+    processRegister: (req, res) => {
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
+            return res.render('register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
+        let userInDb = User.findByField('email', req.body.email);
+
+        if (userInDb) {
+            return res.render('register', {
+                errors: {
+                    email: {
+                        msg: 'Este email ya se encuentra registrado'
+                    }
+                },
+                oldData: req.body
+            });
+        }
+
+        let userToCreate = {
+            name: req.body.name,
+            email: req.body.email,
+            password: bycrypt.hashSync(req.body.password, 10),
+            category: 'user',
+        }
+
+
+        User.create(userToCreate)
+        return res.redirect('/users/login');
+        
+    }
 }
 
 module.exports = usersController;

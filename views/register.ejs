@@ -13,52 +13,56 @@
     <main class="main-register">
         <div class="container-register">
             <div class="register-form">
-                <form action="/" method="POST">
-                <div class="top-welcome">
+                <form action="/users/register" method="POST">
+                    <div class="top-welcome">
+                        <div>
+                            <img class="register-image-boy" src="/images/registro_chico.png" alt="registro chico">
+                        </div>
+                        <div class="welcome">
+                            <h3>Creá tu cuenta</h3>
+                        </div>
+                    </div>
+                    <div class="facebook-button">
+                        <a href="/facebookLogin"><i class="fab fa-facebook-f"></i>Ingresar con Facebook</a>
+                    </div>
+                    <div class="google-button google-end">
+                        <a href="/googleLogin"><i class="fab fa-google"></i>Ingresar con Google +</a>
+                    </div>
+                    <p class="divide">o</p>
+                    <div class="form-group">
+                        <label for="name"></label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" class="form-control"
+                            placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"></label>
+                        <input type="password" name="password" id="password" class="form-control"
+                            placeholder="Contraseña (mínimo 6 caracteres)" required minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="password-confirm"></label>
+                        <input type="password" name="password-confirm" id="password-confirm" class="form-control"
+                            placeholder="Vuelve a escribir tu contraseña" required min="6">
+                    </div>
+                    <div class="form-button">
+                        <button class="login-button" type="submit">Continuar</button>
+                    </div>
+                    <div class="no-account">
+                        <p class="p-no-account">¿Ya tenés un perfil personal?</p>
+                        <a href="/users/login">Iniciar sesión</a>
+                    </div>
                     <div>
-                        <img class="register-image-boy" src="/images/registro_chico.png" alt="registro chico">
+                        <img class="register-image-girl" src="/images/registro_chica.png" alt="registro chica">
                     </div>
-                    <div class="welcome">
-                        <h3>Creá tu cuenta</h3>
-                    </div>
-                </div>
-                <div class="facebook-button">
-                    <a href="/facebookLogin"><i class="fab fa-facebook-f"></i>Ingresar con Facebook</a>
-                </div>
-                <div class="google-button google-end">
-                    <a href="/googleLogin"><i class="fab fa-google"></i>Ingresar con Google +</a>
-                </div>
-                <p class="divide">o</p>
-                <div class="form-group">
-                    <label for="name"></label>
-                    <input type="text" name="name" id="name" class="form-control" placeholder="Tu nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="email"></label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico" required>
-                </div>
-                <div class="form-group">
-                    <label for="password"></label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña (mínimo 6 caracteres)" required minlength="6">
-                </div>
-                <div class="form-group">
-                    <label for="password-confirm"></label>
-                    <input type="password" name="password-confirm" id="password-confirm" class="form-control" placeholder="Vuelve a escribir tu contraseña" required min="6">
-                </div>
-                <div class="form-button">
-                    <button class="login-button" type="submit">Continuar</button>
-                </div>
-                <div class="no-account">
-                    <p class="p-no-account">¿Ya tenés un perfil personal?</p>
-                    <a href="/users/login">Iniciar sesión</a>
-                </div>
-                <div>
-                    <img class="register-image-girl" src="/images/registro_chica.png" alt="registro chica">
-                </div>
-         </div>
+            </div>
     </main>
     <footer>
         <%- include('./partials/footer.ejs'); %>
     </footer>
 </body>
+
 </html>

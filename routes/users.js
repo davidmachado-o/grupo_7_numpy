@@ -26,7 +26,8 @@ const upload = multer({storage:storage})
 
 
 // REGISTER FORM
-router.get('/register', guestMiddleware, usersController.register); 
+router.get('/register', guestMiddleware, usersController.register);
+router.post('/register', registerValidations, usersController.processRegister);   
 
 // LOGIN FORM
 router.get('/login', guestMiddleware, usersController.login); 
