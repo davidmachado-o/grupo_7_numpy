@@ -1,23 +1,26 @@
 [
- {
-  "id": 1,
-  "name": "prueba1",
-  "email": "prueba1@hotmail.com",
-  "password": "$2a$10$eQergwPKDGHXBWxSVAbiKOXvvQQAm4OJt8WaefQltd7qgH1g.OBlC",
-  "category": "user"
- },
- {
-  "id": 2,
-  "name": "prueba2",
-  "email": "prueba2@hotmail.com",
-  "password": "$2a$10$0OEHwcCKrmgg6r5VUNz86eTYajLuZ8NHBP40LKE7lfWGf8xDiGnvW",
-  "category": "user"
- },
- {
-  "id": 3,
-  "name": "prueba3",
-  "email": "prueba3@hotmail.com",
-  "password": "$2a$10$WA7zJ8QN.Zvs0VDav4fJB.v55PQL0nKAEsheQXsmu82/hDHP006TW",
-  "category": "user"
- }
+    {
+        "id": 1,
+        "name": "prueba1",
+        "email": "prueba1@hotmail.com",
+        "password": "$2a$10$9nsfsPWshaGlIkXldmLexeNpam0O7pQHKqK3gCdWE6wf0IP18nktu",
+        "admin": "false",
+        "img": "image-1656633439523-554496064.jpg"
+    },
+    {
+        "id": 2,
+        "name": "prueba2",
+        "email": "prueba2@hotmail.com",
+        "password": "$2a$10$5A/BJ9nBG7vrUyvk09GX4O/EcdrcEMeZUxo2lIePysZFC4VvIfAaa",
+        "admin": "false",
+        "img": "image-1656633447848-213836734.jpg"
+    },
+    {
+        "id": 3,
+        "name": "prueba3",
+        "email": "prueba3@hotmail.com",
+        "password": "$2a$10$x3XJwQr09PNBqmzLY5cAsOERZ.Om8AJChEKUf0tiNXUVYHe6gq6FK",
+        "admin": "false",
+        "img": "image-1656633455837-283723246.jpg"
+    }
 ]

@@ -13,7 +13,7 @@
     <main class="main-register">
         <div class="container-register">
             <div class="register-form">
-                <form action="/users/register" method="POST">
+                <form action="/users/register" method="POST" enctype="multipart/form-data">
                     <div class="top-welcome">
                         <div>
                             <img class="register-image-boy" src="/images/registro_chico.png" alt="registro chico">
@@ -48,6 +48,11 @@
                         <input type="password" name="password-confirm" id="password-confirm" class="form-control"
                             placeholder="Vuelve a escribir tu contraseña" required min="6">
                     </div>
+                    Imágen de perfil
+                    <div class="form-group">
+                        <label for="image"></label>
+                        <input type="file" name="image" accept=".jpg" multiple></input> 
+                    </div>
                     <div class="form-button">
                         <button class="login-button" type="submit">Continuar</button>
                     </div>
@@ -58,6 +63,7 @@
                     <div>
                         <img class="register-image-girl" src="/images/registro_chica.png" alt="registro chica">
                     </div>
+                </form>
             </div>
     </main>
     <footer>

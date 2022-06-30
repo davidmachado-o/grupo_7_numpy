@@ -69,10 +69,10 @@ const usersController = {
             name: req.body.name,
             email: req.body.email,
             password: bycrypt.hashSync(req.body.password, 10),
-            category: 'user',
+            admin: 'false',
+            img: req.file ? req.file.filename : 'default.jpg'// aca
         }
-
-
+        
         User.create(userToCreate)
         return res.redirect('/users/login');
         
@@ -80,3 +80,4 @@ const usersController = {
 }
 
 module.exports = usersController;
+

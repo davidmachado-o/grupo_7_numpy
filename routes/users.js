@@ -14,7 +14,7 @@ const usersController = require('../controllers/usersController');
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
-        cb(null, 'public/images/users')
+        cb(null, path.join(__dirname, '../public/images/users/'))
     },
     filename: function(req, file, cb){
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9) + path.extname(file.originalname)
@@ -27,7 +27,7 @@ const upload = multer({storage:storage})
 
 // REGISTER FORM
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/register', registerValidations, usersController.processRegister);   
+router.post('/register', upload.single('image') ,registerValidations, usersController.processRegister);  
 
 // LOGIN FORM
 router.get('/login', guestMiddleware, usersController.login); 
