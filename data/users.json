@@ -19,5 +19,12 @@
   "email": "prueba3@hotmail.com",
   "password": "$2a$10$WA7zJ8QN.Zvs0VDav4fJB.v55PQL0nKAEsheQXsmu82/hDHP006TW",
   "category": "user"
+ },
+ {
+  "id": 4,
+  "name": "David",
+  "email": "davidmachadodj@gmail.net",
+  "password": "$2a$10$SslYbLRkzzdb9JsNP9IZDOP25a96/xMhtY44nBp8m4Trc9SukQPSW",
+  "category": "user"
  }
 ]
