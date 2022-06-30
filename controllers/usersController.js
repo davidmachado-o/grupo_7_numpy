@@ -19,7 +19,7 @@ const usersController = {
         res.render('login') //ir hacia el form
     },
     processLogin: (req, res) =>{
-        let userToLogin = User.findByField('email', req.body.email);
+        let userToLogin = User.findByField('password', req.body.password);
         if(userToLogin){
             req.session.userLogged = userToLogin;
             res.redirect('/users/details/' + userToLogin.id);
