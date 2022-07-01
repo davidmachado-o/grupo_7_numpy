@@ -18,26 +18,47 @@ const usersController = {
         res.render('login') //ir hacia el form
     },
     processLogin: (req, res) =>{
-        let userToLogin = User.findByField('email', req.body.email);
+        
+        let resultValidation = validationResult(req)
+		let userToLogin = User.findByField('email', req.body.email);
+		
+		if (!resultValidation.errors.length > 0){ 
+		if(userToLogin) {
+			let okPassword = bycrypt.compareSync(req.body.password, userToLogin.password);
+			if (okPassword) {
+				userData = userToLogin
+				delete userToLogin.password;
+				req.session.userLogged = userData;
+				
+				if(req.body.remember) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 1000) * 90 })
+				}
 
-        if(userToLogin){
-            let okPassword = bycrypt.compareSync(req.body.password, userToLogin.password);
-            if(okPassword){
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-                res.redirect('/users/details/' + userToLogin.id);
-            } else {
+				return res.redirect('/users/details/' + userData.id);
+			} 
+				return res.render('login', {
+				errors: {
+					email: {
+						msg: 'Los datos ingresados son incorrectos'
+					}
+				}
+			});
+		} else {
+			return res.render('login', {
+				errors: {
+					email: {
+						msg: 'No se encontro el correo ingresado'
+					}
+				}
+			})
+		}
+	} else {
+	
+	return res.render('login', {
+		errors: resultValidation.mapped(),
+	})
+}
 
-        return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'Las credenciales no son válidas'
-                }
-            }
-            
-        })
-        }
-        }
     },
     logout: (req, res) => {
         req.session.destroy();
