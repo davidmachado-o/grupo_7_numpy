@@ -28,7 +28,9 @@ ul {
   list-style: none;
   display: flex;
 }
-
+a.caracteristic{
+  color: #000;
+}
 a {
   color: #03263c;
   text-decoration: none;
@@ -288,6 +290,9 @@ article.product-seller {
   align-content: center;
   padding: 25px;
 }
+article.product-seller-two {
+  display: none;
+}
 img.volante {
   width: 87px;
   height: 65px;
@@ -380,14 +385,17 @@ button.more-option {
 
 .front {
   border: 1px solid;
-  height: 40vh;
-  display: block;
-  position: relative;
-  padding: 100px 15px;
+  /* height: 12vh; */
+  display: GRID;
+  position: absolute;
+  right: 2vw;
+  top: 42vw;
+  width: 90vw;
+  padding: 10px 125px;
   border-radius: 12px;
   background: rgb(229, 248, 253);
   will-change: transform;
-  transform: translateY(-4px);
+  transform: translateY(-9px);
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 }
 
@@ -395,29 +403,7 @@ button.more-option:hover {
   filter: brightness(110%);
 }
 
-button.more-option:hover .front {
-  transform: translateY(-6px);
-  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-}
 
-button.more-option:active .front {
-  transform: translateY(-2px);
-  transition: transform 34ms;
-}
-
-button.more-option:hover .shadow {
-  transform: translateY(4px);
-  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-}
-
-button.more-option:active .shadow {
-  transform: translateY(1px);
-  transition: transform 34ms;
-}
-
-button.more-option:focus:not(:focus-visible) {
-  outline: none;
-}
 /** contain three **/
 .contain-three {
   display: grid;
@@ -446,12 +432,14 @@ h3.new-seccion-two {
 .col-8 {
   display: flex;
   padding: 5px;
-  background-color: whitesmoke;
+  width: 74vw;
+  background-color: white;
   border-radius: 15px;
 }
 section.anuncio {
+  width: 32vw;
   position: relative;
-  margin: 0px -4px;
+  margin: 0px -3px;
   border-radius: 12px;
   background-color: #dadfff;
 }
@@ -465,7 +453,9 @@ p.promotion {
 button.new-product {
   position: relative;
   top: 75px;
+  left: 30px;
   padding: 10px 2em;
+  width: 20vw;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -508,6 +498,7 @@ section.product {
 section.product-two {
   background-color: #fff;
   boder-radius: 15px;
+  display: none;
 }
 
 article.product-info {
@@ -565,6 +556,7 @@ p.description-col4 {
   padding: 1px 0px;
   color: #666;
 }
+
 /**Footer**/
 footer {
   background-color: #000;
@@ -628,14 +620,19 @@ footer {
   text-align: center;
   letter-spacing: 0.1em;
 }
-/* computadora */
+/******************** computadora ***********************/
 @media (min-width: 360px) {
   .contain-one {
-    left: 105px;
+    left: 13vw;
     width: 75vw;
     top: 5vh;
     height: 91vh;
     padding: 50px 60px;
+  }
+  section.product-two {
+    background-color: #fff;
+    border-radius: 15px;
+    display: grid;
   }
   section.section {
     width: 65vw;
@@ -644,10 +641,10 @@ footer {
     padding: 30px 40px;
   }
   img.cpu {
-    width: 15%;
+    width: 20%;
     position: relative;
     right: 20px;
-    height: 20vh;
+    height: 22vh;
   }
   /* .order{
     left: 40px;
@@ -681,7 +678,7 @@ footer {
   }
   p.price {
     font-size: 30px;
-    left: 90px;
+    left: 12vw;
     top: 20px;
   }
   ul.buttons-two {
@@ -700,7 +697,7 @@ footer {
     font-size: 16px;
   }
   .choices {
-    right: 10vw;
+    right: 5vw;
   }
   p.live {
     font-size: 20px;
@@ -709,24 +706,24 @@ footer {
   }
   a.option-live {
     width: 40px;
-    left: 18vw;
+    left: 10vw;
   }
   p.option {
     font-size: 20px;
     left: 34vw;
   }
   .paying{
-    right: 11vw;
+    right: 4vw;
   }
   p.total {
     position: relative;
-    left: 25vw;
+    left: 12vw;
   }
   p.price-finale {
     left: 40vw;
   }
   button.first{
-    left: 20vw;
+    left: 28vw;
   }
   p.first{
     top: 25px;
@@ -755,6 +752,24 @@ footer {
   img.heart-without{
     left: 10vw;
   }
+  article.product-seller-two {
+    border: 1px solid #666666;
+    border-radius: 15px;
+    background-color: #ffff;
+    margin: 5px;
+    width: 15vw;
+    display: grid;
+    align-content: center;
+    padding: 25px;
+  }
+  article.product-seller {
+    border: 1px solid #666666;
+    border-radius: 15px;
+    background-color: #ffff;
+    margin: 5px;
+    align-content: center;
+    padding: 25px;
+  }
   .contain-three{
     left: 80px;
   }
@@ -765,13 +780,51 @@ footer {
     font-size: 25px;
   }
   button.new-product{
+    left: 0px;
+    top: 80px;
     font-size: 12px;
     height: 7vw;
   }
   img.joystick{
     height: 45vh;
-    top: 100px;
+    top: 72px;
   }
+  .front {
+    border: 1px solid;
+    top: 0px;
+    width: 6vw;
+    height: 42vh;
+    display: flex;
+    margin: 0px 10px 5px 12px;
+    position: relative;
+    padding: 110px 12px;
+    border-radius: 12px;
+    background: rgb(229, 248, 253);
+    will-change: transform;
+    transform: translateX(20px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6vw;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient( to left, rgb(25, 0, 82) 0%, rgb(0, 76, 163) 8%, rgb(49, 0, 163) 92%, rgb(25, 0, 82) 100% );
+}
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6vw;
+  height: 80%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
   /** sections**/
   section.product{
     left: 5px;
@@ -810,10 +863,90 @@ footer {
     font-size: 15px;
     bottom: 80px;
   }
+  section.anuncio {
+    width: 25vw;
+    position: relative;
+    display: grid;
+    margin: 0px 1px -5px -12px;
+    border-radius: 12px;
+    background-color: #dadfff;
+}
+  .col-8 {
+    width: 82vw;
+    padding: 15px;
+  }
 }
 /* tablet */
 @media (min-width: 790px) {
   .contain-one {
     display: block;
+    padding: 10px 22px;
     }
+  section.product-two {
+    background-color: #fff;
+    border-radius: 15px;
+    display: grid;
+  }
+  article.product-seller-two {
+    border: 1px solid #666666;
+    border-radius: 15px;
+    background-color: #ffff;
+    margin: 5px;
+    display: grid;
+    align-content: center;
+    padding: 25px;
+  }
+  /* .front {
+
+    height: 36vh;
+
+    padding: 112px 8px;
+
+  } */
+  img.heart-without {
+    left: 12vw;
+  }
+  p.desc {
+    width: 10vw;
+    right: 25px;
+  }
+  .contain-two {
+    justify-content: center;
+    left: 12vw;
+    width: 76vw;
+  }
+  article.product-seller {
+    width: 20vw;
+    padding: 25px;
+  }
+  article.product-seller-two {
+ 
+    width: 20vw;
+  }
+  img.volante {
+    width: 120px;
+    height: 115px;
+  }
+  p.live{
+    left: 120px;
+  }
+  p.off-col4 {
+    bottom: 23px;
+    right: -1vw;
+    font-size: 12px;
+  }
+  p.price-col4 {
+    font-size: 18px;
+  }
+  article.product-info{
+    height: 18vw;
+    margin: 0px 0px;
+  }
+  img.joystick {
+    top: 50px;
+  }
+  p.name {
+    position: relative;
+    bottom: 15px;
+}
 }
