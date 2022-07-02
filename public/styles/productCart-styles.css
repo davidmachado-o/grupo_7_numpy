@@ -31,10 +31,14 @@ ul {
 a.caracteristic{
   color: #000;
 }
-a {
-  color: #03263c;
+button.remove, button.relation, button.send{
+  color: darkgrey;
   text-decoration: none;
 }
+/* a {
+  color: #03263c;
+  text-decoration: none;
+} */
 section.option {
   display: flex;
   background-color: #fff;
@@ -159,6 +163,7 @@ p.price {
 }
 .option-desc {
   height: 50px;
+  padding: 0px 60px;
   background-color: #ffff;
   border-bottom: 1px solid #6666;
 }
@@ -181,11 +186,12 @@ section.info {
   position: relative;
   width: 61vw;
 }
-a.option-live {
+select.option-live {
   /* border: 1px solid; */
   position: relative;
-  width: 35px;
-  height: 35px;
+  width: 20px;
+  color: blue;
+  height: 33px;
 }
 p.live {
   font-size: 13px;
@@ -665,6 +671,10 @@ footer {
     top: 85px;
     left: 85px;
   }
+  button.remove, button.relation, button.send{
+    padding: 0px 30px;
+    font-size: 17px;
+  }
   .sum{
     top: 20px;
     height: 35px;
@@ -704,8 +714,8 @@ footer {
     position: relative;
     left: 190px;
   }
-  a.option-live {
-    width: 40px;
+  select.option-live {
+    width: 30px;
     left: 10vw;
   }
   p.option {

@@ -42,23 +42,41 @@
                 <p class="price">$30,000</p>
             </div>
         </section>
-        <div class="option-desc">
+        <form class="option-desc"  method="PUT">
             <ul class="buttons-two">
                 <li class="item">
-                    <a class="remove" aria-current="page" href="#">Eliminar</a>
+                    <button type="reset" class="remove" aria-current="page" href="#">Eliminar</button>
                 </li>
                 <li class="item">
-                    <a class="relation" aria-current="page" href="#">Mas productos del vendedor</a>
+                    <button type="button" class="relation" aria-current="page" href="#">Mas productos del vendedor</button>
                 </li>
                 <li class="item">
-                    <a class="send" aria-current="page" href="#">Guardar para despues</a>
+                    <button type="submit" class="send" aria-current="page" href="#">Guardar para despues</button>
                 </li>
             </ul>
-        </div>
+        </form>
         <section class="info">
             <div class="choices">
                 <p class="live">Envio a lorem impsum, Barrio</p>
-                <a class="option-live" href=""> <img class="slice" src="/images/producto_flecha_azul.png" alt="flecha-azul"></a>
+                <!-- <a class="option-live" href=""> <img class="slice" src="/images/producto_flecha_azul.png" alt="flecha-azul"></a> -->
+                <select class="option-live" name = "" src="/images/producto_flecha_azul.png">
+                    <optgroup label="CABA">
+                        <option value="Palermo"></option>
+                        <option value="Cabildo"></option>
+                    </optgroup>
+                    <optgroup label="Tigre">
+                        <option value="Palermo"></option>
+                        <option value="Cabildo"></option>
+                    </optgroup>
+                    <optgroup label="Escobar">
+                        <option value="Palermo"></option>
+                        <option value="Cabildo"></option>
+                    </optgroup>
+                    <optgroup label="Pilar">
+                        <option value="Palermo"></option>
+                        <option value="Cabildo"></option>
+                    </optgroup>
+                </select>
                 <p class="option">Gratis</p>
             </div>
             <div class="paying">
