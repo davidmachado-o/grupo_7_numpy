@@ -81,3 +81,26 @@ Reuniones para definir criterios, estilos y metodos. Seguir con la distribución
 
 ## Dejar de hacer:
 Reuniones a pocos días de la entrega, ya que es mucho más tangible y menos estresante realizar reuniones previas.
+
+### =================================
+
+
+# RETRO SPRINT 5
+
+## Comenzar a hacer: 
+
+Estar atentes a la distribución de tareas en el trello. Tener comunicación en cada duda que surga y contestar las dudas cuando uno lo haga. Si llegara el caso en que un integrante se le dificulte realizar una tarea, darle una ayuda.
+
+## Hacer más:
+
+Actualizar el repositorio en cualquier cambio que hagamos para visibilizar nuestro trabajo y actividad.
+
+## Continuar haciendo:
+
+Reuniones para ver nuestros avances, sacarnos dudas y comunicar nuestras ideas a los integrantes. 
+
+## Dejar de hacer:
+
+Reuniones a pocos días de la entrega, ya que es mucho más tangible y menos estresante realizar reuniones previas.
+
+### =================================

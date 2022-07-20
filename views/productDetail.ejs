@@ -103,6 +103,11 @@
                         <div class="Boton-Carrito">
                             <button type="submit" class="Boton-Carrito">Agregar al carrito</button>
                         </div>
+<!-- edicion para los que esten logueados                  -->
+                        <% if (locals.userLogged && locals.userLogged.admin) { %>
+                            <%- include ("partials/guestButtons") %> 
+                        <% } %> 
+
                     </div>
                 </div>
             </div>

@@ -1,0 +1,6 @@
+<div class="Boton-Carrito">
+    <a href="/products/edit/<%= product.id %> " class="Boton-Carrito">Editar producto</a>
+</div>
+<form class="Boton-Carrito" action="/product/delete/<%= product.id %>?_method=DELETE" method="post">
+    <button type="submit" class="Boton-Carrito">Eliminar</button>
+</form>

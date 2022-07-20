@@ -57,7 +57,7 @@ const usersController = {
 	return res.render('login', {
 		errors: resultValidation.mapped(),
 	})
-}
+            }
 
     },
     logout: (req, res) => {

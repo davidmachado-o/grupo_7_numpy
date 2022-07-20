@@ -6,9 +6,12 @@ const mainRouter = require('./routes/main');
 const productRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
 const session = require('express-session');
+
 const methodOverride = require('method-override');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const cookies = require('cookie-parser');
+const auth = require('./middlewares/authMiddleware')
+
 
 // PUBLIC PATH
 const publicPath = path.resolve(__dirname, "public");
@@ -18,7 +21,7 @@ app.use(express.static(publicPath));
 // VIEW ENGINE
 app.set('view engine', 'ejs')
 app.set('views', (path.resolve('views')))
-
+ 
 // METHOD OVERRIDE
 app.use(methodOverride('_method'))
 
@@ -30,11 +33,15 @@ app.use(session({
   saveUninitialized: false
 }))
 
+
 // COOKIES
 app.use(cookies());
 
 // USER LOGGED MIDDLEWARE
 app.use(userLoggedMiddleware);
+
+//AUTENTIFICACIÓN
+app.use(auth)
 
 // URL ENCODED
 app.use(express.urlencoded({ extended: false }));
