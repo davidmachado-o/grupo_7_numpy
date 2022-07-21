@@ -30,5 +30,19 @@ module.exports = (sequelize, DataTypes) => {
 
     const Order = sequelize.define(alias, cols, config);
 
+    Order.associate = function(models) {
+        Order.belongsTo(models.User, {
+            as: 'user',
+            foreignKey: 'user_id',
+            through: 'users_products'
+        });
+
+        Order.belongsTo(models.Product, {
+            as: 'product',
+            foreignKey: 'products_id',
+            through: 'users_products'
+        });
+    }
+
     return Order;
 }

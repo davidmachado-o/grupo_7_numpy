@@ -78,5 +78,41 @@ module.exports = (sequelize, DataTypes) => {
     
     const Product = sequelize.define(alias, cols, config);
 
+    Product.associate = function(models) {
+        Product.belongsTo(models.Category, {
+            as: 'category',
+            foreignKey: 'category_id',
+            through: 'category'
+        });
+
+        Product.belongsTo(models.Brand, {
+            as: 'brand',
+            foreignKey: 'brand_id',
+            through: 'brand'
+        }
+        );
+
+        Product.belongsTo(models.Users, {
+            as: 'users',
+            foreignKey: 'users_products_id',
+            through: 'users_products'
+        }
+        );
+
+        Product.belongsTo(models.Order, {
+            as: 'order_details',
+            foreignKey: 'order_details_id',
+            through: 'order_details'
+        }
+        );
+
+        Product.hasMany(models.Image, {
+            as: 'image',
+            foreignKey: 'products_id',
+            through: 'products'
+        }
+        );
+    }
+
     return Product;
 }

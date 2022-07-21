@@ -30,5 +30,18 @@ module.exports = (sequelize, DataTypes) => {
 
     const Category = sequelize.define(alias, cols, config);
 
+    Category.associate = function(models) {
+        Category.belongsTo(models.Brand, {
+            as: 'brand',
+            foreignKey: 'brand_category_id',
+            through: 'brand_category'
+        });
+
+        Category.hasMany(models.Product, {
+            as: 'products',
+            foreignKey: 'category_id',
+        });
+    }
+
     return Category;
 }
