@@ -44,4 +44,6 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     const User = sequelize.define(alias, cols, config);
+
+    return User;
 }

@@ -33,4 +33,6 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     const Image = sequelize.define(alias, cols, config);
+
+    return Image;
 }

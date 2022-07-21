@@ -23,4 +23,6 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     const Brand = sequelize.define(alias, cols, config);
+
+    return Brand;
 }
