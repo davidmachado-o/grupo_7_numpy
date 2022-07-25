@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Products';
+    let alias = 'Product';
     let cols = {
         id: {
             type: DataTypes.INTEGER,
@@ -89,15 +89,15 @@ module.exports = (sequelize, DataTypes) => {
             as: 'brand',
             foreignKey: 'brand_id',
             through: 'brand'
-        }
-        );
+        });
 
-        Product.belongsTo(models.Users, {
-            as: 'users',
-            foreignKey: 'users_products_id',
-            through: 'users_products'
-        }
-        );
+        // Product.belongsTo(models.Users, {
+        //     as: 'user',
+        //     through: 'users_products',
+        //     foreignKey: 'users_products_id',
+        //     otherKey: 'products_id',
+        //     timestamps: false
+        // });
 
         Product.belongsTo(models.Order, {
             as: 'order_details',
@@ -106,12 +106,11 @@ module.exports = (sequelize, DataTypes) => {
         }
         );
 
-        Product.hasMany(models.Image, {
+        Product.belongsToMany(models.Image, {
             as: 'image',
             foreignKey: 'products_id',
             through: 'products'
-        }
-        );
+        });
     }
 
     return Product;

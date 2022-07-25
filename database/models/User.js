@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Users';
+    let alias = 'User';
     let cols = {
         id: {
             type: DataTypes.INTEGER(11),
@@ -52,6 +52,14 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'user_type_id',
             through: 'user_type'
         });
+
+        User.belongsTo(models.Product, {
+            as: 'products',
+            foreignKey: 'users_products_id',
+            through: 'users_products',
+            otherKey: 'users_products_id',
+        });
+
 
         User.belongsTo(models.Picture, {
             as: 'picture',

@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Pictures';
+    let alias = 'Picture';
     let cols = {
         id: {
             type: DataTypes.INTEGER,
@@ -31,8 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     Picture.associate = function(models) {
         Picture.belongsTo(models.User, {
             as: 'user',
-            foreignKey: 'users_id',
-            through: 'users'
+            foreignKey: 'picture_id',
         });
     };
 
