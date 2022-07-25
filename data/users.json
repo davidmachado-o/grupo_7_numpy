@@ -1,34 +1,34 @@
 [
- {
-  "id": 1,
-  "name": "prueba1",
-  "email": "prueba1@hotmail.com",
-  "password": "$2a$10$9nsfsPWshaGlIkXldmLexeNpam0O7pQHKqK3gCdWE6wf0IP18nktu",
-  "img": "image-1656633439523-554496064.jpg",
-  "admin": "false"
- },
- {
-  "id": 2,
-  "name": "prueba2",
-  "email": "prueba2@hotmail.com",
-  "password": "$2a$10$5A/BJ9nBG7vrUyvk09GX4O/EcdrcEMeZUxo2lIePysZFC4VvIfAaa",
-  "img": "image-1656633447848-213836734.jpg",
-  "admin": "false"
- },
- {
-  "id": 3,
-  "name": "prueba3",
-  "email": "prueba3@hotmail.com",
-  "password": "$2a$10$x3XJwQr09PNBqmzLY5cAsOERZ.Om8AJChEKUf0tiNXUVYHe6gq6FK",
-  "img": "image-1656633455837-283723246.jpg",
-  "admin": "false"
- },
- {
-  "id": 4,
-  "name": "David test",
-  "email": "davidmachadodj@gmail.net",
-  "password": "$2a$10$K.3qQcq41uuM4PdpDusj8.Hw90fpU8Y0/E.SXWBa9qBHdwrpmdKS2",
-  "img": "image-1656700401306-130708522.jpg",
-  "admin": "false"
- }
+    {
+        "id": 1,
+        "name": "prueba1",
+        "email": "prueba1@hotmail.com",
+        "password": "$2a$10$9nsfsPWshaGlIkXldmLexeNpam0O7pQHKqK3gCdWE6wf0IP18nktu",
+        "img": "image-1656633439523-554496064.jpg",
+        "admin": "false"
+    },
+    {
+        "id": 2,
+        "name": "prueba2",
+        "email": "prueba2@hotmail.com",
+        "password": "$2a$10$5A/BJ9nBG7vrUyvk09GX4O/EcdrcEMeZUxo2lIePysZFC4VvIfAaa",
+        "img": "image-1656633447848-213836734.jpg",
+        "admin": "false"
+    },
+    {
+        "id": 3,
+        "name": "prueba3",
+        "email": "prueba3@hotmail.com",
+        "password": "$2a$10$x3XJwQr09PNBqmzLY5cAsOERZ.Om8AJChEKUf0tiNXUVYHe6gq6FK",
+        "img": "image-1656633455837-283723246.jpg",
+        "admin": "false"
+    },
+    {
+        "id": 4,
+        "name": "David test",
+        "email": "davidmachadodj@gmail.net",
+        "password": "$2a$10$K.3qQcq41uuM4PdpDusj8.Hw90fpU8Y0/E.SXWBa9qBHdwrpmdKS2",
+        "img": "image-1656700401306-130708522.jpg",
+        "admin": "false"
+    }
 ]
