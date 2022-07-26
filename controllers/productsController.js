@@ -1,112 +1,112 @@
 const fs = require('fs');
+const { get } = require('http');
 const path = require('path');
-const db = require('../database/models'); //acá esta el error, si sacas el db el error se va.
+const db = require('../database/models');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
 
 
 const productsController = {
+    productAdd: (req, res) => {
 
-    index : (req, res) => {
+        res.render('productAdd', { products })
 
-        res.render("index", {products}) //productos es un ejemplo
-    },
-    productDetail: (req, res) => {
-
-        // let detalleProducto = productos.find(producto => producto.id == req.params.id); detalleProducto
-
-        let id = req.params.id
-        let product = products.find(product => product.id == id)
-
-        res.render('productDetail', {product} )
-    },
-    
-    productCart: (req, res) =>{
-        res.render('productCart', {products})
-    },
-    
-    productEdit: (req,res) =>{
-        let id = req.params.id;
-        let product = products.find(product => product.id == id);
-
-        res.render('productEdit', {product})
     },
 
+    store: async (req, res) => {
+        await db.Product.create({
 
-    productAdd: (req,res) =>{
+            category_id: req.body.category,
+            brand_id: req.body.brand,
+            users_products_id: '1',
+            order_details_id: '1',
+            name: req.body.name,
+            model: '',
+            processor: req.body.processor,
+            memory: req.body.memory,
+            storage: req.body.storage,
+            price_current: req.body.price,
+            price_discount: '0',
+            stock: req.body.stock,
+            description: req.body.description
 
-        res.render('productAdd', {products})
+        }).then(product => {
+            db.Image.create({
+                products_id: product.id,
+                image_1: req.files[0].filename,
+                image_2: req.files[1].filename,
+                image_3: req.files[2].filename
+            })
+        });
 
-        // let newProduct = {
-        //     id: products.length + 1,
-        // }
+        res.redirect('/');
 
-        // products.push(newProduct)
-
-        // fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-
-        // res.redirect('/products')
     },
-
-    store: (req,res) =>{
-        let newProduct = {
-            id: products.length + 1,
-            ...req.body,
-            image_1: req.files[0].filename,
-            image_2: req.files[1].filename,
-            image_3: req.files[2].filename
-        }
-
-        products.push(newProduct)
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-
-        res.redirect('/product/productEdit/' + newProduct.id);
-        
+    listado: (req, res) => {
+        db.Product.findAll()
+            .then(function (product) {
+                res.render('productList', { product: product })
+            });
     },
+    productDetail: async (req, res) => {
 
-    destroy : (req, res) => {
-		let id = req.params.id 
-		let productDeleted = products.filter(product => product.id != id);
-		
-		fs.writeFileSync(productsFilePath, JSON.stringify(productDeleted));
+        db.Product.findByPk(req.params.id)
+            .then(function (product) {
+                res.render('productDetail', { product: product })  //como hacer para agregar la imagen al productDetail??
+            })
 
-		res.redirect('/')
-	},
+    },
+    productEdit: (req, res) => {
+        db.Product.findByPk(req.params.id)
+            .then(function (product) {
+                res.render('productEdit', { product: product })
+            });
+    },
+    productUpdate: (req, res) => {
+        db.Product.update({
 
-    productUpdate: (req,res) =>{
-        
+            category_id: req.body.category,
+            brand_id: req.body.brand,
+            users_products_id: '1',
+            order_details_id: '1',
+            name: req.body.name,
+            model: '',
+            processor: req.body.processor,
+            memory: req.body.memory,
+            storage: req.body.storage,
+            price_current: req.body.price,
+            price_discount: '0',
+            stock: req.body.stock,
+            description: req.body.description
 
-        let id = req.params.id;
-        let productToEdit = products.find(product => product.id == id);
-
-        productToEdit = {
-            id: productToEdit.id,
-            ...req.body,
-            image_1: productToEdit.image_1,
-            image_2: productToEdit.image_2,
-            image_3: productToEdit.image_3
-        };
-
-        // let image
-        // if (req.files[0] != undefined){
-        //     image= req.files[0].filename;
-        // } else {
-        //     image = productToEdit.image_1
-        // };
-
-        let productEdited = products.map (product => {
-            if (product.id == productToEdit.id) {
-                return product = {...productToEdit}
+        }, {
+            where: {
+                id: req.params.id
             }
-            return product
-        })
+        });
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(productEdited));
-        res.redirect ('/') //despues vemos hacia donde redirige
+        res.redirect('/product/productDetail/' + req.params.id)
+    },
+    destroy: (req, res) => {
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
 
+        res.redirect('/product/productList')
+    },
+
+
+
+    productCart: (req, res) => {
+        res.render('productCart', { products })
     }
+
+
+
+
 }
 
 module.exports = productsController;

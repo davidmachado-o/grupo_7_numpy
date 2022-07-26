@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.Lista {
+    flex-direction: column;
+    display: flex;
+    margin-top: 3%;
+}
+
+.Listax {
+    margin-left: 5%;
+    margin-top: 0.5%;
+    
+}
+
+.Listax a{
+    color: black;
+    font-weight: 1000;
+    text-decoration: underline;
+}
+
+.Listax a:hover{
+    color: blue;
+}

@@ -8,35 +8,41 @@ const productsController = require('../controllers/productsController');
 
 //******** MULTER  **********
 
-const storage =multer.diskStorage({
-    destination: function(req, file, cb){
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
         cb(null, 'public/images/products')
     },
-    filename: function(req, file, cb){
+    filename: function (req, file, cb) {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9) + path.extname(file.originalname)
         cb(null, file.fieldname + '-' + uniqueSuffix)
     }
 })
 
-const upload = multer({storage:storage})
+const upload = multer({ storage: storage })
 
-/* LISTADO DE PRODUCTOS */
-//router.get('/', productsController.index); 
-
-/* DETALLE DE UN PRODUCTO PARTICULAR */ 
-router.get('/productDetail/:id/', productsController.productDetail); 
-router.get('/productCart/', productsController.productCart)
-
- /* EDIT + DONDE SE ENVIA FORM */ 
+/* PRODUCT CREATE / ADD */
 router.get('/productAdd', admin, productsController.productAdd);
 router.post('/productAdd', upload.any(), productsController.store); // para subir cualquier cant de fotos el 'upload.any()' 
 
-router.get('/productEdit/:id/', admin, productsController.productEdit); 
-router.patch('/productEdit/:id/', upload.any(), productsController.productUpdate);
+// /* EDITADO DE PRODUCTOS */
+router.get('/productEdit/:id/', admin, productsController.productEdit);
+router.post('/productEdit/:id/', upload.any(), productsController.productUpdate);
 
-
-/* DELETE */ 
+// /* DELETE */ 
 router.delete('/delete/:id/', admin, productsController.destroy); 
+
+/* LISTADO DE PRODUCTOS */
+router.get('/productList', productsController.listado);
+
+// /* DETALLE DE UN PRODUCTO PARTICULAR */ 
+router.get('/productDetail/:id/', productsController.productDetail);
+router.get('/productCart/', productsController.productCart);
+
+// /* BUSCAR PRODUCTO? */
+
+
+
+
 
 
 

@@ -1,0 +1,27 @@
+<head>
+    <%- include('./partials/head.ejs'); %>
+    <link href="/styles/productList-styles.css" rel="stylesheet">
+</head>
+<header>
+    <% if(isAuthenticated) { %> 
+        <%- include('./partials/headerLogged.ejs'); %>
+    <% } else {%> 
+    
+        <%- include('./partials/header.ejs'); %>
+    <% } %> 
+</header>
+<body>
+<h1>Listado de productos</h1>
+<ul class="Lista">
+    <% for (let i = 0; i < product.length; i++) { %>  
+        <li class="Listax">
+            <a href="/product/productDetail/<%=product[i].id%> ">
+            <%=product[i].name %>
+            </a>
+        </li>
+        <%  } %> 
+</ul>
+</body>
+<footer>
+    <%- include('./partials/footer.ejs'); %>
+</footer>

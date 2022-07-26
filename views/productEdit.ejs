@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <%- include('./partials/head.ejs'); %>
-    <link href="/styles/productEdit-styles.css" rel="stylesheet">
-    <title>Numpy - Edicion de Producto</title>
+        <link href="/styles/productEdit-styles.css" rel="stylesheet">
+        <title>Numpy - Edicion de Producto</title>
 </head>
+
 <body>
     <header>
         <%- include('./partials/headerLogged.ejs'); %>
     </header>
-    
+
     <main>
         <!--Seccion 1: titulos principales-->
         <div class="seccion-titulos-principales">
@@ -20,208 +22,232 @@
             <img class="bola-verde" src="/images/bolita_verde.png" alt="bolita verde">
         </div>
         <!--Seccion 2: Carga de productos-->
-        <form class="seccion-detalles-producto seccion-detalles-producto-1" action="/product/productEdit/<%= product.id%>?_method=PUT" method="POST" enctype="multipart/form-data" id="productEditForm" name="productEditForm">
-                <img class="imagen-producto" src="/images/products/<%= product.image_1 %> " alt="<%= product.name %>">
+        <form class="seccion-detalles-producto seccion-detalles-producto-1"
+            action="/product/productEdit/<%=product.id %>" method="POST" enctype="multipart/form-data"
+            id="productEditForm" name="productEditForm">
+            <img class="imagen-producto" src="/images/products/<%= product.image_1 %> " alt="<%= product.name %>">
+            <div class="titulo-linea">
+                <h2 class="titulo-producto">Categoría producto</h2>
+                <hr class="linea-producto">
+                <div class="caja-producto">
+                    <p class="caja-tick">✅</p>
+                    <label for="category" method="POST"></label>
+                    <select class="caja-texto" name="category" id="category" required>
+                        <option value="<%= product.category %> " disabled> Seleccionar una opcion</option>
+                        <option value="mouse" <%=product.category==='mouse' ? 'selected' : '' %> >Mouse</option>
+                        <option value="teclado" <%=product.category==='teclado' ? 'selected' : '' %> >Teclado</option>
+                        <option value="monitor" <%=product.category==='monitor' ? 'selected' : '' %> >Monitor</option>
+                        <option value="silla" <%=product.category==='silla' ? 'selected' : '' %> >Silla</option>
+                        <option value="procesador" <%=product.category==='procesador' ? 'selected' : '' %> >Procesador
+                        </option>
+                        <option value="combo" <%=product.category==='combo' ? 'selected' : '' %> >Combo</option>
+                    </select>
+                </div>
+                <!--Seccion 3: Carga de productos sub-seccion -->
                 <div class="titulo-linea">
-                        <h2 class="titulo-producto">Categoría producto</h2>
-                        <hr class="linea-producto">
+                    <h2 class="titulo-producto">Marca</h2>
+                    <hr class="linea-producto">
                     <div class="caja-producto">
                         <p class="caja-tick">✅</p>
-                        <label  for="category" method="POST"></label>
-                        <select class="caja-texto" name="category" id="category" required>
-                            <option value="<%= product.category %> " disabled> Seleccionar una opcion</option>
-                            <option value="mouse" <%= product.category  === 'mouse' ? 'selected' : ''%> >Mouse</option>
-                            <option value="teclado" <%= product.category  === 'teclado' ? 'selected' : ''%> >Teclado</option>
-                            <option value="monitor" <%= product.category  === 'monitor' ? 'selected' : ''%> >Monitor</option>
-                            <option value="silla" <%= product.category  === 'silla' ? 'selected' : ''%> >Silla</option>
-                            <option value="procesador" <%= product.category  === 'procesador' ? 'selected' : ''%> >Procesador</option>
-                            <option value="combo" <%= product.category  === 'combo' ? 'selected' : ''%> >Combo</option>
+                        <label for="brand" method="POST"></label>
+                        <select class="caja-texto" name="brand" id="brand" required>
+                            <option value="<%= product.brand %> " disabled> Seleccionar una opcion</option>
+
+                            <option value="Acer" <%=product.brand==='Acer' ? 'selected' : '' %> >Acer</option>
+                            <option value="AMD" <%=product.brand==='AMD' ? 'selected' : '' %> >AMD</option>
+                            <option value="Asus" <%=product.brand==='Asus' ? 'selected' : '' %> >Asus</option>
+                            <option value="Apple" <%=product.brand==='Apple' ? 'selected' : '' %> >Apple</option>
+                            <option value="Cougar" <%=product.brand==='Cougar' ? 'selected' : '' %> >Cougar</option>
+                            <option value="Corsair" <%=product.brand==='Corsair' ? 'selected' : '' %> >Corsair</option>
+                            <option value="Dell" <%=product.brand==='Dell' ? 'selected' : '' %> >Dell</option>
+                            <option value="Dx Racer" <%=product.brand==='Dx Racer' ? 'selected' : '' %> >Dx Racer
+                            </option>
+                            <option value="HP" <%=product.brand==='HP' ? 'selected' : '' %> >HP</option>
+                            <option value="Intel" <%=product.brand==='Intel' ? 'selected' : '' %> >Intel</option>
+                            <option value="Logitech" <%=product.brand==='Logitech' ? 'selected' : '' %> >Logitech
+                            </option>
+                            <option value="LG" <%=product.brand==='LG' ? 'selected' : '' %> >LG</option>
+                            <option value="Lenovo" <%=product.brand==='Lenovo' ? 'selected' : '' %> >Lenovo</option>
+                            <option value="MSI" <%=product.brand==='MSI' ? 'selected' : '' %> >MSI</option>
+                            <option value="Mountain" <%=product.brand==='Mountain' ? 'selected' : '' %> >Mountain
+                            </option>
+                            <option value="Newskill" <%=product.brand==='Newskill' ? 'selected' : '' %> >Newskill
+                            </option>
+                            <option value="Razer" <%=product.brand==='Razer' ? 'selected' : '' %> >Razer</option>
+                            <option value="Samsung" <%=product.brand==='Samsung' ? 'selected' : '' %> >Samsung</option>
+                            <option value="Sony" <%=product.brand==='Sony' ? 'selected' : '' %> >Sony</option>
+                            <option value="Toshiba" <%=product.brand==='Toshiba' ? 'selected' : '' %> >Toshiba</option>
                         </select>
                     </div>
-                     <!--Seccion 3: Carga de productos sub-seccion -->
-                    <div class="titulo-linea">
-                        <h2 class="titulo-producto">Marca</h2>
-                        <hr class="linea-producto">
-                        <div class="caja-producto">
-                            <p class="caja-tick">✅</p>
-                            <label  for="brand" method="POST"></label>
-                            <select class="caja-texto" name="brand" id="brand" required>
-                                <option value="<%= product.brand %> " disabled> Seleccionar una opcion</option>
-
-                                <option value="Acer" <%= product.brand  === 'Acer' ? 'selected' : ''%> >Acer</option>
-                                <option value="AMD" <%= product.brand  === 'AMD' ? 'selected' : ''%> >AMD</option>
-                                <option value="Asus" <%= product.brand  === 'Asus' ? 'selected' : ''%> >Asus</option>
-                                <option value="Apple" <%= product.brand  === 'Apple' ? 'selected' : ''%> >Apple</option>
-                                <option value="Cougar" <%= product.brand  === 'Cougar' ? 'selected' : ''%> >Cougar</option>
-                                <option value="Corsair" <%= product.brand  === 'Corsair' ? 'selected' : ''%> >Corsair</option>
-                                <option value="Dell" <%= product.brand  === 'Dell' ? 'selected' : ''%> >Dell</option>
-                                <option value="Dx Racer" <%= product.brand  === 'Dx Racer' ? 'selected' : ''%> >Dx Racer</option>
-                                <option value="HP" <%= product.brand  === 'HP' ? 'selected' : ''%> >HP</option>
-                                <option value="Intel" <%= product.brand  === 'Intel' ? 'selected' : ''%> >Intel</option>
-                                <option value="Logitech" <%= product.brand  === 'Logitech' ? 'selected' : ''%> >Logitech</option>
-                                <option value="LG" <%= product.brand  === 'LG' ? 'selected' : ''%> >LG</option>
-                                <option value="Lenovo" <%= product.brand  === 'Lenovo' ? 'selected' : ''%> >Lenovo</option>
-                                <option value="MSI" <%= product.brand  === 'MSI' ? 'selected' : ''%> >MSI</option>
-                                <option value="Mountain" <%= product.brand  === 'Mountain' ? 'selected' : ''%> >Mountain</option>
-                                <option value="Newskill" <%= product.brand  === 'Newskill' ? 'selected' : ''%> >Newskill</option>
-                                <option value="Razer" <%= product.brand  === 'Razer' ? 'selected' : ''%> >Razer</option>
-                                <option value="Samsung" <%= product.brand  === 'Samsung' ? 'selected' : ''%> >Samsung</option>
-                                <option value="Sony" <%= product.brand  === 'Sony' ? 'selected' : ''%> >Sony</option>
-                                <option value="Toshiba" <%= product.brand  === 'Toshiba' ? 'selected' : ''%> >Toshiba</option>
-                            </select>
-                        </div>
+                </div>
+                <div class="titulo-linea">
+                    <h2 class="titulo-producto">Modelo</h2>
+                    <hr class="linea-producto">
+                    <div class="caja-producto">
+                        <p class="caja-tick">✅</p>
+                        <label for="model" method="POST"></label>
+                        <input type="text" id="model" name="model" value="<%= product.model%>" class="caja-texto"
+                            required>
                     </div>
-                    <div class="titulo-linea">
-                        <h2 class="titulo-producto">Modelo</h2>
-                        <hr class="linea-producto">
-                        <div class="caja-producto">
-                            <p class="caja-tick">✅</p>
-                            <label  for="model" method="POST"></label>
-                            <input type="text" id="model" name="model" value="<%= product.model%>" class="caja-texto" required>
-                        </div>
+                </div>
+                <div class="titulo-linea">
+                    <h2 class="titulo-producto">Procesador</h2>
+                    <hr class="linea-producto">
+                    <div class="caja-producto">
+                        <p class="caja-tick">✅</p>
+                        <label for="proccesor" method="POST"></label>
+                        <select class="caja-texto" name="processor" id="processor" required>
+                            <option value="<%= product.processor %> " disabled> Seleccionar una opcion</option>
+                            <option value="Core i3" <%=product.processor==='Core i3' ? 'selected' : '' %> >Core i3
+                            </option>
+                            <option value="Core i5" <%=product.processor==='Core i5' ? 'selected' : '' %> >Core i5
+                            </option>
+                            <option value="Core i7" <%=product.processor==='Core i7' ? 'selected' : '' %> >Core i7
+                            </option>
+                            <option value="Core i9" <%=product.processor==='Core i9' ? 'selected' : '' %> >Core i9
+                            </option>
+                            <option value="Ryzen 7" <%=product.processor==='Ryzen 7' ? 'selected' : '' %> >Ryzen 7
+                            </option>
+                            <option value="Ryzen 9" <%=product.processor==='Ryzen 9' ? 'selected' : '' %> >Ryzen 9
+                            </option>
+                            <option value="false" <%=product.processor==false ? 'selected' : '' %> >No aplica</option>
+                        </select>
                     </div>
-                    <div class="titulo-linea">
-                        <h2 class="titulo-producto">Procesador</h2>
-                        <hr class="linea-producto">
-                        <div class="caja-producto">
-                            <p class="caja-tick">✅</p>
-                            <label  for="proccesor" method="POST"></label>
-                            <select class="caja-texto" name="processor" id="processor" required>
-                                <option value="<%= product.processor %> " disabled> Seleccionar una opcion</option>
-                                <option value="Core i3" <%= product.processor  === 'Core i3' ? 'selected' : ''%> >Core i3</option>
-                                <option value="Core i5" <%= product.processor  === 'Core i5' ? 'selected' : ''%> >Core i5</option>
-                                <option value="Core i7" <%= product.processor  === 'Core i7' ? 'selected' : ''%> >Core i7</option>
-                                <option value="Core i9" <%= product.processor  === 'Core i9' ? 'selected' : ''%> >Core i9</option>
-                                <option value="Ryzen 7" <%= product.processor  === 'Ryzen 7' ? 'selected' : ''%> >Ryzen 7</option>
-                                <option value="Ryzen 9" <%= product.processor  === 'Ryzen 9' ? 'selected' : ''%> >Ryzen 9</option>
-                                <option value="false" <%= product.processor  == false ? 'selected' : ''%> >No aplica</option>   
-                            </select>
-                        </div>
+                </div>
+                <div class="titulo-linea">
+                    <h2 class="titulo-producto">Memoria</h2>
+                    <hr class="linea-producto">
+                    <div class="caja-producto">
+                        <p class="caja-tick">✅</p>
+                        <label for="memory" method="POST"></label>
+                        <select class="caja-texto" name="memory" id="memory" required>
+                            <option value="<%= product.memory %>" disabled> Seleccionar una opcion</option>
+                            <option value="34gb" <%=product.memory==='34gb' ? 'selected' : '' %> >34 GB</option>
+                            <option value="64gb" <%=product.memory==='64gb' ? 'selected' : '' %> >64 GB</option>
+                            <option value="false" <%=product.memory==false ? 'selected' : '' %> >No aplica</option>
+                        </select>
                     </div>
-                    <div class="titulo-linea">
-                        <h2 class="titulo-producto">Memoria</h2>
-                        <hr class="linea-producto">
-                        <div class="caja-producto">
-                            <p class="caja-tick">✅</p>
-                            <label  for="memory" method="POST"></label>
-                            <select class="caja-texto" name="memory" id="memory" required>
-                                <option value="<%= product.memory %>" disabled> Seleccionar una opcion</option>
-                                <option value="34gb" <%= product.memory  === '34gb' ? 'selected' : ''%> >34 GB</option>
-                                <option value="64gb" <%= product.memory  === '64gb' ? 'selected' : ''%> >64 GB</option>
-                                <option value="false" <%= product.memory  == false ? 'selected' : ''%> >No aplica</option> 
-                            </select>
-                        </div>
+                </div>
+                <div class="titulo-linea">
+                    <h2 class="titulo-producto">Disco duro</h2>
+                    <hr class="linea-producto">
+                    <div class="caja-producto">
+                        <p class="caja-tick">✅</p>
+                        <label for="storage" method="POST"></label>
+                        <select class="caja-texto" name="storage" id="storage" required>
+                            <option value="<%= product.storage %>" disabled> Seleccionar una opcion</option>
+                            <option value="128gb" <%=product.storage==='128gb' ? 'selected' : '' %> >128 GB</option>
+                            <option value="256gb" <%=product.storage==='256gb' ? 'selected' : '' %> >256 GB</option>
+                            <option value="512gb" <%=product.storage==='512gb' ? 'selected' : '' %> >512 GB</option>
+                            <option value="1tb" <%=product.storage==='1tb' ? 'selected' : '' %> >1 TB</option>
+                            <option value="2tb" <%=product.storage==='2tb' ? 'selected' : '' %> >2 TB</option>
+                            <option value="false" <%=product.storage===false ? 'selected' : '' %> >No aplica</option>
+                        </select>
                     </div>
-                    <div class="titulo-linea">
-                        <h2 class="titulo-producto">Disco duro</h2>
-                        <hr class="linea-producto">
-                        <div class="caja-producto">
-                            <p class="caja-tick">✅</p>
-                            <label  for="storage" method="POST"></label>
-                            <select class="caja-texto" name="storage" id="storage" required>
-                                <option value="<%= product.storage %>" disabled> Seleccionar una opcion</option>
-                                <option value="128gb" <%= product.storage  === '128gb' ? 'selected' : ''%> >128 GB</option>
-                                <option value="256gb" <%= product.storage  === '256gb' ? 'selected' : ''%> >256 GB</option>
-                                <option value="512gb" <%= product.storage  === '512gb' ? 'selected' : ''%> >512 GB</option>
-                                <option value="1tb" <%= product.storage  === '1tb' ? 'selected' : ''%> >1 TB</option>
-                                <option value="2tb" <%= product.storage  === '2tb' ? 'selected' : ''%> >2 TB</option>
-                                <option value="false" <%= product.storage  === false ? 'selected' : ''%> >No aplica</option> 
-                            </select>
-                        </div>
-                    </div>
-                    <div class="titulo-linea">
-                        <h2 class="titulo-producto">Descripción</h2>
-                        <hr class="linea-producto">
-                        <div class="caja-producto caja-producto-descripcion">
-                            <p class="caja-tick">✅</p>
-                            <label  for="description" method="POST"></label>
-                            <textarea class="caja-texto" name="description" id="description" type="text" maxlength="1000" required>
+                </div>
+                <div class="titulo-linea">
+                    <h2 class="titulo-producto">Descripción</h2>
+                    <hr class="linea-producto">
+                    <div class="caja-producto caja-producto-descripcion">
+                        <p class="caja-tick">✅</p>
+                        <label for="description" method="POST"></label>
+                        <textarea class="caja-texto" name="description" id="description" type="text" maxlength="1000"
+                            required>
                                 <%= product.description %>
                             </textarea>
-                            <img src="/images/lapiz_edicion.png" alt="Editar imagen">
-                        </div>
+                        <img src="/images/lapiz_edicion.png" alt="Editar imagen">
                     </div>
-                </div> 
-               
-            <!--Seccion 4: Carga de fotos --> 
+                </div>
+            </div>
+
+            <!--Seccion 4: Carga de fotos -->
             <div class="seccion-detalles-producto-2">
                 <h2 class="titulo-producto titulo-producto-2">Fotos</h2>
                 <hr class="linea-producto linea-producto-2">
                 <div class="seccion-carga-fotos">
-                    <img class="imagen-producto-2" src="/images/products/<%= product.image_1 %> " alt="<%= product.name %>">
-                    <img class="imagen-producto-2" src="/images/products/<%= product.image_2 %> " alt="<%= product.name %>">
-                    <img class="imagen-producto-2" src="/images/products/<%= product.image_3 %> " alt="<%= product.name %>">
+                    <img class="imagen-producto-2" src="/images/products/<%= product.image_1 %> "
+                        alt="<%= product.name %>">
+                    <img class="imagen-producto-2" src="/images/products/<%= product.image_2 %> "
+                        alt="<%= product.name %>">
+                    <img class="imagen-producto-2" src="/images/products/<%= product.image_3 %> "
+                        alt="<%= product.name %>">
                     <div class="div-agregar-fotos">
                         <label for="image"></label>
-                        <input type="file" name="image"> 
+                        <input type="file" name="image">
                     </div>
                 </div>
-             </div>
-        </div>
-         <!--Seccion 5: Carga de precio --> 
-         <div class="seccion-detalles-producto-2 seccion-detalles-producto-3">
-            <div class="titulo-linea">
-                <h2 class="titulo-producto">Precio por unidad</h2>
-                <hr class="linea-producto">
-                <div class="caja-producto-2">
-                    <p class="caja-tick">✅</p>
-                    <label  for="price" method="POST">
-                        $
-                    </label>
-                    <input class="caja-texto" type="number" name="price" id="price" value="<%= product.price %>" required>
-                </div>
-            </div> 
-            <div class="titulo-linea">
-                <h2 class="titulo-producto">Descuento por unidad</h2>
-                <hr class="linea-producto">
-                <div class="caja-producto-2">
-                    <p class="caja-tick">✅</p>
-                    <label  for="discount" method="POST">
-                        %
-                    </label>
-                    <input class="caja-texto" type="number" name="discount"  id="discount" value="<%= product.discount %>" required>
-                </div>
             </div>
-            <div class="titulo-linea">
-                <h2 class="titulo-producto">Inventario a la venta</h2>
-                <hr class="linea-producto">
-                <div class="caja-producto-2">
-                    <p class="caja-tick">✅</p>
-                    <label  for="stock" method="POST">
-                    </label>
-                    <input class="caja-texto" type="number" name="stock" id="stock" value="<%= product.stock %>" required>
+            </div>
+            <!--Seccion 5: Carga de precio -->
+            <div class="seccion-detalles-producto-2 seccion-detalles-producto-3">
+                <div class="titulo-linea">
+                    <h2 class="titulo-producto">Precio por unidad</h2>
+                    <hr class="linea-producto">
+                    <div class="caja-producto-2">
+                        <p class="caja-tick">✅</p>
+                        <label for="price" method="POST">
+                            $
+                        </label>
+                        <input class="caja-texto" type="number" name="price" id="price"
+                            value="<%= product.price_current %>" required>
+                    </div>
                 </div>
-            </div>   
-        
-        <!--Seccion 6: Final --> 
-        <div class="final-general">
-            <p class="final-titulo">¿Ya todo revisado?</p>
+                <div class="titulo-linea">
+                    <h2 class="titulo-producto">Descuento por unidad</h2>
+                    <hr class="linea-producto">
+                    <div class="caja-producto-2">
+                        <p class="caja-tick">✅</p>
+                        <label for="discount" method="POST">
+                            %
+                        </label>
+                        <input class="caja-texto" type="number" name="discount" id="discount"
+                            value="<%= product.price_discount %>" required>
+                    </div>
+                </div>
+                <div class="titulo-linea">
+                    <h2 class="titulo-producto">Inventario a la venta</h2>
+                    <hr class="linea-producto">
+                    <div class="caja-producto-2">
+                        <p class="caja-tick">✅</p>
+                        <label for="stock" method="POST">
+                        </label>
+                        <input class="caja-texto" type="number" name="stock" id="stock" value="<%= product.stock %>"
+                            required>
+                    </div>
+                </div>
+
+                <!--Seccion 6: Final -->
+                <div class="final-general">
+                    <p class="final-titulo">¿Ya todo revisado?</p>
+                    <button type="submit">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor"
+                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <span>Enviar</span>
+                    </button>
+        </form>
+        <form action="/product/delete/<%= product.id %>?_method=DELETE" method="POST">
             <button type="submit">
-                <div class="svg-wrapper-1">
-                  <div class="svg-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                      <path fill="none" d="M0 0h24v24H0z"></path>
-                      <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-                    </svg>
-                  </div>
-                </div>
-                <span>Enviar</span>
+                <img class="basurero" src="/images/basura.png" alt="basuero">
+                <span>Eliminar producto</span>
             </button>
-        </form> 
-            <form action="/product/delete/<%= product.id %>?_method=DELETE" method="POST">
-                <button type="submit">
-                    <img class="basurero" src="/images/basura.png" alt="basuero">
-                    <span>Eliminar producto</span>
-                </button>
-            </form>
-            
-              <img class="bola-rosa-2" src="/images/bolita_rosa.png" alt="Bola rosa">
-              <img class="bola-verde-2" src="/images/bolita_verde.png" alt="Bola verde">
+        </form>
+
+        <img class="bola-rosa-2" src="/images/bolita_rosa.png" alt="Bola rosa">
+        <img class="bola-verde-2" src="/images/bolita_verde.png" alt="Bola verde">
         </div>
-    
-    </main>  
+
+    </main>
     <footer>
         <%- include('./partials/footer.ejs'); %>
     </footer>
 </body>
+
 </html>

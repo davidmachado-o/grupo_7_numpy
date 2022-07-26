@@ -12,7 +12,7 @@
     </header>
     <section class="List">
         <ul class="Main-List">
-            <li class="Listado"><a href="#">Volver al listado</a></li>
+            <li class="Listado"><a href="/product/productList">Volver al listado</a></li>
             <li class="Line1">
                 <hr>
             </li>
@@ -31,23 +31,26 @@
         <article>
             <a href="#">
                 <div class="Cont-Mini-Imagen">
-                    <img class="Mini-Imagen" src="/images/products/<%= product.image_1 %>"  alt="<%= product.name %>">
-                    <img class="Mini-Imagen" src="/images/products/<%= product.image_2 %>"  alt="<%= product.name %>">
-                    <img class="Mini-Imagen" src="/images/products/<%= product.image_3 %>"  alt="<%= product.name %>">
+                    <img class="Mini-Imagen" src="/images/products/<%= product.image_1 %>" alt="<%= product.name %>">
+                    <img class="Mini-Imagen" src="/images/products/<%= product.image_2 %>" alt="<%= product.name %>">
+                    <img class="Mini-Imagen" src="/images/products/<%= product.image_3 %>" alt="<%= product.name %>">
                 </div>
             </a>
             <div class="Cont-Imagen-Desc">
                 <div class="Cont-Imagen">
-                    <img class="Imagen" src="/images/products/<%= product.image_1 %>"  alt="<%= product.name %>">
+                    <img class="Imagen" src="/images/products/<%= product.image_1 %>" alt="<%= product.name %>">
                 </div>
                 <div class="Cont-Descripcion">
                     <div class="Descripcion">
                         <div class="Descripcion-Titulo">
-                            <h2 class="Titulo1"><%= product.name%></h2>
+                            <h2 class="Titulo1">
+                                <%= product.name%>
+                            </h2>
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <div>
-                            <p class="Mini-Descripcion">MARCA: <%= product.brand%></p>
+                            <p class="Mini-Descripcion">MARCA: <%= product.brand_id%>
+                            </p>
                         </div>
                         <div class="Rank">
                             <i class="fa-regular fa-star"></i>
@@ -63,10 +66,11 @@
                         </div>
                         <div class="Precios-Descuentos">
                             <div class="Precio">
-                                <h2>$<%= product.price%></h2>
+                                <h2>$<%= product.price_current%>
+                                </h2>
                             </div>
                             <div class="Descuentos">
-                                <%= product.discount%> % OFF
+                                <%= product.price_discount%> % OFF
                             </div>
                         </div>
                         <div class="Cuotas">
@@ -83,9 +87,9 @@
                         </div>
                         <div class="Especificaciones">
                             <p>Almacenamiento:</p>
-                            <h4 style="color: #666;"> 
+                            <h4 style="color: #666;">
                                 <%= product.storage%>
-                                
+
                         </div>
 
                         <div class="Stock">
@@ -103,10 +107,10 @@
                         <div class="Boton-Carrito">
                             <button type="submit" class="Boton-Carrito">Agregar al carrito</button>
                         </div>
-<!-- edicion para los que esten logueados                  -->
+                        <!-- edicion para los que esten logueados                  -->
                         <% if (locals.userLogged && locals.userLogged.admin) { %>
-                            <%- include ("partials/guestButtons") %> 
-                        <% } %> 
+                            <%- include ("partials/guestButtons") %>
+                                <% } %>
 
                     </div>
                 </div>
@@ -116,23 +120,33 @@
             </div>
             <div class="Cont-Imagen2">
                 <div class="Mini-Article">
-                    <p class="Desc"><%= product.discount%>% OFF</p>
+                    <p class="Desc">
+                        <%= product.discount%>% OFF
+                    </p>
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="/images/products/<%= product.image_1 %>"  alt="<%= product.name %>">
+                    <img class="Producto" src="/images/products/<%= product.image_1 %>" alt="<%= product.name %>">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
-                        <h2 class="Precio2">$<%= product.price%></h2>
-                        <p class="Nombre-Producto"><%= product.model%></p>
+                        <h2 class="Precio2">$<%= product.price%>
+                        </h2>
+                        <p class="Nombre-Producto">
+                            <%= product.model%>
+                        </p>
                     </div>
                 </div>
                 <div class="Mini-Article2">
-                    <p class="Desc"><%= product.discount%>% OFF</p>
+                    <p class="Desc">
+                        <%= product.discount%>% OFF
+                    </p>
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="/images/products/<%= product.image_1 %>"  alt="<%= product.name %>">
+                    <img class="Producto" src="/images/products/<%= product.image_1 %>" alt="<%= product.name %>">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
-                        <h2 class="Precio2">$<%= product.price%></h2>
-                        <p class="Nombre-Producto"><%= product.model%></p>
+                        <h2 class="Precio2">$<%= product.price%>
+                        </h2>
+                        <p class="Nombre-Producto">
+                            <%= product.model%>
+                        </p>
                     </div>
                 </div>
                 <div class="Arrow">
@@ -151,19 +165,27 @@
                 <div class="Tabla-Features">
                     <div class="Features1">
                         <h3>Marca</h3>
-                        <p class="Marca"><%= product.brand%></p>
+                        <p class="Marca">
+                            <%= product.brand%>
+                        </p>
                     </div>
                     <div class="Features2">
                         <h3>Modelo</h3>
-                        <p class="Modelo"><%= product.model%></p>
+                        <p class="Modelo">
+                            <%= product.model%>
+                        </p>
                     </div>
                     <div class="Features3">
                         <h3>Procesador</h3>
-                        <p class="Procesador"><%= product.processor%></p>
+                        <p class="Procesador">
+                            <%= product.process%>
+                        </p>
                     </div>
                     <div class="Features4">
                         <h3>Disco Duro</h3>
-                        <p class="Disco-Duro"><%= product.storage%></p>
+                        <p class="Disco-Duro">
+                            <%= product.storage%>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -326,7 +348,7 @@
                 <div class="Minis-Article1">
                     <p class="Desc">60% OFF</p>
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="images\producto_volante.jpeg">
+                    <img class="Producto" src="\images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
                         <h2 class="Precio2">$20.300</h2>
@@ -335,7 +357,7 @@
                 </div>
                 <div class="Minis-Article2">
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="images\producto_volante.jpeg">
+                    <img class="Producto" src="\images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
                         <h2 class="Precio2">$20.300</h2>
@@ -345,7 +367,7 @@
                 <div class="Minis-Article3">
                     <p class="Desc">60% OFF</p>
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="images\producto_volante.jpeg">
+                    <img class="Producto" src="\images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
                         <h2 class="Precio2">$20.300</h2>
@@ -354,7 +376,7 @@
                 </div>
                 <div class="Minis-Article4">
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="images\producto_volante.jpeg">
+                    <img class="Producto" src="\images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
                         <h2 class="Precio2">$20.300</h2>
@@ -362,6 +384,11 @@
                     </div>
                 </div>
             </div>
+            <a href="/product/productEdit/<%=product.id %> ">
+                <div class="Boton-Comprar">
+                    <button type="submit" class="Boton-Comprar">Editar</button>
+                </div>
+            </a>
         </div>
     </main>
     <footer>

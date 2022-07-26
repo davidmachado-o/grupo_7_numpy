@@ -24,7 +24,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage:storage})
 
-
 // REGISTER FORM
 router.get('/register', guestMiddleware, usersController.register);
 router.post('/register', upload.single('image') ,registerValidations, usersController.processRegister);  

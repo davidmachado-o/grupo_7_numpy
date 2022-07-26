@@ -3,6 +3,7 @@ const path = require('path');
 const { validationResult } = require('express-validator');
 const User = require('../models/User');
 const bycrypt = require('bcryptjs');
+const db = require('../database/models');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'))
@@ -67,41 +68,44 @@ const usersController = {
     register: (req, res) => {
         res.render('register') //ir hacia el form
     },
-    processRegister: (req, res) => {
-        const resultValidation = validationResult(req);
-
-        if (resultValidation.errors.length > 0) {
-            return res.render('register', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            });
+    processRegister: async (req, res) => {
+        let errors = validationResult(req);
+        if(!req.file){
+            errors.errors.pop();
         }
-
-        let userInDb = User.findByField('email', req.body.email);
-
-        if (userInDb) {
-            return res.render('register', {
-                errors: {
-                    email: {
-                        msg: 'Este email ya se encuentra registrado'
-                    }
-                },
-                oldData: req.body
-            });
+        if (errors.isEmpty()) {
+            //Verifico si el email que ingreso ya fue registrado
+            let user = await db.User.findOne({ 
+                where: { email: req.body.email } 
+            })
+            .catch(error => res.send(error));
+            if(user){
+                errors.errors.push({msg: 'Este email ya está registrado.', param:'email'})
+            }
+            //Verifico si escribio bien la contraseña
+            if(req.body.password != req.body.password_confirm){
+                errors.errors.push({msg: 'La contraseña no coinciden.', param:'password'})
+            }
+            //Pregunto si hubo errores
+            if(errors.errors.length > 0){
+                res.render('register', { 
+                    error: errors.mapped(), 
+                    old: req.body 
+                }); 
+            }
+            //Registro la cuenta
+            await db.User.create({
+                users_products_id: ' ',
+                user_type_id: ' ',
+                name: req.body.name,
+                last_name: ' ',
+                email: req.body.email,
+                password: bycrypt.hashSync(req.body.password, 10),
+                picture_id: req.file ? req.file.filename : 'default.jpg'
+            })
+            res.redirect('login')
         }
-
-        let userToCreate = {
-            name: req.body.name,
-            email: req.body.email,
-            password: bycrypt.hashSync(req.body.password, 10),
-            admin: 'false',
-            img: req.file ? req.file.filename : 'default.jpg'// aca
-        }
-        
-        User.create(userToCreate)
-        return res.redirect('/users/login');
-        
-    }
+    },
 }
 
 module.exports = usersController;
