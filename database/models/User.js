@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         password: {
-            type: DataTypes.STRING(45),
+            type: DataTypes.STRING(100),
             allowNull: false,
         }
     };
@@ -45,8 +45,8 @@ module.exports = (sequelize, DataTypes) => {
 
     const User = sequelize.define(alias, cols, config);
 
-    User.associate = function(models) {
-       
+    User.associate = function (models) {
+
         User.belongsTo(models.UserType, {
             as: 'user_type',
             foreignKey: 'user_type_id',

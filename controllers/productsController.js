@@ -51,9 +51,14 @@ const productsController = {
     },
     productDetail: async (req, res) => {
 
-        db.Product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id, {  //como hacer para agregar la imagen al productDetail??
+            include: [{
+                model: db.Image,
+                as: 'image'
+            }]
+        })
             .then(function (product) {
-                res.render('productDetail', { product: product })  //como hacer para agregar la imagen al productDetail??
+                res.render('productDetail', { product: product })  
             })
 
     },
