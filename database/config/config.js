@@ -4,7 +4,11 @@ module.exports = {
     "password": null,
     "database": "numpy_db",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    // Config para Mac
+    "dialectOptions": {
+      "socketPath": "/Applications/MAMP/tmp/mysql/mysql.sock"
+      }
   },
   "test": {
     "username": "root",
