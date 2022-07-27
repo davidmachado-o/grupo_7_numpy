@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `numpy_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `numpy_db`;
 -- MySQL dump 10.13  Distrib 8.0.29, for macos12 (x86_64)
 --
 -- Host: 127.0.0.1    Database: numpy_db
@@ -26,21 +24,10 @@ DROP TABLE IF EXISTS `brand`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `brand` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `brand_category_id` int(11) NOT NULL,
   `name` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `brand_category_id_idx` (`brand_category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `brand`
---
-
-LOCK TABLES `brand` WRITE;
-/*!40000 ALTER TABLE `brand` DISABLE KEYS */;
-/*!40000 ALTER TABLE `brand` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `brand_category`
@@ -56,17 +43,8 @@ CREATE TABLE `brand_category` (
   PRIMARY KEY (`id`),
   KEY `brand_id_idx` (`brand_id`),
   CONSTRAINT `brand_11` FOREIGN KEY (`brand_id`) REFERENCES `brand` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `brand_category`
---
-
-LOCK TABLES `brand_category` WRITE;
-/*!40000 ALTER TABLE `brand_category` DISABLE KEYS */;
-/*!40000 ALTER TABLE `brand_category` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `category`
@@ -77,23 +55,10 @@ DROP TABLE IF EXISTS `category`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `products_id` varchar(45) NOT NULL,
-  `brand_category_id` int(11) NOT NULL,
   `name` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `brand_category_id_idx` (`brand_category_id`),
-  CONSTRAINT `brand_category_id` FOREIGN KEY (`brand_category_id`) REFERENCES `brand_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `category`
---
-
-LOCK TABLES `category` WRITE;
-/*!40000 ALTER TABLE `category` DISABLE KEYS */;
-/*!40000 ALTER TABLE `category` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `image`
@@ -104,24 +69,12 @@ DROP TABLE IF EXISTS `image`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `image` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `products_id` int(11) NOT NULL,
   `image_1` varchar(45) NOT NULL,
   `image_2` varchar(45) DEFAULT NULL,
   `image_3` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `products_id_idx` (`products_id`),
-  CONSTRAINT `products_id` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `image`
---
-
-LOCK TABLES `image` WRITE;
-/*!40000 ALTER TABLE `image` DISABLE KEYS */;
-/*!40000 ALTER TABLE `image` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `order_details`
@@ -144,15 +97,6 @@ CREATE TABLE `order_details` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `order_details`
---
-
-LOCK TABLES `order_details` WRITE;
-/*!40000 ALTER TABLE `order_details` DISABLE KEYS */;
-/*!40000 ALTER TABLE `order_details` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `orders`
 --
 
@@ -167,15 +111,6 @@ CREATE TABLE `orders` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `orders`
---
-
-LOCK TABLES `orders` WRITE;
-/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `picture`
@@ -195,15 +130,6 @@ CREATE TABLE `picture` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `picture`
---
-
-LOCK TABLES `picture` WRITE;
-/*!40000 ALTER TABLE `picture` DISABLE KEYS */;
-/*!40000 ALTER TABLE `picture` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `products`
 --
 
@@ -214,9 +140,7 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) NOT NULL,
   `brand_id` int(11) NOT NULL,
-  `users_products_id` int(11) NOT NULL,
-  `order_details_id` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
+  `name` varchar(100) NOT NULL,
   `model` varchar(45) DEFAULT NULL,
   `processor` varchar(45) DEFAULT NULL,
   `memory` varchar(45) DEFAULT NULL,
@@ -224,29 +148,16 @@ CREATE TABLE `products` (
   `price_current` varchar(45) NOT NULL,
   `price_discount` varchar(45) NOT NULL,
   `stock` int(11) NOT NULL,
-  `description` varchar(100) NOT NULL,
+  `description` varchar(900) NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `category_id_idx` (`category_id`),
   KEY `brand_id_idx` (`brand_id`),
-  KEY `users_products_id_idx` (`users_products_id`),
-  KEY `order_details_id_idx` (`order_details_id`),
   CONSTRAINT `brand_id` FOREIGN KEY (`brand_id`) REFERENCES `brand` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `order_details_id` FOREIGN KEY (`order_details_id`) REFERENCES `order_details` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `users_products_id` FOREIGN KEY (`users_products_id`) REFERENCES `users_products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `products`
---
-
-LOCK TABLES `products` WRITE;
-/*!40000 ALTER TABLE `products` DISABLE KEYS */;
-/*!40000 ALTER TABLE `products` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `user_type`
@@ -261,15 +172,6 @@ CREATE TABLE `user_type` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `user_type`
---
-
-LOCK TABLES `user_type` WRITE;
-/*!40000 ALTER TABLE `user_type` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user_type` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `users`
@@ -296,15 +198,6 @@ CREATE TABLE `users` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `users`
---
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `users_products`
 --
 
@@ -320,15 +213,6 @@ CREATE TABLE `users_products` (
   CONSTRAINT `users_id` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `users_products`
---
-
-LOCK TABLES `users_products` WRITE;
-/*!40000 ALTER TABLE `users_products` DISABLE KEYS */;
-/*!40000 ALTER TABLE `users_products` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -339,4 +223,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-08 19:09:24
+-- Dump completed on 2022-07-27 17:48:14
