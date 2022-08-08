@@ -22,11 +22,11 @@
             <p class="modelo">Nombre de tu producto</p>
                 <div class="caja-producto-precio-stock formulario__grupo-input" id="grupo__name">
                     <label for="precioProducto" class="formulario__label"></label>
-                    <input type="text" class="formulario__input"  placeholder="Ej: Mouse Razer" required name="name">
+                    <input type="text" class="formulario__input"  required placeholder="Ej: Mouse Razer" name="name" id="id__name">
+                    <p class="formulario__input-error">Este campo es obligatorio, se debe ingresar al menos 5 dígitos y solo puede contener numeros, letras y guion bajo</p>
                     <div>
                     <img class="selector" src="/images/Rectangle.png" alt="Selector">
                     </div>
-                    <p class="formulario__input-error">El usuario tiene que ser de 5 dígitos y solo puede contener numeros, letras y guion bajo.</p>
                 </div>
             <div class="container-uno">
                 <img class="numero-uno" src="/images/1.png" alt="1">
@@ -160,13 +160,18 @@
             <img src="/images/Polygon 2.png" alt="flecha abajo">
             </div>
             <div class="container-cuatro">
-            <img class="numero-cuatro" src="/images/4.png" alt="4">
-            <h2>Colocá una breve descripción del producto</h2>
-            <div class="caja-producto-descripcion">
-                <img class="pencil" src="/images/pencil.png" alt="lapiz">
-                <textarea rows="10" required placeholder="Escribe aqui" name="description"></textarea>
-            </div>
-            <img src="/images/Polygon 2.png" alt="flecha abajo">
+                    <img class="numero-cuatro" src="/images/4.png" alt="4">
+                    <h2>Colocá una breve descripción del producto</h2>
+                    
+                    <div class="caja-producto-descripcion formulario__grupo-input" id="grupo__description">
+                        <label class="formulario__label"></label>
+                        <img class="pencil" src="/images/pencil.png" alt="lapiz">
+                        <textarea rows="10" required placeholder="Escribe aqui" name="description" class="formulario__input"></textarea>
+                        <p class="formulario__input-error">La descripcion de producto debe ser de al menos 20 caracteres.</p>
+                    </div>
+                    <img src="/images/Polygon 2.png" alt="flecha abajo">
+                    
+            
             </div>
 
             <div class="container-cinco">
@@ -174,10 +179,15 @@
                 <h2>Carga las imagenes del producto</h2>
                 <div class="caja-producto-imagenes">
                     <img class="pointer" src="/images/plus-sign.png" alt="selector">
-                    <label  for="imagenesProducto"></label>
-                    <input type="file" name="image_1" required>
+                    <div id="grupo__fotos1">
+                    <label  for="imagenesProducto" class="formulario__label"></label>
+                    <input type="file" name="image_1" required class="formulario__input">
+                    <p class="formulario__input-error">Error</p>
+                    </div>
                     <input type="file" name="image_2" required>
+                    <div id="visorArchivo"></div>
                     <input type="file" name="image_3" required>
+                    <div id="visorArchivo"></div>
                 </div>
                 <img src="/images/Polygon 2.png" alt="flecha abajo">
             </div>
