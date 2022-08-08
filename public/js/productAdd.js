@@ -5,7 +5,7 @@ const texto = document.querySelectorAll('#productAddForm textarea');
 
 const expresiones = {
     name: /^[a-zA-Z0-9\_\-]{5,16}$/, // Letras, numeros, guion y guion_bajo
-    description: /^[a-zA-ZÀ-ÿ\s]{20,1000}$/
+    description: /^[a-zA-ZÀ-ÿ\s]{20,1000}$/,
 }
 
 const validarFormulario = (e) => {
@@ -50,4 +50,5 @@ texto.forEach((textarea) => {
     textarea.addEventListener('keyup', validarFormulario2);
     textarea.addEventListener('blur', validarFormulario2);
 });
+
 
