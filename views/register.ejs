@@ -31,27 +31,59 @@
                     <p class="divide">o</p>
                     <div class="form-group">
                         <label for="name"></label>
-                        <input type="text" name="name" id="name" class="form-control" placeholder="Tu nombre" required>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Tu nombre"
+                            value='<%= locals.oldData ? oldData.name : null %>'>
+
+                        <% if ( locals.errors && errors.name ){ %>
+                            <p class="error">
+                                <%= errors.name.msg %>
+                            </p>
+                            <% } %>
+
                     </div>
                     <div class="form-group">
                         <label for="email"></label>
-                        <input type="email" name="email" id="email" class="form-control"
-                            placeholder="Correo electrónico" required>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="Correo electrónico" value='<%= locals.oldData ? oldData.email : null %>'>
+
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="error">
+                                <%= errors.email.msg %>
+                            </p>
+                            <% } %>
+
                     </div>
                     <div class="form-group">
                         <label for="password"></label>
-                        <input type="password" name="password" id="password" class="form-control"
-                            placeholder="Contraseña (mínimo 6 caracteres)" required minlength="6">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña (mínimo 6 caracteres)" value='<%= locals.oldData ? oldData.password : null %>'>
+
+                        <% if (locals.errors && errors.password) { %>
+                            <p class="error">
+                                <%= errors.password.msg %>
+                            </p>
+                            <% } %>
+
                     </div>
                     <div class="form-group">
                         <label for="password-confirm"></label>
                         <input type="password" name="password_confirm" id="password-confirm" class="form-control"
-                            placeholder="Vuelve a escribir tu contraseña" required min="6">
+                            placeholder="Vuelve a escribir tu contraseña" value='<%= locals.oldData ? oldData.password_confirm : null %>'>
+
+                        <% if (locals.errors && errors.password) { %>
+                            <p class="error">
+                                <%= errors.password.msg %>
+                            </p>
+                            <% } %>
+
                     </div>
                     Imágen de perfil
                     <div class="form-group">
                         <label for="image"></label>
-                        <input type="file" name="image" accept=".jpeg" multiple></input> 
+                        <input type="file" name="image" accept=".jpg, .jpeg, .png, .gif" multiple></input>
+                        <% if (locals.errors && errors.image) { %>
+                            <p class="error">
+                                <%= errors.image.msg %>
+                            </p>
+                            <% } %>
                     </div>
                     <div class="form-button">
                         <button class="login-button" type="submit">Continuar</button>

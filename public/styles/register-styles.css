@@ -206,3 +206,10 @@ a {
 .p-no-account {
   color: #747070;
 }
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}

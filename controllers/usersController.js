@@ -13,7 +13,7 @@ const usersController = {
     details: (req, res) => {
         db.User.findByPk(req.params.id)
             .then(function (user) {
-                res.render('userDetail', { user: user })  
+                res.render('userDetail', { user: user })
             })
     },
     login: (req, res) => {
@@ -24,14 +24,9 @@ const usersController = {
         let userToLogin = await db.User.findOne({
             where: { email: req.body.email }
         });
-        console.log(req.body.email)
         if (!resultValidation.errors.length > 0) {
             if (userToLogin) {
                 let okPassword = bycrypt.compareSync(req.body.password, userToLogin.password);
-                console.log(req.body.password)
-                console.log(userToLogin.password)
-                console.log(okPassword)
-
                 if (okPassword) {
                     userData = userToLogin
                     delete userToLogin.password;
@@ -75,44 +70,93 @@ const usersController = {
         res.render('register') //ir hacia el form
     },
     processRegister: async (req, res) => {
-        let errors = validationResult(req);
-        if (!req.file) {
-            errors.errors.pop();
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
+            return res.render('register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
         }
-        if (errors.isEmpty()) {
-            //Verifico si el email que ingreso ya fue registrado
-            let user = await db.User.findOne({
-                where: { email: req.body.email }
-            })
-                .catch(error => res.send(error));
-            if (user) {
-                errors.errors.push({ msg: 'Este email ya está registrado.', param: 'email' })
-            }
-            //Verifico si escribio bien la contraseña
-            if (req.body.password != req.body.password_confirm) {
-                errors.errors.push({ msg: 'La contraseña no coinciden.', param: 'password' })
-            }
-            //Pregunto si hubo errores
-            if (errors.errors.length > 0) {
-                res.render('register', {
-                    error: errors.mapped(),
-                    old: req.body
-                });
-            }
-            //Registro la cuenta
-            await db.User.create({
-                users_products_id: ' ',
-                user_type_id: ' ',
-                name: req.body.name,
-                last_name: ' ',
-                email: req.body.email,
-                password: bycrypt.hashSync(req.body.password, 10),
-                picture_id: req.file ? req.file.filename : 'default.jpg' //cambiar aca INT(11) por VARCHAR(45) por para que pueda ir a la base de datos Y tambien cambiarlo en models.
-            })
-            res.redirect('login')
-        }
-    },
+        //Registro la cuenta
+        await db.User.create({
+            users_products_id: ' ',
+            user_type_id: ' ',
+            name: req.body.name,
+            last_name: ' ',
+            email: req.body.email,
+            password: bycrypt.hashSync(req.body.password, 10),
+            picture_id: req.file ? req.file.filename : 'default.jpg' //cambiar aca INT(11) por VARCHAR(45) por para que pueda ir a la base de datos Y tambien cambiarlo en models.
+        })
+        res.redirect('login')
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let errors = validationResult(req);
+
+// if(req.file && req.file.filename.search(/jpg$|jpeg$|png$/m) == -1){
+//     errors.errors.push({msg: 'Solo formatos JPG, JPEG o PNG.', param:'img'});
+// }
+// if (errors.isEmpty()) {
+//     //Verifico si el email que ingreso ya fue registrado
+//     let user = await db.User.findOne({
+//         where: { email: req.body.email }
+//     })
+//         .catch(error => res.send(error));
+//     if (user) {
+//         errors.errors.push({msg: 'Este email ya está registrado.', param:'email'})
+//     }
+//     //Verifico si escribio bien la contraseña
+//     if(req.body.password != req.body.confirm_password){
+//         errors.errors.push({msg: 'La contraseña no coincide.', param:'password'})
+//     }
+//     //Pregunto si hubo errores
+//     if(errors.errors.length > 0){
+//         res.render('register', {
+//             error: errors.mapped(),
+//             old: req.body
+//         });
+//     }
+//Registro la cuenta
+//         await db.User.create({
+//             users_products_id: ' ',
+//             user_type_id: ' ',
+//             name: req.body.name,
+//             last_name: ' ',
+//             email: req.body.email,
+//             password: bycrypt.hashSync(req.body.password, 10),
+//             picture_id: req.file ? req.file.filename : 'default.jpg' //cambiar aca INT(11) por VARCHAR(45) por para que pueda ir a la base de datos Y tambien cambiarlo en models.
+//         })
+//             .then(res.redirect('login'))
+//             .catch(error => res.send(error));
+//     }
+//         res.render('register', {
+//         error: errors.mapped(),
+//         old: req.body
+//     });
+// }
+// }
 
 module.exports = usersController;
 
