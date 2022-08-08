@@ -179,15 +179,16 @@
                 <h2>Carga las imagenes del producto</h2>
                 <div class="caja-producto-imagenes">
                     <img class="pointer" src="/images/plus-sign.png" alt="selector">
-                    <div id="grupo__fotos1">
+                    
                     <label  for="imagenesProducto" class="formulario__label"></label>
-                    <input type="file" name="image_1" required class="formulario__input">
-                    <p class="formulario__input-error">Error</p>
-                    </div>
-                    <input type="file" name="image_2" required>
+                    <input type="file" name="image_1" required class="formulario__input" id="image_1" onchange="return validarExt()">
+                    
+                    <input type="file" name="image_2" id="image_2" onchange="return validarExt2()">
+                    
+                    <input type="file" name="image_3" id="image_3" onchange="return validarExt3()">
                     <div id="visorArchivo"></div>
-                    <input type="file" name="image_3" required>
-                    <div id="visorArchivo"></div>
+                    <div id="visorArchivo2"></div>
+                    <div id="visorArchivo3"></div>
                 </div>
                 <img src="/images/Polygon 2.png" alt="flecha abajo">
             </div>

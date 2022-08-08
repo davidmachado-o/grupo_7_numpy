@@ -41,6 +41,7 @@ const validarFormulario2 = (e) => {
 }
 
 
+
 inputs.forEach((input) => {
     input.addEventListener('keyup', validarFormulario);
     input.addEventListener('blur', validarFormulario);
@@ -50,5 +51,83 @@ texto.forEach((textarea) => {
     textarea.addEventListener('keyup', validarFormulario2);
     textarea.addEventListener('blur', validarFormulario2);
 });
+
+function validarExt (){
+    var image_1 = document.getElementById('image_1');
+	var archivoRuta = image_1.value;
+	var extPermitidas = /(.jpeg|.jpg|.png|.gif)$/i;
+
+
+    if (!extPermitidas.exec(archivoRuta)){
+        alert('Para poder subir una imagen, debe ser en formato JPEG, JPG, PNG o GIF');
+        image_1.value='';
+        return false;
+    }else{
+        if (image_1.files && image_1.files[0])
+        {
+            var visor = new FileReader();
+			visor.onload = function(e) 
+            
+            {
+                document.getElementById('visorArchivo').innerHTML = 
+                '<embed src="'+e.target.result+'" width="100" height="100" />';
+            };
+
+            visor.readAsDataURL(image_1.files[0]);
+        }
+    }
+}
+
+function validarExt2 (){
+    var image_2 = document.getElementById('image_2');
+	var archivoRuta = image_2.value;
+	var extPermitidas = /(.jpeg|.jpg|.png|.gif)$/i;
+
+
+    if (!extPermitidas.exec(archivoRuta)){
+        alert('Para poder subir una imagen, debe ser en formato JPEG, JPG, PNG o GIF');
+        image_2.value='';
+        return false;
+    }else{
+        if (image_2.files && image_2.files[0])
+        {
+            var visor2 = new FileReader();
+			visor2.onload = function(e) 
+            
+            {
+                document.getElementById('visorArchivo2').innerHTML = 
+                '<embed src="'+e.target.result+'" width="100" height="100" />';
+            };
+
+            visor2.readAsDataURL(image_2.files[0]);
+        }
+    }
+}
+
+function validarExt3 (){
+    var image_3 = document.getElementById('image_3');
+	var archivoRuta = image_3.value;
+	var extPermitidas = /(.jpeg|.jpg|.png|.gif)$/i;
+
+
+    if (!extPermitidas.exec(archivoRuta)){
+        alert('Para poder subir una imagen, debe ser en formato JPEG, JPG, PNG o GIF');
+        image_3.value='';
+        return false;
+    }else{
+        if (image_3.files && image_3.files[0])
+        {
+            var visor3 = new FileReader();
+			visor3.onload = function(e) 
+            
+            {
+                document.getElementById('visorArchivo3').innerHTML = 
+                '<embed src="'+e.target.result+'" width="100" height="100" />';
+            };
+
+            visor3.readAsDataURL(image_3.files[0]);
+        }
+    }
+}
 
 
