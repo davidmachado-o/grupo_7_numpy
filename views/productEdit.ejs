@@ -27,6 +27,15 @@
             id="productEditForm" name="productEditForm">
             <img class="imagen-producto" src="/images/products/<%= product.image_1 %> " alt="<%= product.name %>">
             <div class="titulo-linea">
+                <h2 class="titulo-producto">Nombre del producto</h2>
+                <hr class="linea-producto">
+                <div class="caja-producto" id="grupo__name">
+                    <p class="caja-tick">✅</p>
+                    <label for="name" method="POST" class="formulario__label"></label>
+                    <input type="text" class="formulario__input caja-texto"  required placeholder="Ej: Mouse Razer" name="name" id="id__name" value="<%= product.name%>">
+                    <p class="formulario__input-error">Este campo es obligatorio, se debe ingresar al menos 5 dígitos y solo puede contener numeros, letras y guion bajo</p>
+                </div>
+            <div class="titulo-linea">
                 <h2 class="titulo-producto">Categoría producto</h2>
                 <hr class="linea-producto">
                 <div class="caja-producto">
@@ -148,13 +157,14 @@
                 <div class="titulo-linea">
                     <h2 class="titulo-producto">Descripción</h2>
                     <hr class="linea-producto">
-                    <div class="caja-producto caja-producto-descripcion">
+                    <div class="caja-producto caja-producto-descripcion" id="grupo__description">
                         <p class="caja-tick">✅</p>
-                        <label for="description" method="POST"></label>
-                        <textarea class="caja-texto" name="description" id="description" type="text" maxlength="1000"
+                        <label for="description" method="POST" class="formulario__label"></label>
+                        <textarea class="caja-texto formulario__input" name="description" id="description" type="text" maxlength="1000"
                             required>
                                 <%= product.description %>
                             </textarea>
+                            <p class="formulario__input-error">La descripcion de producto debe ser de al menos 20 caracteres.</p>
                         <img src="/images/lapiz_edicion.png" alt="Editar imagen">
                     </div>
                 </div>
@@ -165,16 +175,24 @@
                 <h2 class="titulo-producto titulo-producto-2">Fotos</h2>
                 <hr class="linea-producto linea-producto-2">
                 <div class="seccion-carga-fotos">
-                    <img class="imagen-producto-2" src="/images/products/<%= product.image_1 %> "
+                    
+                    <label  for="imagenesProducto" class="formulario__label"></label>
+                    <input type="file" name="image_1" required class="formulario__input" id="image_1" onchange="return validarExt()">
+                    
+                    <input type="file" name="image_2" id="image_2" onchange="return validarExt2()">
+                    
+                    <input type="file" name="image_3" id="image_3" onchange="return validarExt3()">
+                    <!--<div id="visorArchivo"></div>
+                    <div id="visorArchivo2"></div>
+                    <div id="visorArchivo3"></div>-->
+
+                    <img id="visorArchivo" class="imagen-producto-2" src="/images/products/<%= product.image_1 %> "
                         alt="<%= product.name %>">
-                    <img class="imagen-producto-2" src="/images/products/<%= product.image_2 %> "
+                    <img  id="visorArchivo2" class="imagen-producto-2" src="/images/products/<%= product.image_2 %> "
                         alt="<%= product.name %>">
-                    <img class="imagen-producto-2" src="/images/products/<%= product.image_3 %> "
+                    <img  id="visorArchivo3" class="imagen-producto-2" src="/images/products/<%= product.image_3 %> "
                         alt="<%= product.name %>">
-                    <div class="div-agregar-fotos">
-                        <label for="image"></label>
-                        <input type="file" name="image">
-                    </div>
+
                 </div>
             </div>
             </div>
@@ -245,6 +263,7 @@
         </div>
 
     </main>
+    <script type="text/javascript" src="/js/productEdit.js"></script>
     <footer>
         <%- include('./partials/footer.ejs'); %>
     </footer>

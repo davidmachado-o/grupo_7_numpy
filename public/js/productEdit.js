@@ -1,14 +1,12 @@
-const formulario = document.getElementById('productAddForm');
-const inputs = document.querySelectorAll('#productAddForm input');
-const texto = document.querySelectorAll('#productAddForm textarea');
+const formulario = document.getElementById('productEditForm');
+const inputs = document.querySelectorAll('#productEditForm input');
+const texto = document.querySelectorAll('#productEditForm textarea');
 
 
 const expresiones = {
     name: /^[a-zA-Z0-9\_\-]{5,16}$/, // Letras, numeros, guion y guion_bajo
-    description: /^[a-zA-ZÀ-ÿ\s]{20,1000}$/,
+    description: /^[a-zA-ZÀ-ÿ\s]{20,1000}$/
 }
-
-
 
 const validarFormulario = (e) => {
     switch (e.target.name){
@@ -45,7 +43,6 @@ const validarFormulario2 = (e) => {
         break
     }
 }
-
 
 
 inputs.forEach((input) => {
@@ -136,5 +133,3 @@ function validarExt3 (){
     }
 
 }
-
-
