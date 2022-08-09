@@ -8,17 +8,21 @@ const expresiones = {
     description: /^[a-zA-ZÀ-ÿ\s]{20,1000}$/,
 }
 
+
+
 const validarFormulario = (e) => {
     switch (e.target.name){
         case "name":
             if (expresiones.name.test(e.target.value)){
                 document.getElementById('grupo__name').classList.remove('formulario__grupo-incorrecto');
                 document.getElementById('grupo__name').classList.add('formulario__grupo-correcto');
-                document.querySelector('#grupo__name .formulario__input-error').classList.remove('formulario__input-error-activo')
+                document.querySelector('#grupo__name .formulario__input-error').classList.remove('formulario__input-error-activo');
+                
             }else{
                 document.getElementById('grupo__name').classList.add('formulario__grupo-incorrecto')
                 document.getElementById('grupo__name').classList.remove('formulario__grupo-correcto');
-                document.querySelector('#grupo__name .formulario__input-error').classList.add('formulario__input-error-activo')
+                document.querySelector('#grupo__name .formulario__input-error').classList.add('formulario__input-error-activo');
+                
             }
         break
 
@@ -30,11 +34,13 @@ const validarFormulario2 = (e) => {
             if (expresiones.description.test(e.target.value)){
                 document.getElementById('grupo__description').classList.remove('formulario__grupo-incorrecto');
                 document.getElementById('grupo__description').classList.add('formulario__grupo-correcto');
-                document.querySelector('#grupo__description .formulario__input-error').classList.remove('formulario__input-error-activo')
+                document.querySelector('#grupo__description .formulario__input-error').classList.remove('formulario__input-error-activo');
+            
             }else{
                 document.getElementById('grupo__description').classList.add('formulario__grupo-incorrecto')
                 document.getElementById('grupo__description').classList.remove('formulario__grupo-correcto');
-                document.querySelector('#grupo__description .formulario__input-error').classList.add('formulario__input-error-activo')
+                document.querySelector('#grupo__description .formulario__input-error').classList.add('formulario__input-error-activo');
+                
             }
         break
     }
@@ -128,6 +134,9 @@ function validarExt3 (){
             visor3.readAsDataURL(image_3.files[0]);
         }
     }
+
+
+
 }
 
 
