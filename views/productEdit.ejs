@@ -41,7 +41,8 @@
                 <div class="caja-producto">
                     <p class="caja-tick">✅</p>
                     <label for="category" method="POST"></label>
-                    <select class="caja-texto" name="category" id="category" required>
+                    <input type="text" class="caja-texto"  required name="category" value="<%= product.category_id%>">
+                    <!--<select class="caja-texto" name="category" id="category" required>
                         <option value="<%= product.category %> " disabled> Seleccionar una opcion</option>
                         <option value="mouse" <%=product.category==='mouse' ? 'selected' : '' %> >Mouse</option>
                         <option value="teclado" <%=product.category==='teclado' ? 'selected' : '' %> >Teclado</option>
@@ -50,7 +51,7 @@
                         <option value="procesador" <%=product.category==='procesador' ? 'selected' : '' %> >Procesador
                         </option>
                         <option value="combo" <%=product.category==='combo' ? 'selected' : '' %> >Combo</option>
-                    </select>
+                    </select>-->
                 </div>
                 <!--Seccion 3: Carga de productos sub-seccion -->
                 <div class="titulo-linea">
