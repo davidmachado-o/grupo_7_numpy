@@ -85,7 +85,7 @@ Reuniones a pocos días de la entrega, ya que es mucho más tangible y menos est
 ### =================================
 
 
-# RETRO SPRINT 5
+# RETRO SPRINT 6
 
 ## Comenzar a hacer: 
 
@@ -102,5 +102,30 @@ Reuniones para ver nuestros avances, sacarnos dudas y comunicar nuestras ideas a
 ## Dejar de hacer:
 
 Reuniones a pocos días de la entrega, ya que es mucho más tangible y menos estresante realizar reuniones previas.
+
+### =================================
+
+
+### =================================
+
+
+# RETRO SPRINT 7
+
+## Comenzar a hacer: 
+
+Al estar finalizando el proyecto, tenemos que hacer una distribución de tareas teniendo en cuenta lo que nos quedo pendiente
+de los Sprints anteriores.
+
+## Hacer más:
+
+No dejar las tareas para último momento porque ahora no nos funciona la base de datos y necesitamos ayuda urgente del profesor. 
+
+## Continuar haciendo:
+
+Comunicarnos por Whatsapp ha sido escencial para el progreso del proyecto. 
+
+## Dejar de hacer:
+
+Reiteramos lo del Sprint anterior: Reuniones a pocos días de la entrega, ya que es mucho más tangible y menos estresante realizar reuniones previas.
 
 ### =================================
