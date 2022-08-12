@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         picture_id: {
-            type: DataTypes.INTEGER(11),
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
         name: {
@@ -32,14 +32,14 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         password: {
-            type: DataTypes.STRING(100),
+            type: DataTypes.STRING(1000),
             allowNull: false,
         }
     };
 
     let config = {
         tableName: 'users',
-        timestamps: true,
+        timestamps: false,
         underscored: true
     };
 

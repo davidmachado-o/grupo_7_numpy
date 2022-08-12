@@ -80,8 +80,8 @@ const usersController = {
         }
         //Registro la cuenta
         await db.User.create({
-            users_products_id: ' ',
-            user_type_id: ' ',
+            users_products_id: 1,
+            user_type_id: 1,
             name: req.body.name,
             last_name: ' ',
             email: req.body.email,
