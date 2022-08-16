@@ -14,16 +14,16 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        users_products_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        order_details_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
+        //users_products_id: {
+          //  type: DataTypes.INTEGER,
+          //  allowNull: false,
+        //},
+        //order_details_id: {
+            //type: DataTypes.INTEGER,
+            //allowNull: false,
+       // },
         name: {
-            type: DataTypes.STRING(45),
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
         model: {
@@ -51,11 +51,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         stock: {
-            type: DataTypes.STRING(11),
+            type: DataTypes.INTEGER(11),
             allowNull: false,
         },
         description: {
-            type: DataTypes.STRING(100),
+            type: DataTypes.STRING(900),
             allowNull: false,
         },
         created_at: {
@@ -72,7 +72,7 @@ module.exports = (sequelize, DataTypes) => {
     
     let config = {
         tableName: 'products',
-        timestamps: true,
+        timestamps: false,
         underscored: true
     };
     
@@ -91,7 +91,7 @@ module.exports = (sequelize, DataTypes) => {
             through: 'brand'
         });
 
-        // Product.belongsTo(models.Users, {
+        //Product.belongsTo(models.Users, {
         //     as: 'user',
         //     through: 'users_products',
         //     foreignKey: 'users_products_id',
@@ -99,12 +99,12 @@ module.exports = (sequelize, DataTypes) => {
         //     timestamps: false
         // });
 
-        Product.belongsTo(models.Order, {
-            as: 'order_details',
-            foreignKey: 'order_details_id',
-            through: 'order_details'
-        }
-        );
+        //Product.belongsTo(models.Order, {
+           // as: 'order_details',
+          //  foreignKey: 'order_details_id',
+           // through: 'order_details'
+       // }
+       // );
 
         Product.belongsToMany(models.Image, {
             as: 'image',

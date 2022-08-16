@@ -79,7 +79,7 @@ const usersController = {
             });
         }
         //Registro la cuenta
-        await db.User.create({
+        try {await db.User.create({
             users_products_id: 1,
             user_type_id: 1,
             name: req.body.name,
@@ -89,8 +89,11 @@ const usersController = {
             picture_id: req.file ? req.file.filename : 'default.jpg' //cambiar aca INT(11) por VARCHAR(45) por para que pueda ir a la base de datos Y tambien cambiarlo en models.
         })
         res.redirect('login')
+    }catch(error)
+    {
+        console.log(error);
     }
-}
+}}
 
 
 
