@@ -37,4 +37,8 @@ router.get('/details/:id/', authMiddleware, usersController.details);
 // LOGOUT
 router.get('/logout', usersController.logout);
 
+// LISTADO
+router.get('/users', usersController.list);
+
+
 module.exports = router;

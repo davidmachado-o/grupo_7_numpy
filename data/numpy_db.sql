@@ -109,7 +109,7 @@ CREATE TABLE `image` (
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `products_id_idx` (`products_id`),
   CONSTRAINT `products_id` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -228,7 +228,7 @@ CREATE TABLE `products` (
   KEY `brand_id_idx` (`brand_id`),
   CONSTRAINT `brand_id` FOREIGN KEY (`brand_id`) REFERENCES `brand` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -284,7 +284,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   KEY `user_type_id_idx` (`user_type_id`),
   KEY `picture_id_idx` (`picture_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -293,7 +293,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (13,1,1,'image-1660265521605-820802536.png','Mercedes',' ','mm.cavanagh@hotmail.com','$2a$10$TyiRxPaclZejEJ7UeXZkauW21zL8JqTSRNPcB5GvNFDbrgNw1J7RW'),(14,1,1,'image-1660671430381-21700808.png','Mercedes',' ','mm.cavanagh@hotmail.com','$2a$10$Cm/3LldZ42yw07NTu59OnOuTmbsD2rtX.97rGVUWE0VSAMo4Vsoku');
+INSERT INTO `users` VALUES (1,1,1,'image-1660767605320-535066677.jpeg','Mercedes',' ','mm.cavanagh@hotmail.com','$2a$10$Xy8QX8ggoa.ytwi4nvoruudAIiLS2Am2HhVaaeR.JrTk0ybaWtL16'),(2,1,1,'image-1660767787117-476877362.jpeg','David',' ','david@gmail.com','$2a$10$Z8YJRiJX846EbrLvHckC8upp68jWwXwEqfBEZCSenJZgxnCKfyPZ.'),(3,1,1,'image-1660767901547-629107395.jpeg','Aylin',' ','aylin@gmail.com','$2a$10$mDyMw/sOlFVZ3BST/k8HNO3tLzlVyGreGCsNxJ/.TyVd..XBtPzFC'),(4,1,1,'image-1660767961763-621754559.png','Alejo',' ','alejo@gmail.com','$2a$10$QA/VYHZUFVd9wDgwhrUoVugdWgmKH.IQjT1qsHJJ/y3qp29AoqQUW');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -332,4 +332,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-17 13:34:52
+-- Dump completed on 2022-08-17 17:28:01

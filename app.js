@@ -5,6 +5,7 @@ const path = require("path");
 const mainRouter = require('./routes/main');
 const productRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
+const apiRoutes = require('./routes/apis/apiRoutes');
 const session = require('express-session');
 
 const methodOverride = require('method-override');
@@ -55,3 +56,4 @@ app.listen(3000, () => {
 app.use('/', mainRouter);
 app.use('/product/', productRouter);
 app.use('/users/', usersRouter);
+app.use('/api/', apiRoutes);

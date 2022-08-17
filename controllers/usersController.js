@@ -16,6 +16,12 @@ const usersController = {
                 res.render('userDetail', { user: user })
             })
     },
+    list: (req, res) => {
+        db.User.findAll()
+            .then(function (user) {
+                res.render('userList', { user: user })
+            })
+    },
     login: (req, res) => {
         res.render('login') //ir hacia el form
     },
