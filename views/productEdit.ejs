@@ -17,7 +17,7 @@
         <div class="seccion-titulos-principales">
             <img class="bola-rosa" src="/images/bolita_rosa.png" alt="bolita rosa">
             <p class="subtitulo-principal">¡Gracias Grupo 7!</p>
-            <h1 class="titulo-principal">Confirma si los datos son correctos.</h1>
+            <h1 class="titulo-principal">Modifica los datos de tu producto.</h1>
             <hr class="titulos-linea">
             <img class="bola-verde" src="/images/bolita_verde.png" alt="bolita verde">
         </div>
@@ -41,17 +41,17 @@
                 <div class="caja-producto">
                     <p class="caja-tick">✅</p>
                     <label for="category" method="POST"></label>
-                    <input type="text" class="caja-texto"  required name="category" value="<%= product.category_id%>">
-                    <!--<select class="caja-texto" name="category" id="category" required>
+                    <select class="caja-texto" name="category" id="category" required>
                         <option value="<%= product.category %> " disabled> Seleccionar una opcion</option>
-                        <option value="mouse" <%=product.category==='mouse' ? 'selected' : '' %> >Mouse</option>
-                        <option value="teclado" <%=product.category==='teclado' ? 'selected' : '' %> >Teclado</option>
-                        <option value="monitor" <%=product.category==='monitor' ? 'selected' : '' %> >Monitor</option>
-                        <option value="silla" <%=product.category==='silla' ? 'selected' : '' %> >Silla</option>
-                        <option value="procesador" <%=product.category==='procesador' ? 'selected' : '' %> >Procesador
-                        </option>
-                        <option value="combo" <%=product.category==='combo' ? 'selected' : '' %> >Combo</option>
-                    </select>-->
+                        <option value="<%= product.category_id%> " selected> <%= product.category_id%> </option>
+                        
+                        <option value="1" <%=product.category_id==='1' ? 'selected' : '' %> >Mouse</option>
+                        <option value="2" <%=product.category_id==='2' ? 'selected' : '' %> >Teclado</option>
+                        <option value="3" <%=product.category_id==='3' ? 'selected' : '' %> >Monitor</option>
+                        <option value="4" <%=product.category_id==='4' ? 'selected' : '' %> >Silla</option>
+                        <option value="5" <%=product.category_id==='5' ? 'selected' : '' %> >Procesador</option>
+                        <option value="6" <%=product.category_id==='6' ? 'selected' : '' %> >Combo</option>
+                    </select>
                 </div>
                 <!--Seccion 3: Carga de productos sub-seccion -->
                 <div class="titulo-linea">
@@ -61,32 +61,33 @@
                         <p class="caja-tick">✅</p>
                         <label for="brand" method="POST"></label>
                         <select class="caja-texto" name="brand" id="brand" required>
-                            <option value="<%= product.brand %> " disabled> Seleccionar una opcion</option>
+                            <option value="<%= product.brand_id %> " disabled> Seleccionar una opcion</option>
+                            <option value="<%= product.brand_id%> " selected> <%= product.brand_id%> </option>
 
-                            <option value="Acer" <%=product.brand==='Acer' ? 'selected' : '' %> >Acer</option>
-                            <option value="AMD" <%=product.brand==='AMD' ? 'selected' : '' %> >AMD</option>
-                            <option value="Asus" <%=product.brand==='Asus' ? 'selected' : '' %> >Asus</option>
-                            <option value="Apple" <%=product.brand==='Apple' ? 'selected' : '' %> >Apple</option>
-                            <option value="Cougar" <%=product.brand==='Cougar' ? 'selected' : '' %> >Cougar</option>
-                            <option value="Corsair" <%=product.brand==='Corsair' ? 'selected' : '' %> >Corsair</option>
-                            <option value="Dell" <%=product.brand==='Dell' ? 'selected' : '' %> >Dell</option>
-                            <option value="Dx Racer" <%=product.brand==='Dx Racer' ? 'selected' : '' %> >Dx Racer
+                            <option value="6" <%=product.brand_id==='Acer' ? 'selected' : '' %> >Acer</option>
+                            <option value="11" <%=product.brand_id==='AMD' ? 'selected' : '' %> >AMD</option>
+                            <option value="5" <%=product.brand_id==='Asus' ? 'selected' : '' %> >Asus</option>
+                            <option value="19" <%=product.brand_id==='Apple' ? 'selected' : '' %> >Apple</option>
+                            <option value="9" <%=product.brand_id==='Cougar' ? 'selected' : '' %> >Cougar</option>
+                            <option value="2" <%=product.brand_id==='Corsair' ? 'selected' : '' %> >Corsair</option>
+                            <option value="14" <%=product.brand_id==='Dell' ? 'selected' : '' %> >Dell</option>
+                            <option value="8" <%=product.brand_id==='Dx Racer' ? 'selected' : '' %> >Dx Racer
                             </option>
-                            <option value="HP" <%=product.brand==='HP' ? 'selected' : '' %> >HP</option>
-                            <option value="Intel" <%=product.brand==='Intel' ? 'selected' : '' %> >Intel</option>
-                            <option value="Logitech" <%=product.brand==='Logitech' ? 'selected' : '' %> >Logitech
+                            <option value="15" <%=product.brand_id==='HP' ? 'selected' : '' %> >HP</option>
+                            <option value="12" <%=product.brand_id==='Intel' ? 'selected' : '' %> >Intel</option>
+                            <option value="4" <%=product.brand_id==='Logitech' ? 'selected' : '' %> >Logitech
                             </option>
-                            <option value="LG" <%=product.brand==='LG' ? 'selected' : '' %> >LG</option>
-                            <option value="Lenovo" <%=product.brand==='Lenovo' ? 'selected' : '' %> >Lenovo</option>
-                            <option value="MSI" <%=product.brand==='MSI' ? 'selected' : '' %> >MSI</option>
-                            <option value="Mountain" <%=product.brand==='Mountain' ? 'selected' : '' %> >Mountain
+                            <option value="18" <%=product.brand_id==='LG' ? 'selected' : '' %> >LG</option>
+                            <option value="16" <%=product.brand_id==='Lenovo' ? 'selected' : '' %> >Lenovo</option>
+                            <option value="13" <%=product.brand_id==='MSI' ? 'selected' : '' %> >MSI</option>
+                            <option value="3" <%=product.brand_id==='Mountain' ? 'selected' : '' %> >Mountain
                             </option>
-                            <option value="Newskill" <%=product.brand==='Newskill' ? 'selected' : '' %> >Newskill
+                            <option value="10" <%=product.brand_id==='Newskill' ? 'selected' : '' %> >Newskill
                             </option>
-                            <option value="Razer" <%=product.brand==='Razer' ? 'selected' : '' %> >Razer</option>
-                            <option value="Samsung" <%=product.brand==='Samsung' ? 'selected' : '' %> >Samsung</option>
-                            <option value="Sony" <%=product.brand==='Sony' ? 'selected' : '' %> >Sony</option>
-                            <option value="Toshiba" <%=product.brand==='Toshiba' ? 'selected' : '' %> >Toshiba</option>
+                            <option value="1" <%=product.brand_id==='Razer' ? 'selected' : '' %> >Razer</option>
+                            <option value="7" <%=product.brand_id==='Samsung' ? 'selected' : '' %> >Samsung</option>
+                            <option value="20" <%=product.brand_id==='Sony' ? 'selected' : '' %> >Sony</option>
+                            <option value="17" <%=product.brand_id==='Toshiba' ? 'selected' : '' %> >Toshiba</option>
                         </select>
                     </div>
                 </div>
@@ -108,19 +109,17 @@
                         <label for="proccesor" method="POST"></label>
                         <select class="caja-texto" name="processor" id="processor" required>
                             <option value="<%= product.processor %> " disabled> Seleccionar una opcion</option>
-                            <option value="Core i3" <%=product.processor==='Core i3' ? 'selected' : '' %> >Core i3
-                            </option>
-                            <option value="Core i5" <%=product.processor==='Core i5' ? 'selected' : '' %> >Core i5
-                            </option>
-                            <option value="Core i7" <%=product.processor==='Core i7' ? 'selected' : '' %> >Core i7
-                            </option>
-                            <option value="Core i9" <%=product.processor==='Core i9' ? 'selected' : '' %> >Core i9
-                            </option>
-                            <option value="Ryzen 7" <%=product.processor==='Ryzen 7' ? 'selected' : '' %> >Ryzen 7
-                            </option>
-                            <option value="Ryzen 9" <%=product.processor==='Ryzen 9' ? 'selected' : '' %> >Ryzen 9
-                            </option>
-                            <option value="false" <%=product.processor==false ? 'selected' : '' %> >No aplica</option>
+                            <option value="<%= product.processor%> " selected> <%= product.processor%> </option>
+
+                            <option value="i9" <%=product.processor==='i9' ? 'selected' : '' %>>i9</option>
+                            <option value="i7" <%=product.processor==='i7' ? 'selected' : '' %>>i7</option>
+                            <option value="i5" <%=product.processor==='i5' ? 'selected' : '' %>>i5</option>
+                            <option value="i3" <%=product.processor==='i3' ? 'selected' : '' %>>i3</option>
+                            <option value="ryzen7" <%=product.processor==='ryzen7' ? 'selected' : '' %>>Ryzen7</option>
+                            <option value="ryzen5" <%=product.processor==='ryzen5' ? 'selected' : '' %>>Ryzen5</option>
+                            <option value="ryzen3" <%=product.processor==='ryzen3' ? 'selected' : '' %>>Ryzen3</option>
+                            <option value="NA" <%=product.processor==='NA' ? 'selected' : '' %>>No aplica</option>
+
                         </select>
                     </div>
                 </div>
@@ -132,9 +131,17 @@
                         <label for="memory" method="POST"></label>
                         <select class="caja-texto" name="memory" id="memory" required>
                             <option value="<%= product.memory %>" disabled> Seleccionar una opcion</option>
-                            <option value="34gb" <%=product.memory==='34gb' ? 'selected' : '' %> >34 GB</option>
-                            <option value="64gb" <%=product.memory==='64gb' ? 'selected' : '' %> >64 GB</option>
-                            <option value="false" <%=product.memory==false ? 'selected' : '' %> >No aplica</option>
+                            <option value="<%= product.memory%> " selected> <%= product.memory%> </option>
+
+                            <option value="4gb" <%=product.memory==='4gb' ? 'selected' : '' %>>4GB</option>
+                            <option value="8gb" <%=product.memory==='8gb' ? 'selected' : '' %>>8GB</option>
+                            <option value="16gb" <%=product.memory==='16gb' ? 'selected' : '' %>>16GB</option>
+                            <option value="32gb" <%=product.memory==='32gb' ? 'selected' : '' %>>32GB</option>
+                            <option value="64gb" <%=product.memory==='64gb' ? 'selected' : '' %>>64GB</option>
+                            <option value="128gb" <%=product.memory==='12gb' ? 'selected' : '' %>>128GB</option>
+                            <option value="NA" <%=product.memory==='NA' ? 'selected' : '' %>>No aplica</option>
+
+                            
                         </select>
                     </div>
                 </div>
@@ -146,12 +153,14 @@
                         <label for="storage" method="POST"></label>
                         <select class="caja-texto" name="storage" id="storage" required>
                             <option value="<%= product.storage %>" disabled> Seleccionar una opcion</option>
+                            <option value="<%= product.storage%> " selected> <%= product.storage%> </option>
+
                             <option value="128gb" <%=product.storage==='128gb' ? 'selected' : '' %> >128 GB</option>
                             <option value="256gb" <%=product.storage==='256gb' ? 'selected' : '' %> >256 GB</option>
                             <option value="512gb" <%=product.storage==='512gb' ? 'selected' : '' %> >512 GB</option>
                             <option value="1tb" <%=product.storage==='1tb' ? 'selected' : '' %> >1 TB</option>
                             <option value="2tb" <%=product.storage==='2tb' ? 'selected' : '' %> >2 TB</option>
-                            <option value="false" <%=product.storage===false ? 'selected' : '' %> >No aplica</option>
+                            <option value="NA" <%=product.storage==='NA' ? 'selected' : '' %> >No aplica</option>
                         </select>
                     </div>
                 </div>
@@ -212,12 +221,12 @@
                     </div>
                 </div>
                 <div class="titulo-linea">
-                    <h2 class="titulo-producto">Descuento por unidad</h2>
+                    <h2 class="titulo-producto">Precio con descuento por unidad</h2>
                     <hr class="linea-producto">
                     <div class="caja-producto-2">
                         <p class="caja-tick">✅</p>
                         <label for="discount" method="POST">
-                            %
+                            $
                         </label>
                         <input class="caja-texto" type="number" name="discount" id="discount"
                             value="<%= product.price_discount %>" required>
