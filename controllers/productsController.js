@@ -17,38 +17,40 @@ const productsController = {
     store: async (req, res) => {
 
 
-       try {await db.Product.create({
+        try {await db.Product.create({
+ 
+             category_id: 1,
+             brand_id: 2,
+             //users_products_id: '1',
+             //order_details_id: '1',
+             name: req.body.name,
+             model: req.body.model,
+             processor: req.body.processor,
+             memory: req.body.memory,
+             storage: req.body.storage,
+             price_current: req.body.price,
+             price_discount: req.body.priceDiscount,
+             stock: 1,
+             description: req.body.description
+ 
+         }).then(product => {
+             db.Image.create({
+                 products_id: 1,
+                 image_1: req.files[0].filename,
+                 image_2: req.files[1].filename,
+                 image_3: req.files[2].filename
+             })
+         });
+ 
+         res.redirect('/product/productList')
+ 
+     } catch(error)
+         {
+             console.log(error)
+         }
+     },
 
-            category_id: 1,
-            brand_id: 2,
-            //users_products_id: '1',
-            //order_details_id: '1',
-            name: req.body.name,
-            model: req.body.model,
-            processor: req.body.processor,
-            memory: req.body.memory,
-            storage: req.body.storage,
-            price_current: req.body.price,
-            price_discount: req.body.priceDiscount,
-            stock: 1,
-            description: req.body.description
-
-        }).then(product => {
-            db.Image.create({
-                products_id: 1,
-                image_1: req.files[0].filename,
-                image_2: req.files[1].filename,
-                image_3: req.files[2].filename
-            })
-        });
-
-        res.redirect('/product/productList')
-
-    } catch(error)
-        {
-            console.log(error)
-        }
-    },
+    
 
 
     listado: (req, res) => {
