@@ -2,10 +2,14 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+
+//** Llamado de rutas */
 const mainRouter = require('./routes/main');
 const productRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
-const apiRoutes = require('./routes/apis/apiRoutes');
+//** Llamado de rutas en las apis */
+const apiUsersRoutes = require('./routes/apis/apiUsersRoutes');
+const apiProductsRoutes = require('./routes/apis/apiProductsRoutes')
 const session = require('express-session');
 
 const methodOverride = require('method-override');
@@ -56,4 +60,9 @@ app.listen(3000, () => {
 app.use('/', mainRouter);
 app.use('/product/', productRouter);
 app.use('/users/', usersRouter);
-app.use('/api/', apiRoutes);
+
+app.use(express.json())
+
+// API's
+app.use('/api/users', apiUsersRoutes);
+app.use('/api/products', apiProductsRoutes);
