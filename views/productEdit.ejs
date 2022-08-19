@@ -25,7 +25,7 @@
         <form class="seccion-detalles-producto seccion-detalles-producto-1"
             action="/product/productEdit/<%=product.id %>" method="POST" enctype="multipart/form-data"
             id="productEditForm" name="productEditForm">
-            <img class="imagen-producto" src="/images/products/<%= product.image_1 %> " alt="<%= product.name %>">
+            <img class="imagen-producto" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
             <div class="titulo-linea">
                 <h2 class="titulo-producto">Nombre del producto</h2>
                 <hr class="linea-producto">
@@ -187,20 +187,20 @@
                 <div class="seccion-carga-fotos">
                     
                     <label  for="imagenesProducto" class="formulario__label"></label>
-                    <input type="file" name="image_1" required class="formulario__input" id="image_1" onchange="return validarExt()">
+                    <input type="file" name="image_11" required class="formulario__input" id="image_1" onchange="return validarExt()">
                     
-                    <input type="file" name="image_2" id="image_2" onchange="return validarExt2()">
+                    <input type="file" name="image_12" id="image_2" onchange="return validarExt2()">
                     
-                    <input type="file" name="image_3" id="image_3" onchange="return validarExt3()">
+                    <input type="file" name="image_13" id="image_3" onchange="return validarExt3()">
                     <!--<div id="visorArchivo"></div>
                     <div id="visorArchivo2"></div>
                     <div id="visorArchivo3"></div>-->
 
-                    <img id="visorArchivo" class="imagen-producto-2" src="/images/products/<%= product.image_1 %> "
+                    <img id="visorArchivo" class="imagen-producto-2" src="/images/products/<%= product.image_11 %> "
                         alt="<%= product.name %>">
-                    <img  id="visorArchivo2" class="imagen-producto-2" src="/images/products/<%= product.image_2 %> "
+                    <img  id="visorArchivo2" class="imagen-producto-2" src="/images/products/<%= product.image_12 %> "
                         alt="<%= product.name %>">
-                    <img  id="visorArchivo3" class="imagen-producto-2" src="/images/products/<%= product.image_3 %> "
+                    <img  id="visorArchivo3" class="imagen-producto-2" src="/images/products/<%= product.image_13 %> "
                         alt="<%= product.name %>">
 
                 </div>

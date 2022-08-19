@@ -30,15 +30,13 @@ const productsController = {
              price_current: req.body.price,
              price_discount: req.body.priceDiscount,
              stock: req.body.stock,
-             description: req.body.description
+             description: req.body.description,
  
-         }).then(product => {
-             db.Image.create({
-                 products_id: 1,
-                 image_1: req.files[0].filename,
-                 image_2: req.files[1].filename,
-                 image_3: req.files[2].filename
-             })
+         
+                 image_11: req.files[0].filename,
+                 image_12: req.files[1].filename,
+                 image_13: req.files[2].filename
+             
          });
  
          res.redirect('/product/productList')
@@ -92,7 +90,10 @@ const productsController = {
             price_current: req.body.price,
             price_discount: req.body.priceDiscount,
             stock: req.body.stock,
-            description: req.body.description
+            description: req.body.description,
+            image_11: req.files[0].filename,
+            image_12: req.files[1].filename,
+            image_13: req.files[2].filename
 
         }, {
             where: {
@@ -100,7 +101,8 @@ const productsController = {
             }
         });
 
-        res.redirect('/product/productDetail/' + req.params.id)
+        //res.redirect('/product/productDetail/' + req.params.id)
+        res.redirect('/product/productList')
     },
     destroy: (req, res) => {
         db.Product.destroy({

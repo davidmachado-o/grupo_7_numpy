@@ -50,6 +50,18 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(45),
             allowNull: false,
         },
+        image_11: {
+            type: DataTypes.STRING(45),
+            allowNull: false,
+        },
+        image_12: {
+            type: DataTypes.STRING(45),
+            allowNull: false,
+        },
+        image_13: {
+            type: DataTypes.STRING(45),
+            allowNull: false,
+        },
         stock: {
             type: DataTypes.INTEGER(11),
             allowNull: false,
@@ -106,11 +118,11 @@ module.exports = (sequelize, DataTypes) => {
        // }
        // );
 
-        Product.belongsToMany(models.Image, {
-            as: 'image',
-            foreignKey: 'products_id',
-            through: 'products'
-        });
+        // Product.belongsToMany(models.Image, {
+        //     as: 'image',
+        //     foreignKey: 'products_id',
+        //     through: 'products'
+        // });
     }
 
     return Product;

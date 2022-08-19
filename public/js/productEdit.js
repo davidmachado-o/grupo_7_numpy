@@ -56,17 +56,17 @@ texto.forEach((textarea) => {
 });
 
 function validarExt (){
-    var image_1 = document.getElementById('image_1');
-	var archivoRuta = image_1.value;
+    var image_11 = document.getElementById('image_11');
+	var archivoRuta = image_11.value;
 	var extPermitidas = /(.jpeg|.jpg|.png|.gif)$/i;
 
 
     if (!extPermitidas.exec(archivoRuta)){
         alert('Para poder subir una imagen, debe ser en formato JPEG, JPG, PNG o GIF');
-        image_1.value='';
+        image_11.value='';
         return false;
     }else{
-        if (image_1.files && image_1.files[0])
+        if (image_11.files && image_11.files[0])
         {
             var visor = new FileReader();
 			visor.onload = function(e) 
@@ -76,23 +76,23 @@ function validarExt (){
                 '<embed src="'+e.target.result+'" width="100" height="100" />';
             };
 
-            visor.readAsDataURL(image_1.files[0]);
+            visor.readAsDataURL(image_11.files[0]);
         }
     }
 }
 
-function validarExt2 (){
-    var image_2 = document.getElementById('image_2');
-	var archivoRuta = image_2.value;
+function validarExt12 (){
+    var image_12 = document.getElementById('image_12');
+	var archivoRuta = image_12.value;
 	var extPermitidas = /(.jpeg|.jpg|.png|.gif)$/i;
 
 
     if (!extPermitidas.exec(archivoRuta)){
         alert('Para poder subir una imagen, debe ser en formato JPEG, JPG, PNG o GIF');
-        image_2.value='';
+        image_12.value='';
         return false;
     }else{
-        if (image_2.files && image_2.files[0])
+        if (image_12.files && image_12.files[0])
         {
             var visor2 = new FileReader();
 			visor2.onload = function(e) 
@@ -102,25 +102,25 @@ function validarExt2 (){
                 '<embed src="'+e.target.result+'" width="100" height="100" />';
             };
 
-            visor2.readAsDataURL(image_2.files[0]);
+            visor2.readAsDataURL(image_12.files[0]);
         }
     }
 }
 
 function validarExt3 (){
-    var image_3 = document.getElementById('image_3');
-	var archivoRuta = image_3.value;
+    var image_13 = document.getElementById('image_13');
+	var archivoRuta = image_13.value;
 	var extPermitidas = /(.jpeg|.jpg|.png|.gif)$/i;
 
 
     if (!extPermitidas.exec(archivoRuta)){
         alert('Para poder subir una imagen, debe ser en formato JPEG, JPG, PNG o GIF');
-        image_3.value='';
+        image_13.value='';
         return false;
     }else{
-        if (image_3.files && image_3.files[0])
+        if (image_13.files && image_13.files[0])
         {
-            var visor3 = new FileReader();
+            var visor13 = new FileReader();
 			visor3.onload = function(e) 
             
             {
@@ -128,7 +128,7 @@ function validarExt3 (){
                 '<embed src="'+e.target.result+'" width="100" height="100" />';
             };
 
-            visor3.readAsDataURL(image_3.files[0]);
+            visor3.readAsDataURL(image_13.files[0]);
         }
     }
 
