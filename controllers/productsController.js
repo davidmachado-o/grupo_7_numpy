@@ -29,7 +29,7 @@ const productsController = {
              storage: req.body.storage,
              price_current: req.body.price,
              price_discount: req.body.priceDiscount,
-             stock: 1,
+             stock: req.body.stock,
              description: req.body.description
  
          }).then(product => {
@@ -91,7 +91,7 @@ const productsController = {
             storage: req.body.storage,
             price_current: req.body.price,
             price_discount: req.body.priceDiscount,
-            stock: 1,
+            stock: req.body.stock,
             description: req.body.description
 
         }, {
