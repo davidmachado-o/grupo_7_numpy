@@ -62,7 +62,8 @@ const productsController = {
             include: [{
                 model: db.Image,
                 as: 'image'
-            }]
+            }
+        ]
         })
             .then(function (product) {
                 res.render('productDetail', { product: product })  

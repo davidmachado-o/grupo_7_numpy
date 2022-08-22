@@ -43,7 +43,7 @@
                     <label for="category" method="POST"></label>
                     <select class="caja-texto" name="category" id="category" required>
                         <option value="<%= product.category %> " disabled> Seleccionar una opcion</option>
-                        <option value="<%= product.category_id%> " selected> <%= product.category_id%> </option>
+                        <option value="<%= product.category_id%> " > <%= product.category_id%> </option>
                         
                         <option value="1" <%=product.category_id==='1' ? 'selected' : '' %> >Mouse</option>
                         <option value="2" <%=product.category_id==='2' ? 'selected' : '' %> >Teclado</option>
@@ -51,6 +51,8 @@
                         <option value="4" <%=product.category_id==='4' ? 'selected' : '' %> >Silla</option>
                         <option value="5" <%=product.category_id==='5' ? 'selected' : '' %> >Procesador</option>
                         <option value="6" <%=product.category_id==='6' ? 'selected' : '' %> >Combo</option>
+                        
+                        
                     </select>
                 </div>
                 <!--Seccion 3: Carga de productos sub-seccion -->
