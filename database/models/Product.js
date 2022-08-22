@@ -7,11 +7,11 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
         },
         category_id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING(45),
             allowNull: false,
         },
         brand_id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING(45),
             allowNull: false,
         },
         //users_products_id: {

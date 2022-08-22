@@ -18,8 +18,8 @@ const productsController = {
 
         try {await db.Product.create({
  
-             category_id: 1,
-             brand_id: 2,
+             category_id: req.body.category,
+             brand_id: req.body.brand,
              //users_products_id: '1',
              //order_details_id: '1',
              name: req.body.name,
@@ -79,8 +79,8 @@ const productsController = {
     productUpdate: (req, res) => {
         db.Product.update({
 
-            category_id: 1,
-            brand_id: 2,
+            category_id: req.body.category,
+            brand_id: req.body.brand,
             //users_products_id: '1',
             //order_details_id: '1',
             name: req.body.name,

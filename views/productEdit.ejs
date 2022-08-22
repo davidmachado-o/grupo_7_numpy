@@ -43,14 +43,14 @@
                     <label for="category" method="POST"></label>
                     <select class="caja-texto" name="category" id="category" required>
                         <option value="<%= product.category %> " disabled> Seleccionar una opcion</option>
-                        <option value="<%= product.category_id%> " > <%= product.category_id%> </option>
                         
-                        <option value="1" <%=product.category_id==='1' ? 'selected' : '' %> >Mouse</option>
-                        <option value="2" <%=product.category_id==='2' ? 'selected' : '' %> >Teclado</option>
-                        <option value="3" <%=product.category_id==='3' ? 'selected' : '' %> >Monitor</option>
-                        <option value="4" <%=product.category_id==='4' ? 'selected' : '' %> >Silla</option>
-                        <option value="5" <%=product.category_id==='5' ? 'selected' : '' %> >Procesador</option>
-                        <option value="6" <%=product.category_id==='6' ? 'selected' : '' %> >Combo</option>
+                        
+                        <option value="Mouse" <%=product.category_id==='Mouse' ? 'selected' : '' %> >Mouse</option>
+                        <option value="Teclado" <%=product.category_id==='Teclado' ? 'selected' : '' %> >Teclado</option>
+                        <option value="Monitor" <%=product.category_id==='Monitor' ? 'selected' : '' %> >Monitor</option>
+                        <option value="Silla" <%=product.category_id==='Silla' ? 'selected' : '' %> >Silla</option>
+                        <option value="Procesador" <%=product.category_id==='Procesador' ? 'selected' : '' %> >Procesador</option>
+                        <option value="Combo" <%=product.category_id==='Combo' ? 'selected' : '' %> >Combo</option>
                         
                         
                     </select>
@@ -64,32 +64,31 @@
                         <label for="brand" method="POST"></label>
                         <select class="caja-texto" name="brand" id="brand" required>
                             <option value="<%= product.brand%> " disabled> Seleccionar una opcion</option>
-                            <option value="<%= product.brand_id%> " selected> <%= product.brand_id%> </option>
 
-                            <option value="6" <%=product.brand_id==='6' ? 'selected' : '' %> >Acer</option>
-                            <option value="11" <%=product.brand_id==='11' ? 'selected' : '' %> >AMD</option>
-                            <option value="5" <%=product.brand_id==='5' ? 'selected' : '' %> >Asus</option>
-                            <option value="19" <%=product.brand_id==='19' ? 'selected' : '' %> >Apple</option>
-                            <option value="9" <%=product.brand_id==='9' ? 'selected' : '' %> >Cougar</option>
-                            <option value="2" <%=product.brand_id==='2' ? 'selected' : '' %> >Corsair</option>
-                            <option value="14" <%=product.brand_id==='14' ? 'selected' : '' %> >Dell</option>
-                            <option value="8" <%=product.brand_id==='8' ? 'selected' : '' %> >Dx Racer
+                            <option value="6" <%=product.brand_id==='Acer' ? 'selected' : '' %> >Acer</option>
+                            <option value="11" <%=product.brand_id==='AMD' ? 'selected' : '' %> >AMD</option>
+                            <option value="5" <%=product.brand_id==='Asus' ? 'selected' : '' %> >Asus</option>
+                            <option value="19" <%=product.brand_id==='Apple' ? 'selected' : '' %> >Apple</option>
+                            <option value="9" <%=product.brand_id==='Cougar' ? 'selected' : '' %> >Cougar</option>
+                            <option value="2" <%=product.brand_id==='Corsair' ? 'selected' : '' %> >Corsair</option>
+                            <option value="14" <%=product.brand_id==='Dell' ? 'selected' : '' %> >Dell</option>
+                            <option value="8" <%=product.brand_id==='Dx Racer' ? 'selected' : '' %> >Dx Racer
                             </option>
-                            <option value="15" <%=product.brand_id==='15' ? 'selected' : '' %> >HP</option>
-                            <option value="12" <%=product.brand_id==='12' ? 'selected' : '' %> >Intel</option>
-                            <option value="4" <%=product.brand_id==='4' ? 'selected' : '' %> >Logitech
+                            <option value="15" <%=product.brand_id==='HP' ? 'selected' : '' %> >HP</option>
+                            <option value="12" <%=product.brand_id==='Intel' ? 'selected' : '' %> >Intel</option>
+                            <option value="4" <%=product.brand_id==='Logitech' ? 'selected' : '' %> >Logitech
                             </option>
-                            <option value="18" <%=product.brand_id==='18' ? 'selected' : '' %> >LG</option>
-                            <option value="16" <%=product.brand_id==='16' ? 'selected' : '' %> >Lenovo</option>
-                            <option value="13" <%=product.brand_id==='13' ? 'selected' : '' %> >MSI</option>
-                            <option value="3" <%=product.brand_id==='3' ? 'selected' : '' %> >Mountain
+                            <option value="18" <%=product.brand_id==='LG' ? 'selected' : '' %> >LG</option>
+                            <option value="16" <%=product.brand_id==='Lenovo' ? 'selected' : '' %> >Lenovo</option>
+                            <option value="13" <%=product.brand_id==='MSI' ? 'selected' : '' %> >MSI</option>
+                            <option value="3" <%=product.brand_id==='Mountain' ? 'selected' : '' %> >Mountain
                             </option>
-                            <option value="10" <%=product.brand_id==='10' ? 'selected' : '' %> >Newskill
+                            <option value="10" <%=product.brand_id==='Newskill' ? 'selected' : '' %> >Newskill
                             </option>
-                            <option value="1" <%=product.brand_id==='1' ? 'selected' : '' %> >Razer</option>
-                            <option value="7" <%=product.brand_id==='7' ? 'selected' : '' %> >Samsung</option>
-                            <option value="20" <%=product.brand_id==='20' ? 'selected' : '' %> >Sony</option>
-                            <option value="17" <%=product.brand_id==='17' ? 'selected' : '' %> >Toshiba</option>
+                            <option value="1" <%=product.brand_id==='1' ? 'Razer' : '' %> >Razer</option>
+                            <option value="7" <%=product.brand_id==='7' ? 'Samsung' : '' %> >Samsung</option>
+                            <option value="20" <%=product.brand_id==='20' ? 'Sony' : '' %> >Sony</option>
+                            <option value="17" <%=product.brand_id==='17' ? 'Toshiba' : '' %> >Toshiba</option>
                         </select>
                     </div>
                 </div>

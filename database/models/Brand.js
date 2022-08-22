@@ -6,10 +6,10 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        brand_category_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
+        // brand_category_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        // },
         name: {
             type: DataTypes.STRING(45),
             allowNull: false,
@@ -31,10 +31,10 @@ module.exports = (sequelize, DataTypes) => {
             through: 'brand_category'
         });
 
-        Brand.hasMany(models.Product, {
-            as: 'products',
-            foreignKey: 'brand_id',
-        });
+        // Brand.hasMany(models.Product, {
+        //     as: 'products',
+        //     foreignKey: 'brand_id',
+        // });
     }
 
     return Brand;
