@@ -55,23 +55,72 @@ h2 {
 /*Seccion 11: banner marcas*/
 
 .tarjeta-11 {
-    display: inline-flex;
     justify-content: center;
     width: 90%;
     margin-bottom: 35px;
+    margin: auto;
 }
 
 .titulo-tarjeta-11 {
-    position: absolute;
     color: #918a8d;
     text-align: center;
     font-weight: 400;
-    letter-spacing: -.216px;
-    line-height: 1.6;
-    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.div-titulo-tarjeta-11{
+    padding-top: 80px;
+    padding-bottom: 30px;
 }
 
 .logitech-logo {
+    width: 50%;
+}
+
+.apple-logo {
+    width: 45%;
+}
+
+.razer-logo {
+    width: 45%;
+}
+
+.sony-logo {
+    width: 45%;
+}
+
+.cougar-logo {
+    width: 50%;
+}
+
+.tarjeta-marcas {
+    width: 70%;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: white;
+    opacity: .6;
+    border-radius: 56px;
+}
+
+.tarjeta-11-articulos {
+    width: 20%;
+}
+
+
+
+/* Seccion 12: Imagen*/
+
+.div-imagen-chica {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.imagen-chica {
     width: 20%;
 }
 
