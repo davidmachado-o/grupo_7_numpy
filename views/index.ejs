@@ -19,30 +19,25 @@
         <div class="container">
             <img class="hero-banner-imagen" src="/images/home_hero _banner.png" alt="Chica feliz de comprar en Numpy">
         </div>
-            <p class="jumbotron-texto">TEXTO</p>
-          <h1 class="jumbotron-titulo">Lorem ipsum <br> dolor sit amet</h1>
+          <h1 class="jumbotron-titulo">Digital Market <br> hecho a tu medida</h1>
       </div>
 
     <main>
-        <!--Seccion 1: banner de tarjetas-->
-        <div class="tarjeta-1">
-            <div class="ver-promociones-general">
-                <article class="ver-promociones-tarjeta">
-                    <img src="/images/home_tarjetas.png" alt="">
-                    <p class="ver-promociones-texto">Ver promociones ></p>
-                </article>
-                <article class="ver-promociones-tarjeta ver-promociones-tarjeta-2">
-                    <img src="/images/home_tarjetas.png" alt="">
-                    <p class="ver-promociones-texto">Ver promociones ></p>
-                </article>
-                <article class="ver-promociones-tarjeta ver-promociones-tarjeta-2">
-                    <img src="/images/home_tarjetas.png" alt="">
-                    <p class="ver-promociones-texto">Ver promociones ></p>
-                </article>
-                <article class="ver-promociones-simbolo-mas">
-                    <img class="ver-promociones-simbolo-mas-foto" src="/images/home_simbolo_mas.png">
-                </article>
-            </div>
+
+
+
+        <!--Seccion 11: banner marcas-->
+        <div class="tarjeta-11">
+            
+                
+                <p class="titulo-tarjeta-11">Encontrá a las <strong> +10.000 marcas</strong> que ya venden en Numpy</p>
+            
+                <ul>
+                    <li>
+                        <img class="logitech-logo" src="/images/logitech-logo.png">
+                    </li>
+                </ul>
+            
         </div>
          <!--Seccion 2: carrousel de opciones-->
         <div class="opciones-general">
@@ -60,22 +55,18 @@
                     <p class="opciones-texto" >Armá tu computadora</p>
                 </div>
                 <div class="opciones-caja-2">
-                    <article class="opciones-caja-2-articles">
-                        <img class="opciones-foto-tv" src="/images/home_tv.jpeg" alt="TV">
-                        <p class="opciones-texto-subtitulo" >Monitores</p>
-                    </article>
-                    <article class="opciones-caja-2-articles">
-                        <img class="opciones-foto-tv" src="/images/home_tv.jpeg" alt="TV">
-                        <p class="opciones-texto-subtitulo" >Monitores</p>
-                    </article>
-                    <article class="opciones-caja-2-articles">
-                        <img class="opciones-foto-tv" src="/images/home_tv.jpeg" alt="TV">
-                        <p class="opciones-texto-subtitulo" >Monitores</p>
-                    </article>
-                    <article class="opciones-caja-2-articles">
-                        <img class="opciones-foto-tv" src="/images/home_tv.jpeg" alt="TV">
-                        <p class="opciones-texto-subtitulo" >Monitores</p>
-                    </article>
+                   
+                    <% product_1.forEach(product1 => { %>
+                    
+                        <article class="opciones-caja-2-articles">
+                            <img class="opciones-foto-tv" src="/images/products/<%= product1.image_11 %> "  alt="<%= product1.name %>">
+                            <p class="opciones-texto-subtitulo" ><%= product1.name %></p>
+                        </article>
+    
+                        <% }) %>
+
+                  
+                    
                     <div class="opciones-cta-div">
                         <p class="opciones-cta">Empezá Ahora ></p>
                     </div>
@@ -188,6 +179,29 @@
                 </article>
             </div>
         </div>
+
+
+         <!--Seccion 1: banner de tarjetas-->
+         <div class="tarjeta-1">
+            <div class="ver-promociones-general">
+                <article class="ver-promociones-tarjeta">
+                    <img src="/images/home_tarjetas.png" alt="">
+                    <p class="ver-promociones-texto">Ver promociones ></p>
+                </article>
+                <article class="ver-promociones-tarjeta ver-promociones-tarjeta-2">
+                    <img src="/images/home_tarjetas.png" alt="">
+                    <p class="ver-promociones-texto">Ver promociones ></p>
+                </article>
+                <article class="ver-promociones-tarjeta ver-promociones-tarjeta-2">
+                    <img src="/images/home_tarjetas.png" alt="">
+                    <p class="ver-promociones-texto">Ver promociones ></p>
+                </article>
+                <article class="ver-promociones-simbolo-mas">
+                    <img class="ver-promociones-simbolo-mas-foto" src="/images/home_simbolo_mas.png">
+                </article>
+            </div>
+        </div>
+
         <!--Seccion 4: banner delivery-->
         <section class="banner-chico-section">
             <img class="banner-chico-section-foto" src="/images/home_banner_delivery.png" alt="Chico hace delivery de Numpy">

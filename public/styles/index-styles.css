@@ -52,6 +52,29 @@ h2 {
 }
 
 
+/*Seccion 11: banner marcas*/
+
+.tarjeta-11 {
+    display: inline-flex;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 35px;
+}
+
+.titulo-tarjeta-11 {
+    position: absolute;
+    color: #918a8d;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: -.216px;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+.logitech-logo {
+    width: 20%;
+}
+
 /* Seccion 1: banner de tarjetas */
  
 .ver-promociones-general{
