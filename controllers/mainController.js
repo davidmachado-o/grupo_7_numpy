@@ -38,14 +38,32 @@ index: (req, res) => {
 	let product_1 = db.Product.findByPk (1)
 	let product_2 = db.Product.findByPk (2)
 	let product_3 = db.Product.findByPk (3)
-	let product_4 = db.Product.findByPk (4)
+	let product_4 = db.Product.findByPk (27)
 
 	Promise.all ([product_1, product_2, product_3, product_4])
 
 	.then(function(product_1, product_2, product_3, product_4) {
 
+		console.log(product_4)
+
 	res.render('index', {product_1, product_2, product_3, product_4})
-})}
+
+	
+})},
+
+
+// index2: (req, res) => {
+
+// 	let product_5 = db.Product.findByPk (5)
+
+
+// 	Promise.all ([product_5])
+
+// 	.then(function(product_5) {
+
+// 	res.render('index', {product_5})
+// })},
+
 }
 
 module.exports = mainController

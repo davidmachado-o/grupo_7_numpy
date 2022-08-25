@@ -9,6 +9,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+header {
+    position:fixed;
+}
+
+.marca {
+    background-color: #4DABCF;
+    color: white;
+}
 
 h2 {
     font-size: 24px;
@@ -52,6 +60,8 @@ h2 {
 }
 
 
+
+
 /*Seccion 11: banner marcas*/
 
 .tarjeta-11 {
@@ -71,7 +81,7 @@ h2 {
 
 .div-titulo-tarjeta-11{
     padding-top: 80px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 .logitech-logo {
@@ -125,6 +135,10 @@ h2 {
 }
 
 /* Seccion 1: banner de tarjetas */
+
+.titulo-tarjeta-font {
+    font-size: 30px;
+}
  
 .ver-promociones-general{
     background-color: white;
@@ -189,6 +203,10 @@ h2 {
     margin-bottom: 15px;
 }
 
+.opciones-article:hover {
+    box-shadow: 10px 5px 5px #cbb7c8;
+}
+
 .opciones-texto {
     font-size: 16px;
     color: #747070;
@@ -233,6 +251,10 @@ button {
        height: auto;
    }
 
+   .opciones-caja-2-articles :hover {
+    transform: translateY(-7px);
+   }
+
    .opciones-texto-subtitulo {
        font-size: 12px;
        color: #747070;
@@ -248,6 +270,8 @@ button {
        width: 50%;
        padding-bottom: 32px;
    }
+
+   
 
    .opciones-cta {
     color: #4DABCF;
@@ -504,11 +528,15 @@ button {
     /* Seccion 0: Jumbotron */
 
     .jumbotron-titulo {
-        top: 300px;
+        top: 250px;
     }
 
     .jumbotron-texto {
         top: 270px;
+    }
+
+    .jumbotron-caja {
+        margin-top: 111px;
     }
 
     /* Seccion 1: banner de tarjetas */
@@ -558,6 +586,10 @@ button {
         top: 335px;
         left: 85px;
         font-size: 30px;
+    }
+
+    .jumbotron-caja {
+        margin-top: 122px;
     }
 
     /* Seccion 1: banner de tarjetas */

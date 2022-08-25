@@ -15,7 +15,7 @@
         <% } %> 
     </header>
 
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid jumbotron-caja">
         <div class="container">
             <img class="hero-banner-imagen" src="/images/home_hero _banner.png" alt="Chica feliz de comprar en Numpy">
         </div>
@@ -67,7 +67,7 @@
          <!--Seccion 2: carrousel de opciones-->
 
          <div class="div-titulo-tarjeta-11">
-            <p class="titulo-tarjeta-11">Encontrá los <strong> mejores productos</strong> digitales</p>
+            <p class="titulo-tarjeta-11 titulo-tarjeta-font">Encontrá los <strong> mejores productos</strong> digitales</p>
         </div>
         <div class="opciones-general">
 
@@ -83,7 +83,7 @@
             </article>
             <article class="opciones-article">
                 <div>
-                    <p class="opciones-texto" >Armá tu computadora</p>
+                    <p class="opciones-texto"><mark class="marca">Ratones</mark></p>
                 </div>
                 <div class="opciones-caja-2">
                    
@@ -96,39 +96,30 @@
     
                         <% }) %>
 
-                  
-                    
-                    <div class="opciones-cta-div">
-                        <p class="opciones-cta">Empezá Ahora ></p>
-                    </div>
                 </div>
             </article>
+
+            
             <article class="opciones-article">
                 <div>
-                    <p class="opciones-texto" >Armá tu computadora</p>
+                    <p class="opciones-texto"><mark class="marca">Mouses</mark></p>
                 </div>
                 <div class="opciones-caja-2">
-                    <article class="opciones-caja-2-articles">
-                        <img class="opciones-foto-tv" src="/images/home_tv.jpeg" alt="TV">
-                        <p class="opciones-texto-subtitulo" >Monitores</p>
-                    </article>
-                    <article class="opciones-caja-2-articles">
-                        <img class="opciones-foto-tv" src="/images/home_tv.jpeg" alt="TV">
-                        <p class="opciones-texto-subtitulo" >Monitores</p>
-                    </article>
-                    <article class="opciones-caja-2-articles">
-                        <img class="opciones-foto-tv" src="/images/home_tv.jpeg" alt="TV">
-                        <p class="opciones-texto-subtitulo" >Monitores</p>
-                    </article>
-                    <article class="opciones-caja-2-articles">
-                        <img class="opciones-foto-tv" src="/images/home_tv.jpeg" alt="TV">
-                        <p class="opciones-texto-subtitulo" >Monitores</p>
-                    </article>
-                    <div class="opciones-cta-div">
-                        <p class="opciones-cta">Empezá Ahora ></p>
-                    </div>
+                   
+                    <% product_1.forEach(product2 => { %>
+                    
+                        <article class="opciones-caja-2-articles">
+                            <img class="opciones-foto-tv" src="/images/products/<%= product2.image_11 %> "  alt="<%= product2.name %>">
+                            <p class="opciones-texto-subtitulo" ><%= product2.name %></p>
+                        </article>
+    
+                        <% }) %>
+
                 </div>
+
             </article>
+
+
         </div>
         <!--Seccion 3: carrousel de opciones de ubicacion MOBILE-->
         <div class="carousel">
