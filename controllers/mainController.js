@@ -33,36 +33,56 @@ const mainController = {
 
 
 
+
+
 index: (req, res) => {
-	// let mouse1 = db.Product.findAll ({where: {category_id: 'Monitor'}})
-	let product_1 = db.Product.findByPk (1)
-	let product_2 = db.Product.findByPk (2)
-	let product_3 = db.Product.findByPk (3)
-	let product_4 = db.Product.findByPk (27)
 
-	Promise.all ([product_1, product_2, product_3, product_4])
+	let products = db.Product.findAll()
 
-	.then(function(product_1, product_2, product_3, product_4) {
+	.then ((products) => {
 
-		console.log(product_4)
+		let mouses = []
+		let keyboards = []
+		let combos = []
+		let sillas = []
 
-	res.render('index', {product_1, product_2, product_3, product_4})
+		products.forEach (e => {
+			if (e.category_id == 'Mouse') {
+				mouses.push(e)
+			} else if (e.category_id == 'Teclado'){
+				keyboards.push(e)
+			} else if (e.category_id == 'Combo'){
+				combos.push(e)
+			} else if (e.category_id == 'Silla'){
+				sillas.push(e)
+			} 
+		})
+
+		res.render('index', {mouses, keyboards, combos, sillas})
+
+	})
+}
+
+
+
+
+// index: (req, res) => {
+// 	// let mouse1 = db.Product.findAll ({where: {category_id: 'Monitor'}})
+// 	let product_1 = db.Product.findByPk (1)
+// 	let product_2 = db.Product.findByPk (2)
+// 	let product_3 = db.Product.findByPk (3)
+// 	let product_4 = db.Product.findByPk (27)
+
+// 	Promise.all ([product_1, product_2, product_3, product_4])
+
+// 	.then(function(product_1, product_2, product_3, product_4) {
+
+// 		console.log(product_4)
+
+// 	res.render('index', {product_1, product_2, product_3, product_4})
 
 	
-})},
-
-
-// index2: (req, res) => {
-
-// 	let product_5 = db.Product.findByPk (5)
-
-
-// 	Promise.all ([product_5])
-
-// 	.then(function(product_5) {
-
-// 	res.render('index', {product_5})
-// })},
+// })}
 
 }
 

@@ -134,6 +134,57 @@ h2 {
     width: 20%;
 }
 
+
+
+/* Seccion 13: tarjetas de Combos*/
+
+.tarjeta-combos{
+    border-radius: 8px;
+    width: 21rem !important;
+}
+
+.tarjetas-combo-div {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title{
+    font-size: 20px;
+    color: #747070;
+    font-weight: 250;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.tarjeta-precio {
+    color: #89387B;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 40px;
+}
+
+.icono-descuento {
+    color: #89387B;
+    padding-left: 40px;
+    position: relative;
+    bottom: -18px;
+    right: -16px;
+}
+
+.tarjeta-combos-precio {
+    flex-direction: column;
+}
+
+.tarjeta-combos-boton {
+   text-align: center;
+}
+
+
 /* Seccion 1: banner de tarjetas */
 
 .titulo-tarjeta-font {
@@ -144,9 +195,7 @@ h2 {
     background-color: white;
     border-radius: 60px;
     padding-top: 20px;
-    padding-bottom: 20px;
     width: 85%;
-    border: dotted rgb(23, 226, 124);
     display: flex;
     align-items: center;
 }
@@ -165,10 +214,12 @@ h2 {
 }
 
 .tarjeta-1 {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     width: 60%;
     margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ver-promociones-tarjeta-2 {
@@ -383,6 +434,12 @@ button {
         margin-left: 90px;
     }
 
+
+/* Seccion 5: Sillas */
+
+
+
+
 /* Seccion 5: Descubi */
 
 .descubri-general{
@@ -592,6 +649,15 @@ button {
         margin-top: 122px;
     }
 
+
+    /* Seccion 13: tarjetas de Combos*/
+
+    .tarjetas-combo-div {
+        display: flex;
+        flex-direction: row;
+    }
+
+
     /* Seccion 1: banner de tarjetas */
 
     .tarjeta-1 {
@@ -600,9 +666,9 @@ button {
 
     .ver-promociones-general {
         width: 80%;
-        padding-bottom: 35px;
         justify-content: space-evenly;
         margin-left: 90px;
+        padding-bottom: 20px;
     }
 
     .ver-promociones-tarjeta-2{
