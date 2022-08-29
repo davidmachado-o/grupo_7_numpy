@@ -92,7 +92,7 @@ const usersController = {
             last_name: ' ',
             email: req.body.email,
             password: bycrypt.hashSync(req.body.password, 10),
-            picture_id: req.file ? req.file.filename : 'default.jpg' //cambiar aca INT(11) por VARCHAR(45) por para que pueda ir a la base de datos Y tambien cambiarlo en models.
+            picture_id: req.file ? req.file.filename : 'default.jpg' //cambiar aca INT(11) por VARCHAR(45) para que pueda ir a la base de datos Y tambien cambiarlo en models.
         })
         res.redirect('login')
     }catch(error)

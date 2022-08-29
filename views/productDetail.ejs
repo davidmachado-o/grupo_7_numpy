@@ -31,14 +31,14 @@
         <article>
             <a href="#">
                 <div class="Cont-Mini-Imagen">
-                    <img class="Mini-Imagen" src="/images/products/<%= product.image_1 %>" alt="<%= product.name %>">
-                    <img class="Mini-Imagen" src="/images/products/<%= product.image_2 %>" alt="<%= product.name %>">
-                    <img class="Mini-Imagen" src="/images/products/<%= product.image_3 %>" alt="<%= product.name %>">
+                    <img class="Mini-Imagen" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
+                    <img class="Mini-Imagen" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
+                    <img class="Mini-Imagen" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
                 </div>
             </a>
             <div class="Cont-Imagen-Desc">
                 <div class="Cont-Imagen">
-                    <img class="Imagen" src="/images/products/<%= product.image_1 %>" alt="<%= product.name %>">
+                    <img class="Imagen" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
                 </div>
                 <div class="Cont-Descripcion">
                     <div class="Descripcion">
@@ -120,33 +120,23 @@
             </div>
             <div class="Cont-Imagen2">
                 <div class="Mini-Article">
-                    <p class="Desc">
-                        <%= product.discount%>% OFF
-                    </p>
+                    <p class="Desc">60% OFF</p>
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="/images/products/<%= product.image_1 %>" alt="<%= product.name %>">
+                    <img class="Producto" src="\images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
-                        <h2 class="Precio2">$<%= product.price%>
-                        </h2>
-                        <p class="Nombre-Producto">
-                            <%= product.model%>
-                        </p>
+                        <h2 class="Precio2">$20.300</h2>
+                        <p class="Nombre-Producto">Volante Logitech G29</p>
                     </div>
                 </div>
                 <div class="Mini-Article2">
-                    <p class="Desc">
-                        <%= product.discount%>% OFF
-                    </p>
+                    <p class="Desc">60% OFF</p>
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="/images/products/<%= product.image_1 %>" alt="<%= product.name %>">
+                    <img class="Producto" src="\images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
-                        <h2 class="Precio2">$<%= product.price%>
-                        </h2>
-                        <p class="Nombre-Producto">
-                            <%= product.model%>
-                        </p>
+                        <h2 class="Precio2">$20.300</h2>
+                        <p class="Nombre-Producto">Volante Logitech G29</p>
                     </div>
                 </div>
                 <div class="Arrow">
@@ -166,7 +156,7 @@
                     <div class="Features1">
                         <h3>Marca</h3>
                         <p class="Marca">
-                            <%= product.brand%>
+                            <%= product.brand_id%>
                         </p>
                     </div>
                     <div class="Features2">
@@ -178,7 +168,7 @@
                     <div class="Features3">
                         <h3>Procesador</h3>
                         <p class="Procesador">
-                            <%= product.process%>
+                            <%= product.processor%>
                         </p>
                     </div>
                     <div class="Features4">

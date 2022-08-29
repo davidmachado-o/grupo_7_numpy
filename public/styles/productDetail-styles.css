@@ -1500,7 +1500,8 @@ button:active {
     }
 
     .Imagen {
-        width: 100%;
+        width: 60%;
+        height: 60%;
     }
 
     .Cont-Descripcion {
