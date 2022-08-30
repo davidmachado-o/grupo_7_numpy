@@ -42,7 +42,7 @@ const usersController = {
                         res.cookie('userEmail', req.body.email, { maxAge: (1000 * 1000) * 90 })
                     }
 
-                    return res.render('userDetail', { users: userData });
+                    return res.render('userDetail', { user: userData });
                 }
                 return res.render('login', {
                     errors: {
