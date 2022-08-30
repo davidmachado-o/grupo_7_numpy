@@ -11,14 +11,23 @@
     <% } %> 
 </header>
 <body>
-<h1>Listado de productos</h1>
+    <div class="bolita-div">
+        <img class="bolita" src="/images/bolita_verde.png">
+    </div>
+
+<h1 class="titulo">Listado de productos</h1>
 <ul class="Lista">
-    <% for (let i = 0; i < product.length; i++) { %>  
-        <li class="Listax">
-            <a href="/product/productDetail/<%=product[i].id%> ">
-            <%=product[i].name %>
-            </a>
-        </li>
+    <% for (let i = 0; i < product.length; i++) { %>
+        <div class="div-lista">
+            
+            <img class="imagenes-productos" src="/images/products/<%= product[i].image_11 %> "  alt="<%= product[i].name %>">
+            <p class="categoria-producto"><%= product[i].category_id%></p>
+            <li class="Listax">
+                <a href="/product/productDetail/<%=product[i].id%> ">
+                <%=product[i].name %>
+                </a>
+            </li>
+        </div>
         <%  } %> 
 </ul>
 </body>
