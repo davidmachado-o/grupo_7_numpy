@@ -21,10 +21,10 @@
         <div class="continue">
             <h5>Inicia sesión para continuar</h5>
         </div>
-        <form action="/users/login" method="POST" enctype="multipart/form-data" id="loginForm" name="loginForm">
+        <form action="/users/login" method="POST" name="loginForm">
             <div class="form-group">
                 <label for="email"></label>
-                <input type="text" name="email" id="email" class="form-control" placeholder="Correo electrónico">
+                <input type="text" name="email" id="email" class="form-control" placeholder="Correo electrónico" required>
                 
                 <% if (locals.errors && errors.email) { %>
                     <p class="error"><%= errors.email.msg %></p>
@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label for="password"></label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña">
+                <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña" required>
                 <% if (locals.errors && errors.password) { %>
                     <p class="error"><%= errors.password.msg %></p>
                 <% } %> 
@@ -63,7 +63,6 @@
         </form>
     </div>
 </main>
-<script type="text/javascript"  src="../middlewares/validateLoginMiddleware.js"></script>
 <footer>
     <%- include('./partials/footer.ejs'); %>
 </footer>

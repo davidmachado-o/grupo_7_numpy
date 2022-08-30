@@ -45,10 +45,15 @@
         <form class="option-desc"  method="PUT">
             <ul class="buttons-two">
                 <li class="item">
+                    <a href="/#">
                     <button type="reset" class="remove" aria-current="page" href="#">Eliminar</button>
+                    </a>
                 </li>
                 <li class="item">
+                    <a href="productList">
                     <button type="button" class="relation" aria-current="page" href="#">Mas productos del vendedor</button>
+                    </a>
+                    
                 </li>
                 <li class="item">
                     <button type="submit" class="send" aria-current="page" href="#">Guardar para despues</button>
@@ -61,20 +66,20 @@
                 <!-- <a class="option-live" href=""> <img class="slice" src="/images/producto_flecha_azul.png" alt="flecha-azul"></a> -->
                 <select class="option-live" name = "" src="/images/producto_flecha_azul.png">
                     <optgroup label="CABA">
-                        <option value="Palermo"></option>
-                        <option value="Cabildo"></option>
+                        <option class="city" > Palermo</option>
+                        <option class="city" > Cabildo</option>
                     </optgroup>
                     <optgroup label="Tigre">
-                        <option value="Palermo"></option>
-                        <option value="Cabildo"></option>
+                        <option >Gral Pacheco</option>
+                        <option >Ricardo Rojas</option>
                     </optgroup>
                     <optgroup label="Escobar">
-                        <option value="Palermo"></option>
-                        <option value="Cabildo"></option>
+                        <option >El Cazador</option>
+                        <option > Garin</option>
                     </optgroup>
                     <optgroup label="Pilar">
-                        <option value="Palermo"></option>
-                        <option value="Cabildo"></option>
+                        <option > Villa Rosa</option>
+                        <option > Zelaya </option>
                     </optgroup>
                 </select>
                 <p class="option">Gratis</p>
@@ -85,9 +90,10 @@
             </div>
         </section>
         <section class="continue">
-            <button type="submit" class="first"> <img class="white-car" src="/images/carrito_camion.png">
+            <a href="productDetail/<%= product.id %> "><button type="submit" class="first"><img class="white-car" src="/images/carrito_camion.png">
                 <p class="first">Continuar Compra </p>
                 </button>
+            </a>
         </section>
 
     </div>
@@ -100,23 +106,25 @@
                     <p class="desc"> 60% OFF</p>
                     <img class="heart-with" src="/images/corazon.png" alt="blue-heart">
                 </div>
-                <img class="volante" src="/images/producto_volante.jpeg" alt="producto-volante">
+
+                <img class="volante" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %> ">
+
                 <div class="contain-price">
-                    <p class="previous-col8"><del>$38,000</del> </p>
-                    <p class="price-col8">$20,300</p>
-                    <p class="description-col8">Volante Logitech G29</p>
+                    <p class="previous-col8"><del>$ <%= product.price_current %></del> </p>
+                    <p class="price-col8">$ <%= product.price_discount %></p>
+                    <p class="description-col8"><%= product.name %> </p>
                 </div>
             </article>
             <article class="product-seller">
                 <div class="decoration">
                 <img class="heart-without" src="/images/corazon.png" alt="blue-heart">
             </div>
-                <img class="volante" src="/images/producto_volante.jpeg" alt="producto-volante">
+                <img class="volante" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
 
                 <div class="contain-price">
-                    <p class="previous-col8"><del>$38,000</del> </p>
-                    <p class="price-col8">$20,300</p>
-                    <p class="description-col8">Volante Logitech G29</p>
+                    <p class="previous-col8"><del>$ <%= product.price_current %></del> </p>
+                    <p class="price-col8">$ <%= product.price_discount %></p>
+                    <p class="description-col8"><%= product.name %></p>
                 </div>
             </article>
             <article class="product-seller-two">
@@ -124,22 +132,22 @@
                     <p class="desc"> 60% OFF</p>
                     <img class="heart-with" src="/images/corazon.png" alt="blue-heart">
                 </div>
-                <img class="volante" src="/images/producto_volante.jpeg" alt="producto-volante">
+                <img class="volante" src="/images/product/<%= product.image_11 %> " alt="<%= product.name %>">
                 <div class="contain-price">
-                    <p class="previous-col8"><del>$38,000</del> </p>
-                    <p class="price-col8">$20,300</p>
-                    <p class="description-col8">Volante Logitech G29</p>
+                    <p class="previous-col8"><del>$ <%= product.price_current %></del> </p>
+                    <p class="price-col8">$ <%= product.price_discount %></p>
+                    <p class="description-col8"><%= product.name %></p>
                 </div>
             </article>
             <article class="product-seller-two">
                 <div class="decoration">
                     <img class="heart-without" src="/images/corazon.png" alt="blue-heart">
                 </div>
-                <img class="volante" src="/images/producto_volante.jpeg" alt="producto-volante">
+                <img class="volante" src="/images/product/<%= product.image_11 %>" alt="<%= product.name %>">
                 <div class="contain-price">
-                    <p class="previous-col8"><del>$38,000</del> </p>
-                    <p class="price-col8">$20,300</p>
-                    <p class="description-col8">Volante Logitech G29</p>
+                    <p class="previous-col8"><del>$ <%= product.price_current %></del> </p>
+                    <p class="price-col8">$ <%= product.price_discount %></p>
+                    <p class="description-col8"><%= product.name %></p>
                 </div>
             </article>
             <button class="more-option">
@@ -154,14 +162,16 @@
         <h3 class="new-seccion-two">Ofertas</h3>
         <div class="col-8">
             <section class="anuncio">
-                <p class="promotion">Lorem ipsun dolor sit amet</p>
+                <p class="promotion">Productos destacados de esta semana</p>
                 <button class="new-product">Ver todas <img class="flechita-azul" src="/images/producto_flecha_azul.png"></button>
                 <img class="joystick" src="/images/carrito_controles.png" alt="controles">
             </section>
             <section class="product">
                 <article class="product-info">
-                    <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
+                    <% silla.forEach(product1=>{ %> 
+                    <img class="game-chair" src="/images/products/<%= product1.image_11 %> " alt="producto-volante">
                     <!-- <img src="/images/corazon.png" alt="heart">-->
+                    <% }) %> 
                     <div class="col-4">
                         <p class="previous-col4"><del>$40,000</del> </p>
                         <span class="col-min">

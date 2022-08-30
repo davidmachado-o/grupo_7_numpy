@@ -106,14 +106,63 @@ const productsController = {
         res.redirect('/product/productList')
     },
 
+    productCart: async (req, res) =>{
+        // await db.Product.findAll(
+        //     {
+        //     includes:[category],
+        //     // where:{
+        //     //     image_11: req.files[0]
+        //     // },
+        //     order:[
+        //         ['category', 'DESC']
+        //     ]
+        // }   
+        // )
+        // .then(function(product) {
+        //     res.render('productCart', {product: product})
+        //     // console.log('Estoy funcionando!')
+        // });
+        await db.Product.findOne()
+        .then(function(product){
+            let silla = [];
+            let monitor = []
+            products.forEach(e => {
+                if (e.category_id == 'Silla') {
+                    silla.push(e)
+                }else if(e.category_id == 'Monitor'){
+                    monitor.push(e)
+                }
+            });
+                
+            res.render('productCart', { product, silla, monitor})
+        
+        })
+
+        
+        // let products = db.Product.findAll()
+
+        // .then ((products) => {
+    
+        //     let monitores = []
+        //     let keyboards = []
+    
+        //     products.forEach(e => {
+        //         if (e.category_id == 'Monitor') {
+        //             monitores.push(e)
+        //         } else if (e.category_id == 'Teclado'){
+        //             keyboards.push(e)
+        //         } 
+        //     })
+        //     let monitor=monitores[0]
+        //     console.log(monitor)
+    
+        //     res.render('productCart', {monitor})
+    
+        // })
+    
 
 
-    productCart: (req, res) => {
-        res.render('productCart', { products })
     }
-
-
-
 
 }
 

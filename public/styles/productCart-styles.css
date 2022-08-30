@@ -256,6 +256,11 @@ img.white-car {
   width: 5vw;
   margin: 0.5em;
 }
+
+option.city{
+  color: rgb(49, 10, 10);
+  background-color: #b46067;
+}
 /**                   contain two               **/
 .contain-two {
   display: grid;
