@@ -8,7 +8,12 @@
 
 <body>
     <header class="main-header">
-        <%- include('./partials/header.ejs'); %>
+        <% if(isAuthenticated) { %> 
+            <%- include('./partials/headerLogged.ejs'); %>
+        <% } else {%> 
+        
+            <%- include('./partials/header.ejs'); %>
+        <% } %> 
     </header>
     <section class="List">
         <ul class="Main-List">

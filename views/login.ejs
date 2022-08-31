@@ -8,7 +8,12 @@
 
 <body>
     <header class="main-header">
-        <%- include('./partials/headerLogged.ejs'); %>
+        <% if(isAuthenticated) { %> 
+            <%- include('./partials/headerLogged.ejs'); %>
+        <% } else {%> 
+        
+            <%- include('./partials/header.ejs'); %>
+        <% } %> 
     </header>
     <main>
     <div class="login-form">

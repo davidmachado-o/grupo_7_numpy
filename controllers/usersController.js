@@ -22,6 +22,9 @@ const usersController = {
                 res.render('userList', { user: user })
             })
     },
+
+
+
     login: (req, res) => {
         res.render('login') //ir hacia el form
     },
@@ -75,6 +78,8 @@ const usersController = {
     register: (req, res) => {
         res.render('register') //ir hacia el form
     },
+
+
     processRegister: async (req, res) => {
         const resultValidation = validationResult(req);
 
