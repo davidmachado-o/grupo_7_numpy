@@ -78,15 +78,31 @@
 
             
             <article class="opciones-article">
-                <div>
-                    <p class="opciones-texto" >Inicia sesión para tener la mejor experiencia</p>
-                </div>
-                <div>
-                    <a href="/users/login">
-                        <button>Iniciar Sesión</button>
-                    </a>
-                    
-                </div>
+
+                <% if(isAuthenticated) { %> 
+                    <div>
+                        <p class="opciones-texto" >Cargá tus productos y empezá a ganar ya</p>
+                    </div>
+                    <div>
+                        <a href="/product/productAdd">
+                            <button>Agregar Productos</button>
+                        </a>
+                        
+                    </div>
+                <% } else {%> 
+                
+                    <div>
+                        <p class="opciones-texto" >Inicia sesión para tener la mejor experiencia</p>
+                    </div>
+                    <div>
+                        <a href="/users/login">
+                            <button>Iniciar Sesión</button>
+                        </a>
+                        
+                    </div>
+                <% } %> 
+
+                
                     <img class="opciones-foto-chica" src="/images/home_chica_celebrando.png">
             </article>
             <article class="opciones-article">
