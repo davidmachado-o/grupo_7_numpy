@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
 
+
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
 
@@ -106,61 +107,71 @@ const productsController = {
         res.redirect('/product/productList')
     },
 
-    productCart: async (req, res) =>{
-        // await db.Product.findAll(
-        //     {
-        //     includes:[category],
-        //     // where:{
-        //     //     image_11: req.files[0]
-        //     // },
-        //     order:[
-        //         ['category', 'DESC']
-        //     ]
-        // }   
-        // )
-        // .then(function(product) {
-        //     res.render('productCart', {product: product})
-        //     // console.log('Estoy funcionando!')
-        // });
-        await db.Product.findOne()
-        .then(function(product){
-            let silla = [];
-            let monitor = []
-            products.forEach(e => {
-                if (e.category_id == 'Silla') {
-                    silla.push(e)
-                }else if(e.category_id == 'Monitor'){
-                    monitor.push(e)
-                }
-            });
-                
-            res.render('productCart', { product, silla, monitor})
-        
+    productCart:  (req, res) =>{
+        let mouse = db.Product.findAll(
+            {
+            where:{
+                category_id: 'Mouse'
+                }, limit:2
+            }   
+        )
+        let teclado = db.Product.findAll(
+
+            {
+            where:{
+                category_id: 'Teclado'
+                }, limit:1
+            }
+        )
+        let combo  = db.Product.findAll(
+            {
+                where:{
+                    category_id: 'Combo'
+                }, limit:1
+            }
+        )
+        let monitor  = db.Product.findAll(
+            {
+                where:{
+                    category_id: 'Monitor'
+                }, limit:1
+            }
+        )
+        let silla  = db.Product.findAll(
+            {
+                where:{
+                    category_id: 'Silla'
+                }, limit:2
+            }
+        )
+        Promise.all([mouse, teclado, combo, monitor, silla])
+        .then(function(data) {
+            let [mouse, teclado, combo, monitor, silla] = data
+            res.render('productCart', {mouse, teclado, combo, monitor, silla})
+            // console.log('Estoy funcionando!')
+        })
+        .catch(error =>{
+            console.log(error)
         })
 
-        
-        // let products = db.Product.findAll()
 
-        // .then ((products) => {
-    
-        //     let monitores = []
-        //     let keyboards = []
-    
+        // db.Product.findAll()
+        // .then(function(product){
+        //     let silla = [];
+        //     let monitor = []
         //     products.forEach(e => {
-        //         if (e.category_id == 'Monitor') {
-        //             monitores.push(e)
-        //         } else if (e.category_id == 'Teclado'){
-        //             keyboards.push(e)
-        //         } 
-        //     })
-        //     let monitor=monitores[0]
-        //     console.log(monitor)
-    
-        //     res.render('productCart', {monitor})
-    
+        //         if (e.category_id == 'Silla') {
+        //             silla.push(e)
+        //         }else if(e.category_id == 'Monitor'){
+        //             monitor.push(e)
+        //         }
+        //     });
+                
+        //     res.render('productCart', { product, silla, monitor})
+        
         // })
-    
 
+    
 
     }
 

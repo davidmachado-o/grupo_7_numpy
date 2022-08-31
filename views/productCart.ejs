@@ -26,7 +26,7 @@
             <img class="cpu" src="/images/producto_cpu.webp" alt="producto-cpu">
             <div class="order">
                 <div class="tittles">
-                    <p class="name">Lorem ipsum dolor</p>
+                    <p class="name"> Combo para computadora </p>
                     <img class="car" src="/images/producto_camion.png" alt="camion" >
                     <p class="send-info">Envio gratis</p>
                 </div>
@@ -39,19 +39,19 @@
                     </div>
                     <button class="rest"> - </button>
                 </div>
-                <p class="price">$30,000</p>
+                <p class="price">$ 30.000</p>
             </div>
         </section>
         <form class="option-desc"  method="PUT">
             <ul class="buttons-two">
                 <li class="item">
-                    <a href="/#">
-                    <button type="reset" class="remove" aria-current="page" href="#">Eliminar</button>
+                    <a href="productDetail/1">
+                    <button type="reset" class="remove" aria-current="page" >Eliminar</button>
                     </a>
                 </li>
                 <li class="item">
                     <a href="productList">
-                    <button type="button" class="relation" aria-current="page" href="#">Mas productos del vendedor</button>
+                    <button type="button" class="relation" aria-current="page" >Mas productos del vendedor</button>
                     </a>
                     
                 </li>
@@ -70,16 +70,16 @@
                         <option class="city" > Cabildo</option>
                     </optgroup>
                     <optgroup label="Tigre">
-                        <option >Gral Pacheco</option>
-                        <option >Ricardo Rojas</option>
+                        <option class="city">Gral Pacheco</option>
+                        <option class="city">Ricardo Rojas</option>
                     </optgroup>
                     <optgroup label="Escobar">
-                        <option >El Cazador</option>
-                        <option > Garin</option>
+                        <option class="city">El Cazador</option>
+                        <option class="city"> Garin</option>
                     </optgroup>
                     <optgroup label="Pilar">
-                        <option > Villa Rosa</option>
-                        <option > Zelaya </option>
+                        <option class="city"> Villa Rosa</option>
+                        <option class="city"> Zelaya </option>
                     </optgroup>
                 </select>
                 <p class="option">Gratis</p>
@@ -90,10 +90,11 @@
             </div>
         </section>
         <section class="continue">
-            <a href="productDetail/<%= product.id %> "><button type="submit" class="first"><img class="white-car" src="/images/carrito_camion.png">
+            
+                <button type="submit" class="first"><img class="white-car" src="/images/carrito_camion.png">
                 <p class="first">Continuar Compra </p>
                 </button>
-            </a>
+          
         </section>
 
     </div>
@@ -101,12 +102,12 @@
     <div class="contain-two">
         <h3 class="new-seccion">Recomendaciones para vos</h3>
          <div class="publication">
+            <% mouse.forEach(product => { %>
             <article class="product-seller">
                 <div class="decoration">
-                    <p class="desc"> 60% OFF</p>
+                    <p class="desc"> 10% OFF</p>
                     <img class="heart-with" src="/images/corazon.png" alt="blue-heart">
                 </div>
-
                 <img class="volante" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %> ">
 
                 <div class="contain-price">
@@ -115,6 +116,8 @@
                     <p class="description-col8"><%= product.name %> </p>
                 </div>
             </article>
+            <%  }) %>
+            <% teclado.forEach(product => { %>
             <article class="product-seller">
                 <div class="decoration">
                 <img class="heart-without" src="/images/corazon.png" alt="blue-heart">
@@ -127,35 +130,30 @@
                     <p class="description-col8"><%= product.name %></p>
                 </div>
             </article>
-            <article class="product-seller-two">
-                <div class="decoration">
-                    <p class="desc"> 60% OFF</p>
-                    <img class="heart-with" src="/images/corazon.png" alt="blue-heart">
-                </div>
-                <img class="volante" src="/images/product/<%= product.image_11 %> " alt="<%= product.name %>">
-                <div class="contain-price">
-                    <p class="previous-col8"><del>$ <%= product.price_current %></del> </p>
-                    <p class="price-col8">$ <%= product.price_discount %></p>
-                    <p class="description-col8"><%= product.name %></p>
-                </div>
-            </article>
-            <article class="product-seller-two">
-                <div class="decoration">
+            <%  }) %>
+
+            <% monitor.forEach(product => { %>
+                <article class="product-seller">
+                    <div class="decoration">
                     <img class="heart-without" src="/images/corazon.png" alt="blue-heart">
                 </div>
-                <img class="volante" src="/images/product/<%= product.image_11 %>" alt="<%= product.name %>">
-                <div class="contain-price">
-                    <p class="previous-col8"><del>$ <%= product.price_current %></del> </p>
-                    <p class="price-col8">$ <%= product.price_discount %></p>
-                    <p class="description-col8"><%= product.name %></p>
-                </div>
-            </article>
+                    <img class="volante" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
+    
+                    <div class="contain-price">
+                        <!-- <p class="previous-col8"><del>$ <%= product.price_current %></del> </p> -->
+                        <p class="price-col8">$ <%= product.price_discount %></p>
+                        <p class="description-col8"><%= product.name %></p>
+                    </div>
+                </article>
+            <%  }) %>
+            <a href="productList">
             <button class="more-option">
                 <span class="shadow"></span>
                 <span class="edge"></span>
                 <span class="front"> <img class="flechaAzul" src="/images/producto_flecha_azul.png" alt="flecha-azul">
                 </span>
               </button>
+              </a>
          </div>
     </div>
     <div class="contain-three">
@@ -163,91 +161,76 @@
         <div class="col-8">
             <section class="anuncio">
                 <p class="promotion">Productos destacados de esta semana</p>
+                <a href="productList">
                 <button class="new-product">Ver todas <img class="flechita-azul" src="/images/producto_flecha_azul.png"></button>
+                </a>
                 <img class="joystick" src="/images/carrito_controles.png" alt="controles">
             </section>
             <section class="product">
+            <% silla.forEach(product =>{ %> 
                 <article class="product-info">
-                    <% silla.forEach(product1=>{ %> 
-                    <img class="game-chair" src="/images/products/<%= product1.image_11 %> " alt="producto-volante">
-                    <!-- <img src="/images/corazon.png" alt="heart">-->
-                    <% }) %> 
-                    <div class="col-4">
-                        <p class="previous-col4"><del>$40,000</del> </p>
-                        <span class="col-min">
-                            <p class="price-col4">$36,000</p>
-                            <p class="off-col4">20% OFF</p>
-                        </span>
-                        <p class="cuotas">12 x $1,000 sin interes</p>
-                        <p class="description-col4">Silla Gamer Marvo CH 106</p>
-                    </div>
-                </article>
-                <article class="product-info">
-                    <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
+                    <img class="game-chair" src="/images/products/<%= product.image_12 %>" alt="<%= product.name %> ">
                     <!-- <img src="/images/corazon.png" alt="heart">-->
                     <div class="col-4">
-                        <p class="previous-col4"><del>$40,000</del> </p>
+                        <p class="previous-col4"><del>US$ <%= product.price_current %>  </del> </p>
                         <span class="col-min">
-                            <p class="price-col4">$36,000</p>
-                            <p class="off-col4">20% OFF</p>
+                            <p class="price-col4">US$ <%= product.price_discount %></p>
+                            <p class="off-col4">10% OFF</p>
                         </span>
-                        <p class="cuotas">12 x $1,000 sin interes</p>
-                        <p class="description-col4">Silla Gamer Marvo CH 106</p>
+                        <p class="cuotas">12 x $3,000 sin interes</p>
+                        <p class="description-col4"> <%= product.name %></p>
                     </div>
                 </article>
+            <% }) %> 
+
+            <% monitor.forEach(product =>{ %> 
                 <article class="product-info">
-                    <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
+                    <img class="game-chair" src="/images/products/<%= product.image_12 %>" alt="<%= product.name %> ">
                     <!-- <img src="/images/corazon.png" alt="heart">-->
                     <div class="col-4">
-                        <p class="previous-col4"><del>$40,000</del> </p>
+                        <p class="previous-col4"><del>US$ <%= product.price_current %>  </del> </p>
                         <span class="col-min">
-                            <p class="price-col4">$36,000</p>
-                            <p class="off-col4">20% OFF</p>
+                            <p class="price-col4">US$ <%= product.price_discount %></p>
+                            <p class="off-col4">10% OFF</p>
                         </span>
-                        <p class="cuotas">12 x $1,000 sin interes</p>
-                        <p class="description-col4">Silla Gamer Marvo CH 106</p>
+                        <p class="cuotas">12 x $3,000 sin interes</p>
+                        <p class="description-col4"> <%= product.name %></p>
                     </div>
                 </article>
+            <% }) %> 
             </section>
             <section class="product-two">
-                <article class="product-info">
-                    <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
-                    <!-- <img src="/images/corazon.png" alt="heart">-->
-                    <div class="col-4">
-                        <p class="previous-col4"><del>$40,000</del> </p>
-                        <span class="col-min">
-                            <p class="price-col4">$36,000</p>
-                            <p class="off-col4">20% OFF</p>
-                        </span>
-                        <p class="cuotas">12 x $1,000 sin interes</p>
-                        <p class="description-col4">Silla Gamer Marvo CH 106</p>
-                    </div>
-                </article>
-                <article class="product-info">
-                    <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
-                    <!-- <img src="/images/corazon.png" alt="heart">-->
-                    <div class="col-4">
-                        <p class="previous-col4"><del>$40,000</del> </p>
-                        <span class="col-min">
-                            <p class="price-col4">$36,000</p>
-                            <p class="off-col4">20% OFF</p>
-                        </span>
-                        <p class="cuotas">12 x $1,000 sin interes</p>
-                        <p class="description-col4">Silla Gamer Marvo CH 106</p>
-                    </div>
-                </article>
-                <article class="product-info">
-                    <img class="game-chair" src="/images/carrito_silla.jpeg" alt="producto-volante">
-                    <!-- <img src="/images/corazon.png" alt="heart">-->
-                    <div class="col-4">
-                        <p class="previous-col4"><del>$40,000</del> </p>
-                        <span class="col-min">
-                            <p class="price-col4">$36,000</p>
-                            <p class="off-col4">20% OFF</p>
-                        </span>
-                        <p class="cuotas">12 x $1,000 sin interes</p>
-                        <p class="description-col4">Silla Gamer Marvo CH 106</p>
-                    </div>
+                <% silla.forEach(product =>{ %> 
+                    <article class="product-info">
+                        <img class="game-chair" src="/images/products/<%= product.image_13 %>" alt="<%= product.name %> ">
+                        <!-- <img src="/images/corazon.png" alt="heart">-->
+                        <div class="col-4">
+                            <p class="previous-col4"><del>US$ <%= product.price_current %>  </del> </p>
+                            <span class="col-min">
+                                <p class="price-col4">US$ <%= product.price_discount %></p>
+                                <p class="off-col4">10% OFF</p>
+                            </span>
+                            <p class="cuotas">12 x $3,000 sin interes</p>
+                            <p class="description-col4"> <%= product.name %></p>
+                        </div>
+                    </article>
+                <% }) %> 
+
+                <% monitor.forEach(product =>{ %> 
+                    <article class="product-info">
+                        <img class="game-chair" src="/images/products/<%= product.image_11 %>" alt="<%= product.name %> ">
+                        <!-- <img src="/images/corazon.png" alt="heart">-->
+                        <div class="col-4">
+                            <p class="previous-col4"><del>US$ <%= product.price_current %>  </del> </p>
+                            <span class="col-min">
+                                <p class="price-col4">US$ <%= product.price_discount %></p>
+                                <p class="off-col4">10% OFF</p>
+                            </span>
+                            <p class="cuotas">12 x $3,000 sin interes</p>
+                            <p class="description-col4"> <%= product.name %></p>
+                        </div>
+                    </article>
+                <% }) %> 
                 </article>
             </section>
         </div>

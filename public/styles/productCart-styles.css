@@ -854,7 +854,7 @@ footer {
   }
   img.game-chair {
     width: 12vw;
-    height: 21vh;
+    height: 28vh;
   }
   .col-4 {
     width: 15vw;
@@ -964,6 +964,8 @@ footer {
   p.name {
     position: relative;
     top: -15px;
+    color: rgb(87, 77, 77);
+    font-style: italic;
   }
   section.option{
     padding: 25px 5px;
