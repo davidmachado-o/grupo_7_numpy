@@ -22,11 +22,24 @@
             
             <img class="imagenes-productos" src="/images/products/<%= product[i].image_11 %> "  alt="<%= product[i].name %>">
             <p class="categoria-producto"><%= product[i].category_id%></p>
-            <li class="Listax">
-                <a href="/product/productDetail/<%=product[i].id%> ">
-                <%=product[i].name %>
-                </a>
-            </li>
+
+            <% if(isAuthenticated) { %> 
+                <li class="Listax">
+                    <a href="/product/productEdit/<%=product[i].id%> ">
+                    <%=product[i].name %>
+                    </a>
+                </li>
+            <% } else {%> 
+            
+                <li class="Listax">
+                    <a href="/product/productDetail/<%=product[i].id%> ">
+                    <%=product[i].name %>
+                    </a>
+                </li>
+            <% } %> 
+
+
+            
         </div>
         <%  } %> 
 </ul>

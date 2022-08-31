@@ -25,7 +25,7 @@ router.get('/productAdd', productsController.productAdd);
 router.post('/productAdd', upload.any(), productsController.store); // para subir cualquier cant de fotos el 'upload.any()' 
 
 // /* EDITADO DE PRODUCTOS */
-router.get('/productEdit/:id/', admin, productsController.productEdit);
+router.get('/productEdit/:id/', productsController.productEdit);
 router.post('/productEdit/:id/', upload.any(), productsController.productUpdate);
 
 // /* DELETE */ 
