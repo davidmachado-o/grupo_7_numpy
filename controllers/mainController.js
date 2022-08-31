@@ -61,6 +61,8 @@ index: (req, res) => {
 		res.render('index', {mouses, keyboards, combos, sillas})
 
 	})
+
+
 }
 
 

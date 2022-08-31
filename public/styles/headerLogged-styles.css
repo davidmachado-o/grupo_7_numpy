@@ -72,7 +72,7 @@ header{
 }
 
 .logo-numpy img{
-    width: 80%;
+    width: 60%;
     position: relative;
     right:10px;
 }
@@ -112,6 +112,10 @@ header{
     display: flex;
     margin: 0 20px;
     flex-wrap: nowrap;
+}
+
+.nav-bottom {
+    margin-bottom: 0px;
 }
 
 .shortcuts-bar{
@@ -171,6 +175,21 @@ a:hover{
     color: #4DABCF;
 }
 
+
+.hero {
+    margin-right: 20px;
+}
+
+
+.nav-item {
+    font-size: 24px;
+}
+
+.lista-menu {
+    margin-bottom: 10px;
+}
+
+
 @media (min-width: 680px){
         .show-nav{
             display: block;
@@ -191,6 +210,14 @@ a:hover{
 }
 
 @media (min-width: 900px){
+
+    .hero {
+        margin-right: 160px;
+    }
+
+    .nav-bottom {
+        margin-right: 140px;
+    }
 
     .ship{
         display: block;
