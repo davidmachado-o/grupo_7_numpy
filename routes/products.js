@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 /* PRODUCT CREATE / ADD */
-router.get('/productAdd', admin, productsController.productAdd);
+router.get('/productAdd', productsController.productAdd);
 router.post('/productAdd', upload.any(), productsController.store); // para subir cualquier cant de fotos el 'upload.any()' 
 
 // /* EDITADO DE PRODUCTOS */
