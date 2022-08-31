@@ -82,7 +82,10 @@
                     <p class="opciones-texto" >Inicia sesión para tener la mejor experiencia</p>
                 </div>
                 <div>
-                    <button>Iniciar Sesión</button>
+                    <a href="/users/login">
+                        <button>Iniciar Sesión</button>
+                    </a>
+                    
                 </div>
                     <img class="opciones-foto-chica" src="/images/home_chica_celebrando.png">
             </article>
@@ -95,7 +98,11 @@
                     <% mouses.forEach(product1 => { %>
                     
                         <article class="opciones-caja-2-articles">
-                            <img class="opciones-foto-tv" src="/images/products/<%= product1.image_11 %> "  alt="<%= product1.name %>">
+                            <a href="/product/productDetail/<%= product1.id %> ">
+                                <img class="opciones-foto-tv" src="/images/products/<%= product1.image_11 %> "  alt="<%= product1.name %>">
+                            </a>
+
+                            
                             <p class="opciones-texto-subtitulo" ><%= product1.name %></p>
                         </article>
     
@@ -114,7 +121,10 @@
                     <% keyboards.forEach(product2 => { %>
                     
                         <article class="opciones-caja-2-articles">
-                            <img class="opciones-foto-tv" src="/images/products/<%= product2.image_11 %> "  alt="<%= product2.name %>">
+                            <a href="/product/productDetail/<%= product2.id %> ">
+                                <img class="opciones-foto-tv" src="/images/products/<%= product2.image_11 %> "  alt="<%= product2.name %>">
+                            </a>
+                            
                             <p class="opciones-texto-subtitulo" ><%= product2.name %></p>
                         </article>
     
@@ -146,7 +156,10 @@
                         <p class="card-text tarjeta-precio">$ <%= product2.price_discount %></p>
                       </div>
                       <div class="tarjeta-combos-boton">
-                        <button>Ver más ></button>
+                        <a href="/product/productDetail/<%= product2.id %> ">
+                            <button>Ver más ></button>
+                        </a>
+                        
                       </div>
                     </div>
                   </div>
@@ -235,7 +248,10 @@
         <!--Seccion 6: Banner recomendaciones personalizadas-->
         <div class="recomendaciones-banner-general">
             <p class="recomendaciones-banner-texto-1">Ver recomendaciones personalizdas</p>
-            <button>Identificate</button>
+            <a href="/users/login">
+                <button>Identificate</button>
+            </a>
+            
             <div class="recomendaciones-banner-div-2">
                 <p class="recomendaciones-banner-texto-2">¿Eres un cliente nuevo?</p>
             <a href="/register">
