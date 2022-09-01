@@ -36,14 +36,14 @@
         <article>
             <a href="#">
                 <div class="Cont-Mini-Imagen">
-                    <img class="Mini-Imagen" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
-                    <img class="Mini-Imagen" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
-                    <img class="Mini-Imagen" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
+                    <img id="img1"  onclick="showMax(1)" class="Mini-Imagen" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
+                    <img  id="img2" onclick="showMax(2)" class="Mini-Imagen" src="/images/products/<%= product.image_12 %> " alt="<%= product.name %>">
+                    <img  id="img3" onclick="showMax(3)" class="Mini-Imagen" src="/images/products/<%= product.image_13 %> " alt="<%= product.name %>">
                 </div>
             </a>
             <div class="Cont-Imagen-Desc">
                 <div class="Cont-Imagen">
-                    <img class="Imagen" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
+                    <img id="big" class="Imagen" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
                 </div>
                 <div class="Cont-Descripcion">
                     <div class="Descripcion">
@@ -106,9 +106,23 @@
                             <a href="#"><i class="fa-solid fa-angle-down"></i></a>
                             <p style="font-size: 14px;">(<%= product.stock%> disponibles)</p>
                         </div>
-                        <div class="Boton-Comprar">
-                            <button type="submit" class="Boton-Comprar">Comprar Ahora</button>
-                        </div>
+
+
+                        <% if(isAuthenticated) { %> 
+                            <div class="Boton-Comprar">
+                                <a href="/product/productEdit/<%=product.id %> ">
+                                    <button type="submit" class="Boton-Comprar">Editar Producto</button>
+                                </a>
+                                
+                            </div>
+                        <% } else {%> 
+                        
+                            <div class="Boton-Comprar">
+                                <button type="submit" class="Boton-Comprar">Comprar Ahora</button>
+                            </div>
+                        <% } %> 
+
+                        
                         <div class="Boton-Carrito">
                             <button type="submit" class="Boton-Carrito">Agregar al carrito</button>
                         </div>
@@ -379,13 +393,16 @@
                     </div>
                 </div>
             </div>
-            <a href="/product/productEdit/<%=product.id %> ">
-                <div class="Boton-Comprar">
-                    <button type="submit" class="Boton-Comprar">Editar</button>
-                </div>
-            </a>
+           
         </div>
     </main>
+    <script>
+        function showMax(n){
+            let imgBig = document.getElementById('big');
+            let imgSmall = document.getElementById('img'+n);
+            [imgBig.src,imgSmall.src] = [imgSmall.src,imgBig.src];
+          }
+        </script>
     <footer>
         <%- include('./partials/footer.ejs'); %>
     </footer>
