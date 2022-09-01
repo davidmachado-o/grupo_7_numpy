@@ -144,7 +144,7 @@
                     <img class="volante" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
     
                     <div class="contain-price">
-                        <!-- <p class="previous-col8"><del>$ <%= product.price_current %></del> </p> -->
+                        <p class="previous-col8"><del>$ <%= product.price_current %></del> </p>
                         <p class="price-col8">$ <%= product.price_discount %></p>
                         <p class="description-col8"><%= product.name %></p>
                     </div>
@@ -172,7 +172,8 @@
                 <img class="joystick" src="/images/carrito_controles.png" alt="controles">
             </section>
             <section class="product">
-            <% silla.forEach(product =>{ %> 
+            <% silla.forEach(product =>{ %>
+                <a href="productDetail/10">
                 <article class="product-info">
                     <img class="game-chair" src="/images/products/<%= product.image_12 %>" alt="<%= product.name %> ">
                     <!-- <img src="/images/corazon.png" alt="heart">-->
@@ -186,9 +187,12 @@
                         <p class="description-col4"> <%= product.name %></p>
                     </div>
                 </article>
+                </a>
+            
             <% }) %> 
 
             <% monitor.forEach(product =>{ %> 
+                <a href="productDetail/7">
                 <article class="product-info">
                     <img class="game-chair" src="/images/products/<%= product.image_12 %>" alt="<%= product.name %> ">
                     <!-- <img src="/images/corazon.png" alt="heart">-->
@@ -202,10 +206,12 @@
                         <p class="description-col4"> <%= product.name %></p>
                     </div>
                 </article>
+                </a>
             <% }) %> 
             </section>
             <section class="product-two">
                 <% silla.forEach(product =>{ %> 
+                    <a href="productDetail/10">
                     <article class="product-info">
                         <img class="game-chair" src="/images/products/<%= product.image_13 %>" alt="<%= product.name %> ">
                         <!-- <img src="/images/corazon.png" alt="heart">-->
@@ -219,9 +225,11 @@
                             <p class="description-col4"> <%= product.name %></p>
                         </div>
                     </article>
+                </a>
                 <% }) %> 
 
                 <% monitor.forEach(product =>{ %> 
+                    <a href="productDetail/10">
                     <article class="product-info">
                         <img class="game-chair" src="/images/products/<%= product.image_11 %>" alt="<%= product.name %> ">
                         <!-- <img src="/images/corazon.png" alt="heart">-->
@@ -235,6 +243,7 @@
                             <p class="description-col4"> <%= product.name %></p>
                         </div>
                     </article>
+                    </a>
                 <% }) %> 
                 </article>
             </section>
