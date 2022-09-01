@@ -415,7 +415,7 @@ button:active {
 
 .Sub-Mini-Article {
     position: absolute;
-    margin-top: 115%;
+    margin-top: 100%;
     margin-left: 6%;
 }
 
@@ -1039,6 +1039,10 @@ button:active {
     transition: all 0.3s ease 0s;
 }
 
+.Minis-Article2 .Sub-Mini-Article {
+    margin-top: 120%;
+}
+
 .Minis-Article2:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     transform: translateY(-10px);
@@ -1073,6 +1077,10 @@ button:active {
     margin-bottom: 10%;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+}
+
+.Minis-Article4 .Sub-Mini-Article {
+    margin-top: 120%;
 }
 
 .Minis-Article4:hover {
