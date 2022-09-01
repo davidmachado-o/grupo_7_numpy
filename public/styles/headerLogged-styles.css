@@ -78,7 +78,7 @@ header{
 }
 
 .main-header a{
-    color: white;
+    /* color: white; */
     padding: 0 10px;
     text-decoration: none;
 }

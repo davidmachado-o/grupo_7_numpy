@@ -23,7 +23,7 @@ input {
   overflow: visible;
   /* outline-offset: -8px; */
   padding: 6px 0 2px 8px;
-  height: 100px;
+  /* height: 100px; */
 }
 
 .main-container {
