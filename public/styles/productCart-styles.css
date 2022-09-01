@@ -301,6 +301,10 @@ article.product-seller {
   margin: 5px;
   align-content: center;
   padding: 22px;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+  box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+  
 }
 article.product-seller-two {
   display: none;
@@ -522,6 +526,9 @@ article.product-info {
   align-items: center;
   background-color: #ffffff;
   position: relative;
+  cursor: pointer;
+
+  transition: all 0.7s ease 0s;
 }
 img.game-chair {
   width: 13vw;
@@ -785,6 +792,10 @@ footer {
     display: grid;
     align-content: center;
     padding: 25px;
+    cursor: pointer;
+    transition: all 0.7s ease 0s;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    /* transition: all 0.3s ease 0s; */
   }
   article.product-seller {
     border: 1px solid #666666;
