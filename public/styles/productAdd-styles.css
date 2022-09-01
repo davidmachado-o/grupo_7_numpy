@@ -19,6 +19,13 @@ main {
   border-radius: 50px;
 }
 
+input {
+  overflow: visible;
+  /* outline-offset: -8px; */
+  padding: 6px 0 2px 8px;
+  height: 100px;
+}
+
 .main-container {
   text-align: center;
   color: white;
@@ -31,7 +38,7 @@ main {
   color: white;
 }
 
-.ball-container{
+.ball-container {
   margin-right: 0;
 }
 
@@ -69,39 +76,39 @@ main {
 }
 
 .numero-tres {
-    /* position: absolute; */
-    top: 1100px;
-    left: 110px;
-    z-index: 1;
-    width: 2.5em;
-    margin-right: auto;
+  /* position: absolute; */
+  top: 1100px;
+  left: 110px;
+  z-index: 1;
+  width: 2.5em;
+  margin-right: auto;
 }
 
 .numero-cuatro {
-    /* position: absolute; */
-    top: 1610px;
-    left: 110px;
-    z-index: 1;
-    width: 3em;
-    margin-right: auto;
+  /* position: absolute; */
+  top: 1610px;
+  left: 110px;
+  z-index: 1;
+  width: 3em;
+  margin-right: auto;
 }
 
 .numero-cinco {
-    /* position: absolute; */
-    top: 2070px;
-    left: 110px;
-    z-index: 1;
-    width: 2.7em;
-    margin-right: auto;
+  /* position: absolute; */
+  top: 2070px;
+  left: 110px;
+  z-index: 1;
+  width: 2.7em;
+  margin-right: auto;
 }
 
 .numero-seis {
-    /* position: absolute; */
-    top: 2353px;
-    left: 110px;
-    z-index: 1;
-    width: 2.7em;
-    margin-right: auto;
+  /* position: absolute; */
+  top: 2353px;
+  left: 110px;
+  z-index: 1;
+  width: 2.7em;
+  margin-right: auto;
 }
 
 .container-uno,
@@ -187,7 +194,6 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
 }
 
 .categorias label {
@@ -195,17 +201,17 @@ main {
   cursor: pointer;
 }
 
-[type=radio] { 
+[type="radio"] {
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-[type=radio] + img {
+[type="radio"] + img {
   cursor: pointer;
 }
-[type=radio]:checked + img {
+[type="radio"]:checked + img {
   /* outline: 2px solid black; */
   border: 3px solid #4dabcf;
   border-radius: 10px;
@@ -322,66 +328,87 @@ main {
 
 .modelo {
   display: flex;
-  padding: 1em 0;
+  padding: 1em 5em;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .pencil {
   width: 6em;
 }
 
-.bola-rosa-2{
-    /* position: absolute; */
-    top: 2900px;
-    left: 100px;
+.bola-rosa-2 {
+  /* position: absolute; */
+  top: 2900px;
+  left: 100px;
 }
 
-.bola-verde-2{
-    /* position: absolute; */
-    top: 2875px;
-    left: 300px;
+.bola-verde-2 {
+  /* position: absolute; */
+  top: 2875px;
+  left: 300px;
 }
-
-
-
-
 
 .formulario__input-error {
-	font-size: 12px;
-	margin-bottom: 0;
-	display: none;
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
 }
 
-.formulario__input-error-activo{
-  display:block;
-  color:#bb2929;
+.formulario__input-error-activo {
+  display: block;
+  color: #bb2929;
 }
 
-
+/* .textarea-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: #747070;
+  text-align: left;
+  margin-left: 2em;
+} */
 
 .formulario__grupo-correcto .formulario__validacion-estado {
-	color: #1ed12d;
-	opacity: 1;
+  color: #1ed12d;
+  opacity: 1;
 }
 
 .formulario__grupo-incorrecto .formulario__label {
-	color: #bb2929;
+  color: #bb2929;
 }
 
 .formulario__grupo-incorrecto .formulario__validacion-estado {
-	color: #bb2929;
-	opacity: 1;
+  color: #bb2929;
+  opacity: 1;
 }
 
 .formulario__grupo-incorrecto .formulario__input {
-	border: 3px solid #bb2929;
+  border: 3px solid #bb2929;
 }
 
 .formulario__mensaje-exito {
-	font-size: 14px;
-	color: #119200;
-	display: none;
+  font-size: 14px;
+  color: #119200;
+  display: none;
 }
 
 .formulario__mensaje-exito-activo {
-	display: block;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .bola-rosa-2 {
+    /* position: absolute; */
+    top: 2900px;
+    left: 100px;
+  }
+  .caja-producto-precio-stock {
+    height: 100px;
+  }
 }

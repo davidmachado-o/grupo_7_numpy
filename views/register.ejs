@@ -14,6 +14,7 @@
         <div class="container-register">
             <div class="register-form">
                 <form action="/users/register" method="POST" enctype="multipart/form-data">
+                    <div class="center">
                     <div class="top-welcome">
                         <div>
                             <img class="register-image-boy" src="/images/registro_chico.png" alt="registro chico">
@@ -22,10 +23,10 @@
                             <h3>Creá tu cuenta</h3>
                         </div>
                     </div>
-                    <div class="facebook-button">
+                    <div class="facebook-button center">
                         <a href="/facebookLogin"><i class="fab fa-facebook-f"></i>Ingresar con Facebook</a>
                     </div>
-                    <div class="google-button google-end">
+                    <div class="google-button google-end center">
                         <a href="/googleLogin"><i class="fab fa-google"></i>Ingresar con Google +</a>
                     </div>
                     <p class="divide">o</p>
@@ -76,9 +77,9 @@
 
                     </div>
                     Imágen de perfil
-                    <div class="form-group">
+                    <div class="form-group center-input">
                         <label for="image"></label>
-                        <input type="file" name="image" accept=".jpg, .jpeg, .png, .gif" multiple></input>
+                        <input id="input" type="file" name="image" accept=".jpg, .jpeg, .png, .gif" multiple></input>
                         <% if (locals.errors && errors.image) { %>
                             <p class="error">
                                 <%= errors.image.msg %>
@@ -94,6 +95,7 @@
                     </div>
                     <div>
                         <img class="register-image-girl" src="/images/registro_chica.png" alt="registro chica">
+                    </div>
                     </div>
                 </form>
             </div>

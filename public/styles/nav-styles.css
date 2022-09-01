@@ -68,12 +68,12 @@ header{
 }
 
 .logo-numpy img{
-    width: 50%;
+    width: 100%;
 }
 
 .main-header a{
     color: white;
-    padding: 0 10px;
+    /* padding: 0 10px; */
     text-decoration: none;
 }
 

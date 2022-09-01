@@ -202,6 +202,19 @@ body {
     justify-content: flex-end;
 }
 
+.main-header a {
+  padding: 0;
+}
+
+.list-nav-2 {
+  padding: 0;
+}
+
+.list-nav-4 {
+  display: none;
+  /* padding: 0; */
+}
+
 /* .footer{
   width: 100%;
   display: flex;

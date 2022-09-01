@@ -40,6 +40,9 @@
     display: flex;
     color: white;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-lista-general .footer-lista {
@@ -69,6 +72,12 @@
 .mas-info {
     text-align: center;
 }
+
+.footer-seccion-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    }
 
 @media (min-width: 369px) {
 
@@ -100,6 +109,11 @@
         padding-top: 0px;
     }
 
+    .footer-seccion-2 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        }
 
 }
 
@@ -129,9 +143,16 @@
 
     .footer-seccion-2 {
         padding-top: 2%;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .footer-lista-general {
+        flex-direction: row;
     }
 
     .footer-logo {
-        width: 15%;
+        width: 100%;
     }
 }
