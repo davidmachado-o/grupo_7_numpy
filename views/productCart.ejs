@@ -26,7 +26,7 @@
             <img class="cpu" src="/images/producto_cpu.webp" alt="producto-cpu">
             <div class="order">
                 <div class="tittles">
-                    <p class="name"> Combo para computadora </p>
+                    <p class="name">Combo de CPU</p>
                     <img class="car" src="/images/producto_camion.png" alt="camion" >
                     <p class="send-info">Envio gratis</p>
                 </div>
@@ -39,19 +39,18 @@
                     </div>
                     <button class="rest"> - </button>
                 </div>
-                <p class="price">$ 30.000</p>
+                <p class="price">$30.000</p>
             </div>
         </section>
         <form class="option-desc"  method="PUT">
             <ul class="buttons-two">
                 <li class="item">
-                    <a href="productDetail/1">
-                    <button type="reset" class="remove" aria-current="page" >Eliminar</button>
-                    </a>
+                    <button type="submit" class="remove" aria-current="page" href="#" >Eliminar</button>
+                    
                 </li>
                 <li class="item">
                     <a href="productList">
-                    <button type="button" class="relation" aria-current="page" >Mas productos del vendedor</button>
+                    <button type="button" class="relation" aria-current="page" href="#">Mas productos del vendedor</button>
                     </a>
                     
                 </li>
@@ -90,11 +89,11 @@
             </div>
         </section>
         <section class="continue">
-            
+                <a href="/">
                 <button type="submit" class="first"><img class="white-car" src="/images/carrito_camion.png">
-                <p class="first">Continuar Compra </p>
+                <p class="first">Terminar Compra </p>
                 </button>
-          
+                </a>
         </section>
 
     </div>
@@ -118,7 +117,7 @@
             </article>
             <%  }) %>
             <% teclado.forEach(product => { %>
-            <article class="product-seller">
+            <article class="product-seller-two">
                 <div class="decoration">
                 <img class="heart-without" src="/images/corazon.png" alt="blue-heart">
             </div>
@@ -133,7 +132,7 @@
             <%  }) %>
 
             <% monitor.forEach(product => { %>
-                <article class="product-seller">
+                <article class="product-seller-two">
                     <div class="decoration">
                     <img class="heart-without" src="/images/corazon.png" alt="blue-heart">
                 </div>
@@ -158,7 +157,7 @@
     </div>
     <div class="contain-three">
         <h3 class="new-seccion-two">Ofertas</h3>
-        <div class="col-8">
+        <div class="col-lil8">
             <section class="anuncio">
                 <p class="promotion">Productos destacados de esta semana</p>
                 <a href="productList">
@@ -171,7 +170,7 @@
                 <article class="product-info">
                     <img class="game-chair" src="/images/products/<%= product.image_12 %>" alt="<%= product.name %> ">
                     <!-- <img src="/images/corazon.png" alt="heart">-->
-                    <div class="col-4">
+                    <div class="col-lil4">
                         <p class="previous-col4"><del>US$ <%= product.price_current %>  </del> </p>
                         <span class="col-min">
                             <p class="price-col4">US$ <%= product.price_discount %></p>
@@ -187,7 +186,7 @@
                 <article class="product-info">
                     <img class="game-chair" src="/images/products/<%= product.image_12 %>" alt="<%= product.name %> ">
                     <!-- <img src="/images/corazon.png" alt="heart">-->
-                    <div class="col-4">
+                    <div class="col-lil4">
                         <p class="previous-col4"><del>US$ <%= product.price_current %>  </del> </p>
                         <span class="col-min">
                             <p class="price-col4">US$ <%= product.price_discount %></p>
@@ -204,7 +203,7 @@
                     <article class="product-info">
                         <img class="game-chair" src="/images/products/<%= product.image_13 %>" alt="<%= product.name %> ">
                         <!-- <img src="/images/corazon.png" alt="heart">-->
-                        <div class="col-4">
+                        <div class="col-lil4">
                             <p class="previous-col4"><del>US$ <%= product.price_current %>  </del> </p>
                             <span class="col-min">
                                 <p class="price-col4">US$ <%= product.price_discount %></p>
@@ -220,7 +219,7 @@
                     <article class="product-info">
                         <img class="game-chair" src="/images/products/<%= product.image_11 %>" alt="<%= product.name %> ">
                         <!-- <img src="/images/corazon.png" alt="heart">-->
-                        <div class="col-4">
+                        <div class="col-lil4">
                             <p class="previous-col4"><del>US$ <%= product.price_current %>  </del> </p>
                             <span class="col-min">
                                 <p class="price-col4">US$ <%= product.price_discount %></p>
