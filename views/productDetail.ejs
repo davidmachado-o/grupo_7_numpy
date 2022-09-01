@@ -8,12 +8,12 @@
 
 <body>
     <header class="main-header">
-        <% if(isAuthenticated) { %> 
+        <% if(isAuthenticated) { %>
             <%- include('./partials/headerLogged.ejs'); %>
-        <% } else {%> 
-        
-            <%- include('./partials/header.ejs'); %>
-        <% } %> 
+                <% } else {%>
+
+                    <%- include('./partials/header.ejs'); %>
+                        <% } %>
     </header>
     <section class="List">
         <ul class="Main-List">
@@ -36,14 +36,18 @@
         <article>
             <a href="#">
                 <div class="Cont-Mini-Imagen">
-                    <img id="img1"  onclick="showMax(1)" class="Mini-Imagen" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
-                    <img  id="img2" onclick="showMax(2)" class="Mini-Imagen" src="/images/products/<%= product.image_12 %> " alt="<%= product.name %>">
-                    <img  id="img3" onclick="showMax(3)" class="Mini-Imagen" src="/images/products/<%= product.image_13 %> " alt="<%= product.name %>">
+                    <img id="img1" onclick="showMax(1)" class="Mini-Imagen"
+                        src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
+                    <img id="img2" onclick="showMax(2)" class="Mini-Imagen"
+                        src="/images/products/<%= product.image_12 %> " alt="<%= product.name %>">
+                    <img id="img3" onclick="showMax(3)" class="Mini-Imagen"
+                        src="/images/products/<%= product.image_13 %> " alt="<%= product.name %>">
                 </div>
             </a>
             <div class="Cont-Imagen-Desc">
                 <div class="Cont-Imagen">
-                    <img id="big" class="Imagen" src="/images/products/<%= product.image_11 %> " alt="<%= product.name %>">
+                    <img id="big" class="Imagen" src="/images/products/<%= product.image_11 %> "
+                        alt="<%= product.name %>">
                 </div>
                 <div class="Cont-Descripcion">
                     <div class="Descripcion">
@@ -108,28 +112,28 @@
                         </div>
 
 
-                        <% if(isAuthenticated) { %> 
+                        <% if(isAuthenticated) { %>
                             <div class="Boton-Comprar">
                                 <a href="/product/productEdit/<%=product.id %> ">
                                     <button type="submit" class="Boton-Comprar">Editar Producto</button>
                                 </a>
-                                
-                            </div>
-                        <% } else {%> 
-                        
-                            <div class="Boton-Comprar">
-                                <button type="submit" class="Boton-Comprar">Comprar Ahora</button>
-                            </div>
-                        <% } %> 
 
-                        
-                        <div class="Boton-Carrito">
-                            <button type="submit" class="Boton-Carrito">Agregar al carrito</button>
-                        </div>
-                        <!-- edicion para los que esten logueados                  -->
-                        <% if (locals.userLogged && locals.userLogged.admin) { %>
-                            <%- include ("partials/guestButtons") %>
+                            </div>
+                            <% } else {%>
+
+                                <div class="Boton-Comprar">
+                                    <button type="submit" class="Boton-Comprar">Comprar Ahora</button>
+                                </div>
                                 <% } %>
+
+
+                                    <div class="Boton-Carrito">
+                                        <button type="submit" class="Boton-Carrito">Agregar al carrito</button>
+                                    </div>
+                                    <!-- edicion para los que esten logueados                  -->
+                                    <% if (locals.userLogged && locals.userLogged.admin) { %>
+                                        <%- include ("partials/guestButtons") %>
+                                            <% } %>
 
                     </div>
                 </div>
@@ -139,22 +143,22 @@
             </div>
             <div class="Cont-Imagen2">
                 <div class="Mini-Article">
-                    <p class="Desc">60% OFF</p>
+                    <p class="Desc">25% OFF</p>
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="\images\producto_volante.jpeg">
+                    <img class="Producto" src="\images\mouse1.jpg">
                     <div class="Sub-Mini-Article">
-                        <p class="Precio-Original2">$38.000</p>
-                        <h2 class="Precio2">$20.300</h2>
-                        <p class="Nombre-Producto">Volante Logitech G29</p>
+                        <p class="Precio-Original2">$9000</p>
+                        <h2 class="Precio2">$6.750</h2>
+                        <p class="Nombre-Producto">Mouse Razer G905</p>
                     </div>
                 </div>
                 <div class="Mini-Article2">
-                    <p class="Desc">60% OFF</p>
+                    <p class="Desc">50% OFF</p>
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
                     <img class="Producto" src="\images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
-                        <h2 class="Precio2">$20.300</h2>
+                        <h2 class="Precio2">$18.999</h2>
                         <p class="Nombre-Producto">Volante Logitech G29</p>
                     </div>
                 </div>
@@ -355,7 +359,7 @@
             </div>
             <div class="Cont-Imagen3">
                 <div class="Minis-Article1">
-                    <p class="Desc">60% OFF</p>
+                    <p class="Desc">20% OFF</p>
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
                     <img class="Producto" src="\images\producto_volante.jpeg">
                     <div class="Sub-Mini-Article">
@@ -366,43 +370,43 @@
                 </div>
                 <div class="Minis-Article2">
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="\images\producto_volante.jpeg">
+                    <img class="Producto" src="\images\home_tv.jpeg">
                     <div class="Sub-Mini-Article">
-                        <p class="Precio-Original2">$38.000</p>
-                        <h2 class="Precio2">$20.300</h2>
-                        <p class="Nombre-Producto">Volante Logitech G29</p>
+                        <p class="Precio-Original2"></p>
+                        <h2 class="Precio2">$ 14.999</h2>
+                        <p class="Nombre-Producto">Monitor Samsung 75hz</p>
                     </div>
                 </div>
                 <div class="Minis-Article3">
                     <p class="Desc">60% OFF</p>
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="\images\producto_volante.jpeg">
+                    <img class="Producto" src="\images\compu 2.png">
                     <div class="Sub-Mini-Article">
                         <p class="Precio-Original2">$38.000</p>
                         <h2 class="Precio2">$20.300</h2>
-                        <p class="Nombre-Producto">Volante Logitech G29</p>
+                        <p class="Nombre-Producto">Combo PC Gamer</p>
                     </div>
                 </div>
                 <div class="Minis-Article4">
                     <a class="Heart" href="#"><i class="fa-solid fa-heart"></i></a>
-                    <img class="Producto" src="\images\producto_volante.jpeg">
+                    <img class="Producto" src="\images\home_silla.png">
                     <div class="Sub-Mini-Article">
-                        <p class="Precio-Original2">$38.000</p>
+                        <p class="Precio-Original2"></p>
                         <h2 class="Precio2">$20.300</h2>
-                        <p class="Nombre-Producto">Volante Logitech G29</p>
+                        <p class="Nombre-Producto">Silla Gamer ASUS</p>
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </main>
     <script>
-        function showMax(n){
+        function showMax(n) {
             let imgBig = document.getElementById('big');
-            let imgSmall = document.getElementById('img'+n);
-            [imgBig.src,imgSmall.src] = [imgSmall.src,imgBig.src];
-          }
-        </script>
+            let imgSmall = document.getElementById('img' + n);
+            [imgBig.src, imgSmall.src] = [imgSmall.src, imgBig.src];
+        }
+    </script>
     <footer>
         <%- include('./partials/footer.ejs'); %>
     </footer>
